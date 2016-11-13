@@ -68,6 +68,7 @@
     <article class="group">
       <h1>You're up and running!</h1>
 <p class="subtitle">November 13, 2016</p>
+ <a href="https://danielykim.github.io/articles/2016/11/13/Hello-World#disqus_thread">0 Comments</a>
 
 <p>Next you can update your site name, avatar and other options using the _config.yml file in the root of your repository (shown below).</p>
 
@@ -76,21 +77,28 @@
 <p>The easiest way to make your first post is to edit this one. Go into /_posts/ and update the Hello World markdown file. For more instructions head over to the <a href="https://github.com/barryclark/jekyll-now">Jekyll Now repository</a> on GitHub.</p>
 
 
+
+<p>
 <div class="comments">
-	<div id="disqus_thread"></div>
+	<div id="disqus_thread" style="max-width:60%;"></div>
 	<script type="text/javascript">
+    var disqus_config = function () {
+      this.page.url = "https://danielykim.github.io/articles/2016/11/13/Hello-World"; // <--- use canonical URL
+      this.page.identifier = "/articles/2016/11/13/Hello-World";
+    };
+    (function() { // DON'T EDIT BELOW THIS LINE
+    
+      var d = document, s = d.createElement('script');
 
-	    var disqus_shortname = 'danielykim';
+      s.src = '//danielykim.disqus.com/embed.js'; // <--- use Disqus shortname
 
-	    (function() {
-	        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-	        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-	        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-	    })();
-
-	</script>
-	<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
 </div>
+</p>
 
 
 
@@ -110,5 +118,6 @@
 </div>  
 </footer>
 
+    <script id="dsq-count-scr" src="//danielykim.disqus.com/count.js" async></script>
   </body>
 </html>
