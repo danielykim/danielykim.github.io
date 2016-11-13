@@ -3,11 +3,11 @@
 #
 
 # Name of your site (displayed in the header)
-name: Daniel Kim, PhD
-author: Daniel Kim, PhD
+name: "Daniel Kim, PhD"
+author: "Daniel Kim, PhD"
 
-title: Blog title
-subtitle: Blog subtitle
+title: "Blog: Daniel Kim"
+subtitle: ""
 
 timezone: Asia/Seoul
 
