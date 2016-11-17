@@ -4,7 +4,6 @@ comments: false
 title: 에드워드 터프티 Edward Tufte
 ---
 
-# 에드워드 터프티 Edward Tufte
 ![Edward Tufte](http://www.edwardtufte.com/bboard/images/0003mW-10280/download.jpg)
 
 에드워드 롤프 터프티 Edward Rolf Tufte (1942년 3월 14일 미주리 출생)는 미국 통계학자이면서 예술가이다. 동시에 예일 대학교에서 3가지 분야의 명예 교수이다. 정치학, 통계학, 컴퓨터 과학. 정보 디자인 관련 저술과 데이터 시각화 분야 개척으로 알려져 있다. 그는 직접 저술하고 디자인하여 자신의 출판사 Graphics Press를 통해 데이터 시각화의 고전이라고 불리는 4개의 책을 출판했다. *뉴욕 타임스*는 에드워드 터프티를 "데이터의 레오나르도 다 빈치"라고 하였으며, *비즈니스 위크*는 "그래픽의 갈릴레오"로 불렀다. Edward Modern 미술관과 스튜디오의 설립자이기도 하다. 
