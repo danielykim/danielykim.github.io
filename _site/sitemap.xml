@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
-<loc>http://localhost:4000/articles/2016/11/13/Tufte-CSS</loc>
-<lastmod>2016-11-13T00:00:00+00:00</lastmod>
+<loc>http://localhost:4000/articles/2016/11/17/Edward-Tufte</loc>
+<lastmod>2016-11-17T00:00:00+00:00</lastmod>
 </url>
 <url>
-<loc>http://localhost:4000/articles/2016/11/13/Hello-World</loc>
+<loc>http://localhost:4000/articles/2016/11/13/Tufte-CSS</loc>
 <lastmod>2016-11-13T00:00:00+00:00</lastmod>
 </url>
 <url>
