@@ -26,14 +26,14 @@ title: 에드워드 터프티 Edward Tufte
 
 
 **박물관과 미술관:** 에드워드 터프티는 아래 박물관과 미술관의 설립자이면서 소유자이다.
-* ET Modern museum/gallery in Chelsea art district, 547 West 20th Street, New York City, 2010-2013.
+  * ET Modern museum/gallery in Chelsea art district, 547 West 20th Street, New York City, 2010-2013.
 
 조각전과 사진전도 열었다.
-* Fermilabs: The Cognitive Art of Feynman Diagrams at Fermi National Accelerator Laboratory
-* Multiplicity, Flying Dreams, Signs of Multiplicity, All Possible Photons, Ironstone Artworks at ET Modern Gallery in Chelsea
-* Escaping Flatland: Sculptures and Prints at Architecture+Design Museum in Los Angeles.
+  * Fermilabs: The Cognitive Art of Feynman Diagrams at Fermi National Accelerator Laboratory
+  * Multiplicity, Flying Dreams, Signs of Multiplicity, All Possible Photons, Ironstone Artworks at ET Modern Gallery in Chelsea
+  * Escaping Flatland: Sculptures and Prints at Architecture+Design Museum in Los Angeles.
 * Major sculpture and landscape artwork exhibit at The Aldrich Contemporary Art Museum, June 2009–April 2010.
-* Group shows at The Drawing Room and 8 other museums and galleries.
+  * Group shows at The Drawing Room and 8 other museums and galleries.
 
 **협회:** 에드워드 터프티는 Cheshire Neighborhood Association의 설립자이면서 의장이다.
 
