@@ -4,14 +4,14 @@ comments: false
 title: 에드워드 터프티 Edward Tufte
 ---
 
-## 에드워드 터프티 Edward Tufte
+# 에드워드 터프티 Edward Tufte
 ![Edward Tufte](http://www.edwardtufte.com/bboard/images/0003mW-10280/download.jpg)
 
 에드워드 롤프 터프티 Edward Rolf Tufte (1942년 3월 14일 미주리 출생)는 미국 통계학자이면서 예술가이다. 동시에 예일 대학교에서 3가지 분야의 명예 교수이다. 정치학, 통계학, 컴퓨터 과학. 정보 디자인 관련 저술과 데이터 시각화 분야 개척으로 알려져 있다. 그는 직접 저술하고 디자인하여 자신의 출판사 Graphics Press를 통해 데이터 시각화의 고전이라고 불리는 4개의 책을 출판했다. *뉴욕 타임스*는 에드워드 터프티를 "데이터의 레오나르도 다 빈치"라고 하였으며, *비즈니스 위크*는 "그래픽의 갈릴레오"로 불렀다. Edward Modern 미술관과 스튜디오의 설립자이기도 하다. 
 
 참고: 에드워드 터프티 홈페이지, [The Work of Edward Tufte and Graphics Press](https://www.edwardtufte.com/tufte/index)
 
-### Biography
+## Biography
 * 1960년 비버리 힐스 고등학교를 졸업했다. 
 * 이후 스탠퍼드에서 통계학으로 학사와 석사 학위를(1964년), 1968년 예일 대학교에서 정치학으로 박사학위를 받았다.
 * 1967년부터 1974년까지 프린스턴 대학교에서 Politics와 Public Affairs 관련 강사와 교수로,
@@ -20,29 +20,32 @@ title: 에드워드 터프티 Edward Tufte
 * 프린스턴과 예일에서 다음과 같은 과목을 가르쳤다. 정책 결정, 통계적인 삽화, 응용 통계학, 정보 디자인, 정치 경제학, 여론, 민주주의 이론, 연구 방법들, 연구와 저술 관련.
 
 
-### 설립자
-**출판사:** 에드워드 터프티는 Graphics Press, LLC의 설립자이면서 소유자이다. 해석적인 디자인 관련 책 4개를 출판했고, 1일 강좌도 한다. 참고로 1983년부터 2014년까지 4개의 책은 약 190만개, 4개의 소책자는 약 42만 2천개가 팔렸고, 이는 현재 진행형이다.
+## 설립자
+### 출판사
+에드워드 터프티는 Graphics Press, LLC의 설립자이면서 소유자이다. 해석적인 디자인 관련 책 4개를 출판했고, 1일 강좌도 한다. 참고로 1983년부터 2014년까지 4개의 책은 약 190만개, 4개의 소책자는 약 42만 2천개가 팔렸고, 이는 현재 진행형이다.
 "Presenting Data and Information"이라는 1일 강좌를 1993년부터 2014년까지 754번 진행하면서 약 26만 9천명의 학생과 함께하였고, 이 역시 현재 진행형이다.
 
 
-**박물관과 미술관:** 에드워드 터프티는 아래 박물관과 미술관의 설립자이면서 소유자이다.
+### 박물관과 미술관
+에드워드 터프티는 아래 박물관과 미술관의 설립자이면서 소유자이다.
   * ET Modern museum/gallery in Chelsea art district, 547 West 20th Street, New York City, 2010-2013.
 
-조각전과 사진전도 열었다.
+## 조각전과 사진전
   * Fermilabs: The Cognitive Art of Feynman Diagrams at Fermi National Accelerator Laboratory
   * Multiplicity, Flying Dreams, Signs of Multiplicity, All Possible Photons, Ironstone Artworks at ET Modern Gallery in Chelsea
   * Escaping Flatland: Sculptures and Prints at Architecture+Design Museum in Los Angeles.
 * Major sculpture and landscape artwork exhibit at The Aldrich Contemporary Art Museum, June 2009–April 2010.
   * Group shows at The Drawing Room and 8 other museums and galleries.
 
-**협회:** 에드워드 터프티는 Cheshire Neighborhood Association의 설립자이면서 의장이다.
+## 협회
+  에드워드 터프티는 Cheshire Neighborhood Association의 설립자이면서 의장이다.
 
 
-### 명예 학위
+## 명예 학위
 *  Williams College, Connecticut College, Cooper Union, Saint Joseph College, Maryland Art Institute, Minneapolis College of Art, University of the Arts.
 
 
-### 회원
+## 회원
 * American Academy of Arts and Sciences
 * Guggenheim Foundation
 * American Statistical Association
@@ -50,14 +53,14 @@ title: 에드워드 터프티 Edward Tufte
 * Society for Technical Communication
 
 
-### 수상과 특허
+## 수상과 특허
 * Donald Campbell Award for Outstanding Methodological Innovations in Policy Studies.
 * American Institute of Graphics Arts medal. Tercentennial Lecture, Yale University.
 * Received 40 awards for books.
 * Patent (with Professor Seth Powsner, Yale Medical School) for graphical display of status of medical patients.
 
 
-### 데이터 분석과 디스플레이 디자인 관련 컨설팅과 강좌
+## 데이터 분석과 디스플레이 디자인 관련 컨설팅과 강좌
 * NASA
 * Apple
 * The New York Times
@@ -82,7 +85,7 @@ title: 에드워드 터프티 Edward Tufte
 * various law firms.
 
 
-### 책
+## 책
 * The Quantitative Analysis of Social Problems, editor (Addison-Wesley, 1970).
 
 * Size and Democracy, Robert A. Dahl and Edward R. Tufte (Stanford University Press, 1973). Paperback edition, 1975.
@@ -135,10 +138,10 @@ title: 에드워드 터프티 Edward Tufte
   * From Martin Kemp’s review of Beautiful Evidence in Nature (13 July 2006): "Tufte is an expert in the presentation of statistical evidence and a sculptor, and has established himself as the world’s leading analyst of graphic information."
 
 
-### 기타 등등
+## 기타 등등
 * [GitHub - edwardtufte/tufte-css: Style your webpage like Edward Tufte's handouts.](https://github.com/edwardtufte/tufte-css)
 * [Tufte Handout: An implementation in R Markdown](https://rstudio.github.io/tufte/)
 
 
-### 참고 문헌
+## 참고 문헌
 * [에드워드 터프티 이력서](http://www.edwardtufte.com/files/ETresume.pdf)
