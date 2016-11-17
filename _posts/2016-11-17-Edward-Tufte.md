@@ -68,53 +68,56 @@ Williams College, Connecticut College, Cooper Union, Saint Joseph College, Maryl
 The Quantitative Analysis of Social Problems, editor (Addison-Wesley, 1970).
 
 Size and Democracy, Robert A. Dahl and Edward R. Tufte (Stanford University Press, 1973). Paperback edition, 1975.
-  * Translations into Japanese, Korean, and Thai.
+* Translations into Japanese, Korean, and Thai.
 
 Data Analysis for Politics and Policy (Prentice-Hall, 1974). 17th printing, 1994. eBook 2013.
 
 Political Control of the Economy (Princeton University Press, 1978). Paperback edition, 1980.
+
 * Kammerer Award of the American Political Science Association, best book on U.S. national policy, 1979.
 * Named a "Citation Classic" in 1988 by the Institute for Scientific Information.
 
 [The Visual Display of Quantitative Information](https://www.edwardtufte.com/tufte/books_vdqi) (Graphics Press, 1983).
-  * Written, designed, and published by Edward Tufte. 17th printing, 1999. Second edition, 2001, 8th printing, 2013.
-  * Spanish edition 2013. French edition 2014.
-  * Named a "Citation Classic" in 1992 by the Institute for Scientific Information.
-  * Named one of the 100 best books of the 20th-century by amazon.com.
+
+* Written, designed, and published by Edward Tufte. 17th printing, 1999. Second edition, 2001, 8th printing, 2013.
+* Spanish edition 2013. French edition 2014.
+* Named a "Citation Classic" in 1992 by the Institute for Scientific Information.
+* Named one of the 100 best books of the 20th-century by amazon.com.
 
 [Envisioning Information](https://www.edwardtufte.com/tufte/books_ei) (Graphics Press, 1990).
-  * Written, designed, and published by Edward Tufte. 14th printing, 2013.
-  * Phi Beta Kappa Award in Science, 1991, for "best book contributing to the literature of science."
-  * Joseph Rigo Award for contributions to software documentation, Association for Computing Machinery, 1992.
-  * Citation for Excellence, American Institute of Architects, 1994.
-  * Chairman's Award in International Book Publishing, American Institute of Architects, 1994.
-  * George Wittenborn Book Award of the Art Libraries Association of North America.
-  * Best Book Design of 1990, National Association of Independent Publishers.
-  * 1990 Computer Book Award, Computer Press Association.
-  * 1990 AIGA Book Show Award, American Institute of Graphic Arts.
-  * Best Graphic Design 1990 (of 700 entries), *ID: International Design*.
-  * 1991 Art and Design Show Award, SIGGRAPH, Association of Computing Machinery.
-  * Award for Instructional Development Tools, Association for Education Communications and Technology, 1992.
+
+* Written, designed, and published by Edward Tufte. 14th printing, 2013.
+* Phi Beta Kappa Award in Science, 1991, for "best book contributing to the literature of science."
+* Joseph Rigo Award for contributions to software documentation, Association for Computing Machinery, 1992.
+* Citation for Excellence, American Institute of Architects, 1994.
+* Chairman's Award in International Book Publishing, American Institute of Architects, 1994.
+* George Wittenborn Book Award of the Art Libraries Association of North America.
+* Best Book Design of 1990, National Association of Independent Publishers.
+* 1990 Computer Book Award, Computer Press Association.
+* 1990 AIGA Book Show Award, American Institute of Graphic Arts.
+* Best Graphic Design 1990 (of 700 entries), *ID: International Design*.
+* 1991 Art and Design Show Award, SIGGRAPH, Association of Computing Machinery.
+* Award for Instructional Development Tools, Association for Education Communications and Technology, 1992.
 
 [Visual Explanations: Images and Quantities, Evidence and Narrative](https://www.edwardtufte.com/tufte/books_visex) (Graphics Press, 1997).
-  * Written, designed, and published by Edward Tufte. 10th printing, 2012.
-  * Award, The 100 Show, American Center for Design.
-  * Silver Medal, The Art Directors 77th Annual Awards.
-  * American Institute of Architects, International Book Award, 1998.
-  * Society for Technical Communication, Award of Distinguished Technical Communication, 1998.
-  * Fifty Books of the Year, American Institute of Graphic Arts, 1998.
-  * *ID: International Design*, Annual Design Review winner, 1998.
-  * *The New York Times* describes ET as "the Leonardo da Vinci of data."
-    * 뉴욕 타임스는 에드워드 터프티를 "데이터의 레오나르도 다 빈치"라고 묘사했다.
+
+* Written, designed, and published by Edward Tufte. 10th printing, 2012.
+* Award, The 100 Show, American Center for Design.
+* Silver Medal, The Art Directors 77th Annual Awards.
+* American Institute of Architects, International Book Award, 1998.
+* Society for Technical Communication, Award of Distinguished Technical Communication, 1998.
+* Fifty Books of the Year, American Institute of Graphic Arts, 1998.
+* *ID: International Design*, Annual Design Review winner, 1998.
+* *The New York Times* describes ET as "the Leonardo da Vinci of data." 뉴욕 타임스는 에드워드 터프티를 "데이터의 레오나르도 다 빈치"라고 묘사했다.
 
 [Beautiful Evidence](https://www.edwardtufte.com/tufte/books_be) (Graphics Press, 2006).
-  * Written, designed, and published by Edward Tufte. 4th printing, 2013.
-  * Best Innovation and Design Books, 2006, *Business Week* ("A brilliant masterpiece from the Galileo of graphics.")
-    * "그래픽의 갈릴레오가 빚어낸 눈부신 걸작"
-  * Best in show, graphic design, New England, Print magazine, 2007
-  * The Editors Recommend, Scientific American.
-  * Best Business and Technology Books, 2006, ZDNET.
-  * From Martin Kemp’s review of Beautiful Evidence in Nature (13 July 2006): "Tufte is an expert in the presentation of statistical evidence and a sculptor, and has established himself as the world’s leading analyst of graphic information."
+
+* Written, designed, and published by Edward Tufte. 4th printing, 2013.
+* Best Innovation and Design Books, 2006, *Business Week* ("A brilliant masterpiece from the Galileo of graphics.") "그래픽의 갈릴레오가 빚어낸 눈부신 걸작"
+* Best in show, graphic design, New England, Print magazine, 2007
+* The Editors Recommend, Scientific American.
+* Best Business and Technology Books, 2006, ZDNET.
+* From Martin Kemp’s review of Beautiful Evidence in Nature (13 July 2006): "Tufte is an expert in the presentation of statistical evidence and a sculptor, and has established himself as the world’s leading analyst of graphic information."
 
 
 ## 기타 등등
