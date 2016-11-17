@@ -145,4 +145,4 @@ title: 에드워드 터프티 Edward Tufte
 
 
 ## 참고 문헌
-* [에드워드 터프티 이력서](http://www.edwardtufte.com/files/ETresume.pdf)
+* [에드워드 터프티의 이력서](http://www.edwardtufte.com/files/ETresume.pdf)
