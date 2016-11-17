@@ -21,7 +21,9 @@ title: 에드워드 터프티 Edward Tufte
 
 
 ## 설립자
+
 ### 출판사
+
 에드워드 터프티는 Graphics Press, LLC의 설립자이면서 소유자이다. 해석적인 디자인 관련 책 4개를 출판했고, 1일 강좌도 한다. 참고로 1983년부터 2014년까지 4개의 책은 약 190만개, 4개의 소책자는 약 42만 2천개가 팔렸고, 이는 현재 진행형이다.
 "Presenting Data and Information"이라는 1일 강좌를 1993년부터 2014년까지 754번 진행하면서 약 26만 9천명의 학생과 함께하였고, 이 역시 현재 진행형이다.
 
@@ -31,11 +33,11 @@ title: 에드워드 터프티 Edward Tufte
   * ET Modern museum/gallery in Chelsea art district, 547 West 20th Street, New York City, 2010-2013.
 
 ## 조각전과 사진전
-  * Fermilabs: The Cognitive Art of Feynman Diagrams at Fermi National Accelerator Laboratory
-  * Multiplicity, Flying Dreams, Signs of Multiplicity, All Possible Photons, Ironstone Artworks at ET Modern Gallery in Chelsea
-  * Escaping Flatland: Sculptures and Prints at Architecture+Design Museum in Los Angeles.
+* Fermilabs: The Cognitive Art of Feynman Diagrams at Fermi National Accelerator Laboratory
+* Multiplicity, Flying Dreams, Signs of Multiplicity, All Possible Photons, Ironstone Artworks at ET Modern Gallery in Chelsea
+* Escaping Flatland: Sculptures and Prints at Architecture+Design Museum in Los Angeles.
 * Major sculpture and landscape artwork exhibit at The Aldrich Contemporary Art Museum, June 2009–April 2010.
-  * Group shows at The Drawing Room and 8 other museums and galleries.
+    * Group shows at The Drawing Room and 8 other museums and galleries.
 
 ## 협회
   에드워드 터프티는 Cheshire Neighborhood Association의 설립자이면서 의장이다.
