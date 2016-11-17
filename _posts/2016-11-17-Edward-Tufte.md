@@ -10,13 +10,13 @@ title: 에드워드 터프티 Edward Tufte
 
 참고: 에드워드 터프티 홈페이지, [The Work of Edward Tufte and Graphics Press](https://www.edwardtufte.com/tufte/index)
 
-## Biography
-* 1960년 비버리 힐스 고등학교를 졸업했다. 
-* 이후 스탠퍼드에서 통계학으로 학사와 석사 학위를(1964년), 1968년 예일 대학교에서 정치학으로 박사학위를 받았다.
-* 1967년부터 1974년까지 프린스턴 대학교에서 Politics와 Public Affairs 관련 강사와 교수로,
-* 1974년부터 1977년까지 우드로우 윌슨 스쿨에서 Public Affairs 교수로,
-* 1977년부터 1999년까지 예일 대학교에서 정치학, 통계학, 컴퓨터 과학, 비평가, 예술 관련 교수로 활동했다.
-* 프린스턴과 예일에서 다음과 같은 과목을 가르쳤다. 정책 결정, 통계적인 삽화, 응용 통계학, 정보 디자인, 정치 경제학, 여론, 민주주의 이론, 연구 방법들, 연구와 저술 관련.
+## 전기
+1960년 비버리 힐스 고등학교를 졸업했다. 
+이후 스탠퍼드에서 통계학으로 학사와 석사 학위를(1964년), 1968년 예일 대학교에서 정치학으로 박사학위를 받았다.
+1967년부터 1974년까지 프린스턴 대학교에서 Politics와 Public Affairs 관련 강사와 교수로,
+1974년부터 1977년까지 우드로우 윌슨 스쿨에서 Public Affairs 교수로,
+1977년부터 1999년까지 예일 대학교에서 정치학, 통계학, 컴퓨터 과학, 비평가, 예술 관련 교수로 활동했다.
+프린스턴과 예일에서 다음과 같은 과목을 가르쳤다. 정책 결정, 통계적인 삽화, 응용 통계학, 정보 디자인, 정치 경제학, 여론, 민주주의 이론, 연구 방법들, 연구와 저술 관련.
 
 
 ## 설립자
@@ -29,21 +29,20 @@ title: 에드워드 터프티 Edward Tufte
 
 ### 박물관과 미술관
 에드워드 터프티는 아래 박물관과 미술관의 설립자이면서 소유자이다.
-  * ET Modern museum/gallery in Chelsea art district, 547 West 20th Street, New York City, 2010-2013.
+ET Modern museum/gallery in Chelsea art district, 547 West 20th Street, New York City, 2010-2013.
 
 ## 조각전과 사진전
-* Fermilabs: The Cognitive Art of Feynman Diagrams at Fermi National Accelerator Laboratory
-* Multiplicity, Flying Dreams, Signs of Multiplicity, All Possible Photons, Ironstone Artworks at ET Modern Gallery in Chelsea
-* Escaping Flatland: Sculptures and Prints at Architecture+Design Museum in Los Angeles.
-* Major sculpture and landscape artwork exhibit at The Aldrich Contemporary Art Museum, June 2009–April 2010.
-    * Group shows at The Drawing Room and 8 other museums and galleries.
+Fermilabs: The Cognitive Art of Feynman Diagrams at Fermi National Accelerator Laboratory
+Multiplicity, Flying Dreams, Signs of Multiplicity, All Possible Photons, Ironstone Artworks at ET Modern Gallery in Chelsea
+Escaping Flatland: Sculptures and Prints at Architecture+Design Museum in Los Angeles.
+Major sculpture and landscape artwork exhibit at The Aldrich Contemporary Art Museum, June 2009–April 2010. Group shows at The Drawing Room and 8 other museums and galleries.
 
 ## 협회
   에드워드 터프티는 Cheshire Neighborhood Association의 설립자이면서 의장이다.
 
 
 ## 명예 학위
-*  Williams College, Connecticut College, Cooper Union, Saint Joseph College, Maryland Art Institute, Minneapolis College of Art, University of the Arts.
+Williams College, Connecticut College, Cooper Union, Saint Joseph College, Maryland Art Institute, Minneapolis College of Art, University of the Arts.
 
 
 ## 회원
@@ -62,49 +61,28 @@ title: 에드워드 터프티 Edward Tufte
 
 
 ## 데이터 분석과 디스플레이 디자인 관련 컨설팅과 강좌
-* NASA
-* Apple
-* The New York Times
-* IBM
-* Bose
-* Fidelity Investments
-* Centers for Disease Control and Prevention
-* Google
-* Hewlett-Packard
-* Medtronic
-* New Jersey Transit
-* Sun Microsystems
-* Newsweek
-* NBC News
-* CBS News
-* Bloomberg
-* Thomson Consumer Electronics
-* President's Commission on Federal Statistics
-* Bureau of Justice Statistics
-* Lotus Development Corporation
-* Federal Energy Administration
-* various law firms.
+* NASA / Apple / The New York Times / IBM / Bose / Fidelity Investments / Centers for Disease Control and Prevention / Google / Hewlett-Packard / Medtronic / New Jersey Transit / Sun Microsystems / Newsweek / NBC News / CBS News / Bloomberg / Thomson Consumer Electronics / President's Commission on Federal Statistics / Bureau of Justice Statistics / Lotus Development Corporation / Federal Energy Administration / various law firms.
 
 
 ## 책
-* The Quantitative Analysis of Social Problems, editor (Addison-Wesley, 1970).
+The Quantitative Analysis of Social Problems, editor (Addison-Wesley, 1970).
 
-* Size and Democracy, Robert A. Dahl and Edward R. Tufte (Stanford University Press, 1973). Paperback edition, 1975.
+Size and Democracy, Robert A. Dahl and Edward R. Tufte (Stanford University Press, 1973). Paperback edition, 1975.
   * Translations into Japanese, Korean, and Thai.
 
-* Data Analysis for Politics and Policy (Prentice-Hall, 1974). 17th printing, 1994. eBook 2013.
+Data Analysis for Politics and Policy (Prentice-Hall, 1974). 17th printing, 1994. eBook 2013.
 
-* Political Control of the Economy (Princeton University Press, 1978). Paperback edition, 1980.
-  * Kammerer Award of the American Political Science Association, best book on U.S. national policy, 1979.
-  * Named a "Citation Classic" in 1988 by the Institute for Scientific Information.
+Political Control of the Economy (Princeton University Press, 1978). Paperback edition, 1980.
+* Kammerer Award of the American Political Science Association, best book on U.S. national policy, 1979.
+* Named a "Citation Classic" in 1988 by the Institute for Scientific Information.
 
-* [The Visual Display of Quantitative Information](https://www.edwardtufte.com/tufte/books_vdqi) (Graphics Press, 1983).
+[The Visual Display of Quantitative Information](https://www.edwardtufte.com/tufte/books_vdqi) (Graphics Press, 1983).
   * Written, designed, and published by Edward Tufte. 17th printing, 1999. Second edition, 2001, 8th printing, 2013.
   * Spanish edition 2013. French edition 2014.
   * Named a "Citation Classic" in 1992 by the Institute for Scientific Information.
   * Named one of the 100 best books of the 20th-century by amazon.com.
 
-* [Envisioning Information](https://www.edwardtufte.com/tufte/books_ei) (Graphics Press, 1990).
+[Envisioning Information](https://www.edwardtufte.com/tufte/books_ei) (Graphics Press, 1990).
   * Written, designed, and published by Edward Tufte. 14th printing, 2013.
   * Phi Beta Kappa Award in Science, 1991, for "best book contributing to the literature of science."
   * Joseph Rigo Award for contributions to software documentation, Association for Computing Machinery, 1992.
@@ -118,7 +96,7 @@ title: 에드워드 터프티 Edward Tufte
   * 1991 Art and Design Show Award, SIGGRAPH, Association of Computing Machinery.
   * Award for Instructional Development Tools, Association for Education Communications and Technology, 1992.
 
-* [Visual Explanations: Images and Quantities, Evidence and Narrative](https://www.edwardtufte.com/tufte/books_visex) (Graphics Press, 1997).
+[Visual Explanations: Images and Quantities, Evidence and Narrative](https://www.edwardtufte.com/tufte/books_visex) (Graphics Press, 1997).
   * Written, designed, and published by Edward Tufte. 10th printing, 2012.
   * Award, The 100 Show, American Center for Design.
   * Silver Medal, The Art Directors 77th Annual Awards.
@@ -129,7 +107,7 @@ title: 에드워드 터프티 Edward Tufte
   * *The New York Times* describes ET as "the Leonardo da Vinci of data."
     * 뉴욕 타임스는 에드워드 터프티를 "데이터의 레오나르도 다 빈치"라고 묘사했다.
 
-* [Beautiful Evidence](https://www.edwardtufte.com/tufte/books_be) (Graphics Press, 2006).
+[Beautiful Evidence](https://www.edwardtufte.com/tufte/books_be) (Graphics Press, 2006).
   * Written, designed, and published by Edward Tufte. 4th printing, 2013.
   * Best Innovation and Design Books, 2006, *Business Week* ("A brilliant masterpiece from the Galileo of graphics.")
     * "그래픽의 갈릴레오가 빚어낸 눈부신 걸작"
@@ -140,9 +118,9 @@ title: 에드워드 터프티 Edward Tufte
 
 
 ## 기타 등등
-* [GitHub - edwardtufte/tufte-css: Style your webpage like Edward Tufte's handouts.](https://github.com/edwardtufte/tufte-css)
-* [Tufte Handout: An implementation in R Markdown](https://rstudio.github.io/tufte/)
+[GitHub - edwardtufte/tufte-css: Style your webpage like Edward Tufte's handouts.](https://github.com/edwardtufte/tufte-css)
+[Tufte Handout: An implementation in R Markdown](https://rstudio.github.io/tufte/)
 
 
 ## 참고 문헌
-* [에드워드 터프티의 이력서](http://www.edwardtufte.com/files/ETresume.pdf)
+[에드워드 터프티의 이력서](http://www.edwardtufte.com/files/ETresume.pdf)
