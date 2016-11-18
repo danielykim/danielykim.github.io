@@ -2,27 +2,27 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Blog: Daniel Kim</title>
-    <description>Data Scientist</description>
+    <description>Data Artientist</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 18 Nov 2016 13:19:35 +0000</pubDate>
-    <lastBuildDate>Fri, 18 Nov 2016 13:19:35 +0000</lastBuildDate>
+    <pubDate>Fri, 18 Nov 2016 16:15:31 +0000</pubDate>
+    <lastBuildDate>Fri, 18 Nov 2016 16:15:31 +0000</lastBuildDate>
     <generator>Jekyll v3.3.0</generator>
     
       <item>
         <title>에드워드 터프티 Edward Tufte</title>
         <description>&lt;p&gt;&lt;img src=&quot;http://www.edwardtufte.com/bboard/images/0003mW-10280/download.jpg&quot; alt=&quot;Edward Tufte&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;에드워드 롤프 터프티 Edward Rolf Tufte (1942년 3월 14일 미주리 출생)는 미국 통계학자이면서 예술가이다. 동시에 예일 대학교에서 3가지 분야의 명예 교수이다. 정치학, 통계학, 컴퓨터 과학. 정보 디자인 관련 저술과 데이터 시각화 분야 개척으로 알려져 있다. 그는 직접 저술하고 디자인하여 자신의 출판사 Graphics Press를 통해 데이터 시각화의 고전이라고 불리는 4개의 책을 출판했다. &lt;em&gt;뉴욕 타임스&lt;/em&gt;는 에드워드 터프티를 “데이터의 레오나르도 다 빈치”라고 하였으며, &lt;em&gt;비즈니스 위크&lt;/em&gt;는 “그래픽의 갈릴레오”로 불렀다. Edward Modern 미술관과 스튜디오의 설립자이기도 하다.&lt;/p&gt;
+&lt;p&gt;에드워드 롤프 터프티 Edward Rolf Tufte (1942년 3월 14일 미주리 출생)는 미국 통계학자이면서 예술가이다. 동시에 예일 대학교에서 3가지 분야의 명예 교수이다. 정치학, 통계학, 컴퓨터 과학. 정보 디자인 관련 저술과 데이터 시각화 분야 개척으로 알려져 있다. 그는 직접 저술하고 디자인하여 데이터 시각화의 고전이라고 불리는 4개의 책을 자신이 소유하고 있는 출판사 Graphics Press를 통해 출판했다. &lt;em&gt;뉴욕 타임스&lt;/em&gt;는 에드워드 터프티를 “데이터의 레오나르도 다 빈치”라고 하였으며, &lt;em&gt;비즈니스 위크&lt;/em&gt;는 “그래픽의 갈릴레오”로 불렀다. Edward Modern 미술관과 스튜디오의 설립자이기도 하다.&lt;/p&gt;
 
 &lt;p&gt;참고: 에드워드 터프티 홈페이지, &lt;a href=&quot;https://www.edwardtufte.com/tufte/index&quot;&gt;The Work of Edward Tufte and Graphics Press&lt;/a&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;section&quot;&gt;전기&lt;/h2&gt;
-&lt;p&gt;1960년 비버리 힐스 고등학교를 졸업했다. 
-이후 스탠퍼드에서 통계학으로 학사와 석사 학위를(1964년), 1968년 예일 대학교에서 정치학으로 박사학위를 받았다.
-1967년부터 1974년까지 프린스턴 대학교에서 Politics와 Public Affairs 관련 강사와 교수로,
-1974년부터 1977년까지 우드로우 윌슨 스쿨에서 Public Affairs 교수로,
-1977년부터 1999년까지 예일 대학교에서 정치학, 통계학, 컴퓨터 과학, 비평가, 예술 관련 교수로 활동했다.
+&lt;p&gt;1960년 비버리 힐스 고등학교를 졸업했다. &lt;br /&gt;
+이후 스탠퍼드에서 통계학으로 학사와 석사 학위를(1964년), 1968년 예일 대학교에서 정치학으로 박사학위를 받았다. &lt;br /&gt;
+1967년부터 1974년까지 프린스턴 대학교에서 Politics와 Public Affairs 관련 강사와 교수로, &lt;br /&gt;
+1974년부터 1977년까지 우드로우 윌슨 스쿨에서 Public Affairs 교수로, &lt;br /&gt;
+1977년부터 1999년까지 예일 대학교에서 정치학, 통계학, 컴퓨터 과학, 비평가, 예술 관련 교수로 활동했다. &lt;br /&gt;
 프린스턴과 예일에서 다음과 같은 과목을 가르쳤다. 정책 결정, 통계적인 삽화, 응용 통계학, 정보 디자인, 정치 경제학, 여론, 민주주의 이론, 연구 방법들, 연구와 저술 관련.&lt;/p&gt;
 
 &lt;h2 id=&quot;section-1&quot;&gt;설립자&lt;/h2&gt;
@@ -33,13 +33,13 @@
 “Presenting Data and Information”이라는 1일 강좌를 1993년부터 2014년까지 754번 진행하면서 약 26만 9천명의 학생과 함께하였고, 이 역시 현재 진행형이다.&lt;/p&gt;
 
 &lt;h3 id=&quot;section-3&quot;&gt;박물관과 미술관&lt;/h3&gt;
-&lt;p&gt;에드워드 터프티는 아래 박물관과 미술관의 설립자이면서 소유자이다.
+&lt;p&gt;에드워드 터프티는 아래 박물관과 미술관의 설립자이면서 소유자이다. &lt;br /&gt;
 ET Modern museum/gallery in Chelsea art district, 547 West 20th Street, New York City, 2010-2013.&lt;/p&gt;
 
 &lt;h2 id=&quot;section-4&quot;&gt;조각전과 사진전&lt;/h2&gt;
-&lt;p&gt;Fermilabs: The Cognitive Art of Feynman Diagrams at Fermi National Accelerator Laboratory
-Multiplicity, Flying Dreams, Signs of Multiplicity, All Possible Photons, Ironstone Artworks at ET Modern Gallery in Chelsea
-Escaping Flatland: Sculptures and Prints at Architecture+Design Museum in Los Angeles.
+&lt;p&gt;Fermilabs: The Cognitive Art of Feynman Diagrams at Fermi National Accelerator Laboratory &lt;br /&gt;
+Multiplicity, Flying Dreams, Signs of Multiplicity, All Possible Photons, Ironstone Artworks at ET Modern Gallery in Chelsea &lt;br /&gt;
+Escaping Flatland: Sculptures and Prints at Architecture+Design Museum in Los Angeles. &lt;br /&gt;
 Major sculpture and landscape artwork exhibit at The Aldrich Contemporary Art Museum, June 2009–April 2010. Group shows at The Drawing Room and 8 other museums and galleries.&lt;/p&gt;
 
 &lt;h2 id=&quot;section-5&quot;&gt;협회&lt;/h2&gt;
@@ -49,93 +49,82 @@ Major sculpture and landscape artwork exhibit at The Aldrich Contemporary Art Mu
 &lt;p&gt;Williams College, Connecticut College, Cooper Union, Saint Joseph College, Maryland Art Institute, Minneapolis College of Art, University of the Arts.&lt;/p&gt;
 
 &lt;h2 id=&quot;section-7&quot;&gt;회원&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;American Academy of Arts and Sciences&lt;/li&gt;
-  &lt;li&gt;Guggenheim Foundation&lt;/li&gt;
-  &lt;li&gt;American Statistical Association&lt;/li&gt;
-  &lt;li&gt;Center for Advanced Study in the Behavioral Sciences,&lt;/li&gt;
-  &lt;li&gt;Society for Technical Communication&lt;/li&gt;
-&lt;/ul&gt;
+&lt;p&gt;American Academy of Arts and Sciences &lt;br /&gt;
+Guggenheim Foundation &lt;br /&gt;
+American Statistical Association &lt;br /&gt;
+Center for Advanced Study in the Behavioral Sciences &lt;br /&gt;
+Society for Technical Communication&lt;/p&gt;
 
 &lt;h2 id=&quot;section-8&quot;&gt;수상과 특허&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;Donald Campbell Award for Outstanding Methodological Innovations in Policy Studies.&lt;/li&gt;
-  &lt;li&gt;American Institute of Graphics Arts medal. Tercentennial Lecture, Yale University.&lt;/li&gt;
-  &lt;li&gt;Received 40 awards for books.&lt;/li&gt;
-  &lt;li&gt;Patent (with Professor Seth Powsner, Yale Medical School) for graphical display of status of medical patients.&lt;/li&gt;
-&lt;/ul&gt;
+&lt;p&gt;Donald Campbell Award for Outstanding Methodological Innovations in Policy Studies. &lt;br /&gt;
+American Institute of Graphics Arts medal. Tercentennial Lecture, Yale University. &lt;br /&gt;
+Received 40 awards for books. &lt;br /&gt;
+Patent (with Professor Seth Powsner, Yale Medical School) for graphical display of status of medical patients.&lt;/p&gt;
 
 &lt;h2 id=&quot;section-9&quot;&gt;데이터 분석과 디스플레이 디자인 관련 컨설팅과 강좌&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;NASA / Apple / The New York Times / IBM / Bose / Fidelity Investments / Centers for Disease Control and Prevention / Google / Hewlett-Packard / Medtronic / New Jersey Transit / Sun Microsystems / Newsweek / NBC News / CBS News / Bloomberg / Thomson Consumer Electronics / President’s Commission on Federal Statistics / Bureau of Justice Statistics / Lotus Development Corporation / Federal Energy Administration / various law firms.&lt;/li&gt;
-&lt;/ul&gt;
+&lt;p&gt;NASA / Apple / The New York Times / IBM / Bose / Fidelity Investments / Centers for Disease Control and Prevention / Google / Hewlett-Packard / Medtronic / New Jersey Transit / Sun Microsystems / Newsweek / NBC News / CBS News / Bloomberg / Thomson Consumer Electronics / President’s Commission on Federal Statistics / Bureau of Justice Statistics / Lotus Development Corporation / Federal Energy Administration / various law firms.&lt;/p&gt;
 
 &lt;h2 id=&quot;section-10&quot;&gt;책&lt;/h2&gt;
 &lt;p&gt;The Quantitative Analysis of Social Problems, editor (Addison-Wesley, 1970).&lt;/p&gt;
 
 &lt;p&gt;Size and Democracy, Robert A. Dahl and Edward R. Tufte (Stanford University Press, 1973). Paperback edition, 1975.&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;Translations into Japanese, Korean, and Thai.&lt;/li&gt;
-&lt;/ul&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;Translations into Japanese, Korean, and Thai.&lt;/p&gt;
+&lt;/blockquote&gt;
 
 &lt;p&gt;Data Analysis for Politics and Policy (Prentice-Hall, 1974). 17th printing, 1994. eBook 2013.&lt;/p&gt;
 
 &lt;p&gt;Political Control of the Economy (Princeton University Press, 1978). Paperback edition, 1980.&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Kammerer Award of the American Political Science Association, best book on U.S. national policy, 1979.&lt;/li&gt;
-  &lt;li&gt;Named a “Citation Classic” in 1988 by the Institute for Scientific Information.&lt;/li&gt;
-&lt;/ul&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;Kammerer Award of the American Political Science Association, best book on U.S. national policy, 1979. &lt;br /&gt;
+Named a “Citation Classic” in 1988 by the Institute for Scientific Information.&lt;/p&gt;
+&lt;/blockquote&gt;
 
 &lt;p&gt;&lt;a href=&quot;https://www.edwardtufte.com/tufte/books_vdqi&quot;&gt;The Visual Display of Quantitative Information&lt;/a&gt; (Graphics Press, 1983).&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Written, designed, and published by Edward Tufte. 17th printing, 1999. Second edition, 2001, 8th printing, 2013.&lt;/li&gt;
-  &lt;li&gt;Spanish edition 2013. French edition 2014.&lt;/li&gt;
-  &lt;li&gt;Named a “Citation Classic” in 1992 by the Institute for Scientific Information.&lt;/li&gt;
-  &lt;li&gt;Named one of the 100 best books of the 20th-century by amazon.com.&lt;/li&gt;
-&lt;/ul&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;Written, designed, and published by Edward Tufte. 17th printing, 1999. Second edition, 2001, 8th printing, 2013. &lt;br /&gt;
+Spanish edition 2013. French edition 2014. &lt;br /&gt;
+Named a “Citation Classic” in 1992 by the Institute for Scientific Information. &lt;br /&gt;
+Named one of the 100 best books of the 20th-century by amazon.com. &lt;br /&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
 
 &lt;p&gt;&lt;a href=&quot;https://www.edwardtufte.com/tufte/books_ei&quot;&gt;Envisioning Information&lt;/a&gt; (Graphics Press, 1990).&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Written, designed, and published by Edward Tufte. 14th printing, 2013.&lt;/li&gt;
-  &lt;li&gt;Phi Beta Kappa Award in Science, 1991, for “best book contributing to the literature of science.”&lt;/li&gt;
-  &lt;li&gt;Joseph Rigo Award for contributions to software documentation, Association for Computing Machinery, 1992.&lt;/li&gt;
-  &lt;li&gt;Citation for Excellence, American Institute of Architects, 1994.&lt;/li&gt;
-  &lt;li&gt;Chairman’s Award in International Book Publishing, American Institute of Architects, 1994.&lt;/li&gt;
-  &lt;li&gt;George Wittenborn Book Award of the Art Libraries Association of North America.&lt;/li&gt;
-  &lt;li&gt;Best Book Design of 1990, National Association of Independent Publishers.&lt;/li&gt;
-  &lt;li&gt;1990 Computer Book Award, Computer Press Association.&lt;/li&gt;
-  &lt;li&gt;1990 AIGA Book Show Award, American Institute of Graphic Arts.&lt;/li&gt;
-  &lt;li&gt;Best Graphic Design 1990 (of 700 entries), &lt;em&gt;ID: International Design&lt;/em&gt;.&lt;/li&gt;
-  &lt;li&gt;1991 Art and Design Show Award, SIGGRAPH, Association of Computing Machinery.&lt;/li&gt;
-  &lt;li&gt;Award for Instructional Development Tools, Association for Education Communications and Technology, 1992.&lt;/li&gt;
-&lt;/ul&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;Written, designed, and published by Edward Tufte. 14th printing, 2013. &lt;br /&gt;
+Phi Beta Kappa Award in Science, 1991, for “best book contributing to the literature of science.” &lt;br /&gt;
+Joseph Rigo Award for contributions to software documentation, Association for Computing Machinery, 1992. &lt;br /&gt;
+Citation for Excellence, American Institute of Architects, 1994. &lt;br /&gt;
+Chairman’s Award in International Book Publishing, American Institute of Architects, 1994. &lt;br /&gt;
+George Wittenborn Book Award of the Art Libraries Association of North America. &lt;br /&gt;
+Best Book Design of 1990, National Association of Independent Publishers. &lt;br /&gt;
+1990 Computer Book Award, Computer Press Association. &lt;br /&gt;
+1990 AIGA Book Show Award, American Institute of Graphic Arts. &lt;br /&gt;
+Best Graphic Design 1990 (of 700 entries), &lt;em&gt;ID: International Design&lt;/em&gt;. &lt;br /&gt;
+1991 Art and Design Show Award, SIGGRAPH, Association of Computing Machinery. &lt;br /&gt;
+Award for Instructional Development Tools, Association for Education Communications and Technology, 1992.&lt;/p&gt;
+&lt;/blockquote&gt;
 
 &lt;p&gt;&lt;a href=&quot;https://www.edwardtufte.com/tufte/books_visex&quot;&gt;Visual Explanations: Images and Quantities, Evidence and Narrative&lt;/a&gt; (Graphics Press, 1997).&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Written, designed, and published by Edward Tufte. 10th printing, 2012.&lt;/li&gt;
-  &lt;li&gt;Award, The 100 Show, American Center for Design.&lt;/li&gt;
-  &lt;li&gt;Silver Medal, The Art Directors 77th Annual Awards.&lt;/li&gt;
-  &lt;li&gt;American Institute of Architects, International Book Award, 1998.&lt;/li&gt;
-  &lt;li&gt;Society for Technical Communication, Award of Distinguished Technical Communication, 1998.&lt;/li&gt;
-  &lt;li&gt;Fifty Books of the Year, American Institute of Graphic Arts, 1998.&lt;/li&gt;
-  &lt;li&gt;&lt;em&gt;ID: International Design&lt;/em&gt;, Annual Design Review winner, 1998.&lt;/li&gt;
-  &lt;li&gt;&lt;em&gt;The New York Times&lt;/em&gt; describes ET as “the Leonardo da Vinci of data.” 뉴욕 타임스는 에드워드 터프티를 “데이터의 레오나르도 다 빈치”라고 묘사했다.&lt;/li&gt;
-&lt;/ul&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;Written, designed, and published by Edward Tufte. 10th printing, 2012. &lt;br /&gt;
+Award, The 100 Show, American Center for Design. &lt;br /&gt;
+Silver Medal, The Art Directors 77th Annual Awards. &lt;br /&gt;
+American Institute of Architects, International Book Award, 1998. &lt;br /&gt;
+Society for Technical Communication, Award of Distinguished Technical Communication, 1998. &lt;br /&gt;
+Fifty Books of the Year, American Institute of Graphic Arts, 1998. &lt;br /&gt;
+&lt;em&gt;ID: International Design&lt;/em&gt;, Annual Design Review winner, 1998. &lt;br /&gt;
+&lt;em&gt;The New York Times&lt;/em&gt; describes ET as “the Leonardo da Vinci of data.” 뉴욕 타임스는 에드워드 터프티를 “데이터의 레오나르도 다 빈치”라고 묘사했다.&lt;/p&gt;
+&lt;/blockquote&gt;
 
 &lt;p&gt;&lt;a href=&quot;https://www.edwardtufte.com/tufte/books_be&quot;&gt;Beautiful Evidence&lt;/a&gt; (Graphics Press, 2006).&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Written, designed, and published by Edward Tufte. 4th printing, 2013.&lt;/li&gt;
-  &lt;li&gt;Best Innovation and Design Books, 2006, &lt;em&gt;Business Week&lt;/em&gt; (“A brilliant masterpiece from the Galileo of graphics.”) “그래픽의 갈릴레오가 빚어낸 눈부신 걸작”&lt;/li&gt;
-  &lt;li&gt;Best in show, graphic design, New England, Print magazine, 2007&lt;/li&gt;
-  &lt;li&gt;The Editors Recommend, Scientific American.&lt;/li&gt;
-  &lt;li&gt;Best Business and Technology Books, 2006, ZDNET.&lt;/li&gt;
-  &lt;li&gt;From Martin Kemp’s review of Beautiful Evidence in Nature (13 July 2006): “Tufte is an expert in the presentation of statistical evidence and a sculptor, and has established himself as the world’s leading analyst of graphic information.”&lt;/li&gt;
-&lt;/ul&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;Written, designed, and published by Edward Tufte. 4th printing, 2013. &lt;br /&gt;
+Best Innovation and Design Books, 2006, &lt;em&gt;Business Week&lt;/em&gt; (“A brilliant masterpiece from the Galileo of graphics.”) “그래픽의 갈릴레오가 빚어낸 눈부신 걸작” &lt;br /&gt;
+Best in show, graphic design, New England, Print magazine, 2007 &lt;br /&gt;
+The Editors Recommend, Scientific American. &lt;br /&gt;
+Best Business and Technology Books, 2006, ZDNET. &lt;br /&gt;
+From Martin Kemp’s review of Beautiful Evidence in Nature (13 July 2006): “Tufte is an expert in the presentation of statistical evidence and a sculptor, and has established himself as the world’s leading analyst of graphic information.”&lt;/p&gt;
+&lt;/blockquote&gt;
 
 &lt;h2 id=&quot;section-11&quot;&gt;기타 등등&lt;/h2&gt;
 &lt;p&gt;&lt;a href=&quot;https://github.com/edwardtufte/tufte-css&quot;&gt;GitHub - edwardtufte/tufte-css: Style your webpage like Edward Tufte’s handouts.&lt;/a&gt;
@@ -244,13 +233,13 @@ Major sculpture and landscape artwork exhibit at The Aldrich Contemporary Art Mu
         &lt;p&gt;Figures should try to use the &lt;code&gt;figure&lt;/code&gt; element, which by default are constrained to the main column. Don’t wrap figures in a paragraph tag. Any label or margin note goes in a regular margin note inside the figure. For example, most of the time one should introduce a figure directly into the main flow of discussion, like so:&lt;/p&gt;
         &lt;figure&gt;
           &lt;label for=&quot;mn-exports-imports&quot; class=&quot;margin-toggle&quot;&gt;&amp;#8853;&lt;/label&gt;&lt;input type=&quot;checkbox&quot; id=&quot;mn-exports-imports&quot; class=&quot;margin-toggle&quot;/&gt;&lt;span class=&quot;marginnote&quot;&gt;From Edward Tufte, &lt;em&gt;Visual Display of Quantitative Information&lt;/em&gt;, page 92.&lt;/span&gt;
-          &lt;img src=&quot;img/exports-imports.png&quot; alt=&quot;Exports and Imports to and from Denmark &amp; Norway from 1700 to 1780&quot; /&gt;
+          &lt;img src=&quot;https://edwardtufte.github.io/tufte-css/img/exports-imports.png&quot; alt=&quot;Exports and Imports to and from Denmark &amp; Norway from 1700 to 1780&quot; /&gt;
         &lt;/figure&gt;
 
-        &lt;p&gt;&lt;label for=&quot;mn-figure-1&quot; class=&quot;margin-toggle&quot;&gt;&amp;#8853;&lt;/label&gt;&lt;input type=&quot;checkbox&quot; id=&quot;mn-figure-1&quot; class=&quot;margin-toggle&quot;/&gt;&lt;span class=&quot;marginnote&quot;&gt;&lt;img src=&quot;img/rhino.png&quot; alt=&quot;Image of a Rhinoceros&quot;/&gt;F.J. Cole, “The History of Albrecht Dürer’s Rhinoceros in Zooological Literature,” &lt;em&gt;Science, Medicine, and History: Essays on the Evolution of Scientific Thought and Medical Practice&lt;/em&gt; (London, 1953), ed. E. Ashworth Underwood, 337-356. From page 71 of Edward Tufte’s &lt;em&gt;Visual Explanations&lt;/em&gt;.&lt;/span&gt; But tight integration of graphics with text is central to Tufte’s work even when those graphics are ancillary to the main body of a text. In many of those cases, a margin figure may be most appropriate. To place figures in the margin, just wrap an image (or whatever) in a margin note inside a &lt;code&gt;p&lt;/code&gt; tag, as seen to the right of this paragraph.&lt;/p&gt;
+        &lt;p&gt;&lt;label for=&quot;mn-figure-1&quot; class=&quot;margin-toggle&quot;&gt;&amp;#8853;&lt;/label&gt;&lt;input type=&quot;checkbox&quot; id=&quot;mn-figure-1&quot; class=&quot;margin-toggle&quot;/&gt;&lt;span class=&quot;marginnote&quot;&gt;&lt;img src=&quot;https://edwardtufte.github.io/tufte-css/img/rhino.png&quot; alt=&quot;Image of a Rhinoceros&quot;/&gt;F.J. Cole, “The History of Albrecht Dürer’s Rhinoceros in Zooological Literature,” &lt;em&gt;Science, Medicine, and History: Essays on the Evolution of Scientific Thought and Medical Practice&lt;/em&gt; (London, 1953), ed. E. Ashworth Underwood, 337-356. From page 71 of Edward Tufte’s &lt;em&gt;Visual Explanations&lt;/em&gt;.&lt;/span&gt; But tight integration of graphics with text is central to Tufte’s work even when those graphics are ancillary to the main body of a text. In many of those cases, a margin figure may be most appropriate. To place figures in the margin, just wrap an image (or whatever) in a margin note inside a &lt;code&gt;p&lt;/code&gt; tag, as seen to the right of this paragraph.&lt;/p&gt;
         &lt;p&gt;If you need a full-width figure, give it the &lt;code&gt;fullwidth&lt;/code&gt; class. Make sure that’s inside an &lt;code&gt;article&lt;/code&gt;, and it will take up (almost) the full width of the screen. This approach is demonstrated below using Edward Tufte’s English translation of the Napoleon’s March data visualization. From &lt;em&gt;Beautiful Evidence&lt;/em&gt;, page 122-124.&lt;/p&gt;
         &lt;figure class=&quot;fullwidth&quot;&gt;
-          &lt;img src=&quot;img/napoleons-march.png&quot; alt=&quot;Figurative map of the successive losses of the French Army in the Russian campaign, 1812-1813&quot; /&gt;
+          &lt;img src=&quot;https://edwardtufte.github.io/tufte-css/img/napoleons-march.png&quot; alt=&quot;Figurative map of the successive losses of the French Army in the Russian campaign, 1812-1813&quot; /&gt;
         &lt;/figure&gt;
       &lt;/section&gt;
 
@@ -281,9 +270,9 @@ Major sculpture and landscape artwork exhibit at The Aldrich Contemporary Art Mu
         &lt;h2 id=&quot;imagequilts&quot;&gt;ImageQuilts&lt;/h2&gt;
         &lt;p&gt;Tufte CSS provides support for Edward Tufte and Adam Schwartz’s &lt;a href=&quot;http://imagequilts.com/&quot;&gt;ImageQuilts&lt;/a&gt;. See the &lt;a href=&quot;http://www.edwardtufte.com/bboard/q-and-a-fetch-msg?msg_id=0003wk&quot;&gt;ET forum announcement thread&lt;/a&gt; for more on quilts. Some have ragged edges, others straight. Include these images just as you would any other &lt;code&gt;figure&lt;/code&gt;.&lt;/p&gt;
         &lt;p&gt;This is an ImageQuilt surveying Chinese calligraphy, placed in a full-width figure to accomodate its girth:&lt;/p&gt;
-        &lt;figure class=&quot;fullwidth&quot;&gt;&lt;img src=&quot;img/imagequilt-chinese-calligraphy.png&quot; alt=&quot;Image of Chinese Calligraphy&quot;/&gt;&lt;/figure&gt;
+        &lt;figure class=&quot;fullwidth&quot;&gt;&lt;img src=&quot;https://edwardtufte.github.io/tufte-css/img/imagequilt-chinese-calligraphy.png&quot; alt=&quot;Image of Chinese Calligraphy&quot;/&gt;&lt;/figure&gt;
         &lt;p&gt;Here is an ImageQuilt of 47 animal sounds over and over, in a figure constrained to the main text region. This quilt has ragged edges, but the image itself is of course still rectangular.&lt;/p&gt;
-        &lt;figure&gt;&lt;img src=&quot;img/imagequilt-animal-sounds.png&quot; alt=&quot;Image of animal sounds&quot;/&gt;&lt;/figure&gt;
+        &lt;figure&gt;&lt;img src=&quot;https://edwardtufte.github.io/tufte-css/img/imagequilt-animal-sounds.png&quot; alt=&quot;Image of animal sounds&quot;/&gt;&lt;/figure&gt;
       &lt;/section&gt;
 
       &lt;section&gt;
