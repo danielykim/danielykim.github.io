@@ -3,6 +3,7 @@ layout: post
 title: 6.4.3.5. 삼중 지수 평활법
 ---
 
+
 <section>
   <p>
 만약에 데이터에 추세와 계절성 둘 다 있다면 어떻게 해야할까?  
@@ -43,6 +44,7 @@ $$ F_{t+m} = (S_{t} + m b_{t}) I_{t - L + m} \qquad 예측 $$
 그리고 \( \alpha, \beta, \gamma\)는 오차의 MSE를 최소화하여 구할 수 있는 상수이다. 이 작업은 좋은 소프트웨어 패키지의 몫이다.
   </p>
 </section>
+
 <section>
   <p>
     <label for="mn-h02" class="margin-toggle">⊕ </label>
@@ -53,6 +55,7 @@ $$ F_{t+m} = (S_{t} + m b_{t}) I_{t - L + m} \qquad 예측 $$
     HW 방법을 초기화하려면 <u>적어도</u> 하나의 완벽한 계절 데이터가 필요하다. 계절성 지표 초기값 \( I_{t-L} \)을 추정하기 위해서이다.
   </p>
 </section>
+
 <section>
   <p>
     <label for="mn-h03" class="margin-toggle">⊕ </label>
@@ -63,6 +66,7 @@ $$ F_{t+m} = (S_{t} + m b_{t}) I_{t - L + m} \qquad 예측 $$
 어떤 하나의 계절 데이터는 \( L \) 주기로 구성된다. 그리고 한 주기에서 다음 주기까지의 추세 인자를 추정해야 한다. 그러기 위해서는 두 계절이 있는 데이터(즉, \( 2L \) 주기가 있는) 사용하기를 권한다.
   </p>
 </section>
+
 <section>
   <h3>초기값 추세 인자</h3>
   <p>
@@ -79,6 +83,7 @@ $$ b = \frac{1}{L} \left( \frac{y_{L+1} - y_{1}}{L} + \frac{y_{L+2}-y_{2}}{L} + 
     1년에 4 주기가 있는 6년치 데이터를 살펴보자.
   </p>
 </section>
+
 <section>
   <p>
     <label for="mn-h05" class="margin-toggle">⊕ </label>
@@ -89,6 +94,7 @@ $$ b = \frac{1}{L} \left( \frac{y_{L+1} - y_{1}}{L} + \frac{y_{L+2}-y_{2}}{L} + 
     <b>1단계:</b> 각 연도마다 주기의 평균을 구한다.
   </p>
 </section>
+
 <section>
   <p>
     <label for="mn-h06" class="margin-toggle">⊕ </label>
@@ -112,6 +118,7 @@ $$ b = \frac{1}{L} \left( \frac{y_{L+1} - y_{1}}{L} + \frac{y_{L+2}-y_{2}}{L} + 
     </table>
   </div>
 </section>
+
 <section>
   <p>
     <label for="mn-h07" class="margin-toggle">⊕ </label>
@@ -136,6 +143,7 @@ $$
 다음 내용에서는 삼중 지수 평활법을 적용하는 예제를 다룰 것이다.  
   </p>
 </section>
+
 <section>
   <h3>계수가 0인 경우</h3>
   <p>
@@ -153,6 +161,7 @@ $$
 당연히 아니다! 추세나 계절성 관련 초기값이 MSE가 최소일 수 있는 경우라 갱신할 필요 없어서 그렇다. 정말로 그런지 검증하기 위해 갱신하는 식을 반드시 점검해야 한다.
   </p>
 </section>
+
 <section>
   <ul class="pager">
     <li class="previous"><a href="{{ "/articles/2016/11/19/ESH-06-04-03-04" | prepend: site.baseurl }}">Previous</a></li>

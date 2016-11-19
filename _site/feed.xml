@@ -5,13 +5,14 @@
     <description>Data Artientist</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 19 Nov 2016 06:50:00 +0000</pubDate>
-    <lastBuildDate>Sat, 19 Nov 2016 06:50:00 +0000</lastBuildDate>
+    <pubDate>Sat, 19 Nov 2016 07:06:13 +0000</pubDate>
+    <lastBuildDate>Sat, 19 Nov 2016 07:06:13 +0000</lastBuildDate>
     <generator>Jekyll v3.3.0</generator>
     
       <item>
         <title>6.4. 시계열 분석 입문</title>
-        <description>&lt;section&gt;
+        <description>&lt;article&gt;
+&lt;section&gt;
   &lt;p&gt;
   &lt;label for=&quot;mn-h01&quot; class=&quot;margin-toggle&quot;&gt;⊕ &lt;/label&gt;
   &lt;input type=&quot;checkbox&quot; id=&quot;mn-h01&quot; class=&quot;margin-toggle&quot;&gt;
@@ -85,6 +86,7 @@
     &lt;a href=&quot;http://www.itl.nist.gov/div898/handbook/pmc/section4/pmc4.htm&quot;&gt;원문 보기&lt;/a&gt;
   &lt;/p&gt;
 &lt;/section&gt;
+&lt;/article&gt;
 </description>
         <pubDate>Sat, 19 Nov 2016 00:00:00 +0000</pubDate>
         <link>http://localhost:4000/articles/2016/11/19/ESH-06-04</link>
@@ -127,6 +129,52 @@
         <pubDate>Sat, 19 Nov 2016 00:00:00 +0000</pubDate>
         <link>http://localhost:4000/articles/2016/11/19/ESH-06-04-03</link>
         <guid isPermaLink="true">http://localhost:4000/articles/2016/11/19/ESH-06-04-03</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>6.4.3.7. 지수 평활법 요약</title>
+        <description>&lt;section&gt;
+  &lt;h3&gt;요약&lt;/h3&gt;
+  &lt;p&gt;
+    &lt;label for=&quot;mn-h01&quot; class=&quot;margin-toggle&quot;&gt;⊕ &lt;/label&gt;
+    &lt;input type=&quot;checkbox&quot; id=&quot;mn-h01&quot; class=&quot;margin-toggle&quot;&gt;
+    &lt;span class=&quot;marginnote&quot;&gt;
+지수 평활법은 유용하다고 입증된 방법이다
+    &lt;/span&gt;
+지수 평활법은 많은 시간에 걸쳐 예측이 필요한 많은 경우에 있어서 아주 유용하다고 입증된 방법이다. 1957년 C. C. 홀트(Holt)가 계절성과 추세가 없는 시계열에 사용하려고 처음 고안하였다. 이후 홀트는 1958년에 추세를 다루는 방법을 제시하였다. 1965년 윈터스(Winters)가 이 방법에 계절성을 넣어 일반화했기 때문에 &quot;홀트-윈터스 기법&quot;이라는 이름이 붙었다.
+  &lt;/p&gt;
+&lt;/section&gt;
+&lt;section&gt;
+  &lt;p&gt;
+    &lt;label for=&quot;mn-h02&quot; class=&quot;margin-toggle&quot;&gt;⊕ &lt;/label&gt;
+    &lt;input type=&quot;checkbox&quot; id=&quot;mn-h02&quot; class=&quot;margin-toggle&quot;&gt;
+    &lt;span class=&quot;marginnote&quot;&gt;
+홀트-윈터스는 갱신하는 식 3개로 구성된다
+    &lt;/span&gt;
+홀트-윈터스 기법은 3개의 갱신하는 식으로 구성된다. 각각에는 0과 1 사이의 상수가 있다. 이 식은 최근 관측값에 더 큰 가중치를 주고 오래될 수록 더 작은 가중치를 준다.    
+  &lt;/p&gt;
+  &lt;p&gt;
+이러한 가중치는 어떤 상수 비율에 따라 지수적으로 감소한다.
+  &lt;/p&gt;
+  &lt;p&gt;
+HW 과정은 소프트웨어로 사용하기 쉽도록 완전하게 자동화 할 수 있다.
+  &lt;/p&gt;
+&lt;/section&gt;
+&lt;section&gt;
+  &lt;ul class=&quot;pager&quot;&gt;
+    &lt;li class=&quot;previous&quot;&gt;&lt;a href=&quot;/articles/2016/11/19/ESH-06-04-03-06&quot;&gt;Previous&lt;/a&gt;&lt;/li&gt;
+    &lt;li class=&quot;next&quot;&gt;&lt;a href=&quot;/articles/2016/11/19/ESH-06-04-04&quot;&gt;Next&lt;/a&gt;&lt;/li&gt;      
+  &lt;/ul&gt;
+  &lt;p&gt;
+    &lt;a href=&quot;http://www.itl.nist.gov/div898/handbook/pmc/section4/pmc437.htm&quot;&gt;원문 보기&lt;/a&gt;
+  &lt;/p&gt;
+&lt;/section&gt;
+</description>
+        <pubDate>Sat, 19 Nov 2016 00:00:00 +0000</pubDate>
+        <link>http://localhost:4000/articles/2016/11/19/ESH-06-04-03-07</link>
+        <guid isPermaLink="true">http://localhost:4000/articles/2016/11/19/ESH-06-04-03-07</guid>
         
         
       </item>
@@ -285,11 +333,11 @@ $$
 &lt;/section&gt;
 &lt;section&gt;
   &lt;ul class=&quot;pager&quot;&gt;
-    &lt;li class=&quot;previous&quot;&gt;&lt;a href=&quot;/articles/2016/11/19/ESH-06-04-03-04&quot;&gt;Previous&lt;/a&gt;&lt;/li&gt;
-    &lt;li class=&quot;next&quot;&gt;&lt;a href=&quot;/articles/2016/11/19/ESH-06-04-03-06&quot;&gt;Next&lt;/a&gt;&lt;/li&gt;      
+    &lt;li class=&quot;previous&quot;&gt;&lt;a href=&quot;/articles/2016/11/19/ESH-06-04-03-05&quot;&gt;Previous&lt;/a&gt;&lt;/li&gt;
+    &lt;li class=&quot;next&quot;&gt;&lt;a href=&quot;/articles/2016/11/19/ESH-06-04-03-07&quot;&gt;Next&lt;/a&gt;&lt;/li&gt;      
   &lt;/ul&gt;
   &lt;p&gt;
-    &lt;a href=&quot;http://www.itl.nist.gov/div898/handbook/pmc/section4/pmc435.htm&quot;&gt;원문 보기&lt;/a&gt;
+    &lt;a href=&quot;http://www.itl.nist.gov/div898/handbook/pmc/section4/pmc436.htm&quot;&gt;원문 보기&lt;/a&gt;
   &lt;/p&gt;
 &lt;/section&gt;
 </description>
@@ -1329,122 +1377,6 @@ MSE = 1.8129
         <pubDate>Sat, 19 Nov 2016 00:00:00 +0000</pubDate>
         <link>http://localhost:4000/articles/2016/11/19/ESH-06-04-02</link>
         <guid isPermaLink="true">http://localhost:4000/articles/2016/11/19/ESH-06-04-02</guid>
-        
-        
-      </item>
-    
-      <item>
-        <title>6.4.2.2. 중앙 이동 평균</title>
-        <description>&lt;section&gt;
-  &lt;p&gt;
-    &lt;label for=&quot;mn-h01&quot; class=&quot;margin-toggle&quot;&gt;⊕ &lt;/label&gt;
-    &lt;input type=&quot;checkbox&quot; id=&quot;mn-h01&quot; class=&quot;margin-toggle&quot;&gt;
-    &lt;span class=&quot;marginnote&quot;&gt;
-이동 평균을 계산할 때, 평균을 중간 시기에 놓는 것이 직관적이다
-    &lt;/span&gt;
-&lt;a href=&quot;/articles/2016/11/19/ESH-06-04-02-01&quot;&gt;이전 예제&lt;/a&gt;에서 처음 3개 시기의 평균을 계산하여, 3번째 숫자 다음에 계산한 값을 두었다. 평균값을 계산했던 구간의 중앙에 놓을 수도 있었다. 즉, 2번째 숫자 다음에 놓을 수도 있었다는 말이다. 이러한 방법은 홀수개의 숫자가 있을 때는 사용해도 괜찮지만, 짝수개의 숫자가 있을 때는 사용하기 곤란하다. 그렇다면 \( M = 4 \)일 때, 첫 번째 이동 평균값을 어디에 두어야 할까?
-  &lt;/p&gt;
-  &lt;p&gt;
-엄밀하게 따지면, 이동 평균은 \( t = 2.5, 3.5, \cdots \) 같은 곳에 놓일 것이다.
-  &lt;/p&gt;
-  &lt;p&gt;
-  이런 경우를 피하기 위해, \( M = 2 \)으로 이동 평균을 평활하자. &lt;b&gt;평활한 값을 평활하자는 이야기이다!&lt;/b&gt;
-  &lt;/p&gt;
-&lt;/section&gt;
-&lt;section&gt;
-  &lt;p&gt;
-    &lt;label for=&quot;mn-h02&quot; class=&quot;margin-toggle&quot;&gt;⊕ &lt;/label&gt;
-    &lt;input type=&quot;checkbox&quot; id=&quot;mn-h02&quot; class=&quot;margin-toggle&quot;&gt;
-    &lt;span class=&quot;marginnote&quot;&gt;
-짝수개의 숫자의 평균을 구한다면 평활한 값을 다시 평활해야 한다
-    &lt;/span&gt;
-다음의 표는 \( M = 4 \)일 때, 결과를 나타낸다.
-  &lt;/p&gt;
-  &lt;p&gt;
-  중간 과정
-  &lt;/p&gt;
-  &lt;div class=&quot;table-wrapper&quot;&gt;
-    &lt;table class=&quot;booktabs&quot;&gt;
-      &lt;thead&gt;
-        &lt;tr&gt;&lt;th style=&quot;text-align: center&quot;&gt;&lt;b&gt;시점&lt;/b&gt;&lt;/th&gt;&lt;th style=&quot;text-align: center&quot;&gt;&lt;b&gt;값&lt;/b&gt;&lt;/th&gt;&lt;th style=&quot;text-align: center&quot;&gt;&lt;b&gt;이동 평균&lt;/b&gt;&lt;/th&gt;&lt;th style=&quot;text-align: center&quot;&gt;&lt;b&gt;중앙&lt;/b&gt;&lt;/th&gt;&lt;/tr&gt;
-      &lt;/thead&gt;
-      &lt;tbody&gt;
-&lt;tr&gt;&lt;td style=&quot;text-align: center&quot;&gt;1&lt;/td&gt;&lt;td style=&quot;text-align: center&quot;&gt;9&lt;/td&gt;&lt;td style=&quot;text-align: center&quot;&gt;&lt;/td&gt;&lt;td style=&quot;text-align: center&quot;&gt;&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td style=&quot;text-align: center&quot;&gt;1.5&lt;/td&gt;&lt;td style=&quot;text-align: center&quot;&gt;&lt;/td&gt;&lt;td style=&quot;text-align: center&quot;&gt;&lt;/td&gt;&lt;td style=&quot;text-align: center&quot;&gt;&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td style=&quot;text-align: center&quot;&gt;2&lt;/td&gt;&lt;td style=&quot;text-align: center&quot;&gt;8&lt;/td&gt;&lt;td style=&quot;text-align: center&quot;&gt;&lt;/td&gt;&lt;td style=&quot;text-align: center&quot;&gt;&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td style=&quot;text-align: center&quot;&gt;2.5&lt;/td&gt;&lt;td style=&quot;text-align: center&quot;&gt;&lt;/td&gt;&lt;td style=&quot;text-align: center&quot;&gt;9.5 &lt;/td&gt;&lt;td style=&quot;text-align: center&quot;&gt;&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td style=&quot;text-align: center&quot;&gt;3&lt;/td&gt;&lt;td style=&quot;text-align: center&quot;&gt;9&lt;/td&gt;&lt;td style=&quot;text-align: center&quot;&gt;&lt;/td&gt;&lt;td style=&quot;text-align: center&quot;&gt;9.5&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td style=&quot;text-align: center&quot;&gt;3.5&lt;/td&gt;&lt;td style=&quot;text-align: center&quot;&gt;&lt;/td&gt;&lt;td style=&quot;text-align: center&quot;&gt;9.5 &lt;/td&gt;&lt;td style=&quot;text-align: center&quot;&gt;&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td style=&quot;text-align: center&quot;&gt;4&lt;/td&gt;&lt;td style=&quot;text-align: center&quot;&gt;12&lt;/td&gt;&lt;td style=&quot;text-align: center&quot;&gt;&lt;/td&gt;&lt;td style=&quot;text-align: center&quot;&gt;10.0&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td style=&quot;text-align: center&quot;&gt;4.5&lt;/td&gt;&lt;td style=&quot;text-align: center&quot;&gt;&lt;/td&gt;&lt;td style=&quot;text-align: center&quot;&gt;10.5 &lt;/td&gt;&lt;td style=&quot;text-align: center&quot;&gt;&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td style=&quot;text-align: center&quot;&gt;5&lt;/td&gt;&lt;td style=&quot;text-align: center&quot;&gt;9&lt;/td&gt;&lt;td style=&quot;text-align: center&quot;&gt;&lt;/td&gt;&lt;td style=&quot;text-align: center&quot;&gt;10.750&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td style=&quot;text-align: center&quot;&gt;5.5&lt;/td&gt;&lt;td style=&quot;text-align: center&quot;&gt;&lt;/td&gt;&lt;td style=&quot;text-align: center&quot;&gt;11.0 &lt;/td&gt;&lt;td style=&quot;text-align: center&quot;&gt;&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td style=&quot;text-align: center&quot;&gt;6&lt;/td&gt;&lt;td style=&quot;text-align: center&quot;&gt;12&lt;/td&gt;&lt;td style=&quot;text-align: center&quot;&gt;&lt;/td&gt;&lt;td style=&quot;text-align: center&quot;&gt;&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td style=&quot;text-align: center&quot;&gt;6.5&lt;/td&gt;&lt;td style=&quot;text-align: center&quot;&gt;&lt;/td&gt;&lt;td style=&quot;text-align: center&quot;&gt;&lt;/td&gt;&lt;td style=&quot;text-align: center&quot;&gt;&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td style=&quot;text-align: center&quot;&gt;7&lt;/td&gt;&lt;td style=&quot;text-align: center&quot;&gt;11&lt;/td&gt;&lt;td style=&quot;text-align: center&quot;&gt;&lt;/td&gt;&lt;td style=&quot;text-align: center&quot;&gt;&lt;/td&gt;&lt;/tr&gt;
-      &lt;/tbody&gt;
-    &lt;/table&gt;
-  &lt;/div&gt;
-&lt;/section&gt;
-&lt;section&gt;
-  &lt;p&gt;
-    &lt;label for=&quot;mn-h03&quot; class=&quot;margin-toggle&quot;&gt;⊕ &lt;/label&gt;
-    &lt;input type=&quot;checkbox&quot; id=&quot;mn-h03&quot; class=&quot;margin-toggle&quot;&gt;
-    &lt;span class=&quot;marginnote&quot;&gt;
-결과 표
-    &lt;/span&gt;
-최종 결과 표이다.
-  &lt;/p&gt;
-  &lt;div class=&quot;table-wrapper&quot;&gt;
-    &lt;table class=&quot;booktabs&quot;&gt;
-      &lt;thead&gt;
-        &lt;tr&gt;&lt;th style=&quot;text-align: center&quot;&gt;&lt;b&gt;시점&lt;/b&gt;&lt;/th&gt;&lt;th style=&quot;text-align: center&quot;&gt;&lt;b&gt;값&lt;/b&gt;&lt;/th&gt;&lt;th style=&quot;text-align: center&quot;&gt;&lt;b&gt;중앙 이동 평균&lt;/b&gt;&lt;/th&gt;&lt;/tr&gt;
-      &lt;/thead&gt;
-      &lt;tbody&gt;
-&lt;tr&gt;&lt;td style=&quot;text-align: center&quot;&gt;1 &lt;/td&gt;&lt;td style=&quot;text-align: center&quot;&gt;9&lt;/td&gt;&lt;td style=&quot;text-align: center&quot;&gt; &lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td style=&quot;text-align: center&quot;&gt;2 &lt;/td&gt;&lt;td style=&quot;text-align: center&quot;&gt;8&lt;/td&gt;&lt;td style=&quot;text-align: center&quot;&gt; &lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td style=&quot;text-align: center&quot;&gt;3 &lt;/td&gt;&lt;td style=&quot;text-align: center&quot;&gt;9&lt;/td&gt;&lt;td style=&quot;text-align: center&quot;&gt;9.5&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td style=&quot;text-align: center&quot;&gt;4 &lt;/td&gt;&lt;td style=&quot;text-align: center&quot;&gt;12&lt;/td&gt;&lt;td style=&quot;text-align: center&quot;&gt;10.0&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td style=&quot;text-align: center&quot;&gt;5 &lt;/td&gt;&lt;td style=&quot;text-align: center&quot;&gt;9&lt;/td&gt;&lt;td style=&quot;text-align: center&quot;&gt;10.750&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td style=&quot;text-align: center&quot;&gt;6 &lt;/td&gt;&lt;td style=&quot;text-align: center&quot;&gt;12&lt;/td&gt;&lt;td style=&quot;text-align: center&quot;&gt; &lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td style=&quot;text-align: center&quot;&gt;7 &lt;/td&gt;&lt;td style=&quot;text-align: center&quot;&gt;11&lt;/td&gt;&lt;td style=&quot;text-align: center&quot;&gt; &lt;/td&gt;&lt;/tr&gt;
-      &lt;/tbody&gt;
-    &lt;/table&gt;
-  &lt;/div&gt;
-&lt;/section&gt;
-&lt;section&gt;
-  &lt;p&gt;
-    &lt;label for=&quot;mn-h04&quot; class=&quot;margin-toggle&quot;&gt;⊕ &lt;/label&gt;
-    &lt;input type=&quot;checkbox&quot; id=&quot;mn-h03&quot; class=&quot;margin-toggle&quot;&gt;
-    &lt;span class=&quot;marginnote&quot;&gt;
-예측할 때 이동 평균으로 의미있는 추세를 다룰 수 없다
-    &lt;/span&gt;
-안타깝게도 전체 데이터의 평균이나 가장 최근 \( M \)개 값의 이동 평균 둘 다, 의미있는 추세가 있을 때 다음 시기를 제대로 예측하기 힘들다.
-  &lt;/p&gt;  
-&lt;/section&gt;
-&lt;section&gt;
-  &lt;p&gt;
-    &lt;label for=&quot;mn-h05&quot; class=&quot;margin-toggle&quot;&gt;⊕ &lt;/label&gt;
-    &lt;input type=&quot;checkbox&quot; id=&quot;mn-h03&quot; class=&quot;margin-toggle&quot;&gt;
-    &lt;span class=&quot;marginnote&quot;&gt;
-선형 추세에 대한 이중 이동 평균
-    &lt;/span&gt;
-이동 평균을 변형시켜 추세를 좀 더 잘 다루는 방법이 있다. 선형 추세에 대한 이중 이동 평균이라고 하는데, 같은 \( M \) 값으로 원래 이동 평균의 이동 평균을 구하고(두 번째 이동 평균), 구한 두 종류의 이동 평균 값을 가지고 기울기와 y절편을 구한다. 그 다음 한 개 이상의 시기를 예측한다.
-  &lt;/p&gt;  
-&lt;/section&gt;
-&lt;section&gt;
-  &lt;ul class=&quot;pager&quot;&gt;
-    &lt;li class=&quot;previous&quot;&gt;&lt;a href=&quot;/articles/2016/11/19/ESH-06-04-02-01&quot;&gt;Previous&lt;/a&gt;&lt;/li&gt;
-    &lt;li class=&quot;next&quot;&gt;&lt;a href=&quot;/articles/2016/11/19/ESH-06-04-03&quot;&gt;Next&lt;/a&gt;&lt;/li&gt;      
-  &lt;/ul&gt;
-  &lt;p&gt;
-    &lt;a href=&quot;http://www.itl.nist.gov/div898/handbook/pmc/section4/pmc422.htm&quot;&gt;원문 보기&lt;/a&gt;
-  &lt;/p&gt;
-&lt;/section&gt;
-</description>
-        <pubDate>Sat, 19 Nov 2016 00:00:00 +0000</pubDate>
-        <link>http://localhost:4000/articles/2016/11/19/ESH-06-04-02-02</link>
-        <guid isPermaLink="true">http://localhost:4000/articles/2016/11/19/ESH-06-04-02-02</guid>
         
         
       </item>

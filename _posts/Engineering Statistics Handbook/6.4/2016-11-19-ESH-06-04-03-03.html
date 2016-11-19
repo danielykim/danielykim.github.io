@@ -3,6 +3,7 @@ layout: post
 title: 6.4.3.3. 이중 지수 평활법
 ---
 
+
 <section>
   <p>
     <label for="mn-h01" class="margin-toggle">⊕ </label>
@@ -23,6 +24,7 @@ title: 6.4.3.3. 이중 지수 평활법
 이중 지수 평활법에서 시계열의 현재 값은 평활화한 현재 값을 계산하는데 사용된다.  
   </p>
 </section>
+
 <section>
   <p>
     <label for="mn-h02" class="margin-toggle">⊕ </label>
@@ -38,6 +40,7 @@ $$ S_{t+1} = S_{t} + \alpha \epsilon_{t} $$
 다시 말해, 새로운 예측은 이전 예측에 가장 마지막 예측의 오차 수정치를 더한 것이다.  
   </p>
 </section>
+
 <section>
   <h3>초기값</h3>
   <p>
@@ -59,6 +62,7 @@ $$
 $$
   </p>
 </section>
+
 <section>
   <h3>첨언</h3>
   <p>
@@ -73,6 +77,7 @@ $$
 두 번째 평활식은 마지막 두 값의 차이를 나타내는 추세를 갱신한다. 이 식은 단일 평활의 기본 등식과 비슷하지만, 추세를 갱신하는 부분이 다르다.    
   </p>
 </section>
+
 <section>
   <p>
     <label for="mn-h05" class="margin-toggle">⊕ </label>
@@ -82,6 +87,7 @@ $$
     </span>
 \( \alpha \)와 \( \gamma \)값은 마르쿼트(Marquardt) 알고리즘 같은 비선형 최적화 기법을 사용해서 구할 수 있다.
 </section>
+
 <section>
   <ul class="pager">
     <li class="previous"><a href="{{ "/articles/2016/11/19/ESH-06-04-03-02" | prepend: site.baseurl }}">Previous</a></li>
