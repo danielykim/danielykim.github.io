@@ -94,6 +94,7 @@
     <b>메모:</b> 기본 등식에서 \( y_{t-1} \)을 \( y_{t} \)로 바꾼 방법도 있다. EWMA 제어 차트 절에 Robert가 1959년에 제안한 이 방법을 서술하였다. 여기에서 사용하는 등식은 1986년에 Hunter가 제안한 것을 따른다.
   </p>
 </section>
+
 <section>
   <h3>첫 번째 EWMA 설정하기</h3>
   <p>
@@ -111,6 +112,7 @@
 \( \alpha \) 값이 작을 수록 첫 번째 EWMA를 정하는 것이 중요하게 된다. 초기 설정을 확정하기 전에 몇 가지 방법들을 시도해보길 바란다(여기에서는 사용하는 소프트웨어가 이러한 기능을 지원하고 있다는 것을 가정하고 있다).    
   </p>
 </section>
+
 <section>
   <h3>왜 "지수"라는 말이 들어가는가?</h3>
   <p>
@@ -128,6 +130,7 @@
   $$
   </p>
 </section>
+
 <section>
   <p>
     <label for="mn-h04" class="margin-toggle">⊕ </label>
@@ -141,6 +144,7 @@ S_{t} = \alpha \sum_{i=1}^{t-2} (1-\alpha)^{i-1} y_{t-i} + (1-\alpha)^{t-2} S_{2
   $$
   </p>
 </section>
+
 <section>
   <p>
     <label for="mn-h05" class="margin-toggle">⊕ </label>
@@ -154,6 +158,7 @@ S_{5} = \alpha \left[ (1-\alpha)^{0} y_{5-1} + (1-\alpha)^{1} y_{5-2} + (1-\alph
   $$
   </p>
 </section>
+
 <section>
   <p>
     <label for="mn-h06" class="margin-toggle">⊕ </label>
@@ -168,6 +173,7 @@ S_{5} = \alpha \left[ (1-\alpha)^{0} y_{5-1} + (1-\alpha)^{1} y_{5-2} + (1-\alph
 위의 식에서 보면, \( t \)가 증가할 수록 평활화한 \( S_t \)의 영향이 점점 작아지는 것을 알 수 있다.  
   </p>
 </section>
+
 <section>
   <p>
     <label for="mn-h07" class="margin-toggle">⊕ </label>
@@ -191,6 +197,7 @@ S_{5} = \alpha \left[ (1-\alpha)^{0} y_{5-1} + (1-\alpha)^{1} y_{5-2} + (1-\alph
     </table>
   </div>  
 </section>
+
 <section>
   <h3>어떤 \( \alpha \)가 "가장" 좋은 값인가?</h3>
   <p>
@@ -221,6 +228,7 @@ S_{5} = \alpha \left[ (1-\alpha)^{0} y_{5-1} + (1-\alpha)^{1} y_{5-2} + (1-\alph
 가장 작은 MSE를 얻을 수 있는 \( \alpha \) 값이 가장 좋은 값이다.  
   </p>
 </section>
+
 <section>
   <p>
     <label for="mn-h09" class="margin-toggle">⊕ </label>
@@ -255,6 +263,7 @@ S_{5} = \alpha \left[ (1-\alpha)^{0} y_{5-1} + (1-\alpha)^{1} y_{5-2} + (1-\alph
 제곱 오차의 합(SSE)은 208.94이고, 제곱 오차의 평균(MSE)은 SSE / 11 = 19.0 이다.
   </p>
 </section>
+
 <section>
   <p>
     <label for="mn-h10" class="margin-toggle">⊕ </label>
@@ -265,6 +274,7 @@ S_{5} = \alpha \left[ (1-\alpha)^{0} y_{5-1} + (1-\alpha)^{1} y_{5-2} + (1-\alph
 \( \alpha=0.5 \) 인 경우에 MSE를 계산하면 16.29를 얻을 수 있다. 더 좋은 값을 얻을 수 있을까? 시행착오(trial-and-error) 접근법을 적용해볼 수 있다. \( \alpha \)를 0.1부터 0.9까지 탐색하고 그 중에서 가장 좋은 \( \alpha \)를 선택한 다음, \( \alpha-\Delta \)와 \( \alpha+\Delta \) 범위에서 작업을 반복한다. 한 번 더 반복하면, 소수점 3째 자리 정확도를 가지는 \( \alpha \)를 찾을 수 있다.
   </p>
 </section>
+
 <section>
   <p>
     <label for="mn-h11" class="margin-toggle">⊕ </label>
@@ -275,6 +285,7 @@ S_{5} = \alpha \left[ (1-\alpha)^{0} y_{5-1} + (1-\alpha)^{1} y_{5-2} + (1-\alph
 하지만 마르쿼트(Marquardt) 방법 같은 더 좋은 탐색법이 있다. 이 방법은 실제 값과 추정 값의 차이(residual) 제곱 합을 최소화하는 비선형 최적화 기법이다. 일반적으로 보통 좋은 통계 프로그램들은 MSE를 최소화하는 \( \alpha\)를 찾아준다.
   </p>
 </section>
+
 <section>
   <p>
     <label for="mn-h12" class="margin-toggle">⊕ </label>
@@ -287,6 +298,7 @@ S_{5} = \alpha \left[ (1-\alpha)^{0} y_{5-1} + (1-\alpha)^{1} y_{5-2} + (1-\alph
     <img src="http://www.itl.nist.gov/div898/handbook/pmc/section4/gifs/tseries2.gif" alt="Exponential Smoothing: Original and Smoothed Values">
   </figure>
 </section>
+
 <section>
   <ul class="pager">
     <li class="previous"><a href="/articles/2016/11/19/ESH-06-04-03">Previous</a></li>

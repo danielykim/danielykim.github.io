@@ -5,14 +5,13 @@
     <description>Data Artientist</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 19 Nov 2016 07:06:13 +0000</pubDate>
-    <lastBuildDate>Sat, 19 Nov 2016 07:06:13 +0000</lastBuildDate>
+    <pubDate>Sat, 19 Nov 2016 07:28:37 +0000</pubDate>
+    <lastBuildDate>Sat, 19 Nov 2016 07:28:37 +0000</lastBuildDate>
     <generator>Jekyll v3.3.0</generator>
     
       <item>
         <title>6.4. 시계열 분석 입문</title>
-        <description>&lt;article&gt;
-&lt;section&gt;
+        <description>&lt;section&gt;
   &lt;p&gt;
   &lt;label for=&quot;mn-h01&quot; class=&quot;margin-toggle&quot;&gt;⊕ &lt;/label&gt;
   &lt;input type=&quot;checkbox&quot; id=&quot;mn-h01&quot; class=&quot;margin-toggle&quot;&gt;
@@ -30,6 +29,7 @@
 이 절(section)에서는 급성장하는 시계열 분석과 모델링 분야에서 많은 이들이 사용하는 기법을 간략하게 설명하겠다.  
   &lt;/p&gt;
 &lt;/section&gt;
+
 &lt;section&gt;
     &lt;p&gt;
   &lt;label for=&quot;mn-h01&quot; class=&quot;margin-toggle&quot;&gt;⊕ &lt;/label&gt;
@@ -39,44 +39,57 @@
   &lt;/span&gt;
   다루는 내용의 범위
   &lt;/p&gt;
-  &lt;ol&gt;
-    &lt;li&gt;1. 정의, 응용, 기법&lt;/li&gt;
-    &lt;li&gt;2. 이동 평균과 평활법이란?
-      &lt;ol&gt;
-        &lt;li&gt;1. 단일 이동 평균&lt;/li&gt;
-        &lt;li&gt;2. 중앙 이동 평균&lt;/li&gt;
-      &lt;/ol&gt;
-    &lt;/li&gt;
-    &lt;li&gt;3. 지수 평활법이란?
-      &lt;ol&gt;
-        &lt;li&gt;1. 단일 지수 평활법&lt;/li&gt;
-        &lt;li&gt;2. 단일 지수 평활법을 통한 예측&lt;/li&gt;
-        &lt;li&gt;3. 이중 지수 평활법&lt;/li&gt;
-        &lt;li&gt;4. 이중 지수 평활법을 통한 예측&lt;/li&gt;
-        &lt;li&gt;5. 삼중 지수 평활법&lt;/li&gt;
-        &lt;li&gt;6. 삼중 지수 평활법 예제&lt;/li&gt;
-        &lt;li&gt;7. 지수 평활법 요약&lt;/li&gt;
-      &lt;/ol&gt;
-    &lt;/li&gt;
-    &lt;li&gt;4. 단변량 시계열 모델
-      &lt;ol&gt;
-        &lt;li&gt; 1. 표본 데이터&lt;/li&gt;
-        &lt;li&gt; 2. 정상성&lt;label for=&quot;sn-stationarity&quot; class=&quot;margin-toggle sidenote-number&quot;&gt;&lt;/label&gt;&lt;input type=&quot;checkbox&quot; id=&quot;sn-stationarity&quot; class=&quot;margin-toggle&quot;/&gt;&lt;span class=&quot;sidenote&quot;&gt;Stationarity&lt;/span&gt;&lt;/li&gt;
-        &lt;li&gt; 3. 계절성&lt;label for=&quot;sn-stationarity&quot; class=&quot;margin-toggle sidenote-number&quot;&gt;&lt;/label&gt;&lt;input type=&quot;checkbox&quot; id=&quot;sn-stationarity&quot; class=&quot;margin-toggle&quot;/&gt;&lt;span class=&quot;sidenote&quot;&gt;Seasonality&lt;/span&gt;&lt;/li&gt;
-        &lt;li&gt; 4. 일반적인 접근법&lt;/li&gt;
-        &lt;li&gt; 5. 박스-젠킨스&lt;label for=&quot;sn-Box-Jenkins&quot; class=&quot;margin-toggle sidenote-number&quot;&gt;&lt;/label&gt;&lt;input type=&quot;checkbox&quot; id=&quot;sn-Box-Jenkins&quot; class=&quot;margin-toggle&quot;/&gt;&lt;span class=&quot;sidenote&quot;&gt;Box-Jenkins&lt;/span&gt; 접근법&lt;/li&gt;
-        &lt;li&gt; 6. 박스-젠킨스 모델 판별&lt;/li&gt;
-        &lt;li&gt; 7. 박스-젠킨스 모델 측정&lt;/li&gt;
-        &lt;li&gt; 8. 박스-젠킨스 모델 검증&lt;/li&gt;
-        &lt;li&gt; 9. 단변량 박스-젠킨스 분석 예제&lt;/li&gt;
-        &lt;li&gt;10. 계절성 데이터에 대한 박스-젠킨스 모델 분석&lt;/li&gt;
-      &lt;/ol&gt;
-    &lt;/li&gt;
-    &lt;li&gt;5. 다변량 시계열 모델
-      &lt;ol&gt;&lt;li&gt;1. 다변량 시계열 분석의 예&lt;/li&gt;&lt;/ol&gt;
-    &lt;/li&gt;
-  &lt;/ol&gt;
+  &lt;p&gt;
+    &lt;a href=&quot;/articles/2016/11/19/ESH-06-04-01&quot;&gt;1. 정의, 응용, 기법&lt;/a&gt;
+  &lt;/p&gt;
+  &lt;p&gt;
+    &lt;a href=&quot;/articles/2016/11/19/ESH-06-04-02&quot;&gt;2. 이동 평균과 평활법이란?&lt;/a&gt;
+      &lt;blockquote&gt;
+        &lt;p&gt;
+          &lt;a href=&quot;/articles/2016/11/19/ESH-06-04-02-01&quot;&gt;1. 단일 이동 평균&lt;/a&gt;&lt;br/&gt;
+          &lt;a href=&quot;/articles/2016/11/19/ESH-06-04-02-02&quot;&gt;2. 중앙 이동 평균&lt;/a&gt;
+        &lt;/p&gt;
+      &lt;/blockquote&gt;
+  &lt;/p&gt;
+  &lt;p&gt;
+    &lt;a href=&quot;/articles/2016/11/19/ESH-06-04-03&quot;&gt;3. 지수 평활법이란?&lt;/a&gt;
+      &lt;blockquote&gt;
+        &lt;p&gt;
+          &lt;a href=&quot;/articles/2016/11/19/ESH-06-04-03-01&quot;&gt;1. 단일 지수 평활법&lt;/a&gt;&lt;br/&gt;
+          &lt;a href=&quot;/articles/2016/11/19/ESH-06-04-03-02&quot;&gt;2. 단일 지수 평활법을 통한 예측&lt;/a&gt;&lt;br/&gt;
+          &lt;a href=&quot;/articles/2016/11/19/ESH-06-04-03-03&quot;&gt;3. 이중 지수 평활법&lt;/a&gt;&lt;br/&gt;
+          &lt;a href=&quot;/articles/2016/11/19/ESH-06-04-03-04&quot;&gt;4. 이중 지수 평활법을 통한 예측&lt;/a&gt;&lt;br/&gt;
+          &lt;a href=&quot;/articles/2016/11/19/ESH-06-04-03-05&quot;&gt;5. 삼중 지수 평활법&lt;/a&gt;&lt;br/&gt;
+          &lt;a href=&quot;/articles/2016/11/19/ESH-06-04-03-06&quot;&gt;6. 삼중 지수 평활법 예제&lt;/a&gt;&lt;br/&gt;
+          &lt;a href=&quot;/articles/2016/11/19/ESH-06-04-03-07&quot;&gt;7. 지수 평활법 요약&lt;/a&gt;
+        &lt;/p&gt;
+      &lt;/blockquote&gt;
+  &lt;/p&gt;
+  &lt;p&gt;
+    4. 단변량 시계열 모델
+      &lt;blockquote&gt;
+        &lt;p&gt;
+         1. 표본 데이터&lt;br/&gt;
+         2. 정상성&lt;label for=&quot;sn-stationarity&quot; class=&quot;margin-toggle sidenote-number&quot;&gt;&lt;/label&gt;&lt;input type=&quot;checkbox&quot; id=&quot;sn-stationarity&quot; class=&quot;margin-toggle&quot;/&gt;&lt;span class=&quot;sidenote&quot;&gt;Stationarity&lt;/span&gt;&lt;br/&gt;
+         3. 계절성&lt;label for=&quot;sn-stationarity&quot; class=&quot;margin-toggle sidenote-number&quot;&gt;&lt;/label&gt;&lt;input type=&quot;checkbox&quot; id=&quot;sn-stationarity&quot; class=&quot;margin-toggle&quot;/&gt;&lt;span class=&quot;sidenote&quot;&gt;Seasonality&lt;/span&gt;&lt;br/&gt;
+         4. 일반적인 접근법&lt;br/&gt;
+         5. 박스-젠킨스&lt;label for=&quot;sn-Box-Jenkins&quot; class=&quot;margin-toggle sidenote-number&quot;&gt;&lt;/label&gt;&lt;input type=&quot;checkbox&quot; id=&quot;sn-Box-Jenkins&quot; class=&quot;margin-toggle&quot;/&gt;&lt;span class=&quot;sidenote&quot;&gt;Box-Jenkins&lt;/span&gt; 접근법&lt;br/&gt;
+         6. 박스-젠킨스 모델 판별&lt;br/&gt;
+         7. 박스-젠킨스 모델 측정&lt;br/&gt;
+         8. 박스-젠킨스 모델 검증&lt;br/&gt;
+         9. 단변량 박스-젠킨스 분석 예제&lt;br/&gt;
+        10. 계절성 데이터에 대한 박스-젠킨스 모델 분석
+        &lt;/p&gt;
+      &lt;/blockquote&gt;
+  &lt;/p&gt;
+  &lt;p&gt;
+    5. 다변량 시계열 모델
+      &lt;blockquote&gt;
+        &lt;p&gt;1. 다변량 시계열 분석의 예&lt;/p&gt;
+      &lt;/blockquote&gt;
+  &lt;/p&gt;
 &lt;/section&gt;
+
 &lt;section&gt;
   &lt;ul class=&quot;pager&quot;&gt;
     &lt;li class=&quot;previous&quot;&gt;&lt;a href=&quot;#&quot;&gt;Previous&lt;/a&gt;&lt;/li&gt;
@@ -86,7 +99,6 @@
     &lt;a href=&quot;http://www.itl.nist.gov/div898/handbook/pmc/section4/pmc4.htm&quot;&gt;원문 보기&lt;/a&gt;
   &lt;/p&gt;
 &lt;/section&gt;
-&lt;/article&gt;
 </description>
         <pubDate>Sat, 19 Nov 2016 00:00:00 +0000</pubDate>
         <link>http://localhost:4000/articles/2016/11/19/ESH-06-04</link>
@@ -116,6 +128,7 @@
   이번 절에서는 &lt;a href=&quot;/articles/2016/11/19/ESH-06-04-03-01&quot;&gt;단일&lt;/a&gt;, &lt;a href=&quot;/articles/2016/11/19/ESH-06-04-03-03&quot;&gt;이중&lt;/a&gt;, &lt;a href=&quot;/articles/2016/11/19/ESH-06-04-03-05&quot;&gt;삼중&lt;/a&gt; 지수 평활법을 살펴보자.
   &lt;/p&gt;
 &lt;/section&gt;
+
 &lt;section&gt;
   &lt;ul class=&quot;pager&quot;&gt;
     &lt;li class=&quot;previous&quot;&gt;&lt;a href=&quot;/articles/2016/11/19/ESH-06-04-02-02&quot;&gt;Previous&lt;/a&gt;&lt;/li&gt;
@@ -146,6 +159,7 @@
 지수 평활법은 많은 시간에 걸쳐 예측이 필요한 많은 경우에 있어서 아주 유용하다고 입증된 방법이다. 1957년 C. C. 홀트(Holt)가 계절성과 추세가 없는 시계열에 사용하려고 처음 고안하였다. 이후 홀트는 1958년에 추세를 다루는 방법을 제시하였다. 1965년 윈터스(Winters)가 이 방법에 계절성을 넣어 일반화했기 때문에 &quot;홀트-윈터스 기법&quot;이라는 이름이 붙었다.
   &lt;/p&gt;
 &lt;/section&gt;
+
 &lt;section&gt;
   &lt;p&gt;
     &lt;label for=&quot;mn-h02&quot; class=&quot;margin-toggle&quot;&gt;⊕ &lt;/label&gt;
@@ -162,6 +176,7 @@
 HW 과정은 소프트웨어로 사용하기 쉽도록 완전하게 자동화 할 수 있다.
   &lt;/p&gt;
 &lt;/section&gt;
+
 &lt;section&gt;
   &lt;ul class=&quot;pager&quot;&gt;
     &lt;li class=&quot;previous&quot;&gt;&lt;a href=&quot;/articles/2016/11/19/ESH-06-04-03-06&quot;&gt;Previous&lt;/a&gt;&lt;/li&gt;
@@ -227,6 +242,7 @@ HW 과정은 소프트웨어로 사용하기 쉽도록 완전하게 자동화 �
     &lt;/table&gt;
   &lt;/div&gt;
 &lt;/section&gt;
+
 &lt;section&gt;
   &lt;p&gt;
     &lt;label for=&quot;mn-h02&quot; class=&quot;margin-toggle&quot;&gt;⊕ &lt;/label&gt;
@@ -242,6 +258,7 @@ HW 과정은 소프트웨어로 사용하기 쉽도록 완전하게 자동화 �
     &lt;span class=&quot;sidenote&quot;&gt;가로축은 시점, 세로축은 판매량&lt;/span&gt;
   &lt;/figure&gt;
 &lt;/section&gt;
+
 &lt;section&gt;
   &lt;p&gt;
     &lt;label for=&quot;mn-h03&quot; class=&quot;margin-toggle&quot;&gt;⊕ &lt;/label&gt;
@@ -258,6 +275,7 @@ HW 과정은 소프트웨어로 사용하기 쉽도록 완전하게 자동화 �
     &lt;span class=&quot;sidenote&quot;&gt;가로축은 시점, 세로축은 판매량&lt;/span&gt;
   &lt;/figure&gt;
 &lt;/section&gt;
+
 &lt;section&gt;
   &lt;p&gt;
     &lt;label for=&quot;mn-h04&quot; class=&quot;margin-toggle&quot;&gt;⊕ &lt;/label&gt;
@@ -283,6 +301,7 @@ HW 과정은 소프트웨어로 사용하기 쉽도록 완전하게 자동화 �
 위에서 계수 \( \alpha, \beta, \gamma \)는 각 기법마다 MSE를 최소화하는 프로그램으로 구한 것이다.
   &lt;/p&gt;
 &lt;/section&gt;
+
 &lt;section&gt;
   &lt;h3&gt;초기 추세 계산 예제&lt;/h3&gt;
   &lt;p&gt;
@@ -302,6 +321,7 @@ $$
 $$
   &lt;/p&gt;
 &lt;/section&gt;
+
 &lt;section&gt;
   &lt;h3&gt;초기 계절성 지표를 계산하는 예&lt;/h3&gt;
   &lt;p&gt;
@@ -331,6 +351,7 @@ $$
 이 예제에서 6년의 데이터를 사용했다. 다른 방법으로 하면 3이나 다른 값이 될 수도 있다. 초기값은 다양한 방법으로 계산할 수 있다.  
   &lt;/p&gt;
 &lt;/section&gt;
+
 &lt;section&gt;
   &lt;ul class=&quot;pager&quot;&gt;
     &lt;li class=&quot;previous&quot;&gt;&lt;a href=&quot;/articles/2016/11/19/ESH-06-04-03-05&quot;&gt;Previous&lt;/a&gt;&lt;/li&gt;
@@ -390,6 +411,7 @@ $$ F_{t+m} = (S_{t} + m b_{t}) I_{t - L + m} \qquad 예측 $$
 그리고 \( \alpha, \beta, \gamma\)는 오차의 MSE를 최소화하여 구할 수 있는 상수이다. 이 작업은 좋은 소프트웨어 패키지의 몫이다.
   &lt;/p&gt;
 &lt;/section&gt;
+
 &lt;section&gt;
   &lt;p&gt;
     &lt;label for=&quot;mn-h02&quot; class=&quot;margin-toggle&quot;&gt;⊕ &lt;/label&gt;
@@ -400,6 +422,7 @@ $$ F_{t+m} = (S_{t} + m b_{t}) I_{t - L + m} \qquad 예측 $$
     HW 방법을 초기화하려면 &lt;u&gt;적어도&lt;/u&gt; 하나의 완벽한 계절 데이터가 필요하다. 계절성 지표 초기값 \( I_{t-L} \)을 추정하기 위해서이다.
   &lt;/p&gt;
 &lt;/section&gt;
+
 &lt;section&gt;
   &lt;p&gt;
     &lt;label for=&quot;mn-h03&quot; class=&quot;margin-toggle&quot;&gt;⊕ &lt;/label&gt;
@@ -410,6 +433,7 @@ $$ F_{t+m} = (S_{t} + m b_{t}) I_{t - L + m} \qquad 예측 $$
 어떤 하나의 계절 데이터는 \( L \) 주기로 구성된다. 그리고 한 주기에서 다음 주기까지의 추세 인자를 추정해야 한다. 그러기 위해서는 두 계절이 있는 데이터(즉, \( 2L \) 주기가 있는) 사용하기를 권한다.
   &lt;/p&gt;
 &lt;/section&gt;
+
 &lt;section&gt;
   &lt;h3&gt;초기값 추세 인자&lt;/h3&gt;
   &lt;p&gt;
@@ -426,6 +450,7 @@ $$ b = \frac{1}{L} \left( \frac{y_{L+1} - y_{1}}{L} + \frac{y_{L+2}-y_{2}}{L} + 
     1년에 4 주기가 있는 6년치 데이터를 살펴보자.
   &lt;/p&gt;
 &lt;/section&gt;
+
 &lt;section&gt;
   &lt;p&gt;
     &lt;label for=&quot;mn-h05&quot; class=&quot;margin-toggle&quot;&gt;⊕ &lt;/label&gt;
@@ -436,6 +461,7 @@ $$ b = \frac{1}{L} \left( \frac{y_{L+1} - y_{1}}{L} + \frac{y_{L+2}-y_{2}}{L} + 
     &lt;b&gt;1단계:&lt;/b&gt; 각 연도마다 주기의 평균을 구한다.
   &lt;/p&gt;
 &lt;/section&gt;
+
 &lt;section&gt;
   &lt;p&gt;
     &lt;label for=&quot;mn-h06&quot; class=&quot;margin-toggle&quot;&gt;⊕ &lt;/label&gt;
@@ -459,6 +485,7 @@ $$ b = \frac{1}{L} \left( \frac{y_{L+1} - y_{1}}{L} + \frac{y_{L+2}-y_{2}}{L} + 
     &lt;/table&gt;
   &lt;/div&gt;
 &lt;/section&gt;
+
 &lt;section&gt;
   &lt;p&gt;
     &lt;label for=&quot;mn-h07&quot; class=&quot;margin-toggle&quot;&gt;⊕ &lt;/label&gt;
@@ -483,6 +510,7 @@ $$
 다음 내용에서는 삼중 지수 평활법을 적용하는 예제를 다룰 것이다.  
   &lt;/p&gt;
 &lt;/section&gt;
+
 &lt;section&gt;
   &lt;h3&gt;계수가 0인 경우&lt;/h3&gt;
   &lt;p&gt;
@@ -500,6 +528,7 @@ $$
 당연히 아니다! 추세나 계절성 관련 초기값이 MSE가 최소일 수 있는 경우라 갱신할 필요 없어서 그렇다. 정말로 그런지 검증하기 위해 갱신하는 식을 반드시 점검해야 한다.
   &lt;/p&gt;
 &lt;/section&gt;
+
 &lt;section&gt;
   &lt;ul class=&quot;pager&quot;&gt;
     &lt;li class=&quot;previous&quot;&gt;&lt;a href=&quot;/articles/2016/11/19/ESH-06-04-03-04&quot;&gt;Previous&lt;/a&gt;&lt;/li&gt;
@@ -532,6 +561,7 @@ m 시점 앞을 예측하는 식은 다음과 같이 쓸 수 있다.
   $$ F_{t+m} = S_{t} + m b_{t} $$
   &lt;/p&gt;
 &lt;/section&gt;
+
 &lt;section&gt;
   &lt;p&gt;
     &lt;label for=&quot;mn-h02&quot; class=&quot;margin-toggle&quot;&gt;⊕ &lt;/label&gt;
@@ -555,6 +585,7 @@ $$
 대조군으로 \( \alpha=0.977\)일 때의 단일 평활 모델도 해보자. 이 \( \alpha \) 값은 단일 지수 평활법에서 최소 MSE와 가까운 값이다.
   &lt;/p&gt;
 &lt;/section&gt;
+
 &lt;section&gt;
   &lt;p&gt;
     &lt;label for=&quot;mn-h03&quot; class=&quot;margin-toggle&quot;&gt;⊕ &lt;/label&gt;
@@ -584,6 +615,7 @@ $$
     &lt;/table&gt;
   &lt;/div&gt; 
 &lt;/section&gt;
+
 &lt;section&gt;
   &lt;h3&gt;예측값 비교&lt;/h3&gt;
   &lt;p&gt;
@@ -609,6 +641,7 @@ $$
     &lt;/table&gt;
   &lt;/div&gt;
 &lt;/section&gt;
+
 &lt;section&gt;
   &lt;p&gt;
     &lt;label for=&quot;mn-h05&quot; class=&quot;margin-toggle&quot;&gt;⊕ &lt;/label&gt;
@@ -625,6 +658,7 @@ $$
 이 그래프에서 보니 이중 평활법 경우가 단일 평활법보다 데이터에 훨씬 더 가깝다. 단일 평활법은 예측할 때 단순하게 수평선과 다를바가 없다는 것도 알 수 있다. 실제 상황에서 이런 수평선과 같은 상황이 일어날 가능성은 낮다. 따라서 이 경우에는 이중 평활법이 낫다.
   &lt;/p&gt;
 &lt;/section&gt;
+
 &lt;section&gt;
   &lt;p&gt;
     &lt;label for=&quot;mn-h06&quot; class=&quot;margin-toggle&quot;&gt;⊕ &lt;/label&gt;
@@ -641,6 +675,7 @@ $$
 꽤 재미있는 그림이다. 두 기법 모두 비슷한 경향을 따르지만, 회귀선은 이중 평활법에 비해 예측값이 느리게 증가한다.    
   &lt;/p&gt;
 &lt;/section&gt;
+
 &lt;section&gt;
   &lt;p&gt;
     &lt;label for=&quot;mn-h07&quot; class=&quot;margin-toggle&quot;&gt;⊕ &lt;/label&gt;
@@ -651,6 +686,7 @@ $$
 예측하는 사람에 따라 선택하는 기법이 다르다. 성장과정을 공격적으로 나타내고 싶으면, 이중 평활법을 선택한다. 아니면, 회귀법을 사용할 것이다. 선형 회귀법에서 &quot;시간&quot;은 독립 변수 역할을 한다. 4장에서 선형 회귀의 기본적인 내용과 회귀 추정의 세부 사항을 이야기했다.
   &lt;/p&gt;
 &lt;/section&gt;
+
 &lt;section&gt;
   &lt;ul class=&quot;pager&quot;&gt;
     &lt;li class=&quot;previous&quot;&gt;&lt;a href=&quot;/articles/2016/11/19/ESH-06-04-03-03&quot;&gt;Previous&lt;/a&gt;&lt;/li&gt;
@@ -690,6 +726,7 @@ $$
 이중 지수 평활법에서 시계열의 현재 값은 평활화한 현재 값을 계산하는데 사용된다.  
   &lt;/p&gt;
 &lt;/section&gt;
+
 &lt;section&gt;
   &lt;p&gt;
     &lt;label for=&quot;mn-h02&quot; class=&quot;margin-toggle&quot;&gt;⊕ &lt;/label&gt;
@@ -705,6 +742,7 @@ $$ S_{t+1} = S_{t} + \alpha \epsilon_{t} $$
 다시 말해, 새로운 예측은 이전 예측에 가장 마지막 예측의 오차 수정치를 더한 것이다.  
   &lt;/p&gt;
 &lt;/section&gt;
+
 &lt;section&gt;
   &lt;h3&gt;초기값&lt;/h3&gt;
   &lt;p&gt;
@@ -726,6 +764,7 @@ $$
 $$
   &lt;/p&gt;
 &lt;/section&gt;
+
 &lt;section&gt;
   &lt;h3&gt;첨언&lt;/h3&gt;
   &lt;p&gt;
@@ -740,6 +779,7 @@ $$
 두 번째 평활식은 마지막 두 값의 차이를 나타내는 추세를 갱신한다. 이 식은 단일 평활의 기본 등식과 비슷하지만, 추세를 갱신하는 부분이 다르다.    
   &lt;/p&gt;
 &lt;/section&gt;
+
 &lt;section&gt;
   &lt;p&gt;
     &lt;label for=&quot;mn-h05&quot; class=&quot;margin-toggle&quot;&gt;⊕ &lt;/label&gt;
@@ -749,6 +789,7 @@ $$
     &lt;/span&gt;
 \( \alpha \)와 \( \gamma \)값은 마르쿼트(Marquardt) 알고리즘 같은 비선형 최적화 기법을 사용해서 구할 수 있다.
 &lt;/section&gt;
+
 &lt;section&gt;
   &lt;ul class=&quot;pager&quot;&gt;
     &lt;li class=&quot;previous&quot;&gt;&lt;a href=&quot;/articles/2016/11/19/ESH-06-04-03-02&quot;&gt;Previous&lt;/a&gt;&lt;/li&gt;
@@ -780,6 +821,7 @@ $$
 $$ S_{t+1} = \alpha y_{t} + (1 - \alpha)S_{t} \ , \quad 0 &lt; \alpha \le 1, \quad t &gt; 0. $$
   &lt;/p&gt;
 &lt;/section&gt;
+
 &lt;section&gt;
   &lt;p&gt;
     &lt;label for=&quot;mn-h02&quot; class=&quot;margin-toggle&quot;&gt;⊕ &lt;/label&gt;
@@ -795,6 +837,7 @@ $$ S_{t+1} = S_{t} + \alpha \epsilon_{t} $$
 다시 말해, 새로운 예측은 이전 예측에 가장 마지막 예측의 오차 수정치를 더한 것이다.  
   &lt;/p&gt;
 &lt;/section&gt;
+
 &lt;section&gt;
   &lt;p&gt;
     &lt;label for=&quot;mn-h03&quot; class=&quot;margin-toggle&quot;&gt;⊕ &lt;/label&gt;
@@ -810,6 +853,7 @@ $$ S_{t+1} = S_{t} + \alpha \epsilon_{t} $$
 다시 말해, 새로운 예측은 이전 예측에 가장 마지막 예측의 오차 수정치를 더한 것이다.  
   &lt;/p&gt;
 &lt;/section&gt;
+
 &lt;section&gt;
   &lt;h3&gt;예측의 재복합&lt;/h3&gt;
   &lt;p&gt;
@@ -823,6 +867,7 @@ $$ S_{t+1} = \alpha y_{origin} + (1-\alpha)S_{t} $$
 여기에서 y_{origin}은 상수이다. 이 기법을 재복합&lt;label for=&quot;sn-bootstrapping&quot; class=&quot;margin-toggle sidenote-number&quot;&gt;&lt;/label&gt;&lt;input type=&quot;checkbox&quot; id=&quot;sn-bootstrapping&quot; class=&quot;margin-toggle&quot;/&gt;&lt;span class=&quot;sidenote&quot;&gt;Bootstrapping&lt;/span&gt;이라고 부른다.
   &lt;/p&gt;
 &lt;/section&gt;
+
 &lt;section&gt;
   &lt;h3&gt;재복합 예제&lt;/h3&gt;
   &lt;p&gt;
@@ -844,6 +889,7 @@ $$ S_{t+1} = \alpha y_{origin} + (1-\alpha)S_{t} $$
   $$ S_{t+2} = 0.1(70) + 0.9(71.5) = 71.35 $$
   &lt;/p&gt;
 &lt;/section&gt;
+
 &lt;section&gt;
   &lt;h3&gt;재복합 예측과 보통의 예측 방법 비교&lt;/h3&gt;
   &lt;p&gt;
@@ -869,6 +915,7 @@ $$ S_{t+1} = \alpha y_{origin} + (1-\alpha)S_{t} $$
     &lt;/table&gt;
   &lt;/div&gt;  
 &lt;/section&gt;
+
 &lt;section&gt;
   &lt;p&gt;
     &lt;label for=&quot;mn-h05&quot; class=&quot;margin-toggle&quot;&gt;⊕ &lt;/label&gt;
@@ -879,6 +926,7 @@ $$ S_{t+1} = \alpha y_{origin} + (1-\alpha)S_{t} $$
 단일 평활(단일 지수 평활을 줄여서)은 추세가 있을 때 그리 좋은 선택은 아니다. 단일 계수 \( \alpha \)로만으로는 부족하다.
   &lt;/p&gt;
 &lt;/section&gt;
+
 &lt;section&gt;
   &lt;p&gt;
     &lt;label for=&quot;mn-h06&quot; class=&quot;margin-toggle&quot;&gt;⊕ &lt;/label&gt;
@@ -908,6 +956,7 @@ $$ S_{t+1} = \alpha y_{origin} + (1-\alpha)S_{t} $$
     &lt;/table&gt;
   &lt;/div&gt;  
 &lt;/section&gt;
+
 &lt;section&gt;
   &lt;p&gt;
     &lt;label for=&quot;mn-h07&quot; class=&quot;margin-toggle&quot;&gt;⊕ &lt;/label&gt;
@@ -924,6 +973,7 @@ $$ S_{t+1} = \alpha y_{origin} + (1-\alpha)S_{t} $$
     &lt;span class=&quot;sidenote&quot;&gt;가로축은 시점, 세로축은 데이터&lt;/span&gt;  
   &lt;/figure&gt;
 &lt;/section&gt;
+
 &lt;section&gt;
   &lt;ul class=&quot;pager&quot;&gt;
     &lt;li class=&quot;previous&quot;&gt;&lt;a href=&quot;/articles/2016/11/19/ESH-06-04-03-01&quot;&gt;Previous&lt;/a&gt;&lt;/li&gt;
@@ -963,6 +1013,7 @@ $$ S_{t+1} = \alpha y_{origin} + (1-\alpha)S_{t} $$
     &lt;b&gt;메모:&lt;/b&gt; 기본 등식에서 \( y_{t-1} \)을 \( y_{t} \)로 바꾼 방법도 있다. EWMA 제어 차트 절에 Robert가 1959년에 제안한 이 방법을 서술하였다. 여기에서 사용하는 등식은 1986년에 Hunter가 제안한 것을 따른다.
   &lt;/p&gt;
 &lt;/section&gt;
+
 &lt;section&gt;
   &lt;h3&gt;첫 번째 EWMA 설정하기&lt;/h3&gt;
   &lt;p&gt;
@@ -980,6 +1031,7 @@ $$ S_{t+1} = \alpha y_{origin} + (1-\alpha)S_{t} $$
 \( \alpha \) 값이 작을 수록 첫 번째 EWMA를 정하는 것이 중요하게 된다. 초기 설정을 확정하기 전에 몇 가지 방법들을 시도해보길 바란다(여기에서는 사용하는 소프트웨어가 이러한 기능을 지원하고 있다는 것을 가정하고 있다).    
   &lt;/p&gt;
 &lt;/section&gt;
+
 &lt;section&gt;
   &lt;h3&gt;왜 &quot;지수&quot;라는 말이 들어가는가?&lt;/h3&gt;
   &lt;p&gt;
@@ -997,6 +1049,7 @@ $$ S_{t+1} = \alpha y_{origin} + (1-\alpha)S_{t} $$
   $$
   &lt;/p&gt;
 &lt;/section&gt;
+
 &lt;section&gt;
   &lt;p&gt;
     &lt;label for=&quot;mn-h04&quot; class=&quot;margin-toggle&quot;&gt;⊕ &lt;/label&gt;
@@ -1010,6 +1063,7 @@ S_{t} = \alpha \sum_{i=1}^{t-2} (1-\alpha)^{i-1} y_{t-i} + (1-\alpha)^{t-2} S_{2
   $$
   &lt;/p&gt;
 &lt;/section&gt;
+
 &lt;section&gt;
   &lt;p&gt;
     &lt;label for=&quot;mn-h05&quot; class=&quot;margin-toggle&quot;&gt;⊕ &lt;/label&gt;
@@ -1023,6 +1077,7 @@ S_{5} = \alpha \left[ (1-\alpha)^{0} y_{5-1} + (1-\alpha)^{1} y_{5-2} + (1-\alph
   $$
   &lt;/p&gt;
 &lt;/section&gt;
+
 &lt;section&gt;
   &lt;p&gt;
     &lt;label for=&quot;mn-h06&quot; class=&quot;margin-toggle&quot;&gt;⊕ &lt;/label&gt;
@@ -1037,6 +1092,7 @@ S_{5} = \alpha \left[ (1-\alpha)^{0} y_{5-1} + (1-\alpha)^{1} y_{5-2} + (1-\alph
 위의 식에서 보면, \( t \)가 증가할 수록 평활화한 \( S_t \)의 영향이 점점 작아지는 것을 알 수 있다.  
   &lt;/p&gt;
 &lt;/section&gt;
+
 &lt;section&gt;
   &lt;p&gt;
     &lt;label for=&quot;mn-h07&quot; class=&quot;margin-toggle&quot;&gt;⊕ &lt;/label&gt;
@@ -1060,6 +1116,7 @@ S_{5} = \alpha \left[ (1-\alpha)^{0} y_{5-1} + (1-\alpha)^{1} y_{5-2} + (1-\alph
     &lt;/table&gt;
   &lt;/div&gt;  
 &lt;/section&gt;
+
 &lt;section&gt;
   &lt;h3&gt;어떤 \( \alpha \)가 &quot;가장&quot; 좋은 값인가?&lt;/h3&gt;
   &lt;p&gt;
@@ -1090,6 +1147,7 @@ S_{5} = \alpha \left[ (1-\alpha)^{0} y_{5-1} + (1-\alpha)^{1} y_{5-2} + (1-\alph
 가장 작은 MSE를 얻을 수 있는 \( \alpha \) 값이 가장 좋은 값이다.  
   &lt;/p&gt;
 &lt;/section&gt;
+
 &lt;section&gt;
   &lt;p&gt;
     &lt;label for=&quot;mn-h09&quot; class=&quot;margin-toggle&quot;&gt;⊕ &lt;/label&gt;
@@ -1124,6 +1182,7 @@ S_{5} = \alpha \left[ (1-\alpha)^{0} y_{5-1} + (1-\alpha)^{1} y_{5-2} + (1-\alph
 제곱 오차의 합(SSE)은 208.94이고, 제곱 오차의 평균(MSE)은 SSE / 11 = 19.0 이다.
   &lt;/p&gt;
 &lt;/section&gt;
+
 &lt;section&gt;
   &lt;p&gt;
     &lt;label for=&quot;mn-h10&quot; class=&quot;margin-toggle&quot;&gt;⊕ &lt;/label&gt;
@@ -1134,6 +1193,7 @@ S_{5} = \alpha \left[ (1-\alpha)^{0} y_{5-1} + (1-\alpha)^{1} y_{5-2} + (1-\alph
 \( \alpha=0.5 \) 인 경우에 MSE를 계산하면 16.29를 얻을 수 있다. 더 좋은 값을 얻을 수 있을까? 시행착오(trial-and-error) 접근법을 적용해볼 수 있다. \( \alpha \)를 0.1부터 0.9까지 탐색하고 그 중에서 가장 좋은 \( \alpha \)를 선택한 다음, \( \alpha-\Delta \)와 \( \alpha+\Delta \) 범위에서 작업을 반복한다. 한 번 더 반복하면, 소수점 3째 자리 정확도를 가지는 \( \alpha \)를 찾을 수 있다.
   &lt;/p&gt;
 &lt;/section&gt;
+
 &lt;section&gt;
   &lt;p&gt;
     &lt;label for=&quot;mn-h11&quot; class=&quot;margin-toggle&quot;&gt;⊕ &lt;/label&gt;
@@ -1144,6 +1204,7 @@ S_{5} = \alpha \left[ (1-\alpha)^{0} y_{5-1} + (1-\alpha)^{1} y_{5-2} + (1-\alph
 하지만 마르쿼트(Marquardt) 방법 같은 더 좋은 탐색법이 있다. 이 방법은 실제 값과 추정 값의 차이(residual) 제곱 합을 최소화하는 비선형 최적화 기법이다. 일반적으로 보통 좋은 통계 프로그램들은 MSE를 최소화하는 \( \alpha\)를 찾아준다.
   &lt;/p&gt;
 &lt;/section&gt;
+
 &lt;section&gt;
   &lt;p&gt;
     &lt;label for=&quot;mn-h12&quot; class=&quot;margin-toggle&quot;&gt;⊕ &lt;/label&gt;
@@ -1156,6 +1217,7 @@ S_{5} = \alpha \left[ (1-\alpha)^{0} y_{5-1} + (1-\alpha)^{1} y_{5-2} + (1-\alph
     &lt;img src=&quot;http://www.itl.nist.gov/div898/handbook/pmc/section4/gifs/tseries2.gif&quot; alt=&quot;Exponential Smoothing: Original and Smoothed Values&quot;&gt;
   &lt;/figure&gt;
 &lt;/section&gt;
+
 &lt;section&gt;
   &lt;ul class=&quot;pager&quot;&gt;
     &lt;li class=&quot;previous&quot;&gt;&lt;a href=&quot;/articles/2016/11/19/ESH-06-04-03&quot;&gt;Previous&lt;/a&gt;&lt;/li&gt;
@@ -1192,6 +1254,7 @@ S_{5} = \alpha \left[ (1-\alpha)^{0} y_{5-1} + (1-\alpha)^{1} y_{5-2} + (1-\alph
     &lt;/ul&gt;
   &lt;/p&gt;
 &lt;/section&gt;
+
 &lt;section&gt;
   &lt;p&gt;
     &lt;label for=&quot;mn-h02&quot; class=&quot;margin-toggle&quot;&gt;⊕ &lt;/label&gt;
@@ -1232,6 +1295,7 @@ S_{5} = \alpha \left[ (1-\alpha)^{0} y_{5-1} + (1-\alpha)^{1} y_{5-2} + (1-\alph
 과연 잘 추정한 것일까?  
   &lt;/p&gt;
 &lt;/section&gt;
+
 &lt;section&gt;
   &lt;p&gt;
     &lt;label for=&quot;mn-h03&quot; class=&quot;margin-toggle&quot;&gt;⊕ &lt;/label&gt;
@@ -1270,6 +1334,7 @@ S_{5} = \alpha \left[ (1-\alpha)^{0} y_{5-1} + (1-\alpha)^{1} y_{5-2} + (1-\alph
   SSE = 36 그리고 MSE = 36/12 = 3
   &lt;/p&gt;
 &lt;/section&gt;
+
 &lt;section&gt;
   &lt;p&gt;
     &lt;label for=&quot;mn-h04&quot; class=&quot;margin-toggle&quot;&gt;⊕ &lt;/label&gt;
@@ -1294,6 +1359,7 @@ S_{5} = \alpha \left[ (1-\alpha)^{0} y_{5-1} + (1-\alpha)^{1} y_{5-2} + (1-\alph
 가장 작은 MSE를 보이는 추정치가 가장 좋은 것이다. 위의 표에서 평균으로 구한 MSE가 가장 작다는 것을 수학적으로 알 수 있다.
   &lt;/p&gt;
 &lt;/section&gt;
+
 &lt;section&gt;
   &lt;p&gt;
     &lt;label for=&quot;mn-h05&quot; class=&quot;margin-toggle&quot;&gt;⊕ &lt;/label&gt;
@@ -1329,6 +1395,7 @@ S_{5} = \alpha \left[ (1-\alpha)^{0} y_{5-1} + (1-\alpha)^{1} y_{5-2} + (1-\alph
 MSE = 1.8129
   &lt;/p&gt;
 &lt;/section&gt;
+
 &lt;section&gt;
   &lt;p&gt;
     &lt;label for=&quot;mn-h05&quot; class=&quot;margin-toggle&quot;&gt;⊕ &lt;/label&gt;
@@ -1345,6 +1412,7 @@ MSE = 1.8129
     &lt;span class=&quot;sidenote&quot;&gt;가로축은 연도, 세로축은 수입&lt;/span&gt;
   &lt;/figure&gt;
 &lt;/section&gt;
+
 &lt;section&gt;
   &lt;p&gt;
     &lt;label for=&quot;mn-h06&quot; class=&quot;margin-toggle&quot;&gt;⊕ &lt;/label&gt;
@@ -1364,6 +1432,7 @@ MSE = 1.8129
     &lt;/ol&gt;
   &lt;/p&gt;
 &lt;/section&gt;
+
 &lt;section&gt;
   &lt;ul class=&quot;pager&quot;&gt;
     &lt;li class=&quot;previous&quot;&gt;&lt;a href=&quot;/articles/2016/11/19/ESH-06-04-01&quot;&gt;Previous&lt;/a&gt;&lt;/li&gt;

@@ -31,43 +31,55 @@ title: 6.4. 시계열 분석 입문
   </span>
   다루는 내용의 범위
   </p>
-  <ol>
-    <li><a href="{{ "/articles/2016/11/19/ESH-06-04-01" | prepend: site.baseurl }}">1. 정의, 응용, 기법</a></li>
-      <li><a href="{{ "/articles/2016/11/19/ESH-06-04-02" | prepend: site.baseurl }}">2. 이동 평균과 평활법이란?</a>
-      <ol>
-        <li><a href="{{ "/articles/2016/11/19/ESH-06-04-02-01" | prepend: site.baseurl }}">1. 단일 이동 평균</a></li>
-        <li><a href="{{ "/articles/2016/11/19/ESH-06-04-02-02" | prepend: site.baseurl }}">2. 중앙 이동 평균</a></li>
-      </ol>
-    </li>
-    <li><a href="{{ "/articles/2016/11/19/ESH-06-04-03" | prepend: site.baseurl }}">3. 지수 평활법이란?</a>
-      <ol>
-        <li><a href="{{ "/articles/2016/11/19/ESH-06-04-03-01" | prepend: site.baseurl }}">1. 단일 지수 평활법</a></li>
-        <li><a href="{{ "/articles/2016/11/19/ESH-06-04-03-02" | prepend: site.baseurl }}">2. 단일 지수 평활법을 통한 예측</a></li>
-        <li><a href="{{ "/articles/2016/11/19/ESH-06-04-03-03" | prepend: site.baseurl }}">3. 이중 지수 평활법</a></li>
-        <li><a href="{{ "/articles/2016/11/19/ESH-06-04-03-04" | prepend: site.baseurl }}">4. 이중 지수 평활법을 통한 예측</a></li>
-        <li><a href="{{ "/articles/2016/11/19/ESH-06-04-03-05" | prepend: site.baseurl }}">5. 삼중 지수 평활법</a></li>
-        <li><a href="{{ "/articles/2016/11/19/ESH-06-04-03-06" | prepend: site.baseurl }}">6. 삼중 지수 평활법 예제</a></li>
-        <li><a href="{{ "/articles/2016/11/19/ESH-06-04-03-07" | prepend: site.baseurl }}">7. 지수 평활법 요약</a></li>
-      </ol>
-    </li>
-    <li>4. 단변량 시계열 모델
-      <ol>
-        <li> 1. 표본 데이터</li>
-        <li> 2. 정상성<label for="sn-stationarity" class="margin-toggle sidenote-number"></label><input type="checkbox" id="sn-stationarity" class="margin-toggle"/><span class="sidenote">Stationarity</span></li>
-        <li> 3. 계절성<label for="sn-stationarity" class="margin-toggle sidenote-number"></label><input type="checkbox" id="sn-stationarity" class="margin-toggle"/><span class="sidenote">Seasonality</span></li>
-        <li> 4. 일반적인 접근법</li>
-        <li> 5. 박스-젠킨스<label for="sn-Box-Jenkins" class="margin-toggle sidenote-number"></label><input type="checkbox" id="sn-Box-Jenkins" class="margin-toggle"/><span class="sidenote">Box-Jenkins</span> 접근법</li>
-        <li> 6. 박스-젠킨스 모델 판별</li>
-        <li> 7. 박스-젠킨스 모델 측정</li>
-        <li> 8. 박스-젠킨스 모델 검증</li>
-        <li> 9. 단변량 박스-젠킨스 분석 예제</li>
-        <li>10. 계절성 데이터에 대한 박스-젠킨스 모델 분석</li>
-      </ol>
-    </li>
-    <li>5. 다변량 시계열 모델
-      <ol><li>1. 다변량 시계열 분석의 예</li></ol>
-    </li>
-  </ol>
+  <p>
+    <a href="{{ "/articles/2016/11/19/ESH-06-04-01" | prepend: site.baseurl }}">1. 정의, 응용, 기법</a>
+  </p>
+  <p>
+    <a href="{{ "/articles/2016/11/19/ESH-06-04-02" | prepend: site.baseurl }}">2. 이동 평균과 평활법이란?</a>
+      <blockquote>
+        <p>
+          <a href="{{ "/articles/2016/11/19/ESH-06-04-02-01" | prepend: site.baseurl }}">1. 단일 이동 평균</a><br/>
+          <a href="{{ "/articles/2016/11/19/ESH-06-04-02-02" | prepend: site.baseurl }}">2. 중앙 이동 평균</a>
+        </p>
+      </blockquote>
+  </p>
+  <p>
+    <a href="{{ "/articles/2016/11/19/ESH-06-04-03" | prepend: site.baseurl }}">3. 지수 평활법이란?</a>
+      <blockquote>
+        <p>
+          <a href="{{ "/articles/2016/11/19/ESH-06-04-03-01" | prepend: site.baseurl }}">1. 단일 지수 평활법</a><br/>
+          <a href="{{ "/articles/2016/11/19/ESH-06-04-03-02" | prepend: site.baseurl }}">2. 단일 지수 평활법을 통한 예측</a><br/>
+          <a href="{{ "/articles/2016/11/19/ESH-06-04-03-03" | prepend: site.baseurl }}">3. 이중 지수 평활법</a><br/>
+          <a href="{{ "/articles/2016/11/19/ESH-06-04-03-04" | prepend: site.baseurl }}">4. 이중 지수 평활법을 통한 예측</a><br/>
+          <a href="{{ "/articles/2016/11/19/ESH-06-04-03-05" | prepend: site.baseurl }}">5. 삼중 지수 평활법</a><br/>
+          <a href="{{ "/articles/2016/11/19/ESH-06-04-03-06" | prepend: site.baseurl }}">6. 삼중 지수 평활법 예제</a><br/>
+          <a href="{{ "/articles/2016/11/19/ESH-06-04-03-07" | prepend: site.baseurl }}">7. 지수 평활법 요약</a>
+        </p>
+      </blockquote>
+  </p>
+  <p>
+    4. 단변량 시계열 모델
+      <blockquote>
+        <p>
+         1. 표본 데이터<br/>
+         2. 정상성<label for="sn-stationarity" class="margin-toggle sidenote-number"></label><input type="checkbox" id="sn-stationarity" class="margin-toggle"/><span class="sidenote">Stationarity</span><br/>
+         3. 계절성<label for="sn-stationarity" class="margin-toggle sidenote-number"></label><input type="checkbox" id="sn-stationarity" class="margin-toggle"/><span class="sidenote">Seasonality</span><br/>
+         4. 일반적인 접근법<br/>
+         5. 박스-젠킨스<label for="sn-Box-Jenkins" class="margin-toggle sidenote-number"></label><input type="checkbox" id="sn-Box-Jenkins" class="margin-toggle"/><span class="sidenote">Box-Jenkins</span> 접근법<br/>
+         6. 박스-젠킨스 모델 판별<br/>
+         7. 박스-젠킨스 모델 측정<br/>
+         8. 박스-젠킨스 모델 검증<br/>
+         9. 단변량 박스-젠킨스 분석 예제<br/>
+        10. 계절성 데이터에 대한 박스-젠킨스 모델 분석
+        </p>
+      </blockquote>
+  </p>
+  <p>
+    5. 다변량 시계열 모델
+      <blockquote>
+        <p>1. 다변량 시계열 분석의 예</p>
+      </blockquote>
+  </p>
 </section>
 
 <section>

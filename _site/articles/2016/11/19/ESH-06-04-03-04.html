@@ -7,7 +7,7 @@
   
   <link rel="icon" type="image/png" href="http://danielykim.me/images/myicon.png" />
   <title>Blog: Daniel Kim</title>
-  <meta name="description" content="      ⊕         예측 식    한 시점 앞을 예측하는 식은 다음과 같이 쓸 수 있다.  $$ F_{t+1} = S_{t} + b_{t} $$m 시점 앞을 예측하는 식은 다음과 같이 쓸 수 있다.  $$ F_{t+m} = S_{t} + m b_{t} $$        ⊕...">
+  <meta name="description" content="      ⊕         예측 식    한 시점 앞을 예측하는 식은 다음과 같이 쓸 수 있다.  $$ F_{t+1} = S_{t} + b_{t} $$m 시점 앞을 예측하는 식은 다음과 같이 쓸 수 있다.  $$ F_{t+m} = S_{t} + m b_{t} $$  ">
 
   <!-- Google Fonts loaded here depending on setting in _data/options.yml true loads font, blank does not-->
   
@@ -87,6 +87,7 @@ m 시점 앞을 예측하는 식은 다음과 같이 쓸 수 있다.
   $$ F_{t+m} = S_{t} + m b_{t} $$
   </p>
 </section>
+
 <section>
   <p>
     <label for="mn-h02" class="margin-toggle">⊕ </label>
@@ -110,6 +111,7 @@ $$
 대조군으로 \( \alpha=0.977\)일 때의 단일 평활 모델도 해보자. 이 \( \alpha \) 값은 단일 지수 평활법에서 최소 MSE와 가까운 값이다.
   </p>
 </section>
+
 <section>
   <p>
     <label for="mn-h03" class="margin-toggle">⊕ </label>
@@ -139,6 +141,7 @@ $$
     </table>
   </div> 
 </section>
+
 <section>
   <h3>예측값 비교</h3>
   <p>
@@ -164,6 +167,7 @@ $$
     </table>
   </div>
 </section>
+
 <section>
   <p>
     <label for="mn-h05" class="margin-toggle">⊕ </label>
@@ -180,6 +184,7 @@ $$
 이 그래프에서 보니 이중 평활법 경우가 단일 평활법보다 데이터에 훨씬 더 가깝다. 단일 평활법은 예측할 때 단순하게 수평선과 다를바가 없다는 것도 알 수 있다. 실제 상황에서 이런 수평선과 같은 상황이 일어날 가능성은 낮다. 따라서 이 경우에는 이중 평활법이 낫다.
   </p>
 </section>
+
 <section>
   <p>
     <label for="mn-h06" class="margin-toggle">⊕ </label>
@@ -196,6 +201,7 @@ $$
 꽤 재미있는 그림이다. 두 기법 모두 비슷한 경향을 따르지만, 회귀선은 이중 평활법에 비해 예측값이 느리게 증가한다.    
   </p>
 </section>
+
 <section>
   <p>
     <label for="mn-h07" class="margin-toggle">⊕ </label>
@@ -206,6 +212,7 @@ $$
 예측하는 사람에 따라 선택하는 기법이 다르다. 성장과정을 공격적으로 나타내고 싶으면, 이중 평활법을 선택한다. 아니면, 회귀법을 사용할 것이다. 선형 회귀법에서 "시간"은 독립 변수 역할을 한다. 4장에서 선형 회귀의 기본적인 내용과 회귀 추정의 세부 사항을 이야기했다.
   </p>
 </section>
+
 <section>
   <ul class="pager">
     <li class="previous"><a href="/articles/2016/11/19/ESH-06-04-03-03">Previous</a></li>

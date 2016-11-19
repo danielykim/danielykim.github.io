@@ -7,7 +7,7 @@
   
   <link rel="icon" type="image/png" href="http://danielykim.me/images/myicon.png" />
   <title>Blog: Daniel Kim</title>
-  <meta name="description" content="  예측 식      ⊕         다음 값을 예측하기    기본 등식을 예측 식으로 사용한다.$$ S_{t+1} = \alpha y_{t} + (1 - \alpha)S_{t} \ , \quad 0  0. $$        ⊕         새로운 예측은 이전 예측에 오차 수정...">
+  <meta name="description" content="  예측 식      ⊕         다음 값을 예측하기    기본 등식을 예측 식으로 사용한다.$$ S_{t+1} = \alpha y_{t} + (1 - \alpha)S_{t} \ , \quad 0  0. $$  ">
 
   <!-- Google Fonts loaded here depending on setting in _data/options.yml true loads font, blank does not-->
   
@@ -86,6 +86,7 @@
 $$ S_{t+1} = \alpha y_{t} + (1 - \alpha)S_{t} \ , \quad 0 < \alpha \le 1, \quad t > 0. $$
   </p>
 </section>
+
 <section>
   <p>
     <label for="mn-h02" class="margin-toggle">⊕ </label>
@@ -101,6 +102,7 @@ $$ S_{t+1} = S_{t} + \alpha \epsilon_{t} $$
 다시 말해, 새로운 예측은 이전 예측에 가장 마지막 예측의 오차 수정치를 더한 것이다.  
   </p>
 </section>
+
 <section>
   <p>
     <label for="mn-h03" class="margin-toggle">⊕ </label>
@@ -116,6 +118,7 @@ $$ S_{t+1} = S_{t} + \alpha \epsilon_{t} $$
 다시 말해, 새로운 예측은 이전 예측에 가장 마지막 예측의 오차 수정치를 더한 것이다.  
   </p>
 </section>
+
 <section>
   <h3>예측의 재복합</h3>
   <p>
@@ -129,6 +132,7 @@ $$ S_{t+1} = \alpha y_{origin} + (1-\alpha)S_{t} $$
 여기에서 y_{origin}은 상수이다. 이 기법을 재복합<label for="sn-bootstrapping" class="margin-toggle sidenote-number"></label><input type="checkbox" id="sn-bootstrapping" class="margin-toggle"/><span class="sidenote">Bootstrapping</span>이라고 부른다.
   </p>
 </section>
+
 <section>
   <h3>재복합 예제</h3>
   <p>
@@ -150,6 +154,7 @@ $$ S_{t+1} = \alpha y_{origin} + (1-\alpha)S_{t} $$
   $$ S_{t+2} = 0.1(70) + 0.9(71.5) = 71.35 $$
   </p>
 </section>
+
 <section>
   <h3>재복합 예측과 보통의 예측 방법 비교</h3>
   <p>
@@ -175,6 +180,7 @@ $$ S_{t+1} = \alpha y_{origin} + (1-\alpha)S_{t} $$
     </table>
   </div>  
 </section>
+
 <section>
   <p>
     <label for="mn-h05" class="margin-toggle">⊕ </label>
@@ -185,6 +191,7 @@ $$ S_{t+1} = \alpha y_{origin} + (1-\alpha)S_{t} $$
 단일 평활(단일 지수 평활을 줄여서)은 추세가 있을 때 그리 좋은 선택은 아니다. 단일 계수 \( \alpha \)로만으로는 부족하다.
   </p>
 </section>
+
 <section>
   <p>
     <label for="mn-h06" class="margin-toggle">⊕ </label>
@@ -214,6 +221,7 @@ $$ S_{t+1} = \alpha y_{origin} + (1-\alpha)S_{t} $$
     </table>
   </div>  
 </section>
+
 <section>
   <p>
     <label for="mn-h07" class="margin-toggle">⊕ </label>
@@ -230,6 +238,7 @@ $$ S_{t+1} = \alpha y_{origin} + (1-\alpha)S_{t} $$
     <span class="sidenote">가로축은 시점, 세로축은 데이터</span>  
   </figure>
 </section>
+
 <section>
   <ul class="pager">
     <li class="previous"><a href="/articles/2016/11/19/ESH-06-04-03-01">Previous</a></li>
