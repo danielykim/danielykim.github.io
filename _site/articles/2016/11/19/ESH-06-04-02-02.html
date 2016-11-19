@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <link rel="icon" type="image/png" href="http://danielykim.me/images/myicon.png" />
+  <title>Blog: Daniel Kim</title>
+  <meta name="description" content="      ⊕         이동 평균을 계산할 때, 평균을 중간 시기에 놓는 것이 직관적이다    이전 예제에서 처음 3개 시기의 평균을 계산하여, 3번째 숫자 다음에 계산한 값을 두었다. 평균값을 계산했던 구간의 중앙에 놓을 수도 있었다. 즉, 2번째 숫자 다음에 놓을 수도 있...">
+
+  <!-- Google Fonts loaded here depending on setting in _data/options.yml true loads font, blank does not-->
+  
+  
+  <!-- Load up MathJax script if needed ... specify in /_data/options.yml file-->
+  <script type="text/javascript" async
+    src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+  </script>
+
+  <link rel="stylesheet" type="text/css" href="/css/tufte.css">
+  <link rel="stylesheet" type="text/css" href="/tufte.css">
+  <!-- <link rel="stylesheet" type="text/css" href="/css/print.css" media="print"> -->
+
+  <link rel="canonical" href="http://localhost:4000/articles/2016/11/19/ESH-06-04-02-02">
+
+  <link rel="alternate" type="application/rss+xml" title="Blog: Daniel Kim" href="http://localhost:4000/feed.xml" />
+
+  <script type="text/javascript" src="/js/pace.min.js"></script>
+
+  <link rel="stylesheet" type="text/css" href="/css/pace-flash.css">
+
+</head>
+
+  <body>
+    <!--- Header and nav template site-wide -->
+<header>
+    <nav class="group">
+    <h1>Data Artience</h1>
+	
+		
+  	
+		
+  	
+		
+		    
+		      <a href="/">blog</a>
+		    
+	    
+  	
+		
+		    
+		      <a href="/about/">About</a>
+		    
+	    
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+	</nav>
+</header>
+
+    <article class="group">
+      <h1>6.4.2.2. 중앙 이동 평균</h1>
+
+<p class="subtitle">November 19, 2016</p>
+
+
+<section>
+  <p>
+    <label for="mn-h01" class="margin-toggle">⊕ </label>
+    <input type="checkbox" id="mn-h01" class="margin-toggle">
+    <span class="marginnote">
+이동 평균을 계산할 때, 평균을 중간 시기에 놓는 것이 직관적이다
+    </span>
+<a href="/articles/2016/11/19/ESH-06-04-02-01">이전 예제</a>에서 처음 3개 시기의 평균을 계산하여, 3번째 숫자 다음에 계산한 값을 두었다. 평균값을 계산했던 구간의 중앙에 놓을 수도 있었다. 즉, 2번째 숫자 다음에 놓을 수도 있었다는 말이다. 이러한 방법은 홀수개의 숫자가 있을 때는 사용해도 괜찮지만, 짝수개의 숫자가 있을 때는 사용하기 곤란하다. 그렇다면 \( M = 4 \)일 때, 첫 번째 이동 평균값을 어디에 두어야 할까?
+  </p>
+  <p>
+엄밀하게 따지면, 이동 평균은 \( t = 2.5, 3.5, \cdots \) 같은 곳에 놓일 것이다.
+  </p>
+  <p>
+  이런 경우를 피하기 위해, \( M = 2 \)으로 이동 평균을 평활하자. <b>평활한 값을 평활하자는 이야기이다!</b>
+  </p>
+</section>
+<section>
+  <p>
+    <label for="mn-h02" class="margin-toggle">⊕ </label>
+    <input type="checkbox" id="mn-h02" class="margin-toggle">
+    <span class="marginnote">
+짝수개의 숫자의 평균을 구한다면 평활한 값을 다시 평활해야 한다
+    </span>
+다음의 표는 \( M = 4 \)일 때, 결과를 나타낸다.
+  </p>
+  <p>
+  중간 과정
+  </p>
+  <div class="table-wrapper">
+    <table class="booktabs">
+      <thead>
+        <tr><th style="text-align: center"><b>시점</b></th><th style="text-align: center"><b>값</b></th><th style="text-align: center"><b>이동 평균</b></th><th style="text-align: center"><b>중앙</b></th></tr>
+      </thead>
+      <tbody>
+<tr><td style="text-align: center">1</td><td style="text-align: center">9</td><td style="text-align: center"></td><td style="text-align: center"></td></tr>
+<tr><td style="text-align: center">1.5</td><td style="text-align: center"></td><td style="text-align: center"></td><td style="text-align: center"></td></tr>
+<tr><td style="text-align: center">2</td><td style="text-align: center">8</td><td style="text-align: center"></td><td style="text-align: center"></td></tr>
+<tr><td style="text-align: center">2.5</td><td style="text-align: center"></td><td style="text-align: center">9.5 </td><td style="text-align: center"></td></tr>
+<tr><td style="text-align: center">3</td><td style="text-align: center">9</td><td style="text-align: center"></td><td style="text-align: center">9.5</td></tr>
+<tr><td style="text-align: center">3.5</td><td style="text-align: center"></td><td style="text-align: center">9.5 </td><td style="text-align: center"></td></tr>
+<tr><td style="text-align: center">4</td><td style="text-align: center">12</td><td style="text-align: center"></td><td style="text-align: center">10.0</td></tr>
+<tr><td style="text-align: center">4.5</td><td style="text-align: center"></td><td style="text-align: center">10.5 </td><td style="text-align: center"></td></tr>
+<tr><td style="text-align: center">5</td><td style="text-align: center">9</td><td style="text-align: center"></td><td style="text-align: center">10.750</td></tr>
+<tr><td style="text-align: center">5.5</td><td style="text-align: center"></td><td style="text-align: center">11.0 </td><td style="text-align: center"></td></tr>
+<tr><td style="text-align: center">6</td><td style="text-align: center">12</td><td style="text-align: center"></td><td style="text-align: center"></td></tr>
+<tr><td style="text-align: center">6.5</td><td style="text-align: center"></td><td style="text-align: center"></td><td style="text-align: center"></td></tr>
+<tr><td style="text-align: center">7</td><td style="text-align: center">11</td><td style="text-align: center"></td><td style="text-align: center"></td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+<section>
+  <p>
+    <label for="mn-h03" class="margin-toggle">⊕ </label>
+    <input type="checkbox" id="mn-h03" class="margin-toggle">
+    <span class="marginnote">
+결과 표
+    </span>
+최종 결과 표이다.
+  </p>
+  <div class="table-wrapper">
+    <table class="booktabs">
+      <thead>
+        <tr><th style="text-align: center"><b>시점</b></th><th style="text-align: center"><b>값</b></th><th style="text-align: center"><b>중앙 이동 평균</b></th></tr>
+      </thead>
+      <tbody>
+<tr><td style="text-align: center">1 </td><td style="text-align: center">9</td><td style="text-align: center"> </td></tr>
+<tr><td style="text-align: center">2 </td><td style="text-align: center">8</td><td style="text-align: center"> </td></tr>
+<tr><td style="text-align: center">3 </td><td style="text-align: center">9</td><td style="text-align: center">9.5</td></tr>
+<tr><td style="text-align: center">4 </td><td style="text-align: center">12</td><td style="text-align: center">10.0</td></tr>
+<tr><td style="text-align: center">5 </td><td style="text-align: center">9</td><td style="text-align: center">10.750</td></tr>
+<tr><td style="text-align: center">6 </td><td style="text-align: center">12</td><td style="text-align: center"> </td></tr>
+<tr><td style="text-align: center">7 </td><td style="text-align: center">11</td><td style="text-align: center"> </td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+<section>
+  <p>
+    <label for="mn-h04" class="margin-toggle">⊕ </label>
+    <input type="checkbox" id="mn-h03" class="margin-toggle">
+    <span class="marginnote">
+예측할 때 이동 평균으로 의미있는 추세를 다룰 수 없다
+    </span>
+안타깝게도 전체 데이터의 평균이나 가장 최근 \( M \)개 값의 이동 평균 둘 다, 의미있는 추세가 있을 때 다음 시기를 제대로 예측하기 힘들다.
+  </p>  
+</section>
+<section>
+  <p>
+    <label for="mn-h05" class="margin-toggle">⊕ </label>
+    <input type="checkbox" id="mn-h03" class="margin-toggle">
+    <span class="marginnote">
+선형 추세에 대한 이중 이동 평균
+    </span>
+이동 평균을 변형시켜 추세를 좀 더 잘 다루는 방법이 있다. 선형 추세에 대한 이중 이동 평균이라고 하는데, 같은 \( M \) 값으로 원래 이동 평균의 이동 평균을 구하고(두 번째 이동 평균), 구한 두 종류의 이동 평균 값을 가지고 기울기와 y절편을 구한다. 그 다음 한 개 이상의 시기를 예측한다.
+  </p>  
+</section>
+<section>
+  <ul class="pager">
+    <li class="previous"><a href="/articles/2016/11/19/ESH-06-04-02-01">Previous</a></li>
+    <li class="next"><a href="/articles/2016/11/19/ESH-06-04-03">Next</a></li>      
+  </ul>
+  <p>
+    <a href="http://www.itl.nist.gov/div898/handbook/pmc/section4/pmc422.htm">원문 보기</a>
+  </p>
+</section>
+
+
+
+<p>
+<div class="comments">
+	<div id="disqus_thread" style="max-width:60%;"></div>
+	<script type="text/javascript">
+    var disqus_config = function () {
+      this.page.url = "https://danielykim.github.io/articles/2016/11/19/ESH-06-04-02-02"; // <--- use canonical URL
+      this.page.identifier = "/articles/2016/11/19/ESH-06-04-02-02";
+    };
+    (function() { // DON'T EDIT BELOW THIS LINE
+    
+      var d = document, s = d.createElement('script');
+
+      s.src = '//danielykim.disqus.com/embed.js'; // <--- use Disqus shortname
+
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+</div>
+</p>
+
+
+
+
+    </article>
+    <span class="print-footer">6.4.2.2. 중앙 이동 평균 - November 19, 2016 - Daniel Kim, PhD</span>
+    <footer>
+  <hr class="slender">
+  <ul class="footer-links">
+    <li><a href="mailto:daniel.youngho.kim@gmail.com"><span class="icon-mail"></span></a></li>    
+    <li><a href="https://www.linkedin.com/in/danielyounghokim"><span class="icon-info"></span></a></li>    
+      
+  </ul>
+<div class="credits">
+<span>&copy; 2016 &nbsp;&nbsp;DANIEL KIM, PHD</span></br> <br>
+<span>This site created with the <a href="//github.com/clayh53/tufte-jekyll">Tufte theme for  </a> in <a href="//jekyllrb.com">Jekyll</a>.</span> 
+</div>  
+</footer>
+
+    <script id="dsq-count-scr" src="//danielykim.disqus.com/count.js" async></script>
+    
+  </body>
+</html>

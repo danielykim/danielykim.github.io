@@ -1,0 +1,146 @@
+---
+layout: post
+title: 6.4.3.4. 이중 지수 평활법을 이용한 예측(LASP)
+---
+
+<section>
+  <p>
+    <label for="mn-h01" class="margin-toggle">⊕ </label>
+    <input type="checkbox" id="mn-h01" class="margin-toggle">
+    <span class="marginnote">
+예측 식
+    </span>
+한 시점 앞을 예측하는 식은 다음과 같이 쓸 수 있다.
+  $$ F_{t+1} = S_{t} + b_{t} $$
+m 시점 앞을 예측하는 식은 다음과 같이 쓸 수 있다.
+  $$ F_{t+m} = S_{t} + m b_{t} $$
+  </p>
+</section>
+<section>
+  <p>
+    <label for="mn-h02" class="margin-toggle">⊕ </label>
+    <input type="checkbox" id="mn-h02" class="margin-toggle">
+    <span class="marginnote">
+예제
+    </span>
+다음의 데이터를 다시 한 번 살펴보자.
+    <blockquote>
+      <p>6.4, 5.6, 7.8, 8.8, 11, 11.6, 16.7, 15.3, 21.6, 22.4.</p>
+    </blockquote>
+  </p>
+  <p>
+\( \alpha=0.3623 \)과 \( \gamma=1.0 \)인 이중 평활법 모델로 맞춰보자. 이 두 매개변수는 원본 시게열을 한 시점 앞 예측과 비교하여 최소 MSE값과 가까운 것이다(지금 다루는 이중 지수 평활법은 평활값을 계산하기 위해 현재 시계열 값을 사용한다). 초기값은 다음과 같다.
+$$
+\begin{align*}
+  S_{1} &= y_{1} = 6.4 \\
+  b_{1} &= \frac{1}{3} \left[ (y_{2} - y_{1}) + (y_{3} - y_{2}) + (y_{4} - y_{3}) \right]
+\end{align*}
+$$
+대조군으로 \( \alpha=0.977\)일 때의 단일 평활 모델도 해보자. 이 \( \alpha \) 값은 단일 지수 평활법에서 최소 MSE와 가까운 값이다.
+  </p>
+</section>
+<section>
+  <p>
+    <label for="mn-h03" class="margin-toggle">⊕ </label>
+    <input type="checkbox" id="mn-h03" class="margin-toggle">
+    <span class="marginnote">
+예제 결과 예측
+    </span>
+예제에서 평활 결과는 다음과 같다.
+  </p>
+  <div class="table-wrapper">
+    <table class="booktabs">
+      <thead>
+        <tr><th style="text-align: center"><b>데이터</b></th><th style="text-align: center"><b>이중</b></th><th style="text-align: center"><b>단일</b></th></tr>
+      </thead>
+      <tbody>
+<tr><td style="text-align: center">6.4</td><td style="text-align: center">6.4</td><td style="text-align: center"></td></tr>
+<tr><td style="text-align: center">5.6</td><td style="text-align: center">6.6 (예측 = 7.2)</td><td style="text-align: center">6.4</td></tr>
+<tr><td style="text-align: center">7.8</td><td style="text-align: center">7.2 (예측 = 6.8)</td><td style="text-align: center">5.6</td></tr>
+<tr><td style="text-align: center">8.8</td><td style="text-align: center">8.1 (예측 = 7.8)</td><td style="text-align: center">7.8</td></tr>
+<tr><td style="text-align: center">11.0</td><td style="text-align: center">9.8 (예측 = 9.1)</td><td style="text-align: center">8.8</td></tr>
+<tr><td style="text-align: center">11.6</td><td style="text-align: center">11.5 (예측 = 11.4)</td><td style="text-align: center">10.9</td></tr>
+<tr><td style="text-align: center">16.7</td><td style="text-align: center">14.5 (예측 = 13.2)</td><td style="text-align: center">11.6</td></tr>
+<tr><td style="text-align: center">15.3</td><td style="text-align: center">16.7 (예측 = 17.4)</td><td style="text-align: center">16.6</td></tr>
+<tr><td style="text-align: center">21.6</td><td style="text-align: center">19.9 (예측 = 18.9)</td><td style="text-align: center">15.3</td></tr>
+<tr><td style="text-align: center">22.4</td><td style="text-align: center">22.8 (예측 = 23.1)</td><td style="text-align: center">21.5</td></tr>
+      </tbody>
+    </table>
+  </div> 
+</section>
+<section>
+  <h3>예측값 비교</h3>
+  <p>
+    <label for="mn-h04" class="margin-toggle">⊕ </label>
+    <input type="checkbox" id="mn-h04" class="margin-toggle">
+    <span class="marginnote">
+표는 단일 및 이중 지수 평활법으로 예측한 결과를 나타낸다
+    </span>
+각 방법이 미래를 어떻게 예측했는지 살펴보기 위해, 가장 마지막 관측값 이후 5개 시점을 계산하면,
+  </p>
+  <div class="table-wrapper">
+    <table class="booktabs">
+      <thead>
+        <tr><th style="text-align: center"><b>시점</b></th><th style="text-align: center"><b>단일</b></th><th style="text-align: center"><b>이중</b></th></tr>
+      </thead>
+      <tbody>
+<tr><td style="text-align: center">11</td><td style="text-align: center">22.4</td><td style="text-align: center">25.8</td></tr>
+<tr><td style="text-align: center">12</td><td style="text-align: center">22.4</td><td style="text-align: center">28.7</td></tr>
+<tr><td style="text-align: center">13</td><td style="text-align: center">22.4</td><td style="text-align: center">31.7</td></tr>
+<tr><td style="text-align: center">14</td><td style="text-align: center">22.4</td><td style="text-align: center">34.6</td></tr>
+<tr><td style="text-align: center">15</td><td style="text-align: center">22.4</td><td style="text-align: center">37.6</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+<section>
+  <p>
+    <label for="mn-h05" class="margin-toggle">⊕ </label>
+    <input type="checkbox" id="mn-h05" class="margin-toggle">
+    <span class="marginnote">
+단일 및 이중 지수 평활법으로 예측한 결과를 비교하는 그래프
+    </span>
+결과를 나타내는 그래프로 보면 아주 명확하게 차이를 볼 수 있다.    
+  </p>
+  <figure>
+    <img src="http://www.itl.nist.gov/div898/handbook/pmc/section4/gifs/tseries4.gif">
+  </figure>
+  <p>
+이 그래프에서 보니 이중 평활법 경우가 단일 평활법보다 데이터에 훨씬 더 가깝다. 단일 평활법은 예측할 때 단순하게 수평선과 다를바가 없다는 것도 알 수 있다. 실제 상황에서 이런 수평선과 같은 상황이 일어날 가능성은 낮다. 따라서 이 경우에는 이중 평활법이 낫다.
+  </p>
+</section>
+<section>
+  <p>
+    <label for="mn-h06" class="margin-toggle">⊕ </label>
+    <input type="checkbox" id="mn-h06" class="margin-toggle">
+    <span class="marginnote">
+이중 지수 평활법과 회귀법으로 예측한 결과를 비교하는 그래프
+    </span>
+선형 회귀법과 이중 지수 평활법을 비교해보자.
+  </p>
+  <figure>
+    <img src="http://www.itl.nist.gov/div898/handbook/pmc/section4/gifs/tseries5.gif">
+  </figure>
+  <p>
+꽤 재미있는 그림이다. 두 기법 모두 비슷한 경향을 따르지만, 회귀선은 이중 평활법에 비해 예측값이 느리게 증가한다.    
+  </p>
+</section>
+<section>
+  <p>
+    <label for="mn-h07" class="margin-toggle">⊕ </label>
+    <input type="checkbox" id="mn-h07" class="margin-toggle">
+    <span class="marginnote">
+예측하는 사람마다 다른 기법을 선택한다
+    </span>
+예측하는 사람에 따라 선택하는 기법이 다르다. 성장과정을 공격적으로 나타내고 싶으면, 이중 평활법을 선택한다. 아니면, 회귀법을 사용할 것이다. 선형 회귀법에서 "시간"은 독립 변수 역할을 한다. 4장에서 선형 회귀의 기본적인 내용과 회귀 추정의 세부 사항을 이야기했다.
+  </p>
+</section>
+<section>
+  <ul class="pager">
+    <li class="previous"><a href="{{ "/articles/2016/11/19/ESH-06-04-03-03" | prepend: site.baseurl }}">Previous</a></li>
+    <li class="next"><a href="{{ "/articles/2016/11/19/ESH-06-04-03-05" | prepend: site.baseurl }}">Next</a></li>      
+  </ul>
+  <p>
+    <a href="http://www.itl.nist.gov/div898/handbook/pmc/section4/pmc434.htm">원문 보기</a>
+  </p>
+</section>

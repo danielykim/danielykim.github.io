@@ -1,0 +1,111 @@
+---
+layout: post
+title: 6.4.2.2. 중앙 이동 평균
+---
+
+<section>
+  <p>
+    <label for="mn-h01" class="margin-toggle">⊕ </label>
+    <input type="checkbox" id="mn-h01" class="margin-toggle">
+    <span class="marginnote">
+이동 평균을 계산할 때, 평균을 중간 시기에 놓는 것이 직관적이다
+    </span>
+<a href="{{ "/articles/2016/11/19/ESH-06-04-02-01" | prepend: site.baseurl }}">이전 예제</a>에서 처음 3개 시기의 평균을 계산하여, 3번째 숫자 다음에 계산한 값을 두었다. 평균값을 계산했던 구간의 중앙에 놓을 수도 있었다. 즉, 2번째 숫자 다음에 놓을 수도 있었다는 말이다. 이러한 방법은 홀수개의 숫자가 있을 때는 사용해도 괜찮지만, 짝수개의 숫자가 있을 때는 사용하기 곤란하다. 그렇다면 \( M = 4 \)일 때, 첫 번째 이동 평균값을 어디에 두어야 할까?
+  </p>
+  <p>
+엄밀하게 따지면, 이동 평균은 \( t = 2.5, 3.5, \cdots \) 같은 곳에 놓일 것이다.
+  </p>
+  <p>
+  이런 경우를 피하기 위해, \( M = 2 \)으로 이동 평균을 평활하자. <b>평활한 값을 평활하자는 이야기이다!</b>
+  </p>
+</section>
+<section>
+  <p>
+    <label for="mn-h02" class="margin-toggle">⊕ </label>
+    <input type="checkbox" id="mn-h02" class="margin-toggle">
+    <span class="marginnote">
+짝수개의 숫자의 평균을 구한다면 평활한 값을 다시 평활해야 한다
+    </span>
+다음의 표는 \( M = 4 \)일 때, 결과를 나타낸다.
+  </p>
+  <p>
+  중간 과정
+  </p>
+  <div class="table-wrapper">
+    <table class="booktabs">
+      <thead>
+        <tr><th style="text-align: center"><b>시점</b></th><th style="text-align: center"><b>값</b></th><th style="text-align: center"><b>이동 평균</b></th><th style="text-align: center"><b>중앙</b></th></tr>
+      </thead>
+      <tbody>
+<tr><td style="text-align: center">1</td><td style="text-align: center">9</td><td style="text-align: center"></td><td style="text-align: center"></td></tr>
+<tr><td style="text-align: center">1.5</td><td style="text-align: center"></td><td style="text-align: center"></td><td style="text-align: center"></td></tr>
+<tr><td style="text-align: center">2</td><td style="text-align: center">8</td><td style="text-align: center"></td><td style="text-align: center"></td></tr>
+<tr><td style="text-align: center">2.5</td><td style="text-align: center"></td><td style="text-align: center">9.5 </td><td style="text-align: center"></td></tr>
+<tr><td style="text-align: center">3</td><td style="text-align: center">9</td><td style="text-align: center"></td><td style="text-align: center">9.5</td></tr>
+<tr><td style="text-align: center">3.5</td><td style="text-align: center"></td><td style="text-align: center">9.5 </td><td style="text-align: center"></td></tr>
+<tr><td style="text-align: center">4</td><td style="text-align: center">12</td><td style="text-align: center"></td><td style="text-align: center">10.0</td></tr>
+<tr><td style="text-align: center">4.5</td><td style="text-align: center"></td><td style="text-align: center">10.5 </td><td style="text-align: center"></td></tr>
+<tr><td style="text-align: center">5</td><td style="text-align: center">9</td><td style="text-align: center"></td><td style="text-align: center">10.750</td></tr>
+<tr><td style="text-align: center">5.5</td><td style="text-align: center"></td><td style="text-align: center">11.0 </td><td style="text-align: center"></td></tr>
+<tr><td style="text-align: center">6</td><td style="text-align: center">12</td><td style="text-align: center"></td><td style="text-align: center"></td></tr>
+<tr><td style="text-align: center">6.5</td><td style="text-align: center"></td><td style="text-align: center"></td><td style="text-align: center"></td></tr>
+<tr><td style="text-align: center">7</td><td style="text-align: center">11</td><td style="text-align: center"></td><td style="text-align: center"></td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+<section>
+  <p>
+    <label for="mn-h03" class="margin-toggle">⊕ </label>
+    <input type="checkbox" id="mn-h03" class="margin-toggle">
+    <span class="marginnote">
+결과 표
+    </span>
+최종 결과 표이다.
+  </p>
+  <div class="table-wrapper">
+    <table class="booktabs">
+      <thead>
+        <tr><th style="text-align: center"><b>시점</b></th><th style="text-align: center"><b>값</b></th><th style="text-align: center"><b>중앙 이동 평균</b></th></tr>
+      </thead>
+      <tbody>
+<tr><td style="text-align: center">1 </td><td style="text-align: center">9</td><td style="text-align: center"> </td></tr>
+<tr><td style="text-align: center">2 </td><td style="text-align: center">8</td><td style="text-align: center"> </td></tr>
+<tr><td style="text-align: center">3 </td><td style="text-align: center">9</td><td style="text-align: center">9.5</td></tr>
+<tr><td style="text-align: center">4 </td><td style="text-align: center">12</td><td style="text-align: center">10.0</td></tr>
+<tr><td style="text-align: center">5 </td><td style="text-align: center">9</td><td style="text-align: center">10.750</td></tr>
+<tr><td style="text-align: center">6 </td><td style="text-align: center">12</td><td style="text-align: center"> </td></tr>
+<tr><td style="text-align: center">7 </td><td style="text-align: center">11</td><td style="text-align: center"> </td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+<section>
+  <p>
+    <label for="mn-h04" class="margin-toggle">⊕ </label>
+    <input type="checkbox" id="mn-h03" class="margin-toggle">
+    <span class="marginnote">
+예측할 때 이동 평균으로 의미있는 추세를 다룰 수 없다
+    </span>
+안타깝게도 전체 데이터의 평균이나 가장 최근 \( M \)개 값의 이동 평균 둘 다, 의미있는 추세가 있을 때 다음 시기를 제대로 예측하기 힘들다.
+  </p>  
+</section>
+<section>
+  <p>
+    <label for="mn-h05" class="margin-toggle">⊕ </label>
+    <input type="checkbox" id="mn-h03" class="margin-toggle">
+    <span class="marginnote">
+선형 추세에 대한 이중 이동 평균
+    </span>
+이동 평균을 변형시켜 추세를 좀 더 잘 다루는 방법이 있다. 선형 추세에 대한 이중 이동 평균이라고 하는데, 같은 \( M \) 값으로 원래 이동 평균의 이동 평균을 구하고(두 번째 이동 평균), 구한 두 종류의 이동 평균 값을 가지고 기울기와 y절편을 구한다. 그 다음 한 개 이상의 시기를 예측한다.
+  </p>  
+</section>
+<section>
+  <ul class="pager">
+    <li class="previous"><a href="{{ "/articles/2016/11/19/ESH-06-04-02-01" | prepend: site.baseurl }}">Previous</a></li>
+    <li class="next"><a href="{{ "/articles/2016/11/19/ESH-06-04-03" | prepend: site.baseurl }}">Next</a></li>      
+  </ul>
+  <p>
+    <a href="http://www.itl.nist.gov/div898/handbook/pmc/section4/pmc422.htm">원문 보기</a>
+  </p>
+</section>

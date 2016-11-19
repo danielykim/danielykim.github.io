@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <link rel="icon" type="image/png" href="http://danielykim.me/images/myicon.png" />
+  <title>Blog: Daniel Kim</title>
+  <meta name="description" content="      ⊕         지수 평활법은 과거 관측값을 지수적으로 감소하는 가중치로 다룬다    이 방법은 평활한 시계열을 구할 때 사람들이 정말 많이 사용하는 방법이다. 단일 이동 평균은 과거 관측값을 동일한 가중치로 다루지만, 지수 평활법은 관측값이 오래된 것일 수록 지수적으...">
+
+  <!-- Google Fonts loaded here depending on setting in _data/options.yml true loads font, blank does not-->
+  
+  
+  <!-- Load up MathJax script if needed ... specify in /_data/options.yml file-->
+  <script type="text/javascript" async
+    src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+  </script>
+
+  <link rel="stylesheet" type="text/css" href="/css/tufte.css">
+  <link rel="stylesheet" type="text/css" href="/tufte.css">
+  <!-- <link rel="stylesheet" type="text/css" href="/css/print.css" media="print"> -->
+
+  <link rel="canonical" href="http://localhost:4000/articles/2016/11/19/ESH-06-04-03">
+
+  <link rel="alternate" type="application/rss+xml" title="Blog: Daniel Kim" href="http://localhost:4000/feed.xml" />
+
+  <script type="text/javascript" src="/js/pace.min.js"></script>
+
+  <link rel="stylesheet" type="text/css" href="/css/pace-flash.css">
+
+</head>
+
+  <body>
+    <!--- Header and nav template site-wide -->
+<header>
+    <nav class="group">
+    <h1>Data Artience</h1>
+	
+		
+  	
+		
+  	
+		
+		    
+		      <a href="/">blog</a>
+		    
+	    
+  	
+		
+		    
+		      <a href="/about/">About</a>
+		    
+	    
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+	</nav>
+</header>
+
+    <article class="group">
+      <h1>6.4.3. 지수 평활법이란?</h1>
+
+<p class="subtitle">November 19, 2016</p>
+
+
+<section>
+  <p>
+    <label for="mn-h01" class="margin-toggle">⊕ </label>
+    <input type="checkbox" id="mn-h01" class="margin-toggle">
+    <span class="marginnote">
+지수 평활법은 과거 관측값을 지수적으로 감소하는 가중치로 다룬다
+    </span>
+이 방법은 평활한 시계열을 구할 때 사람들이 정말 많이 사용하는 방법이다. 단일 이동 평균은 과거 관측값을 동일한 가중치로 다루지만, 지수 평활법은 관측값이 오래된 것일 수록 지수적으로 감소하는 가중치로 다룬다.
+  </p>
+  <p>
+다시 말해, 예측할 때 최근 관측값에 오래된 관측값보다 상대적으로 더 높은 가중치가 붙는다는 것이다.
+  </p>
+  <p>
+이동 평균은 관측값을 정확하게 같은 가중치 \( 1/N \)로 다룬다. 하지만, 지수 평활법에서는 정하거나 계산해서 넣어줘야 할 1개 이상의 평활 매개변수가 있다. 이러한 매개변수에 따라 가중치 값이 변한다.
+  </p>
+  <p>
+  이번 절에서는 <a href="/articles/2016/11/19/ESH-06-04-03-01">단일</a>, <a href="/articles/2016/11/19/ESH-06-04-03-03">이중</a>, <a href="/articles/2016/11/19/ESH-06-04-03-05">삼중</a> 지수 평활법을 살펴보자.
+  </p>
+</section>
+<section>
+  <ul class="pager">
+    <li class="previous"><a href="/articles/2016/11/19/ESH-06-04-02-02">Previous</a></li>
+    <li class="next"><a href="/articles/2016/11/19/ESH-06-04-03-01">Next</a></li>      
+  </ul>
+  <p>
+    <a href="http://www.itl.nist.gov/div898/handbook/pmc/section4/pmc43.htm">원문 보기</a>
+  </p>
+</section>
+
+
+
+<p>
+<div class="comments">
+	<div id="disqus_thread" style="max-width:60%;"></div>
+	<script type="text/javascript">
+    var disqus_config = function () {
+      this.page.url = "https://danielykim.github.io/articles/2016/11/19/ESH-06-04-03"; // <--- use canonical URL
+      this.page.identifier = "/articles/2016/11/19/ESH-06-04-03";
+    };
+    (function() { // DON'T EDIT BELOW THIS LINE
+    
+      var d = document, s = d.createElement('script');
+
+      s.src = '//danielykim.disqus.com/embed.js'; // <--- use Disqus shortname
+
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+</div>
+</p>
+
+
+
+
+    </article>
+    <span class="print-footer">6.4.3. 지수 평활법이란? - November 19, 2016 - Daniel Kim, PhD</span>
+    <footer>
+  <hr class="slender">
+  <ul class="footer-links">
+    <li><a href="mailto:daniel.youngho.kim@gmail.com"><span class="icon-mail"></span></a></li>    
+    <li><a href="https://www.linkedin.com/in/danielyounghokim"><span class="icon-info"></span></a></li>    
+      
+  </ul>
+<div class="credits">
+<span>&copy; 2016 &nbsp;&nbsp;DANIEL KIM, PHD</span></br> <br>
+<span>This site created with the <a href="//github.com/clayh53/tufte-jekyll">Tufte theme for  </a> in <a href="//jekyllrb.com">Jekyll</a>.</span> 
+</div>  
+</footer>
+
+    <script id="dsq-count-scr" src="//danielykim.disqus.com/count.js" async></script>
+    
+  </body>
+</html>

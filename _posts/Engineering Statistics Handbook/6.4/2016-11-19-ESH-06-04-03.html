@@ -1,0 +1,33 @@
+---
+layout: post
+title: 6.4.3. 지수 평활법이란?
+---
+
+<section>
+  <p>
+    <label for="mn-h01" class="margin-toggle">⊕ </label>
+    <input type="checkbox" id="mn-h01" class="margin-toggle">
+    <span class="marginnote">
+지수 평활법은 과거 관측값을 지수적으로 감소하는 가중치로 다룬다
+    </span>
+이 방법은 평활한 시계열을 구할 때 사람들이 정말 많이 사용하는 방법이다. 단일 이동 평균은 과거 관측값을 동일한 가중치로 다루지만, 지수 평활법은 관측값이 오래된 것일 수록 지수적으로 감소하는 가중치로 다룬다.
+  </p>
+  <p>
+다시 말해, 예측할 때 최근 관측값에 오래된 관측값보다 상대적으로 더 높은 가중치가 붙는다는 것이다.
+  </p>
+  <p>
+이동 평균은 관측값을 정확하게 같은 가중치 \( 1/N \)로 다룬다. 하지만, 지수 평활법에서는 정하거나 계산해서 넣어줘야 할 1개 이상의 평활 매개변수가 있다. 이러한 매개변수에 따라 가중치 값이 변한다.
+  </p>
+  <p>
+  이번 절에서는 <a href="{{ "/articles/2016/11/19/ESH-06-04-03-01" | prepend: site.baseurl }}">단일</a>, <a href="{{ "/articles/2016/11/19/ESH-06-04-03-03" | prepend: site.baseurl }}">이중</a>, <a href="{{ "/articles/2016/11/19/ESH-06-04-03-05" | prepend: site.baseurl }}">삼중</a> 지수 평활법을 살펴보자.
+  </p>
+</section>
+<section>
+  <ul class="pager">
+    <li class="previous"><a href="{{ "/articles/2016/11/19/ESH-06-04-02-02" | prepend: site.baseurl }}">Previous</a></li>
+    <li class="next"><a href="{{ "/articles/2016/11/19/ESH-06-04-03-01" | prepend: site.baseurl }}">Next</a></li>      
+  </ul>
+  <p>
+    <a href="http://www.itl.nist.gov/div898/handbook/pmc/section4/pmc43.htm">원문 보기</a>
+  </p>
+</section>

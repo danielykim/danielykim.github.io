@@ -1,0 +1,93 @@
+---
+layout: post
+title: 6.4.3.3. 이중 지수 평활법
+---
+
+<section>
+  <p>
+    <label for="mn-h01" class="margin-toggle">⊕ </label>
+    <input type="checkbox" id="mn-h01" class="margin-toggle">
+    <span class="marginnote">
+이중 지수 평활법에는 두 개의 상수 매개변수가 있고, 이 방법은 추세를 다루기에 좀 더 적합하다
+    </span>
+바로 이전에 본 것처럼, 단일 평활법은 추세가 있는 경우를 다루기에 좋지 않다. 기본 등식과 함께 \( \gamma \)라는 상수를 포함하는 한 가지 식을 더 고려하면 단일 평활법을 개선할 수 있다. \( \gamma \)는 반드시 \( \alpha \)와 함께 사용해야 한다.
+  </p>
+  <p>
+아래는 이중 지수 평활법을 나타내는 두 식이다.
+  $$ 
+  \begin{align*}  
+    S_{t} &= \alpha y_{t} + (1-\alpha)( S_{t-1} + b_{t-1} ) \ , \qquad 0 \le \alpha \le 1 \\ 
+    b_{t} &= \gamma ( S_{t} - S_{t-1} ) + (1-\gamma)b_{t-1} \ , \qquad 0 \le \gamma \le 1
+  \end{align*}
+  $$
+이중 지수 평활법에서 시계열의 현재 값은 평활화한 현재 값을 계산하는데 사용된다.  
+  </p>
+</section>
+<section>
+  <p>
+    <label for="mn-h02" class="margin-toggle">⊕ </label>
+    <input type="checkbox" id="mn-h02" class="margin-toggle">
+    <span class="marginnote">
+새로운 예측은 이전 예측에 오차 수정치를 더한 것이다
+    </span>
+위의 식을 다음과 같이 다시 쓸 수 있다.
+$$ S_{t+1} = S_{t} + \alpha \epsilon_{t} $$
+여기에서 \( \epsilon_{t} \)는 시기 \( t \)의 예측 오차(실제 - 예측)이다.
+  </p>
+  <p>
+다시 말해, 새로운 예측은 이전 예측에 가장 마지막 예측의 오차 수정치를 더한 것이다.  
+  </p>
+</section>
+<section>
+  <h3>초기값</h3>
+  <p>
+    <label for="mn-h03" class="margin-toggle">⊕ </label>
+    <input type="checkbox" id="mn-h03" class="margin-toggle">
+    <span class="marginnote">
+초기값을 선택하는 몇 가지 방법
+    </span>
+단일 평활법 경우처럼 이중 평활법에서도 \( S_{t} \)와 \( b_{t} \) 식의 초기값을 여러 가지 방법으로 정할 수 있다.
+  </p>
+  <p>
+일반적으로 \( S_{1} \)은 \( y_{1} \)로 정한다. 아래 3가지 방법 중에서 \( b_{1} \) 을 정하면 좋다.
+$$
+\begin{align*}
+  b_{1} &= y_{2} - y_{1} \\
+  b_{1} &= \frac{1}{3} \left[ (y_{2} - y_{1} ) + ( y_{3} - y_{2} ) + (y_{4} - y_{3}) \right] \\
+  b_{1} &= \frac{ y_{n} - y_{1} }{ n - 1 }
+\end{align*}
+$$
+  </p>
+</section>
+<section>
+  <h3>첨언</h3>
+  <p>
+    <label for="mn-h04" class="margin-toggle">⊕ </label>
+    <input type="checkbox" id="mn-h04" class="margin-toggle">
+    <span class="marginnote">
+평활식의 의미
+    </span>
+첫 번째 평활식은 이전 시점의 추세 \( b_{t-1} \)를 이전 평활값에 더하여 이전 시점의 추세에 대해 \( S_{t} \) 를 맞춘다. 이 과정을 통해 뒤처짐을 제거하고 \( S_{t} \)을 현재값에 적절하게 맞춘다.
+  </p>
+  <p>
+두 번째 평활식은 마지막 두 값의 차이를 나타내는 추세를 갱신한다. 이 식은 단일 평활의 기본 등식과 비슷하지만, 추세를 갱신하는 부분이 다르다.    
+  </p>
+</section>
+<section>
+  <p>
+    <label for="mn-h05" class="margin-toggle">⊕ </label>
+    <input type="checkbox" id="mn-h05" class="margin-toggle">
+    <span class="marginnote">
+비선형 최적화 기법을 사용할 수 있다
+    </span>
+\( \alpha \)와 \( \gamma \)값은 마르쿼트(Marquardt) 알고리즘 같은 비선형 최적화 기법을 사용해서 구할 수 있다.
+</section>
+<section>
+  <ul class="pager">
+    <li class="previous"><a href="{{ "/articles/2016/11/19/ESH-06-04-03-02" | prepend: site.baseurl }}">Previous</a></li>
+    <li class="next"><a href="{{ "/articles/2016/11/19/ESH-06-04-03-04" | prepend: site.baseurl }}">Next</a></li>      
+  </ul>
+  <p>
+    <a href="http://www.itl.nist.gov/div898/handbook/pmc/section4/pmc433.htm">원문 보기</a>
+  </p>
+</section>

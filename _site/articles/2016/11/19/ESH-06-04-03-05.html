@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <link rel="icon" type="image/png" href="http://danielykim.me/images/myicon.png" />
+  <title>Blog: Daniel Kim</title>
+  <meta name="description" content="  만약에 데이터에 추세와 계절성 둘 다 있다면 어떻게 해야할까?          ⊕         계절성을 다루기 위해 3번째 매개변수를 추가해야 한다    이런 경우에는 이중 평활법이 적합하지 않다. 계절성(때때로 주기성이라고도 부르는)을 다루기 위해 3번째 식을 도입하자. 이...">
+
+  <!-- Google Fonts loaded here depending on setting in _data/options.yml true loads font, blank does not-->
+  
+  
+  <!-- Load up MathJax script if needed ... specify in /_data/options.yml file-->
+  <script type="text/javascript" async
+    src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+  </script>
+
+  <link rel="stylesheet" type="text/css" href="/css/tufte.css">
+  <link rel="stylesheet" type="text/css" href="/tufte.css">
+  <!-- <link rel="stylesheet" type="text/css" href="/css/print.css" media="print"> -->
+
+  <link rel="canonical" href="http://localhost:4000/articles/2016/11/19/ESH-06-04-03-05">
+
+  <link rel="alternate" type="application/rss+xml" title="Blog: Daniel Kim" href="http://localhost:4000/feed.xml" />
+
+  <script type="text/javascript" src="/js/pace.min.js"></script>
+
+  <link rel="stylesheet" type="text/css" href="/css/pace-flash.css">
+
+</head>
+
+  <body>
+    <!--- Header and nav template site-wide -->
+<header>
+    <nav class="group">
+    <h1>Data Artience</h1>
+	
+		
+  	
+		
+  	
+		
+		    
+		      <a href="/">blog</a>
+		    
+	    
+  	
+		
+		    
+		      <a href="/about/">About</a>
+		    
+	    
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+	</nav>
+</header>
+
+    <article class="group">
+      <h1>6.4.3.5. 삼중 지수 평활법</h1>
+
+<p class="subtitle">November 19, 2016</p>
+
+
+<section>
+  <p>
+만약에 데이터에 추세와 계절성 둘 다 있다면 어떻게 해야할까?  
+  </p>
+  <p>
+    <label for="mn-h01" class="margin-toggle">⊕ </label>
+    <input type="checkbox" id="mn-h01" class="margin-toggle">
+    <span class="marginnote">
+계절성을 다루기 위해 3번째 매개변수를 추가해야 한다
+    </span>
+이런 경우에는 이중 평활법이 적합하지 않다. 계절성(때때로 주기성이라고도 부르는)을 다루기 위해 3번째 식을 도입하자. 이를 제안한 사람의 이름을 따라 "홀트-윈터스"(Holt-Winters, 약자로 HW)로 부른다.
+  </p>
+  <p>
+이 경우에 기본 등식은 다음과 같다.
+$$
+\begin{align*}
+  S_{t} &= \alpha \frac{ y_{t} }{ I_{t-L} } + (1-\alpha)(S_{t-1} + b_{t-1}) & 전체적인 \ 평활 \\
+  b_{t} &= \gamma (S_{t} - S_{t-1}) + (1 - \gamma)b_{t-1} & 추세 \ 평활 \\
+  I_{t} &= \beta \frac{ y_{t} }{ S_{t} } + (1 - \beta) I_{t-L} & 계절성 \ 평활
+\end{align*}
+$$
+  </p>
+  <p>
+$$ F_{t+m} = (S_{t} + m b_{t}) I_{t - L + m} \qquad 예측 $$
+  </p>
+  <p>
+  여기에서
+    <ul>
+      <li>\(y\)는 관측값</li>
+      <li>\(S\)는 평활화한 관측값</li>
+      <li>\(b\)는 추세 인자</li>
+      <li>\(I\)는 계절성 지표</li>
+      <li>\(F\)는 m 시점 앞 예측</li>
+      <li>\(t\)는 어떤 시간 주기를 나타내는 지표</li>
+    </ul>
+  </p>
+  <p>
+그리고 \( \alpha, \beta, \gamma\)는 오차의 MSE를 최소화하여 구할 수 있는 상수이다. 이 작업은 좋은 소프트웨어 패키지의 몫이다.
+  </p>
+</section>
+<section>
+  <p>
+    <label for="mn-h02" class="margin-toggle">⊕ </label>
+    <input type="checkbox" id="mn-h02" class="margin-toggle">
+    <span class="marginnote">
+완벽한 계절 정보가 필요하다
+    </span>
+    HW 방법을 초기화하려면 <u>적어도</u> 하나의 완벽한 계절 데이터가 필요하다. 계절성 지표 초기값 \( I_{t-L} \)을 추정하기 위해서이다.
+  </p>
+</section>
+<section>
+  <p>
+    <label for="mn-h03" class="margin-toggle">⊕ </label>
+    <input type="checkbox" id="mn-h03" class="margin-toggle">
+    <span class="marginnote">
+한 계절에 \( L \) 주기
+    </span>
+어떤 하나의 계절 데이터는 \( L \) 주기로 구성된다. 그리고 한 주기에서 다음 주기까지의 추세 인자를 추정해야 한다. 그러기 위해서는 두 계절이 있는 데이터(즉, \( 2L \) 주기가 있는) 사용하기를 권한다.
+  </p>
+</section>
+<section>
+  <h3>초기값 추세 인자</h3>
+  <p>
+    <label for="mn-h04" class="margin-toggle">⊕ </label>
+    <input type="checkbox" id="mn-h04" class="margin-toggle">
+    <span class="marginnote">
+추세와 계절성 매개변수를 어떻게 초기화 할 것인가
+    </span>
+초기 추세를 계산하는 일반적인 식은 다음과 같다.
+$$ b = \frac{1}{L} \left( \frac{y_{L+1} - y_{1}}{L} + \frac{y_{L+2}-y_{2}}{L} + \cdots + \frac{y_{L+L} - y_{L}}{L} \right) $$
+  </p>
+  <h3>계절성 지수의 초기값</h3>
+  <p>
+    1년에 4 주기가 있는 6년치 데이터를 살펴보자.
+  </p>
+</section>
+<section>
+  <p>
+    <label for="mn-h05" class="margin-toggle">⊕ </label>
+    <input type="checkbox" id="mn-h05" class="margin-toggle">
+    <span class="marginnote">
+1단계: 연도 평균
+    </span>
+    <b>1단계:</b> 각 연도마다 주기의 평균을 구한다.
+  </p>
+</section>
+<section>
+  <p>
+    <label for="mn-h06" class="margin-toggle">⊕ </label>
+    <input type="checkbox" id="mn-h06" class="margin-toggle">
+    <span class="marginnote">
+2단계: 연도 평균으로 나눈다
+    </span>
+    <b>2단계:</b> 관측값을 적절한 연도 평균으로 나눈다.
+  </p>
+  <div class="table-wrapper">
+    <table class="booktabs">
+      <thead>
+        <tr><th style="text-align: center"><b>1번째 연도</b></th><th style="text-align: center"><b>2번째 연도</b></th><th style="text-align: center"><b>3번째 연도</b></th><th style="text-align: center"><b>4번째 연도</b></th><th style="text-align: center"><b>5번째 연도</b></th><th style="text-align: center"><b>6번째 연도</b></th></tr>
+      </thead>
+      <tbody>
+<tr><td style="text-align: center">\( y_{1}/A_{1} \)</td><td style="text-align: center">\( y_{5}/A_{2} \)</td><td style="text-align: center">\( y_{9}/A_{3}   \)</td><td style="text-align: center">\( y_{13}/A_{4} \)</td><td style="text-align: center">\( y_{17}/A_{5} \)</td><td style="text-align: center">\( y_{21}/A_{6} \)</td></tr>
+<tr><td style="text-align: center">\( y_{2}/A_{1} \)</td><td style="text-align: center">\( y_{6}/A_{2} \)</td><td style="text-align: center">\( y_{10}/A_{3}  \)</td><td style="text-align: center">\( y_{14}/A_{4} \)</td><td style="text-align: center">\( y_{18}/A_{5} \)</td><td style="text-align: center">\( y_{22}/A_{6} \)</td></tr>
+<tr><td style="text-align: center">\( y_{3}/A_{1} \)</td><td style="text-align: center">\( y_{7}/A_{2} \)</td><td style="text-align: center">\( y_{11}/A_{3}  \)</td><td style="text-align: center">\( y_{15}/A_{4} \)</td><td style="text-align: center">\( y_{19}/A_{5} \)</td><td style="text-align: center">\( y_{23}/A_{6} \)</td></tr>
+<tr><td style="text-align: center">\( y_{4}/A_{1} \)</td><td style="text-align: center">\( y_{8}/A_{2} \)</td><td style="text-align: center">\( y_{12}/A_{3}  \)</td><td style="text-align: center">\( y_{16}/A_{4} \)</td><td style="text-align: center">\( y_{20}/A_{5} \)</td><td style="text-align: center">\( y_{24}/A_{7} \)</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+<section>
+  <p>
+    <label for="mn-h07" class="margin-toggle">⊕ </label>
+    <input type="checkbox" id="mn-h07" class="margin-toggle">
+    <span class="marginnote">
+3단계: 계절성 지표를 구성한다
+    </span>
+    <b>3단계:</b> 각 행의 평균을 계산해서 계절성 지표를 구성한다. 그러면 초기 계절성 지수는 (상징적인 의미에서) 다음과 같다.
+$$
+\begin{align*}
+  I_{1} &= \left( y_{1}/A_{1} + y_{5}/A_{2} + y_{9}/A_{3}  + y_{13}/A_{4} + y_{17}/A_{5} + y_{21}/A_{6} \right) / 6 \\
+  I_{2} &= \left( y_{2}/A_{1} + y_{6}/A_{2} + y_{10}/A_{3} + y_{14}/A_{4} + y_{18}/A_{5} + y_{22}/A_{6} \right) / 6 \\
+  I_{3} &= \left( y_{3}/A_{1} + y_{7}/A_{2} + y_{11}/A_{3} + y_{15}/A_{4} + y_{19}/A_{5} + y_{23}/A_{6} \right) / 6 \\
+  I_{4} &= \left( y_{4}/A_{1} + y_{8}/A_{2} + y_{12}/A_{3} + y_{16}/A_{4} + y_{20}/A_{5} + y_{24}/A_{6} \right) / 6
+\end{align*}
+$$
+  </p>
+  <p>
+지금까지 계절성 지수를 어떻게 초기화하는지 살펴보았다.    
+  </p>
+  <p>
+다음 내용에서는 삼중 지수 평활법을 적용하는 예제를 다룰 것이다.  
+  </p>
+</section>
+<section>
+  <h3>계수가 0인 경우</h3>
+  <p>
+    <label for="mn-h08" class="margin-toggle">⊕ </label>
+    <input type="checkbox" id="mn-h08" class="margin-toggle">
+    <span class="marginnote">
+추세와 계절성 매개변수 계수가 0인 경우
+    </span>
+삼중 지수 평활법을 컴퓨터로 계산하면 가끔 \( \gamma \)나 \( \beta \)가 0인 경우나 둘 다 0인 경우가 있다.
+  </p>
+  <p>
+이러한 경우에 추세나 계절성이 없다고 봐야할까?
+  </p>
+  <p>
+당연히 아니다! 추세나 계절성 관련 초기값이 MSE가 최소일 수 있는 경우라 갱신할 필요 없어서 그렇다. 정말로 그런지 검증하기 위해 갱신하는 식을 반드시 점검해야 한다.
+  </p>
+</section>
+<section>
+  <ul class="pager">
+    <li class="previous"><a href="/articles/2016/11/19/ESH-06-04-03-04">Previous</a></li>
+    <li class="next"><a href="/articles/2016/11/19/ESH-06-04-03-06">Next</a></li>      
+  </ul>
+  <p>
+    <a href="http://www.itl.nist.gov/div898/handbook/pmc/section4/pmc435.htm">원문 보기</a>
+  </p>
+</section>
+
+
+
+<p>
+<div class="comments">
+	<div id="disqus_thread" style="max-width:60%;"></div>
+	<script type="text/javascript">
+    var disqus_config = function () {
+      this.page.url = "https://danielykim.github.io/articles/2016/11/19/ESH-06-04-03-05"; // <--- use canonical URL
+      this.page.identifier = "/articles/2016/11/19/ESH-06-04-03-05";
+    };
+    (function() { // DON'T EDIT BELOW THIS LINE
+    
+      var d = document, s = d.createElement('script');
+
+      s.src = '//danielykim.disqus.com/embed.js'; // <--- use Disqus shortname
+
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+</div>
+</p>
+
+
+
+
+    </article>
+    <span class="print-footer">6.4.3.5. 삼중 지수 평활법 - November 19, 2016 - Daniel Kim, PhD</span>
+    <footer>
+  <hr class="slender">
+  <ul class="footer-links">
+    <li><a href="mailto:daniel.youngho.kim@gmail.com"><span class="icon-mail"></span></a></li>    
+    <li><a href="https://www.linkedin.com/in/danielyounghokim"><span class="icon-info"></span></a></li>    
+      
+  </ul>
+<div class="credits">
+<span>&copy; 2016 &nbsp;&nbsp;DANIEL KIM, PHD</span></br> <br>
+<span>This site created with the <a href="//github.com/clayh53/tufte-jekyll">Tufte theme for  </a> in <a href="//jekyllrb.com">Jekyll</a>.</span> 
+</div>  
+</footer>
+
+    <script id="dsq-count-scr" src="//danielykim.disqus.com/count.js" async></script>
+    
+  </body>
+</html>

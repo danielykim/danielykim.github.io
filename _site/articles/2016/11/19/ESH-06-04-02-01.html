@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <link rel="icon" type="image/png" href="http://danielykim.me/images/myicon.png" />
+  <title>Blog: Daniel Kim</title>
+  <meta name="description" content="      ⊕             이동 평균은 평활하는 과정이다    과거 데이터 중에서 전부가 아닌 일부의 평균을 다음과 같이 계산하여 과거 데이터를 요약할 수도 있다.                무작위로 뽑은 12명의 공급자 예제에서 사용한 데이터를 다시 떠올려보자. 다음과 ...">
+
+  <!-- Google Fonts loaded here depending on setting in _data/options.yml true loads font, blank does not-->
+  
+  
+  <!-- Load up MathJax script if needed ... specify in /_data/options.yml file-->
+  <script type="text/javascript" async
+    src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+  </script>
+
+  <link rel="stylesheet" type="text/css" href="/css/tufte.css">
+  <link rel="stylesheet" type="text/css" href="/tufte.css">
+  <!-- <link rel="stylesheet" type="text/css" href="/css/print.css" media="print"> -->
+
+  <link rel="canonical" href="http://localhost:4000/articles/2016/11/19/ESH-06-04-02-01">
+
+  <link rel="alternate" type="application/rss+xml" title="Blog: Daniel Kim" href="http://localhost:4000/feed.xml" />
+
+  <script type="text/javascript" src="/js/pace.min.js"></script>
+
+  <link rel="stylesheet" type="text/css" href="/css/pace-flash.css">
+
+</head>
+
+  <body>
+    <!--- Header and nav template site-wide -->
+<header>
+    <nav class="group">
+    <h1>Data Artience</h1>
+	
+		
+  	
+		
+  	
+		
+		    
+		      <a href="/">blog</a>
+		    
+	    
+  	
+		
+		    
+		      <a href="/about/">About</a>
+		    
+	    
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+	</nav>
+</header>
+
+    <article class="group">
+      <h1>6.4.2.1. 단일 이동 평균</h1>
+
+<p class="subtitle">November 19, 2016</p>
+
+
+<section>
+  <p>
+    <label for="mn-h01" class="margin-toggle">⊕ </label>
+    <input type="checkbox" id="mn-h01" class="margin-toggle">
+    <span class="marginnote">
+    이동 평균은 평활하는 과정이다
+    </span>
+과거 데이터 중에서 전부가 아닌 일부의 평균을 다음과 같이 계산하여 과거 데이터를 요약할 수도 있다.
+    <blockquote>
+      <p>
+      무작위로 뽑은 <a href="/articles/2016/11/19/ESH-06-04-02">12명의 공급자 예제</a>에서 사용한 데이터를 다시 떠올려보자. 다음과 같은 공급량이 있었다. \( 9, 8, 9, 12, 9, 12, 11, 7, 13, 9, 11, 10 \). 크기가 3인 집합 \( M \)이 있다고 하자. 이 때 처음부터 3번째 값까지의 평균은 \( (9 + 8 + 9) / 3 = 8.667 \)이다.
+      </p>
+    </blockquote>
+  </p>
+  <p>
+이것을 "평활"<label for="sn-smoothing" class="margin-toggle sidenote-number"></label><input type="checkbox" id="sn-smoothing" class="margin-toggle"/><span class="sidenote">smoothing</span>이라고 한다. 평활은 한 구간에서 시작해서 첫 번째 값을 제외한 그 다음 3개의 값의 평균을 계산하는 방식으로 진행한다.
+  </p>
+</section>
+<section>
+  <p>
+    <label for="mn-h02" class="margin-toggle">⊕ </label>
+    <input type="checkbox" id="mn-h02" class="margin-toggle">
+    <span class="marginnote">
+    이동 평균 예제
+    </span>
+다음의 표는 이동 평균이라고 불리는 평활 과정을 나타낸다. 이동 평균은 일반적으로 다음과 같이 쓸 수 있다.
+$$ M_t = \frac{ X_{t} + X_{t-1} + \cdots + X_{t-N+1} }{N} $$ 
+  </p>
+  <p>
+이동 평균 결과
+  </p>
+  <div class="table-wrapper">
+    <table class="booktabs">
+      <thead>
+        <tr><th style="text-align: center"><b>공급자</b></th><th style="text-align: center"><b>$</b></th><th style="text-align: center"><b>이동 평균</b></th><th style="text-align: center"><b>오차</b></th><th style="text-align: center"><b>제곱 오차</b></th></tr>
+      </thead>
+      <tbody>
+<tr><td style="text-align: center">1</td><td style="text-align: center">9</td><td style="text-align: center"> </td><td style="text-align: center"> </td><td style="text-align: center"> </td></tr>
+<tr><td style="text-align: center">2</td><td style="text-align: center">8</td><td style="text-align: center"> </td><td style="text-align: center"> </td><td style="text-align: center"> </td></tr>
+<tr><td style="text-align: center">3</td><td style="text-align: center">9</td><td style="text-align: center">8.667</td><td style="text-align: center">0.333</td><td style="text-align: center">0.111</td></tr>
+<tr><td style="text-align: center">4</td><td style="text-align: center">12</td><td style="text-align: center">9.667</td><td style="text-align: center">2.333</td><td style="text-align: center">5.444</td></tr>
+<tr><td style="text-align: center">5</td><td style="text-align: center">9</td><td style="text-align: center">10.000</td><td style="text-align: center">-1.000</td><td style="text-align: center">1.000</td></tr>
+<tr><td style="text-align: center">6</td><td style="text-align: center">12</td><td style="text-align: center">11.000</td><td style="text-align: center">1.000</td><td style="text-align: center">1.000</td></tr>
+<tr><td style="text-align: center">7</td><td style="text-align: center">11</td><td style="text-align: center">10.667</td><td style="text-align: center">0.333</td><td style="text-align: center">0.111</td></tr>
+<tr><td style="text-align: center">8</td><td style="text-align: center">7</td><td style="text-align: center">10.000</td><td style="text-align: center">-3.000</td><td style="text-align: center">9.000</td></tr>
+<tr><td style="text-align: center">9</td><td style="text-align: center">13</td><td style="text-align: center">10.333</td><td style="text-align: center">2.667</td><td style="text-align: center">7.111</td></tr>
+<tr><td style="text-align: center">10</td><td style="text-align: center">9</td><td style="text-align: center">9.667</td><td style="text-align: center">-0.667</td><td style="text-align: center">0.444</td></tr>
+<tr><td style="text-align: center">11</td><td style="text-align: center">11</td><td style="text-align: center">11.000</td><td style="text-align: center">0</td><td style="text-align: center">0</td></tr>
+<tr><td style="text-align: center">12</td><td style="text-align: center">10</td><td style="text-align: center">10.000</td><td style="text-align: center">0</td><td style="text-align: center">0</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>
+이전의 보통 평균에서 MSE는 3이었지만 이 경우는 MSE = 2.42 이다.  
+  </p>
+</section>
+<section>
+  <ul class="pager">
+    <li class="previous"><a href="/articles/2016/11/19/ESH-06-04-02">Previous</a></li>
+    <li class="next"><a href="/articles/2016/11/19/ESH-06-04-02-02">Next</a></li>      
+  </ul>
+  <p>
+    <a href="http://www.itl.nist.gov/div898/handbook/pmc/section4/pmc421.htm">원문 보기</a>
+  </p>
+</section>
+
+
+
+<p>
+<div class="comments">
+	<div id="disqus_thread" style="max-width:60%;"></div>
+	<script type="text/javascript">
+    var disqus_config = function () {
+      this.page.url = "https://danielykim.github.io/articles/2016/11/19/ESH-06-04-02-01"; // <--- use canonical URL
+      this.page.identifier = "/articles/2016/11/19/ESH-06-04-02-01";
+    };
+    (function() { // DON'T EDIT BELOW THIS LINE
+    
+      var d = document, s = d.createElement('script');
+
+      s.src = '//danielykim.disqus.com/embed.js'; // <--- use Disqus shortname
+
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+</div>
+</p>
+
+
+
+
+    </article>
+    <span class="print-footer">6.4.2.1. 단일 이동 평균 - November 19, 2016 - Daniel Kim, PhD</span>
+    <footer>
+  <hr class="slender">
+  <ul class="footer-links">
+    <li><a href="mailto:daniel.youngho.kim@gmail.com"><span class="icon-mail"></span></a></li>    
+    <li><a href="https://www.linkedin.com/in/danielyounghokim"><span class="icon-info"></span></a></li>    
+      
+  </ul>
+<div class="credits">
+<span>&copy; 2016 &nbsp;&nbsp;DANIEL KIM, PHD</span></br> <br>
+<span>This site created with the <a href="//github.com/clayh53/tufte-jekyll">Tufte theme for  </a> in <a href="//jekyllrb.com">Jekyll</a>.</span> 
+</div>  
+</footer>
+
+    <script id="dsq-count-scr" src="//danielykim.disqus.com/count.js" async></script>
+    
+  </body>
+</html>
