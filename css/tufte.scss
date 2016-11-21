@@ -71,7 +71,7 @@ p > a { @if $link-style == underline
     }
     @else
     {
-      color: $contrast-color;
+      color: $text-color;
       text-decoration: none;
     }
   }
