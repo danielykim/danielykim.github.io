@@ -62,7 +62,7 @@ a {
   text-decoration: none;
 }
 
-p > a { @if $link-style == underline
+footer > a, span > a, p > a { @if $link-style == underline
     {
       color: $text-color;
       text-decoration: none;
