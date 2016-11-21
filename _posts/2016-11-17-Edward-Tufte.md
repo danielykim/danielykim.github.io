@@ -116,6 +116,11 @@ Political Control of the Economy (Princeton University Press, 1978). Paperback e
 > From Martin Kemp’s review of Beautiful Evidence in Nature (13 July 2006): "Tufte is an expert in the presentation of statistical evidence and a sculptor, and has established himself as the world’s leading analyst of graphic information."
 
 
+## 그가 사용한 용어
+Chartjunk
+Sparkline
+
+
 ## 기타 등등
 [GitHub - edwardtufte/tufte-css: Style your webpage like Edward Tufte's handouts.](https://github.com/edwardtufte/tufte-css)
 [Tufte Handout: An implementation in R Markdown](https://rstudio.github.io/tufte/)
