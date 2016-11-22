@@ -13,8 +13,9 @@ title: About
 이 블로그에서는 데이터 과학, 데이터 시각화, 통계, 물리 등 글쓴이의 관심사를 다룰 계획이다.
 
 
-Undergraduate courses in physics at KAIST (2004-2008). 
-Doctor's course in physics at KAIST (2008-2015).
-Post-doctoral researcher, Natural Science Research Institute at KAIST (2015-2016)
-Data scientist at Samsung SDS (2016-present). 
-He was working on digital art history, complex networks, and large scale worldwide patent analysis.
+Undergraduate courses in physics at KAIST (2004-2008). <br/>
+Doctor's course in physics at KAIST (2008-2015). <br/>
+Post-doctoral researcher, Natural Science Research Institute at KAIST (2015-2016).  <br/>
+Data scientist at Samsung SDS (2016-present). <br/>
+He was working on digital art history, complex networks, and large scale worldwide patent analysis. <br/>
+See also: my [homepage](http://danielykim.me) and [LinkedIn](https://www.linkedin.com/in/danielyounghokim)
