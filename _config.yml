@@ -14,7 +14,7 @@ timezone: Asia/Seoul
 editor: gvim
 
 # Short bio or description (displayed in the header)
-description: Data Artientist
+description: Under construction
 
 # URL of your avatar or profile pic (you could use your GitHub profile pic)
 avatar: https://avatars3.githubusercontent.com/u/17574076?v=3&s=460
@@ -26,10 +26,10 @@ avatar: https://avatars3.githubusercontent.com/u/17574076?v=3&s=460
 # Includes an icon in the footer for each username you enter
 footer-links:
   dribbble:
-  email:
+  email: daniel.youngho.kim@gmail.com
   facebook:
   flickr:
-  github:
+  github: 
   instagram:
   linkedin: danielyounghokim
   pinterest:
