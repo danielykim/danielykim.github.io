@@ -300,8 +300,8 @@ a {
   text-decoration: none;
 }
 
-p > a {
-  color: #a00000;
+footer > a, span > a, p > a {
+  color: #111;
   text-decoration: none;
 }
 

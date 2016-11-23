@@ -1,0 +1,131 @@
+---
+layout: post
+title: 6.4.4.3.1. 계절적인 부 시계열 그래프
+---
+
+
+<section>
+  <p>
+    <label for="mn-h01" class="margin-toggle">⊕ </label>
+    <input type="checkbox" id="mn-h01" class="margin-toggle">
+    <span class="marginnote">
+목적
+    </span>
+계절적인 부 시계열 그래프(클리브랜드Cleveland 1993)는 시계열에서 계절성을 감지하기 위한 도구이다.
+  </p>
+  <p>
+이 그래프는 계절성의 주기를 이미 알고 있을 때만 쓸모 있다. 사실 많은 경우에, 주기를 알 수 있다. 예를 들면, 보통 월별 데이터의 주기는 12이다.
+  </p>
+  <p>
+주기를 모른다면, 주기를 결정하기 위해 자기 상관 그래프나 분광 그래프(spectral plot)를 사용하면 된다.
+  </p>
+</section>
+
+<section>
+  <p>
+    <label for="mn-h02" class="margin-toggle">⊕ </label>
+    <input type="checkbox" id="mn-h02" class="margin-toggle">
+    <span class="marginnote">
+견본 그래프
+    </span>
+    <figure>
+      <img src="http://www.itl.nist.gov/div898/handbook/pmc/section4/gifs/co2seas.gif">
+    </figure>
+  </p>
+  <p>
+월별 이산화탄소 농도를 나타내는 이 계절적인 부 시계열 그래프에서 뚜렷한 계절성 패턴을 볼 수 있다. 이산화탄소 농도는 5월에 가장 높고, 9월까지 점차 감소한다. 그리고 다시 5월까지 증가한다.  
+  </p>
+  <p>
+관측 값이 많다면, 상자 그래프를 사용하길 바란다.
+  </p>
+</section>
+
+<section>
+  <p>
+    <label for="mn-h03" class="margin-toggle">⊕ </label>
+    <input type="checkbox" id="mn-h03" class="margin-toggle">
+    <span class="marginnote">
+정의
+    </span>
+계절적인 부 시계열 그래프에는 다음과 같은 요소가 있다.
+    <blockquote>
+      <p>
+      <b>세로축:</b> 응답 변수(response variable)<br/>
+      <b>가로축:</b> 시간 순서로 정렬한 계절. 예를 들면, 월별 데이터에서, 모든 1월 값을 시간 순서대로 정렬해서 그리고, 2월이나 다른 월에 대해서도 마찬가지로 그린 것.
+      </p>
+    </blockquote>
+  </p>
+  <p>
+그리고 그룹 평균을 구해서 그룹마다 그리는 기준선도 있다.
+  </p>
+  <p>
+그리는 사람은 이 그래프를 그리기 전에 계절적인 패턴의 길이를 정해야 한다. 많은 경우에, 분석하는 사람은 문제와 데이터 수집하는 과정의 맥락에서 알 수 있다. 이산화탄소 데이터처럼, 가끔 이 그래프를 그리기 전에 시계열에서 추세를 없앨 필요도 있다.  
+  </p>
+</section>
+
+<section>
+  <p>
+    <label for="mn-h04" class="margin-toggle">⊕ </label>
+    <input type="checkbox" id="mn-h04" class="margin-toggle">
+    <span class="marginnote">
+질문
+    </span>
+계절적인 부 시게열 그래프로 다음과 같은 질문에 답할 수 있다.
+    <blockquote>
+      <p>
+  1. 데이터가 계절적인 패턴을 나타내는가?
+  2. 계절성의 성질이 무엇인가?
+  3. 그룹 안의 패턴이 있는가? (예를 들면, 1월과 6월은 패턴이 비슷한가?)
+  4. 계절성을 고려할 때 이상점(outlier)이 있는가?
+      </p>
+    </blockquote>
+  </p>
+  <p>
+연속 순서 그래프에서 분명하게 나타나는 주기적 패턴이 없다.  
+  </p>
+</section>
+
+<section>
+  <p>
+    <label for="mn-h05" class="margin-toggle">⊕ </label>
+    <input type="checkbox" id="mn-h05" class="margin-toggle">
+    <span class="marginnote">
+중요성
+    </span>
+시계열을 분석할 때, 의미있는 계절성 효과 존재 여부를 아는 것은 중요하다. 계절적인 부 시계열 그래프는 계절적인 패턴 존재 여부를 판단할 때 사용하기에 훌륭한 도구이다.
+  </p>
+</section>
+
+<section>
+  <p>
+    <label for="mn-h06" class="margin-toggle">⊕ </label>
+    <input type="checkbox" id="mn-h06" class="margin-toggle">
+    <span class="marginnote">
+관련 기법
+    </span>
+    연속 순서 그래프<br/>
+    상자 그래프<br/>
+    자기 상관 그래프<br/>
+  </p>
+</section>
+
+<section>
+  <p>
+    <label for="mn-h07" class="margin-toggle">⊕ </label>
+    <input type="checkbox" id="mn-h07" class="margin-toggle">
+    <span class="marginnote">
+소프트웨어
+    </span>
+몇몇 통계 소프트웨어에서 계절적인 부 시계열 그래프 그리는 기능을 지원한다. 직접 그려주지 않는 대부분의 통계 소프트웨어에서 이 그래프를 그리는 매크로를 작성할 수 있을 것이다. Dataplot 코드와 R 코드로 계절적인 부 시계열 그래프를 그릴 수 있다.
+  </p>
+</section>
+
+<section>
+  <ul class="pager">
+    <li class="previous"><a href="{{ "/articles/2016/11/23/ESH-06-04-04-03" | prepend: site.baseurl }}">Previous</a></li>
+    <li class="next"><a href="{{ "/articles/2016/11/23/ESH-06-04-04-04" | prepend: site.baseurl }}">Next</a></li>      
+  </ul>
+  <p>
+    <a href="http://www.itl.nist.gov/div898/handbook/pmc/section4/pmc4431.htm">원문 보기</a>
+  </p>
+</section>

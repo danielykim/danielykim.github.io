@@ -7,7 +7,7 @@
   
   <link rel="icon" type="image/png" href="http://danielykim.me/images/myicon.png" />
   <title>Blog: Daniel Kim</title>
-  <meta name="description" content="      ⊕         지수 평활법은 과거 관측값을 지수적으로 감소하는 가중치로 다룬다    이 방법은 평활한 시계열을 구할 때 사람들이 정말 많이 사용하는 방법이다. 단일 이동 평균은 과거 관측값을 동일한 가중치로 다루지만, 지수 평활법은 관측값이 오래된 것일 수록 지수적으...">
+  <meta name="description" content="      ⊕         지수 평활법은 유용하다고 입증된 방법이다        "단변량 시계열" 용어는 일정한 시간 간격에 따라 순서대로 기록한 한 종류의 (스칼라 scala) 관측값들로 구성되는 시계열이다. 월별 평균 이산화탄소 농도와 엘니뇨 현상을 예측하가 위한 남방 진동 ...">
 
   <!-- Google Fonts loaded here depending on setting in _data/options.yml true loads font, blank does not-->
   
@@ -21,7 +21,7 @@
   <link rel="stylesheet" type="text/css" href="/tufte.css">
   <!-- <link rel="stylesheet" type="text/css" href="/css/print.css" media="print"> -->
 
-  <link rel="canonical" href="http://localhost:4000/articles/2016/11/19/ESH-06-04-03">
+  <link rel="canonical" href="http://localhost:4000/articles/2016/11/23/ESH-06-04-04">
 
   <link rel="alternate" type="application/rss+xml" title="Blog: Daniel Kim" href="http://localhost:4000/feed.xml" />
 
@@ -69,9 +69,9 @@
 </header>
 
     <article class="group">
-      <h1>6.4.3. 지수 평활법이란?</h1>
+      <h1>6.4.4. 단변량 시계열 모델</h1>
 
-<p class="subtitle">November 19, 2016</p>
+<p class="subtitle">November 23, 2016</p>
 
 
 <section>
@@ -79,28 +79,42 @@
     <label for="mn-h01" class="margin-toggle">⊕ </label>
     <input type="checkbox" id="mn-h01" class="margin-toggle">
     <span class="marginnote">
-지수 평활법은 과거 관측값을 지수적으로 감소하는 가중치로 다룬다
+지수 평활법은 유용하다고 입증된 방법이다
     </span>
-이 방법은 평활한 시계열을 구할 때 사람들이 정말 많이 사용하는 방법이다. 단일 이동 평균은 과거 관측값을 동일한 가중치로 다루지만, 지수 평활법은 관측값이 오래된 것일 수록 지수적으로 감소하는 가중치로 다룬다.
+    "단변량 시계열" 용어는 일정한 시간 간격에 따라 순서대로 기록한 한 종류의 (<a href="https://ko.wikipedia.org/wiki/%EC%8A%A4%EC%B9%BC%EB%9D%BC_(%EC%88%98%ED%95%99)">스칼라</a> scala) 관측값들로 구성되는 시계열이다. 월별 평균 이산화탄소 농도와 엘니뇨 현상을 예측하가 위한 남방 진동 같은 데이터가 이에 해당한다.
   </p>
   <p>
-다시 말해, 예측할 때 최근 관측값에 오래된 관측값보다 상대적으로 더 높은 가중치가 붙는다는 것이다.
+보통 단변량 시계열이 한 열(column)을 구성하는 숫자로 주어지긴 하지만, 사실상 시계열 자체에 이미 시간 변수가 있는셈이다. 데이터를 시간 축에서 같은 간격으로 기록했다면, 시간 변수나 색인 등을 일일이 분명하게 보여줄 필요가 없다. 물론, 시계열로 그래프를 그릴 때는 시간 변수를 분명하게 나타내야 한다. 하지만, 시계열 모델 자체에서는 그렇게 하지 않는다.  
   </p>
+</section>
+
+<section>
   <p>
-이동 평균은 관측값을 정확하게 같은 가중치 \( 1/N \)로 다룬다. 하지만, 지수 평활법에서는 정하거나 계산해서 넣어줘야 할 1개 이상의 평활 매개변수가 있다. 이러한 매개변수에 따라 가중치 값이 변한다.
-  </p>
-  <p>
-  이번 절에서는 <a href="/articles/2016/11/19/ESH-06-04-03-01">단일</a>, <a href="/articles/2016/11/19/ESH-06-04-03-03">이중</a>, <a href="/articles/2016/11/19/ESH-06-04-03-05">삼중</a> 지수 평활법을 살펴보자.
+    <label for="mn-h02" class="margin-toggle">⊕ </label>
+    <input type="checkbox" id="mn-h02" class="margin-toggle">
+    <span class="marginnote">
+내용
+    </span>
+  1. 표본 데이터
+  2. 정상성(Stationarity)
+  3. 계절성(Seasonality)
+  4. 일반적인 접근법
+  5. 박스-젠킨스(Box-Jenkins) 접근법
+  6. 박스-젠킨스 모델 판별
+  7. 박스-젠킨스 모델 측정
+  8. 박스-젠킨스 모델 검증
+  9. 단변량 박스-젠킨스 분석의 예
+  10. 계절성 데이터에 대한 박스-젠킨스 모델 분석
   </p>
 </section>
 
 <section>
   <ul class="pager">
-    <li class="previous"><a href="/articles/2016/11/19/ESH-06-04-02-02">Previous</a></li>
-    <li class="next"><a href="/articles/2016/11/19/ESH-06-04-03-01">Next</a></li>      
+    <li class="previous"><a href="/articles/2016/11/19/ESH-06-04-03-07">Previous</a></li>
+    <li class="next"><a href="/articles/2016/11/23/ESH-06-04-04-01">Next</a></li>
   </ul>
   <p>
-    <a href="http://www.itl.nist.gov/div898/handbook/pmc/section4/pmc43.htm">원문 보기</a>
+    <a href="http://www.itl.nist.gov/div898/handbook/pmc/section4/pmc44.htm">원문 보기</a>
   </p>
 </section>
 
@@ -111,8 +125,8 @@
 	<div id="disqus_thread" style="max-width:60%;"></div>
 	<script type="text/javascript">
     var disqus_config = function () {
-      this.page.url = "https://danielykim.github.io/articles/2016/11/19/ESH-06-04-03"; // <--- use canonical URL
-      this.page.identifier = "/articles/2016/11/19/ESH-06-04-03";
+      this.page.url = "https://danielykim.github.io/articles/2016/11/23/ESH-06-04-04"; // <--- use canonical URL
+      this.page.identifier = "/articles/2016/11/23/ESH-06-04-04";
     };
     (function() { // DON'T EDIT BELOW THIS LINE
     
@@ -132,7 +146,7 @@
 
 
     </article>
-    <span class="print-footer">6.4.3. 지수 평활법이란? - November 19, 2016 - Daniel Kim, PhD</span>
+    <span class="print-footer">6.4.4. 단변량 시계열 모델 - November 23, 2016 - Daniel Kim, PhD</span>
     <footer>
   <hr class="slender">
   <ul class="footer-links">

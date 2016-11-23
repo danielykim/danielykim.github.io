@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <link rel="icon" type="image/png" href="http://danielykim.me/images/myicon.png" />
+  <title>Blog: Daniel Kim</title>
+  <meta name="description" content="      ⊕         계절성    많은 시게열은 계절성을 나타낸다. 계절성은 주기적인 변동을 의미한다. 예를 들면, 소매 형태 판매량의 시계열은 크리스마스 기간에 최고조에 다다르고 나서 기간이 지나면 감소한다. 그래서 소매 형태 판매량의 시계열은 보통 9월부터 12월까지 증...">
+
+  <!-- Google Fonts loaded here depending on setting in _data/options.yml true loads font, blank does not-->
+  
+  
+  <!-- Load up MathJax script if needed ... specify in /_data/options.yml file-->
+  <script type="text/javascript" async
+    src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+  </script>
+
+  <link rel="stylesheet" type="text/css" href="/css/tufte.css">
+  <link rel="stylesheet" type="text/css" href="/tufte.css">
+  <!-- <link rel="stylesheet" type="text/css" href="/css/print.css" media="print"> -->
+
+  <link rel="canonical" href="http://localhost:4000/articles/2016/11/23/ESH-06-04-04-03">
+
+  <link rel="alternate" type="application/rss+xml" title="Blog: Daniel Kim" href="http://localhost:4000/feed.xml" />
+
+  <script type="text/javascript" src="/js/pace.min.js"></script>
+
+  <link rel="stylesheet" type="text/css" href="/css/pace-flash.css">
+
+</head>
+
+  <body>
+    <!--- Header and nav template site-wide -->
+<header>
+    <nav class="group">
+    <h1>Under construction</h1>
+	
+		
+  	
+		
+		    
+		      <a href="/">blog</a>
+		    
+	    
+  	
+		
+		    
+		      <a href="/about/">About</a>
+		    
+	    
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+		    
+		      <a href="/feed.xslt.xml"></a>
+		    
+	    
+  	
+	</nav>
+</header>
+
+    <article class="group">
+      <h1>6.4.4.3. 계절성(Seasonality)</h1>
+
+<p class="subtitle">November 23, 2016</p>
+
+
+<section>
+  <p>
+    <label for="mn-h01" class="margin-toggle">⊕ </label>
+    <input type="checkbox" id="mn-h01" class="margin-toggle">
+    <span class="marginnote">
+계절성
+    </span>
+많은 시게열은 계절성을 나타낸다. 계절성은 주기적인 변동을 의미한다. 예를 들면, 소매 형태 판매량의 시계열은 크리스마스 기간에 최고조에 다다르고 나서 기간이 지나면 감소한다. 그래서 소매 형태 판매량의 시계열은 보통 9월부터 12월까지 증가하는 추세를, 1월과 2월에 감소하는 추세를 보인다.
+  </p>
+  <p>
+경제 분야 시게열에서 계절성은 아주 흔한 현상이지만, 공학이나 과학 분야 시계열에서는 그렇지 않다.
+  </p>
+  <p>
+계절성이 나타나면, 시계열 모델에서 반드시 고려해야 한다. 이 절에서는 계절성을 감지하는 기법을 살펴보자. 계절성을 모델링하는 작업은 이후의 절에서 다루겠다.  
+  </p>
+</section>
+
+<section>
+  <p>
+    <label for="mn-h02" class="margin-toggle">⊕ </label>
+    <input type="checkbox" id="mn-h02" class="margin-toggle">
+    <span class="marginnote">
+계절성을 감지하기
+    </span>
+계절성을 감지하기 위해 다음의 기법을 사용할 수 있다.    
+  </p>
+  <blockquote>
+    <p>
+    1. 연속 순서 그래프가 종종 계절성을 보여준다.<br/>
+    2. 계절적인 부 시계열(subseries) 그래프는 계절성을 보여주기 위한 전문적인 기법이다.<br/>
+    3. 다중 상자 그래프(multiple box plots)도 계절적인 부 시계열 그래프에서 계절성을 감지하기 위해 사용할 수 있다.<br/>
+  4. 자기상관 그래프는 계절성을 확인하는데 도움이 된다.
+    </p>
+  </blockquote>
+  <p>
+아래는 각 그래프에 해당하는 예제이다.    
+  </p>
+  <p>
+어떤 시계열을 분석할 때 첫 단계에서 연속 순서 그래프를 사용하길 추천한다. 가끔 이 그래프에서 계절성이 나타나더라도, 계절적인 부 시계열이나 상자 그래프로 더욱 분명하게 확인할 수 있다. 계절적인 부 시계열 그래프는 계절적인 차이와 그룹 내부 패턴 모두를 확인하는데 매우 좋다. 상자 그래프는 (그룹 패턴들 사이의) 계절적인 차이를 꽤 잘 보여주지만, 그룹 내부의 패턴을 보여주지는 않는다. 하지만, 큰 데이터가 있을 때, 보통 상자 그래프가 계절적인 부 시계열 그래프보다 읽기 쉽다.
+  </p>
+  <p>
+계절적인 부 시계열 그래프와 상자 그래프 모두 계절 주기를 알고 있다고 가정한다. 사실 대부분의 경우에, 분석하는 사람은 이것을 알게 된다. 예를 들면, 월별 데이터에서 1년에 12달이 있으니 주기는 12이다. 하지만 주기를 모르면, 자기 상관 그래프를 사용하자. 의미있는 계절성이 있으면, 자기 상관 그래프에서 주기와 같은 어떤 뒤처짐 값에서 뾰족한 막대 모양이 나타난다. 예를 들면, 월별 데이터에 계절성 효과가 있으면, 12, 24, 36 등의 뒤처짐 값에서 (뒤처짐 값이 커질 수록 막대 그래프 크기가 줄어들긴 하지만) 의미있는 막대 그래프가 나타날 것이다.  
+  </p>
+</section>
+
+<section>
+  <p>
+    <label for="mn-h03" class="margin-toggle">⊕ </label>
+    <input type="checkbox" id="mn-h03" class="margin-toggle">
+    <span class="marginnote">
+계절성이 없는 예제
+    </span>
+다음은 엘니뇨를 예측하기 위한 남방 진동 데이터를 나타내는 그래프이다.
+  </p>
+</section>
+
+<section>
+  <p>
+    <label for="mn-h04" class="margin-toggle">⊕ </label>
+    <input type="checkbox" id="mn-h04" class="margin-toggle">
+    <span class="marginnote">
+연속 순서 그래프
+    </span>
+    <figure>
+      <img src="http://www.itl.nist.gov/div898/handbook/pmc/section4/gifs/oscrunsq.gif">
+    </figure>
+  </p>
+  <p>
+연속 순서 그래프에서 분명하게 나타나는 주기적 패턴이 없다.  
+  </p>
+</section>
+
+<section>
+  <p>
+    <label for="mn-h05" class="margin-toggle">⊕ </label>
+    <input type="checkbox" id="mn-h05" class="margin-toggle">
+    <span class="marginnote">
+계절적인 부 시계열 그래프
+    </span>
+    <figure>
+      <img src="http://www.itl.nist.gov/div898/handbook/pmc/section4/gifs/oscseas.gif">
+    </figure>
+  </p>
+  <p>
+각 월의 평균값이 거의 비슷하다. 분명하게 나타나는 패턴이 없다.  
+  </p>
+</section>
+
+<section>
+  <p>
+    <label for="mn-h06" class="margin-toggle">⊕ </label>
+    <input type="checkbox" id="mn-h06" class="margin-toggle">
+    <span class="marginnote">
+상자 그래프
+    </span>
+    <figure>
+      <img src="http://www.itl.nist.gov/div898/handbook/pmc/section4/gifs/oscboxpl.gif">
+    </figure>
+  </p>
+  <p>
+계절적인 부 시계열 그래프처럼, 분명하게 나타나는 패턴이 없다.  
+  </p>
+  <p>
+관측값이 상당히 많아서 상자 그래프가 계절적인 부 시계열 그래프보다 월별 차이를 더 잘 보여준다.
+  </p>
+</section>
+
+<section>
+  <p>
+    <label for="mn-h07" class="margin-toggle">⊕ </label>
+    <input type="checkbox" id="mn-h07" class="margin-toggle">
+    <span class="marginnote">
+계절성이 있는 예제
+    </span>
+    다음은 월별 이산화탄소 농도 데이터를 나타내는 그래프이다. 선형 추세는 제거한 것이다.
+    <figure>
+      <img src="http://www.itl.nist.gov/div898/handbook/pmc/section4/gifs/co2res.gif">
+    </figure>
+  </p>
+  <p>
+이 그래프는 주기적인 성질을 나타낸다. 하지만, 이 그래프에서 계절성이 있다고 판단하기는 힘들다.
+  </p>
+</section>
+
+<section>
+  <p>
+    <label for="mn-h08" class="margin-toggle">⊕ </label>
+    <input type="checkbox" id="mn-h08" class="margin-toggle">
+    <span class="marginnote">
+상자 그래프
+    </span>
+    <figure>
+      <img src="http://www.itl.nist.gov/div898/handbook/pmc/section4/gifs/co2boxpl.gif">
+    </figure>
+  </p>
+  <p>
+계절적인 부 시계열 그래프처럼, 상자 그래프에서도 계절적인 패턴이 상당히 분명하게 나타난다.
+  </p>
+</section>
+
+<section>
+  <ul class="pager">
+    <li class="previous"><a href="/articles/2016/11/23/ESH-06-04-04-02">Previous</a></li>
+    <li class="next"><a href="/articles/2016/11/23/ESH-06-04-04-03-01">Next</a></li>      
+  </ul>
+  <p>
+    <a href="http://www.itl.nist.gov/div898/handbook/pmc/section4/pmc443.htm">원문 보기</a>
+  </p>
+</section>
+
+
+
+<p>
+<div class="comments">
+	<div id="disqus_thread" style="max-width:60%;"></div>
+	<script type="text/javascript">
+    var disqus_config = function () {
+      this.page.url = "https://danielykim.github.io/articles/2016/11/23/ESH-06-04-04-03"; // <--- use canonical URL
+      this.page.identifier = "/articles/2016/11/23/ESH-06-04-04-03";
+    };
+    (function() { // DON'T EDIT BELOW THIS LINE
+    
+      var d = document, s = d.createElement('script');
+
+      s.src = '//danielykim.disqus.com/embed.js'; // <--- use Disqus shortname
+
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+</div>
+</p>
+
+
+
+
+    </article>
+    <span class="print-footer">6.4.4.3. 계절성(Seasonality) - November 23, 2016 - Daniel Kim, PhD</span>
+    <footer>
+  <hr class="slender">
+  <ul class="footer-links">
+    <li><a href="mailto:daniel.youngho.kim@gmail.com"><span class="icon-mail"></span></a></li>    
+    <li><a href="https://www.linkedin.com/in/danielyounghokim"><span class="icon-info"></span></a></li>    
+      
+  </ul>
+<div class="credits">
+<span>&copy; 2016 &nbsp;&nbsp;DANIEL KIM, PHD</span></br> <br>
+<span>This site created with the <a href="//github.com/clayh53/tufte-jekyll">Tufte theme for  </a> in <a href="//jekyllrb.com">Jekyll</a>.</span> 
+</div>  
+</footer>
+
+    <script id="dsq-count-scr" src="//danielykim.disqus.com/count.js" async></script>
+    
+  </body>
+</html>
