@@ -1,0 +1,169 @@
+---
+layout: post
+title: 6.4.4.9. 단변량 박스-젠킨스 분석 예제
+---
+
+
+<section>
+  <p>
+    <label for="mn-h01" class="margin-toggle">⊕ </label>
+    <input type="checkbox" id="mn-h01" class="margin-toggle">
+    <span class="marginnote">
+시계열 F
+    </span>
+Box, Jenkins, and Reinsel, 1994에 있는 시계열 F 데이터를 살펴보자. 다음 그래프에서 볼 수 있는 것처럼 원본 데이터에는 70개의 점이 있다.    
+    <figure>
+      <img src="http://www.itl.nist.gov/div898/handbook/pmc/section4/pmc449_r01.gif">
+    </figure>
+  </p>
+  <p>
+데이터에 계절적인 성분이나 눈에 띄는 추세가 있는 것 같진 않다. (직선을 데이터에 맞춰 시계열의 정상성을 확인했다. 0에서 많이 차이나는 기울기가 보이진 않았다. p-값 = 0.2)
+  </p>
+  <p>
+6.4.4.10절에서 나머지 시계열에 박스-융 테스트를 다루는 예제가 있다.
+
+  </p>
+</section>
+
+<section>
+  <p>
+    <label for="mn-h02" class="margin-toggle">⊕ </label>
+    <input type="checkbox" id="mn-h02" class="margin-toggle">
+    <span class="marginnote">
+모델 판별
+    </span>
+데이터를 맞추기 위한 모델의 종류를 정하기 위해 첫 35 뒤처짐에 대한 데이터의 자기상관 함수(ACF)를 보자. 결과와 ACF를 95% 신뢰 구간과 함께 뒤처짐에 따라 그려보자.
+  </p>
+  <div class="table-wrapper">
+    <table class="booktabs">
+      <thead>
+        <tr><th style="text-align: center"><b>뒤처짐</b></th><th style="text-align: center"><b>ACF</b></th></tr>
+      </thead>
+      <tbody>
+<tr><td style="text-align: center">   0</td><td style="text-align: center"> 1.000000000</td></tr>
+<tr><td style="text-align: center">   1</td><td style="text-align: center">-0.389878319</td></tr>
+<tr><td style="text-align: center">   2</td><td style="text-align: center"> 0.304394082</td></tr>
+<tr><td style="text-align: center">   3</td><td style="text-align: center">-0.165554717</td></tr>
+<tr><td style="text-align: center">   4</td><td style="text-align: center"> 0.070719321</td></tr>
+<tr><td style="text-align: center">   5</td><td style="text-align: center">-0.097039288</td></tr>
+<tr><td style="text-align: center">   6</td><td style="text-align: center">-0.047057692</td></tr>
+<tr><td style="text-align: center">   7</td><td style="text-align: center"> 0.035373112</td></tr>
+<tr><td style="text-align: center">   8</td><td style="text-align: center">-0.043458199</td></tr>
+<tr><td style="text-align: center">   9</td><td style="text-align: center">-0.004796162</td></tr>
+<tr><td style="text-align: center">  10</td><td style="text-align: center"> 0.014393137</td></tr>
+<tr><td style="text-align: center">  11</td><td style="text-align: center"> 0.109917200</td></tr>
+<tr><td style="text-align: center">  12</td><td style="text-align: center">-0.068778492</td></tr>
+<tr><td style="text-align: center">  13</td><td style="text-align: center"> 0.148034489</td></tr>
+<tr><td style="text-align: center">  14</td><td style="text-align: center"> 0.035768581</td></tr>
+<tr><td style="text-align: center">  15</td><td style="text-align: center">-0.006677806</td></tr>
+<tr><td style="text-align: center">  16</td><td style="text-align: center"> 0.173004275</td></tr>
+<tr><td style="text-align: center">  17</td><td style="text-align: center">-0.111342583</td></tr>
+<tr><td style="text-align: center">  18</td><td style="text-align: center"> 0.019970791</td></tr>
+<tr><td style="text-align: center">  19</td><td style="text-align: center">-0.047349722</td></tr>
+<tr><td style="text-align: center">  20</td><td style="text-align: center"> 0.016136806</td></tr>
+<tr><td style="text-align: center">  21</td><td style="text-align: center"> 0.022279561</td></tr>
+<tr><td style="text-align: center">  22</td><td style="text-align: center">-0.078710582</td></tr>
+<tr><td style="text-align: center">  23</td><td style="text-align: center">-0.009577413</td></tr>
+<tr><td style="text-align: center">  24</td><td style="text-align: center">-0.073114034</td></tr>
+<tr><td style="text-align: center">  25</td><td style="text-align: center">-0.019503289</td></tr>
+<tr><td style="text-align: center">  26</td><td style="text-align: center"> 0.041465024</td></tr>
+<tr><td style="text-align: center">  27</td><td style="text-align: center">-0.022134370</td></tr>
+<tr><td style="text-align: center">  28</td><td style="text-align: center"> 0.088887299</td></tr>
+<tr><td style="text-align: center">  29</td><td style="text-align: center"> 0.016247148</td></tr>
+<tr><td style="text-align: center">  30</td><td style="text-align: center"> 0.003946351</td></tr>
+<tr><td style="text-align: center">  31</td><td style="text-align: center"> 0.004584069</td></tr>
+<tr><td style="text-align: center">  32</td><td style="text-align: center">-0.024782198</td></tr>
+<tr><td style="text-align: center">  33</td><td style="text-align: center">-0.025905040</td></tr>
+<tr><td style="text-align: center">  34</td><td style="text-align: center">-0.062879966</td></tr>
+<tr><td style="text-align: center">  35</td><td style="text-align: center"> 0.026101117</td></tr>      
+      </tbody>
+    </table>
+  </div>
+  <figure>
+    <img src="http://www.itl.nist.gov/div898/handbook/pmc/section4/pmc449_r02.gif">
+  </figure>
+  <p>
+ACF 값의 부호가 왔다갔다하다가 2 뒤처짐 이후로 빠르게 감소한다. 이것은 AR(2) 모델이 데이터에 적합하다는 의미이다.  
+  </p>
+</section>
+
+<section>
+  <p>
+    <label for="mn-h03" class="margin-toggle">⊕ </label>
+    <input type="checkbox" id="mn-h03" class="margin-toggle">
+    <span class="marginnote">
+모델 맞추기
+    </span>
+AR(2) 모델을 데이터에 맞추자.
+$$ X_{t} = \delta + \phi_{1} X_{t-1} + \phi_{2} X_{t-2} + A_{t} $$
+  </p>
+  <p>
+아래는 모델을 맞춘 결과이다.  
+  </p>
+  <div class="table-wrapper">
+    <table class="booktabs">
+      <thead>
+        <tr><th style="text-align: center"><b>소스</b></th><th style="text-align: center"><b>측정</b></th><th style="text-align: center"><b>표준 오차</b></th></tr>
+      </thead>
+      <tbody>
+        <tr><th style="text-align: center">\( \phi_{1} \)</th><th style="text-align: center">-0.3198</th><th style="text-align: center"> 0.1202 </th></tr>
+        <tr><th style="text-align: center">\( \phi_{2} \)</th><th style="text-align: center"> 0.1797</th><th style="text-align: center"> 0.1202 </th></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>
+    <blockquote>
+      <p>\( \delta = 51.1286 \)</p>
+      <p>나머지 표준 편차 = 10.9599</p>
+      <p>
+        나머지의 테스트 무작위성:<br/>
+        표준화된 통계<br/>
+        Z = 0.4887, p-값 = 0.625
+      </p>
+    </blockquote>
+  </p>
+  
+  </p>
+</section>
+
+<section>
+  <p>
+    <label for="mn-h04" class="margin-toggle">⊕ </label>
+    <input type="checkbox" id="mn-h04" class="margin-toggle">
+    <span class="marginnote">
+예측
+    </span>
+지금까지 다룬 AR(2) 모델로 6 시점 앞까지 예측해보자.
+  </p>
+  <div class="table-wrapper">
+    <table class="booktabs">
+      <thead>
+        <tr><th style="text-align: center"><b>시점</b></th><th style="text-align: center"><b>예측</b></th><th style="text-align: center"><b>표준 오차</b></th></tr>
+      </thead>
+      <tbody>
+        <tr><th style="text-align: center">71</th><th style="text-align: center">60.6405</th><th style="text-align: center">10.9479</th></tr>
+        <tr><th style="text-align: center">72</th><th style="text-align: center">43.0317</th><th style="text-align: center">11.4941</th></tr>
+        <tr><th style="text-align: center">73</th><th style="text-align: center">55.4274</th><th style="text-align: center">11.9015 </th></tr>
+        <tr><th style="text-align: center">74</th><th style="text-align: center">48.2987</th><th style="text-align: center">12.0108</th></tr>
+        <tr><th style="text-align: center">75</th><th style="text-align: center">52.8061</th><th style="text-align: center">12.0585 </th></tr>
+        <tr><th style="text-align: center">76</th><th style="text-align: center">50.0835</th><th style="text-align: center">12.0751</th></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>
+이전 데이터와 예측한 값을 (90% 신뢰 구간과 함께) 그리면 다음과 같다.
+    <figure>
+      <img src="http://www.itl.nist.gov/div898/handbook/pmc/section4/pmc449_r03.gif">
+    </figure>
+  </p>
+</section>
+
+<section>
+  <ul class="pager">
+    <li class="previous"><a href="{{ "/articles/2016/11/25/ESH-06-04-04-08-01" | prepend: site.baseurl }}">Previous</a></li>
+    <li class="next"><a href="{{ "/articles/2016/11/25/ESH-06-04-04-10" | prepend: site.baseurl }}">Next</a></li>      
+  </ul>
+  <p>
+    <a href="http://www.itl.nist.gov/div898/handbook/pmc/section4/pmc449.htm">원문 보기</a>
+  </p>
+</section>

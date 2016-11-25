@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <link rel="icon" type="image/png" href="http://danielykim.me/images/myicon.png" />
+  <title>Blog: Daniel Kim</title>
+  <meta name="description" content="      ⊕         적합성에 대한 테스트    박스-융 테스트(1978)는 시계열이 모델에 잘 맞는지 진단하는 방법이다.    데이터를 ARMA(p,q) 모델로 맞춘 다음, 시계열의 나머지에 테스트를 적용하면 된다. 테스트에서 나머지에 대한 m개의 자기상관을 검사한다. 자...">
+
+  <!-- Google Fonts loaded here depending on setting in _data/options.yml true loads font, blank does not-->
+  
+  
+  <!-- Load up MathJax script if needed ... specify in /_data/options.yml file-->
+  <script type="text/javascript" async
+    src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+  </script>
+
+  <link rel="stylesheet" type="text/css" href="/css/tufte.css">
+  <link rel="stylesheet" type="text/css" href="/tufte.css">
+  <!-- <link rel="stylesheet" type="text/css" href="/css/print.css" media="print"> -->
+
+  <link rel="canonical" href="http://localhost:4000/articles/2016/11/25/ESH-06-04-04-08-01">
+
+  <link rel="alternate" type="application/rss+xml" title="Blog: Daniel Kim" href="http://localhost:4000/feed.xml" />
+
+  <script type="text/javascript" src="/js/pace.min.js"></script>
+
+  <link rel="stylesheet" type="text/css" href="/css/pace-flash.css">
+
+</head>
+
+  <body>
+    <!--- Header and nav template site-wide -->
+<header>
+    <nav class="group">
+    <h1>Under construction</h1>
+	
+		
+  	
+		
+		    
+		      <a href="/">blog</a>
+		    
+	    
+  	
+		
+		    
+		      <a href="/about/">About</a>
+		    
+	    
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+		    
+		      <a href="/feed.xslt.xml"></a>
+		    
+	    
+  	
+	</nav>
+</header>
+
+    <article class="group">
+      <h1>6.4.4.8.1 박스-융 테스트</h1>
+
+<p class="subtitle">November 25, 2016</p>
+
+
+<section>
+  <p>
+    <label for="mn-h01" class="margin-toggle">⊕ </label>
+    <input type="checkbox" id="mn-h01" class="margin-toggle">
+    <span class="marginnote">
+적합성에 대한 테스트
+    </span>
+박스-융 테스트(1978)는 시계열이 모델에 잘 맞는지 진단하는 방법이다.
+  </p>
+  <p>
+데이터를 ARMA(p,q) 모델로 맞춘 다음, 시계열의 나머지에 테스트를 적용하면 된다. 테스트에서 나머지에 대한 m개의 자기상관을 검사한다. 자기상관이 아주 작다면, 모델이 적합하지 않다고 말할 수 없다는 결과를 준다.
+
+  </p>
+  <p>
+6.4.4.10절에서 나머지 시계열에 박스-융 테스트를 다루는 예제가 있다.
+
+  </p>
+</section>
+
+<section>
+  <p>
+    <label for="mn-h02" class="margin-toggle">⊕ </label>
+    <input type="checkbox" id="mn-h02" class="margin-toggle">
+    <span class="marginnote">
+정의
+    </span>
+일반적으로, 박스-융 테스트는 다음과 같이 정의한다.
+    <blockquote>
+      <p>\(H_{0}\) : 모델이 적합하지 않다는 모습이 안 보인다.</p>
+      <p>\(H_{a}\) : 모델이 적합하지 않다고 보인다.</p>
+      <p>
+      테스트 통계: 길이 \(n\)인 주어진 시계열 \(Y\)가 있을 때, 테스트 통계는 다음과 같다.
+      $$ Q = n(n+2) \sum_{k=1}^{m} \frac{ r_{k}^{2} }{ n - k } $$
+여기에서 r_{k}는 뒤처짐 k에서 측정한 시계열의 자기상관이고, m은 테스트하는 뒤처짐의 갯수이다.
+      </p>
+      <p>유의미도: \(\alpha\)</p>
+      <p>
+      기각 영역(critical region): 박스-융 테스트는 다음과 같은 경우 귀무 가설(null hypothesis; 유의미하게 모델이 적합하지 않은 경우)을 기각한다.
+      $$ Q > \chi_{1-\alpha, h}^{2} $$
+      여기에서 \(\chi_{1-\alpha, h}^{2}\)는 자유도가 \(h\), 유의미도가 \(\alpha\)일 때 카이 제곱 분포표 값이다.
+      </p>
+    </blockquote>
+  </p>
+  <p>
+테스트를 나머지에 적용했기 때문에, 반드시 자유도가 \( h=m-p-q \)가 되도록 처리해야한다. 여기에서 \(p\)와 \(q\)는 데이터를 맞추는 \(ARMA(p,q)\) 모델에서 매개변수의 수이다.
+
+  </p>
+</section>
+
+<section>
+  <ul class="pager">
+    <li class="previous"><a href="/articles/2016/11/25/ESH-06-04-04-08">Previous</a></li>
+    <li class="next"><a href="/articles/2016/11/25/ESH-06-04-04-09">Next</a></li>      
+  </ul>
+  <p>
+    <a href="http://www.itl.nist.gov/div898/handbook/pmc/section4/pmc4481.htm">원문 보기</a>
+  </p>
+</section>
+
+
+
+<p>
+<div class="comments">
+	<div id="disqus_thread" style="max-width:60%;"></div>
+	<script type="text/javascript">
+    var disqus_config = function () {
+      this.page.url = "https://danielykim.github.io/articles/2016/11/25/ESH-06-04-04-08-01"; // <--- use canonical URL
+      this.page.identifier = "/articles/2016/11/25/ESH-06-04-04-08-01";
+    };
+    (function() { // DON'T EDIT BELOW THIS LINE
+    
+      var d = document, s = d.createElement('script');
+
+      s.src = '//danielykim.disqus.com/embed.js'; // <--- use Disqus shortname
+
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+</div>
+</p>
+
+
+
+
+    </article>
+    <span class="print-footer">6.4.4.8.1 박스-융 테스트 - November 25, 2016 - Daniel Kim, PhD</span>
+    <footer>
+  <hr class="slender">
+  <ul class="footer-links">
+    <li><a href="mailto:daniel.youngho.kim@gmail.com"><span class="icon-mail"></span></a></li>    
+    <li><a href="https://www.linkedin.com/in/danielyounghokim"><span class="icon-info"></span></a></li>    
+      
+  </ul>
+<div class="credits">
+<span>&copy; 2016 &nbsp;&nbsp;DANIEL KIM, PHD</span></br> <br>
+<span>This site created with the <a href="//github.com/clayh53/tufte-jekyll">Tufte theme for  </a> in <a href="//jekyllrb.com">Jekyll</a>.</span> 
+</div>  
+</footer>
+
+    <script id="dsq-count-scr" src="//danielykim.disqus.com/count.js" async></script>
+    
+  </body>
+</html>

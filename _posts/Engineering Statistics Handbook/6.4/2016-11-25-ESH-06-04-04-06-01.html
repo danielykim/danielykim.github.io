@@ -1,0 +1,95 @@
+---
+layout: post
+title: 6.4.4.6.1. 남방 진동 데이터에서 모델 판별
+---
+
+
+<section>
+  <p>
+    <label for="mn-h01" class="margin-toggle">⊕ </label>
+    <input type="checkbox" id="mn-h01" class="margin-toggle">
+    <span class="marginnote">
+남방 진동 예제
+    </span>
+두 개의 서로 다른 예제에 대해 박스-젠킨스 모델링에서 시계열의 그래프로 모델 판별하는 과정을 살펴보자.
+  </p>
+  <p>
+첫 번째 예제는 남방 진동 데이터이다. 먼저, 정상성(stationarity)과 계절성(seasonality)을 고려해야 하는지 판단하기 위해 연속 순서 그래프와 계절적인 부 시계열 그래프를 보자.  
+  </p>
+</section>
+
+<section>
+  <p>
+    <label for="mn-h02" class="margin-toggle">⊕ </label>
+    <input type="checkbox" id="mn-h02" class="margin-toggle">
+    <span class="marginnote">
+연속 순서 그래프
+    </span>
+    <figure>
+      <img src="http://www.itl.nist.gov/div898/handbook/pmc/section4/gifs/oscrunsq.gif">
+    </figure>
+  </p>
+  <p>
+연속 순서 그래프(Run sequence plot)에서 정상성이 보인다.  
+  </p>
+</section>
+
+<section>
+  <p>
+    <label for="mn-h03" class="margin-toggle">⊕ </label>
+    <input type="checkbox" id="mn-h03" class="margin-toggle">
+    <span class="marginnote">
+계절적인 부 시계열 그래프
+    </span>
+계절적인 부 시계열 그래프에서 계절성이 분명하게 보이지 않는다.
+  </p>
+  <p>
+비-정상성이나 계절성이 보이지 않으니, 원 데이터의 자기상관과 부분 자기상관 그래프를 보자.
+
+  </p>
+</section>
+
+<section>
+  <p>
+    <label for="mn-h04" class="margin-toggle">⊕ </label>
+    <input type="checkbox" id="mn-h04" class="margin-toggle">
+    <span class="marginnote">
+자기상관 그래프
+    </span>
+    <figure>
+      <img src="http://www.itl.nist.gov/div898/handbook/pmc/section4/gifs/oscauto.gif">
+    </figure>
+  </p>
+  <p>
+자기상관 그래프에서 지수적인 감소와 감쇠 사인 성분이 보인다. 이러한 상황에서는 1보다 큰 차수의 자동회귀 모델이 적절할 것이다. 차수를 결정하기 위해 부분 자기상관 함수를 봐야 한다.  
+  </p>
+</section>
+
+<section>
+  <p>
+    <label for="mn-h05" class="margin-toggle">⊕ </label>
+    <input type="checkbox" id="mn-h05" class="margin-toggle">
+    <span class="marginnote">
+부분 자기상관 그래프
+    </span>
+    <figure>
+      <img src="http://www.itl.nist.gov/div898/handbook/pmc/section4/gifs/oscauto.gif">
+    </figure>
+  </p>
+  <p>
+부분 자기상관 그래프에서 보니 AR(2) 모델이 적절한 것 같다.  
+  </p>
+  <p>
+요약하면, 계절적인 항이나 추세를 빼거나 제거하는 작업 없는 AR(2) 모델이 적합했다. 모델을 결정하기 전에 꼭 모델을 검증해야 한다.
+  </p>
+</section>
+
+<section>
+  <ul class="pager">
+    <li class="previous"><a href="{{ "/articles/2016/11/25/ESH-06-04-04-06" | prepend: site.baseurl }}">Previous</a></li>
+    <li class="next"><a href="{{ "/articles/2016/11/25/ESH-06-04-04-06-02" | prepend: site.baseurl }}">Next</a></li>      
+  </ul>
+  <p>
+    <a href="http://www.itl.nist.gov/div898/handbook/pmc/section4/pmc4461.htm">원문 보기</a>
+  </p>
+</section>
