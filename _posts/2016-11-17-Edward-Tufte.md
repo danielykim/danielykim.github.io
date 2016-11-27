@@ -116,9 +116,10 @@ Political Control of the Economy (Princeton University Press, 1978). Paperback e
 > From Martin Kemp’s review of Beautiful Evidence in Nature (13 July 2006): "Tufte is an expert in the presentation of statistical evidence and a sculptor, and has established himself as the world’s leading analyst of graphic information."
 
 
-## 그가 사용한 용어
-Chartjunk
-Sparkline
+## 그가 처음 사용한 용어
+Chartjunk <br/>
+Sparkline <br/>
+ImageQuilt
 
 
 ## 기타 등등
