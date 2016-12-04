@@ -7,7 +7,7 @@
   
   <link rel="icon" type="image/png" href="http://danielykim.me/images/myicon.png" />
   <title>Blog: Daniel Kim</title>
-  <meta name="description" content="      ⊕         월별 이산화탄소 농도 에제    두 번째 예제는 월별 이산화탄소 농도 데이터이다. 첫 번째 예제처럼, 먼저 정상성을 확인하기 위해 연속 순서 그래프(Run sequence plot)를 보자.  ">
+  <meta name="description" content="      ⊕         월별 이산화탄소 농도 에제    두 번째 예제는 월별 이산화탄소 농도 데이터이다. 첫 번째 예제처럼, 먼저 정상성을 확인하기 위해 진행 순서 그래프(Run sequence plot)를 보자.  ">
 
   <!-- Google Fonts loaded here depending on setting in _data/options.yml true loads font, blank does not-->
   
@@ -81,7 +81,7 @@
     <span class="marginnote">
 월별 이산화탄소 농도 에제
     </span>
-두 번째 예제는 월별 이산화탄소 농도 데이터이다. 첫 번째 예제처럼, 먼저 정상성을 확인하기 위해 연속 순서 그래프(Run sequence plot)를 보자.
+두 번째 예제는 월별 이산화탄소 농도 데이터이다. 첫 번째 예제처럼, 먼저 정상성을 확인하기 위해 진행 순서 그래프(Run sequence plot)를 보자.
   </p>
 </section>
 
@@ -90,14 +90,14 @@
     <label for="mn-h02" class="margin-toggle">⊕ </label>
     <input type="checkbox" id="mn-h02" class="margin-toggle">
     <span class="marginnote">
-연속 순서 그래프
+진행 순서 그래프
     </span>
     <figure>
       <img src="http://www.itl.nist.gov/div898/handbook/pmc/section4/gifs/co2runsq.gif">
     </figure>
   </p>
   <p>
-데이터의 연속 순서 그래프에서 증가 추세가 보인다. 단순한 직선으로 증가 추세를 충분히 맞출 수 있을 것 같다.
+데이터의 진행 순서 그래프에서 증가 추세가 보인다. 단순한 직선으로 증가 추세를 충분히 맞출 수 있을 것 같다.
   </p>
 </section>
 
@@ -113,7 +113,7 @@
     </figure>
   </p>
   <p>
-여기에서 y축은 원 데이터에서 맞춘 직선을 뺀 나머지이다. 선형 추세를 제거하고나니, 연속 순서 그래프는 일정한 위치에 놓였고 일정한 분산을 가지는 것을 볼 수 있다. 이러한 경향은 정상성(stationarity)을 의미한다.
+여기에서 \(y\)축은 원 데이터에서 맞춘 직선을 뺀 나머지이다. 선형 추세를 제거하고나니, 진행 순서 그래프는 일정한 위치에 놓였고 일정한 분산을 가지는 것을 볼 수 있다. 이러한 경향은 정상성(stationarity)을 의미한다.
   </p>
   <p>
 하지만, 그래프에 게절성(seasonality)이 없다. 주기를 정하기 위해 자기상관함수를 확인하고 주기적 부 시계열 그래프를 살펴보자.

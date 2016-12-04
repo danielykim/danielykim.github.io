@@ -83,21 +83,9 @@
     <span class="marginnote">
 시계열 G
     </span>
-이 예제는 Box, Jenkins, and Reinsel 1994에 있는 시계열 G 데이터를 사용하여 계절적인 데이터에 대한 박스-젠킨스 시계열 분석에 관한 것이다. 아래 그림에서 볼 수 있듯이 144개의 관측값이 있다.
+이 예제에서는 Box, Jenkins, and Reinsel 1994에 있는 시계열 데이터 G를 사용하여 계절적인 데이터에 대한 박스-젠킨스 시계열 분석 방법을 다룰 것이다. 아래 그림에서 볼 수 있듯이 144개의 관측값이 있다.
     <figure>
       <img src="http://www.itl.nist.gov/div898/handbook/pmc/section4/pmc44a_r01.gif">
-    </figure>
-  </p>
-  <p>
-자연 로그 변환으로 일정하지 않은 분산 효과를 없앨 수 있다.
-    <figure>
-      <img src="http://www.itl.nist.gov/div898/handbook/pmc/section4/pmc44a_r02.gif">
-    </figure>
-  </p>
-  <p>
-그 다음, 뺄셈으로 시계열에서 추세를 없앤다. 결과 시계열은 다음과 같다.
-    <figure>
-      <img src="http://www.itl.nist.gov/div898/handbook/pmc/section4/pmc44a_r03.gif">
     </figure>
   </p>
 </section>
@@ -250,7 +238,7 @@ Box, Jenkins, and Reinsel, 1994에 있는 시계열 F 데이터를 살펴보자.
     <span class="marginnote">
 월별 이산화탄소 농도 에제
     </span>
-두 번째 예제는 월별 이산화탄소 농도 데이터이다. 첫 번째 예제처럼, 먼저 정상성을 확인하기 위해 연속 순서 그래프(Run sequence plot)를 보자.
+두 번째 예제는 월별 이산화탄소 농도 데이터이다. 첫 번째 예제처럼, 먼저 정상성을 확인하기 위해 진행 순서 그래프(Run sequence plot)를 보자.
   </p>
 </section>
 
@@ -271,7 +259,7 @@ Box, Jenkins, and Reinsel, 1994에 있는 시계열 F 데이터를 살펴보자.
 두 개의 서로 다른 예제에 대해 박스-젠킨스 모델링에서 시계열의 그래프로 모델 판별하는 과정을 살펴보자.
   </p>
   <p>
-첫 번째 예제는 남방 진동 데이터이다. 먼저, 정상성(stationarity)과 계절성(seasonality)을 고려해야 하는지 판단하기 위해 연속 순서 그래프와 계절적인 부 시계열 그래프를 보자.  
+첫 번째 예제는 남방 진동 데이터이다. 먼저, 정상성(stationarity)과 계절성(seasonality)을 고려해야 하는지 판단하기 위해 진행 순서 그래프와 계절적인 부 시계열 그래프를 보자.  
   </p>
 </section>
 
@@ -411,7 +399,7 @@ $$
 정상 과정(stationary process)은 평균, 분산, 자기상관 구조가 시간에 따라서 변하지 않는 특징이 있다. 정상성은 정확한 수학적 용어로 정의할 수 있지만, 이 글에서는 추세를 무시하면, 분산이 일정하고, 시간에 따라 일정한 자기상관 구조가 있으며, 주기적인 변동(계절성)이 없는 평평한 시계열 정도로 이야기하면 충분하다.
   </p>
   <p>
-  실용적인 목적에서 보통 연속 순서 그래프(run sequence plot)를 보고 정상성을 판단할 수 있다.
+  실용적인 목적에서 보통 진행 순서 그래프(run sequence plot)를 보고 정상성을 판단할 수 있다.
   </p>
 </section>
 

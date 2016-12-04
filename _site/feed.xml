@@ -5,8 +5,8 @@
     <description>Under construction</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 25 Nov 2016 11:40:08 +0000</pubDate>
-    <lastBuildDate>Fri, 25 Nov 2016 11:40:08 +0000</lastBuildDate>
+    <pubDate>Sun, 04 Dec 2016 07:41:18 +0000</pubDate>
+    <lastBuildDate>Sun, 04 Dec 2016 07:41:18 +0000</lastBuildDate>
     <generator>Jekyll v3.3.0</generator>
     
       <item>
@@ -18,11 +18,14 @@
     &lt;span class=&quot;marginnote&quot;&gt;
 시계열 G
     &lt;/span&gt;
-이 예제는 Box, Jenkins, and Reinsel 1994에 있는 시계열 G 데이터를 사용하여 계절적인 데이터에 대한 박스-젠킨스 시계열 분석에 관한 것이다. 아래 그림에서 볼 수 있듯이 144개의 관측값이 있다.
+이 예제에서는 Box, Jenkins, and Reinsel 1994에 있는 시계열 데이터 G를 사용하여 계절적인 데이터에 대한 박스-젠킨스 시계열 분석 방법을 다룰 것이다. 아래 그림에서 볼 수 있듯이 144개의 관측값이 있다.
     &lt;figure&gt;
       &lt;img src=&quot;http://www.itl.nist.gov/div898/handbook/pmc/section4/pmc44a_r01.gif&quot;&gt;
     &lt;/figure&gt;
   &lt;/p&gt;
+&lt;/section&gt;
+
+&lt;section&gt;
   &lt;p&gt;
 자연 로그 변환으로 일정하지 않은 분산 효과를 없앨 수 있다.
     &lt;figure&gt;
@@ -591,7 +594,7 @@ Negiz 사례 연구에서 박스-젠킨스 모델 맞추는 예제를 살펴볼 
     &lt;span class=&quot;marginnote&quot;&gt;
 정상성 감지하기
     &lt;/span&gt;
-정상성은 연속 순서 그래프로 판단할 수 있다. 연속 순서 그래프에서 일정한 위치와 척도가 나타나야 한다. 자가상관 그래프로도 감지할 수 있다. 특별히, 비-정상성이 있다면 종종 자기상관 그래프가 아주 느리게 감소하는 패턴으로 나타난다.
+정상성은 진행 순서 그래프로 판단할 수 있다. 진행 순서 그래프에서 일정한 위치와 척도가 나타나야 한다. 자가상관 그래프로도 감지할 수 있다. 특별히, 비-정상성이 있다면 종종 자기상관 그래프가 아주 느리게 감소하는 패턴으로 나타난다.
   &lt;/p&gt;
 &lt;/section&gt;
 
@@ -889,7 +892,7 @@ Negiz 데이터 사례 연구에 부분 자기상관 그래프가 있다.
     &lt;span class=&quot;marginnote&quot;&gt;
 월별 이산화탄소 농도 에제
     &lt;/span&gt;
-두 번째 예제는 월별 이산화탄소 농도 데이터이다. 첫 번째 예제처럼, 먼저 정상성을 확인하기 위해 연속 순서 그래프(Run sequence plot)를 보자.
+두 번째 예제는 월별 이산화탄소 농도 데이터이다. 첫 번째 예제처럼, 먼저 정상성을 확인하기 위해 진행 순서 그래프(Run sequence plot)를 보자.
   &lt;/p&gt;
 &lt;/section&gt;
 
@@ -898,14 +901,14 @@ Negiz 데이터 사례 연구에 부분 자기상관 그래프가 있다.
     &lt;label for=&quot;mn-h02&quot; class=&quot;margin-toggle&quot;&gt;⊕ &lt;/label&gt;
     &lt;input type=&quot;checkbox&quot; id=&quot;mn-h02&quot; class=&quot;margin-toggle&quot;&gt;
     &lt;span class=&quot;marginnote&quot;&gt;
-연속 순서 그래프
+진행 순서 그래프
     &lt;/span&gt;
     &lt;figure&gt;
       &lt;img src=&quot;http://www.itl.nist.gov/div898/handbook/pmc/section4/gifs/co2runsq.gif&quot;&gt;
     &lt;/figure&gt;
   &lt;/p&gt;
   &lt;p&gt;
-데이터의 연속 순서 그래프에서 증가 추세가 보인다. 단순한 직선으로 증가 추세를 충분히 맞출 수 있을 것 같다.
+데이터의 진행 순서 그래프에서 증가 추세가 보인다. 단순한 직선으로 증가 추세를 충분히 맞출 수 있을 것 같다.
   &lt;/p&gt;
 &lt;/section&gt;
 
@@ -921,7 +924,7 @@ Negiz 데이터 사례 연구에 부분 자기상관 그래프가 있다.
     &lt;/figure&gt;
   &lt;/p&gt;
   &lt;p&gt;
-여기에서 y축은 원 데이터에서 맞춘 직선을 뺀 나머지이다. 선형 추세를 제거하고나니, 연속 순서 그래프는 일정한 위치에 놓였고 일정한 분산을 가지는 것을 볼 수 있다. 이러한 경향은 정상성(stationarity)을 의미한다.
+여기에서 \(y\)축은 원 데이터에서 맞춘 직선을 뺀 나머지이다. 선형 추세를 제거하고나니, 진행 순서 그래프는 일정한 위치에 놓였고 일정한 분산을 가지는 것을 볼 수 있다. 이러한 경향은 정상성(stationarity)을 의미한다.
   &lt;/p&gt;
   &lt;p&gt;
 하지만, 그래프에 게절성(seasonality)이 없다. 주기를 정하기 위해 자기상관함수를 확인하고 주기적 부 시계열 그래프를 살펴보자.
@@ -1032,7 +1035,7 @@ Negiz 데이터 사례 연구에 부분 자기상관 그래프가 있다.
 두 개의 서로 다른 예제에 대해 박스-젠킨스 모델링에서 시계열의 그래프로 모델 판별하는 과정을 살펴보자.
   &lt;/p&gt;
   &lt;p&gt;
-첫 번째 예제는 남방 진동 데이터이다. 먼저, 정상성(stationarity)과 계절성(seasonality)을 고려해야 하는지 판단하기 위해 연속 순서 그래프와 계절적인 부 시계열 그래프를 보자.  
+첫 번째 예제는 남방 진동 데이터이다. 먼저, 정상성(stationarity)과 계절성(seasonality)을 고려해야 하는지 판단하기 위해 진행 순서 그래프와 계절적인 부 시계열 그래프를 보자.  
   &lt;/p&gt;
 &lt;/section&gt;
 
@@ -1041,14 +1044,14 @@ Negiz 데이터 사례 연구에 부분 자기상관 그래프가 있다.
     &lt;label for=&quot;mn-h02&quot; class=&quot;margin-toggle&quot;&gt;⊕ &lt;/label&gt;
     &lt;input type=&quot;checkbox&quot; id=&quot;mn-h02&quot; class=&quot;margin-toggle&quot;&gt;
     &lt;span class=&quot;marginnote&quot;&gt;
-연속 순서 그래프
+진행 순서 그래프
     &lt;/span&gt;
     &lt;figure&gt;
       &lt;img src=&quot;http://www.itl.nist.gov/div898/handbook/pmc/section4/gifs/oscrunsq.gif&quot;&gt;
     &lt;/figure&gt;
   &lt;/p&gt;
   &lt;p&gt;
-연속 순서 그래프(Run sequence plot)에서 정상성이 보인다.  
+진행 순서 그래프(Run sequence plot)에서 정상성이 보인다.  
   &lt;/p&gt;
 &lt;/section&gt;
 
