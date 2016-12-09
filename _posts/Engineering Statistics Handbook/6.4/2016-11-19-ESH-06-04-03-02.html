@@ -34,32 +34,16 @@ $$ S_{t+1} = S_{t} + \alpha \epsilon_{t} $$
 </section>
 
 <section>
-  <p>
-    <label for="mn-h03" class="margin-toggle">⊕ </label>
-    <input type="checkbox" id="mn-h03" class="margin-toggle">
-    <span class="marginnote">
-새로운 예측은 이전 예측에 오차 수정치를 더한 것이다
-    </span>
-위의 식을 다음과 같이 다시 쓸 수 있다.
-$$ S_{t+1} = S_{t} + \alpha \epsilon_{t} $$
-여기에서 \( \epsilon_{t} \)는 시기 \( t \)의 예측 오차(실제 - 예측)이다.
-  </p>
-  <p>
-다시 말해, 새로운 예측은 이전 예측에 가장 마지막 예측의 오차 수정치를 더한 것이다.  
-  </p>
-</section>
-
-<section>
   <h3>예측의 재복합</h3>
   <p>
     <label for="mn-h02" class="margin-toggle">⊕ </label>
-    <input type="checkbox" id="mn-h02" class="margin-toggle">
+    <input type="checkbox" id="mn-h03" class="margin-toggle">
     <span class="marginnote">
 재복합 예측(Bootstrapping forecasts)
     </span>
 실제 관측값이 없는데 어떤 시점(보통 가장 마지막 시점)에서 예측하고 싶다면 어떻게 될까? 이러한 상황에서는 위의 예측 식을 다음과 같이 바꿔야한다.
 $$ S_{t+1} = \alpha y_{origin} + (1-\alpha)S_{t} $$
-여기에서 y_{origin}은 상수이다. 이 기법을 재복합<label for="sn-bootstrapping" class="margin-toggle sidenote-number"></label><input type="checkbox" id="sn-bootstrapping" class="margin-toggle"/><span class="sidenote">Bootstrapping</span>이라고 부른다.
+여기에서 \( y_{origin} \)은 상수이다. 이 기법을 재복합<label for="sn-bootstrapping" class="margin-toggle sidenote-number"></label><input type="checkbox" id="sn-bootstrapping" class="margin-toggle"/><span class="sidenote">Bootstrapping</span>이라고 부른다.
   </p>
 </section>
 
@@ -67,7 +51,7 @@ $$ S_{t+1} = \alpha y_{origin} + (1-\alpha)S_{t} $$
   <h3>재복합 예제</h3>
   <p>
     <label for="mn-h03" class="margin-toggle">⊕ </label>
-    <input type="checkbox" id="mn-h03" class="margin-toggle">
+    <input type="checkbox" id="mn-h04" class="margin-toggle">
     <span class="marginnote">
       예제
     </span>
@@ -89,7 +73,7 @@ $$ S_{t+1} = \alpha y_{origin} + (1-\alpha)S_{t} $$
   <h3>재복합 예측과 보통의 예측 방법 비교</h3>
   <p>
     <label for="mn-h04" class="margin-toggle">⊕ </label>
-    <input type="checkbox" id="mn-h04" class="margin-toggle">
+    <input type="checkbox" id="mn-h05" class="margin-toggle">
     <span class="marginnote">
 두 방법을 비교하는 표
     </span>
@@ -114,7 +98,7 @@ $$ S_{t+1} = \alpha y_{origin} + (1-\alpha)S_{t} $$
 <section>
   <p>
     <label for="mn-h05" class="margin-toggle">⊕ </label>
-    <input type="checkbox" id="mn-h05" class="margin-toggle">
+    <input type="checkbox" id="mn-h06" class="margin-toggle">
     <span class="marginnote">
 추세를 고려하는 단일 지수 평활
     </span>
@@ -125,7 +109,7 @@ $$ S_{t+1} = \alpha y_{origin} + (1-\alpha)S_{t} $$
 <section>
   <p>
     <label for="mn-h06" class="margin-toggle">⊕ </label>
-    <input type="checkbox" id="mn-h06" class="margin-toggle">
+    <input type="checkbox" id="mn-h07" class="margin-toggle">
     <span class="marginnote">
 추세가 있는 표본 데이터
     </span>
@@ -155,7 +139,7 @@ $$ S_{t+1} = \alpha y_{origin} + (1-\alpha)S_{t} $$
 <section>
   <p>
     <label for="mn-h07" class="margin-toggle">⊕ </label>
-    <input type="checkbox" id="mn-h07" class="margin-toggle">
+    <input type="checkbox" id="mn-h08" class="margin-toggle">
     <span class="marginnote">
 추세가 있을 때 단일 평활법이 적절하지 않다는 것을 보여주는 그래프
     </span>
