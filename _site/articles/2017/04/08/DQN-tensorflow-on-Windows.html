@@ -76,53 +76,50 @@
 
 <p>이 글의 목적은 고전 게임을 심층강화학습하는 코드인 <a href="https://github.com/devsisters/DQN-tensorflow">DQN-tensorflow</a>를 Windows 7이나 10에서 실행하는 방법을 소개하는 것입니다. 혹시 코드와 관련된 이론적인 배경이 궁금하시다면 <a href="http://home.uchicago.edu/~arij/journalclub/papers/2015_Mnih_et_al.pdf">논문</a>을 직접 읽어보시거나 <a href="http://sanghyukchun.github.io/90/">천상혁님의 논문 리뷰</a>를 참조하시길 바랍니다.</p>
 
-<p><a href="https://github.com/devsisters/DQN-tensorflow">DQN-tensorflow</a> 라는 제목에서 알 수 있듯이, 내부에서 Python 라이브러리인 tensorflow 를 사용합니다.</p>
+<p><a href="https://github.com/devsisters/DQN-tensorflow">DQN-tensorflow</a> 라는 제목에서 알 수 있듯이, 코드 내부에서 Python 라이브러리인 tensorflow 를 사용합니다. <a href="https://github.com/devsisters/DQN-tensorflow">DQN-tensorflow</a> 여기에서 구할 수 있는 코드는 Linux 환경에서 <code class="highlighter-rouge">git clone https://github.com/devsisters/DQN-tensorflow.git</code> 하고나서 Python 2.7.x 환경에서 repository에서 나와있는대로 실행하면 잘 돌아갑니다.</p>
 
-<p>Windows 7과 10 환경 각각에서 Python 3.5.2와 tensorflow-gpu 1.1.0rc를 이용하여 진행했습니다.</p>
+<p>하지만, <code class="highlighter-rouge">Windows 7</code>이나 <code class="highlighter-rouge">10</code>에서 위의 코드를 바로 돌리려고 하면 두 가지 종류의 오류 때문에 실행되지 않습니다.</p>
+
+<ol>
+  <li>Windows 파일 경로 길이 제한</li>
+  <li>Python 2와 3 호환성</li>
+</ol>
 
 <h2 id="windows-7----">Windows 7 파일 경로 길이 제한</h2>
-<p><a href="https://github.com/devsisters/DQN-tensorflow">DQN-tensorflow</a> 여기에서 구할 수 있는 코드는 Linux 환경에서 <code class="highlighter-rouge">git clone https://github.com/devsisters/DQN-tensorflow.git</code> 하고나서 Python 2.7.x 환경에서 repository에서 나와있는대로 실행하면 잘 돌아갑니다. 하지만, repository에 있는 checkpoints 안에 있는 하위 폴더 경로가 길어서 Windows 10에서는 경로명 제한을 해제한 후에 <code class="highlighter-rouge">clone</code> 해야하고 Windows 7에서는 압축파일을 받아서 적당한 곳에 직접 풀어서 진행해야합니다.</p>
+<p><strong>로컬로 가져올 때:</strong> 하지만, repository에 있는 checkpoints 안에 있는 하위 폴더 경로가 길어서 Windows 10에서는 경로명 제한을 해제한 후에 <code class="highlighter-rouge">clone</code> 해야하고 Windows 7에서는 압축파일을 받아서 적당한 곳에 직접 풀어서 진행해야합니다.</p>
 
-<p>Windows 7에서는 경로 길이 제한 때문에 checkpoints 안에 매개변수값과 관련된 폴더를 만들다가 오류가 생깁니다. 이러한 오류는 <code class="highlighter-rouge">dqn/base.py</code>에서 600-63 번째 줄에 있는 코드를 주석처리하면 발생하지 않습니다. 저는 60-63번째 줄을 주석처리하고 64번째 줄의</p>
-
-<pre><code class="language-Python">return model_dir + '/'
-</code></pre>
-
-<p>을 아래와 같이 임의로 바꿨습니다.</p>
-
-<pre><code class="language-Python">return model_dir + '20170408/'
-</code></pre>
+<p><strong>실행할 때:</strong> Windows 7에서는 경로 길이 제한 때문에 checkpoints 안에 매개변수값과 관련된 폴더를 만들다가 오류가 생깁니다. <code class="highlighter-rouge">dqn/base.py</code>에서 600-63 번째 줄에 있는 코드를 주석처리하면 이러한 오류는 발생하지 않습니다. 저는 60-63번째 줄을 주석처리하고 64번째 줄의 <code class="highlighter-rouge">return model_dir + '/'</code>을 <code class="highlighter-rouge">return model_dir + '20170408/'</code>로 바꿨습니다. <a href="https://github.com/devsisters/DQN-tensorflow">DQN-tensorflow</a>의 코드는 <code class="highlighter-rouge">config.py</code>에 있는 매개변수별로 폴더를 만들지만 이 글에서는 매개변수들을 바꾸지 않고 실행해보는 것 자체에 관심이 있기 때문에 경로를 위와 같이 하였습니다.</p>
 
 <h2 id="python-2--python-3">Python 2 → Python 3</h2>
-<p><a href="https://github.com/devsisters/DQN-tensorflow">DQN-tensorflow</a> 여기 있는 코드가 Python 2.7.x 를 지원하니 다음과 같이 Python 3.x 로 바꿉니다.</p>
+<p><a href="https://github.com/devsisters/DQN-tensorflow">DQN-tensorflow</a> 여기 있는 코드가 Python 3.x 에서 돌아가지 않으니 다음과 같이 바꿉니다.</p>
 
 <ol>
-  <li>
-    <p><code class="highlighter-rouge">environment.py</code> 와 <code class="highlighter-rouge">agent.py</code>에 있는 <code class="highlighter-rouge">xrange</code>를 <code class="highlighter-rouge">range</code>로 바꿉니다.</p>
-  </li>
-  <li>
-    <p><code class="highlighter-rouge">agent.py</code>에서 201과 248번째 줄의 <code class="highlighter-rouge">reduce</code> 를 사용하기 위해 2번째 줄에</p>
-  </li>
+  <li><code class="highlighter-rouge">environment.py</code> 와 <code class="highlighter-rouge">agent.py</code>에 있는 <code class="highlighter-rouge">xrange</code>를 <code class="highlighter-rouge">range</code>로 바꿉니다.</li>
+  <li><code class="highlighter-rouge">agent.py</code>에서 201과 248번째 줄의 <code class="highlighter-rouge">reduce</code> 를 사용하기 위해 2번째 줄에 <code class="highlighter-rouge">import functools</code>을 추가하고 <code class="highlighter-rouge">reduce</code>를 사용하는 부분을 <code class="highlighter-rouge">functools.reduce</code>로 바꿉니다.</li>
+  <li><code class="highlighter-rouge">agent.py</code>에서 328번째 줄의 <code class="highlighter-rouge">self._saver = tf.train.Saver(self.w.values() + [self.step_op], max_to_keep=30)</code>을 <code class="highlighter-rouge">self._saver = tf.train.Saver([v for k, v in self.w.items()] + [self.step_op], max_to_keep=30)</code>로 바꿉니다.</li>
 </ol>
 
-<pre><code class="language-Python">import functools
-</code></pre>
+<h2 id="section">실행</h2>
+<p><code class="highlighter-rouge">python main.py --is_train=True --use_gpu=True --display=False</code>를 실행하면 다음과 같이 훈련을 시작합니다. 기본값은 벽돌깨기 게임(<code class="highlighter-rouge">Breakout-v0</code>)입니다. <code class="highlighter-rouge">--env_name=Breakout-v0</code>을 옵션으로 주지 않은 것에 주목하시길 바랍니다.</p>
 
-<p>을 추가하고 <code class="highlighter-rouge">reduce</code>를 사용하는 부분을 <code class="highlighter-rouge">functools.reduce</code>로 바꿉니다.</p>
+<p><img src="/images/2017-04-08/Python3.5.2-amd64_tensorflow-gpu1.1.0rc_NVIDIA_960M_Windows10-part1.png" alt="" /></p>
 
-<ol>
-  <li><code class="highlighter-rouge">agent.py</code>에서 328번째 줄의</li>
-</ol>
+<p>NVIDIA 960M을 가지고 훈련/학습을 시작합니다. 중간에 보이는 <code class="highlighter-rouge">The TensorFlow library wasn't compiled to use SSE4.2 instructions, but these are available on your machine and could speed up CPU computations.</code>라는 메시지는 tensorflow-gpu 소스 코드를 받아서 직접 컴파일하면 나타나지 않습니다. 소스 코드를 받아서 적절한 옵션으로 컴파일하면 CPU가 지원하는 vectorization을 이용할 수 있습니다. Linux에서는 테스트해보았으나 Windows에서는 아직 해보지 않았습니다. 자세한 내용은 <a href="https://www.tensorflow.org/install/install_sources">Installing TensorFlow from Sources</a>를 참조하시길 바랍니다.</p>
 
-<pre><code class="language-Python">self._saver = tf.train.Saver(self.w.values() + [self.step_op], max_to_keep=30)
-</code></pre>
+<p><img src="/images/2017-04-08/Python3.5.2-amd64_tensorflow-gpu1.1.0rc_NVIDIA_960M_Windows10-part2.png" alt="" /></p>
 
-<p>을</p>
+<p>위의 사진은 학습이 진행되는 과정입니다. 중간에 checkpoints 가 저장됩니다. <code class="highlighter-rouge">config.py</code>에서 저장하는 빈도를 조절할 수 있습니다.</p>
 
-<pre><code class="language-Python">self._saver = tf.train.Saver([v for k, v in self.w.items()] + [self.step_op], max_to_keep=30)
-</code></pre>
-
-<p>으로 바꿉니다.</p>
+<h2 id="section-1">이 글에서 사용한 환경</h2>
+<ul>
+  <li><code class="highlighter-rouge">Windows 7</code>과 <code class="highlighter-rouge">10</code> 환경 각각에서 테스트 했습니다.</li>
+  <li><code class="highlighter-rouge">Python 3.5.2</code></li>
+  <li><code class="highlighter-rouge">tensorflow-gpu 1.1.0rc</code></li>
+  <li>NVIDIA 960M + CUDA 8.0.44 + cuDNN v5.1</li>
+  <li><code class="highlighter-rouge">MSYS2</code> + <code class="highlighter-rouge">CMAKE</code>로 미리 컴파일한 <code class="highlighter-rouge">atari-py</code></li>
+  <li><code class="highlighter-rouge">pip install gym[atari]==0.7.0</code></li>
+  <li><a href="http://www.lfd.uci.edu/~gohlke/pythonlibs/">여기</a>에서 받을 수 있는 <code class="highlighter-rouge">PyOpenGL_accelerate‑3.1.1‑cp35‑cp35m‑win_amd64.whl</code></li>
+</ul>
 
 
 

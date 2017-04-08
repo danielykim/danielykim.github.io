@@ -5,61 +5,58 @@
     <description>Exploring Data</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 08 Apr 2017 05:17:35 +0000</pubDate>
-    <lastBuildDate>Sat, 08 Apr 2017 05:17:35 +0000</lastBuildDate>
+    <pubDate>Sat, 08 Apr 2017 06:05:29 +0000</pubDate>
+    <lastBuildDate>Sat, 08 Apr 2017 06:05:29 +0000</lastBuildDate>
     <generator>Jekyll v3.3.0</generator>
     
       <item>
         <title>DQN-tensorflow on Windows 7 and 10</title>
         <description>&lt;p&gt;이 글의 목적은 고전 게임을 심층강화학습하는 코드인 &lt;a href=&quot;https://github.com/devsisters/DQN-tensorflow&quot;&gt;DQN-tensorflow&lt;/a&gt;를 Windows 7이나 10에서 실행하는 방법을 소개하는 것입니다. 혹시 코드와 관련된 이론적인 배경이 궁금하시다면 &lt;a href=&quot;http://home.uchicago.edu/~arij/journalclub/papers/2015_Mnih_et_al.pdf&quot;&gt;논문&lt;/a&gt;을 직접 읽어보시거나 &lt;a href=&quot;http://sanghyukchun.github.io/90/&quot;&gt;천상혁님의 논문 리뷰&lt;/a&gt;를 참조하시길 바랍니다.&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&quot;https://github.com/devsisters/DQN-tensorflow&quot;&gt;DQN-tensorflow&lt;/a&gt; 라는 제목에서 알 수 있듯이, 내부에서 Python 라이브러리인 tensorflow 를 사용합니다.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/devsisters/DQN-tensorflow&quot;&gt;DQN-tensorflow&lt;/a&gt; 라는 제목에서 알 수 있듯이, 코드 내부에서 Python 라이브러리인 tensorflow 를 사용합니다. &lt;a href=&quot;https://github.com/devsisters/DQN-tensorflow&quot;&gt;DQN-tensorflow&lt;/a&gt; 여기에서 구할 수 있는 코드는 Linux 환경에서 &lt;code class=&quot;highlighter-rouge&quot;&gt;git clone https://github.com/devsisters/DQN-tensorflow.git&lt;/code&gt; 하고나서 Python 2.7.x 환경에서 repository에서 나와있는대로 실행하면 잘 돌아갑니다.&lt;/p&gt;
 
-&lt;p&gt;Windows 7과 10 환경 각각에서 Python 3.5.2와 tensorflow-gpu 1.1.0rc를 이용하여 진행했습니다.&lt;/p&gt;
+&lt;p&gt;하지만, &lt;code class=&quot;highlighter-rouge&quot;&gt;Windows 7&lt;/code&gt;이나 &lt;code class=&quot;highlighter-rouge&quot;&gt;10&lt;/code&gt;에서 위의 코드를 바로 돌리려고 하면 두 가지 종류의 오류 때문에 실행되지 않습니다.&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Windows 파일 경로 길이 제한&lt;/li&gt;
+  &lt;li&gt;Python 2와 3 호환성&lt;/li&gt;
+&lt;/ol&gt;
 
 &lt;h2 id=&quot;windows-7----&quot;&gt;Windows 7 파일 경로 길이 제한&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&quot;https://github.com/devsisters/DQN-tensorflow&quot;&gt;DQN-tensorflow&lt;/a&gt; 여기에서 구할 수 있는 코드는 Linux 환경에서 &lt;code class=&quot;highlighter-rouge&quot;&gt;git clone https://github.com/devsisters/DQN-tensorflow.git&lt;/code&gt; 하고나서 Python 2.7.x 환경에서 repository에서 나와있는대로 실행하면 잘 돌아갑니다. 하지만, repository에 있는 checkpoints 안에 있는 하위 폴더 경로가 길어서 Windows 10에서는 경로명 제한을 해제한 후에 &lt;code class=&quot;highlighter-rouge&quot;&gt;clone&lt;/code&gt; 해야하고 Windows 7에서는 압축파일을 받아서 적당한 곳에 직접 풀어서 진행해야합니다.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;로컬로 가져올 때:&lt;/strong&gt; 하지만, repository에 있는 checkpoints 안에 있는 하위 폴더 경로가 길어서 Windows 10에서는 경로명 제한을 해제한 후에 &lt;code class=&quot;highlighter-rouge&quot;&gt;clone&lt;/code&gt; 해야하고 Windows 7에서는 압축파일을 받아서 적당한 곳에 직접 풀어서 진행해야합니다.&lt;/p&gt;
 
-&lt;p&gt;Windows 7에서는 경로 길이 제한 때문에 checkpoints 안에 매개변수값과 관련된 폴더를 만들다가 오류가 생깁니다. 이러한 오류는 &lt;code class=&quot;highlighter-rouge&quot;&gt;dqn/base.py&lt;/code&gt;에서 600-63 번째 줄에 있는 코드를 주석처리하면 발생하지 않습니다. 저는 60-63번째 줄을 주석처리하고 64번째 줄의&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&quot;language-Python&quot;&gt;return model_dir + '/'
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;을 아래와 같이 임의로 바꿨습니다.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&quot;language-Python&quot;&gt;return model_dir + '20170408/'
-&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;실행할 때:&lt;/strong&gt; Windows 7에서는 경로 길이 제한 때문에 checkpoints 안에 매개변수값과 관련된 폴더를 만들다가 오류가 생깁니다. &lt;code class=&quot;highlighter-rouge&quot;&gt;dqn/base.py&lt;/code&gt;에서 600-63 번째 줄에 있는 코드를 주석처리하면 이러한 오류는 발생하지 않습니다. 저는 60-63번째 줄을 주석처리하고 64번째 줄의 &lt;code class=&quot;highlighter-rouge&quot;&gt;return model_dir + '/'&lt;/code&gt;을 &lt;code class=&quot;highlighter-rouge&quot;&gt;return model_dir + '20170408/'&lt;/code&gt;로 바꿨습니다. &lt;a href=&quot;https://github.com/devsisters/DQN-tensorflow&quot;&gt;DQN-tensorflow&lt;/a&gt;의 코드는 &lt;code class=&quot;highlighter-rouge&quot;&gt;config.py&lt;/code&gt;에 있는 매개변수별로 폴더를 만들지만 이 글에서는 매개변수들을 바꾸지 않고 실행해보는 것 자체에 관심이 있기 때문에 경로를 위와 같이 하였습니다.&lt;/p&gt;
 
 &lt;h2 id=&quot;python-2--python-3&quot;&gt;Python 2 → Python 3&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&quot;https://github.com/devsisters/DQN-tensorflow&quot;&gt;DQN-tensorflow&lt;/a&gt; 여기 있는 코드가 Python 2.7.x 를 지원하니 다음과 같이 Python 3.x 로 바꿉니다.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/devsisters/DQN-tensorflow&quot;&gt;DQN-tensorflow&lt;/a&gt; 여기 있는 코드가 Python 3.x 에서 돌아가지 않으니 다음과 같이 바꿉니다.&lt;/p&gt;
 
 &lt;ol&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;environment.py&lt;/code&gt; 와 &lt;code class=&quot;highlighter-rouge&quot;&gt;agent.py&lt;/code&gt;에 있는 &lt;code class=&quot;highlighter-rouge&quot;&gt;xrange&lt;/code&gt;를 &lt;code class=&quot;highlighter-rouge&quot;&gt;range&lt;/code&gt;로 바꿉니다.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;agent.py&lt;/code&gt;에서 201과 248번째 줄의 &lt;code class=&quot;highlighter-rouge&quot;&gt;reduce&lt;/code&gt; 를 사용하기 위해 2번째 줄에&lt;/p&gt;
-  &lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;environment.py&lt;/code&gt; 와 &lt;code class=&quot;highlighter-rouge&quot;&gt;agent.py&lt;/code&gt;에 있는 &lt;code class=&quot;highlighter-rouge&quot;&gt;xrange&lt;/code&gt;를 &lt;code class=&quot;highlighter-rouge&quot;&gt;range&lt;/code&gt;로 바꿉니다.&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;agent.py&lt;/code&gt;에서 201과 248번째 줄의 &lt;code class=&quot;highlighter-rouge&quot;&gt;reduce&lt;/code&gt; 를 사용하기 위해 2번째 줄에 &lt;code class=&quot;highlighter-rouge&quot;&gt;import functools&lt;/code&gt;을 추가하고 &lt;code class=&quot;highlighter-rouge&quot;&gt;reduce&lt;/code&gt;를 사용하는 부분을 &lt;code class=&quot;highlighter-rouge&quot;&gt;functools.reduce&lt;/code&gt;로 바꿉니다.&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;agent.py&lt;/code&gt;에서 328번째 줄의 &lt;code class=&quot;highlighter-rouge&quot;&gt;self._saver = tf.train.Saver(self.w.values() + [self.step_op], max_to_keep=30)&lt;/code&gt;을 &lt;code class=&quot;highlighter-rouge&quot;&gt;self._saver = tf.train.Saver([v for k, v in self.w.items()] + [self.step_op], max_to_keep=30)&lt;/code&gt;로 바꿉니다.&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;pre&gt;&lt;code class=&quot;language-Python&quot;&gt;import functools
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&quot;section&quot;&gt;실행&lt;/h2&gt;
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;python main.py --is_train=True --use_gpu=True --display=False&lt;/code&gt;를 실행하면 다음과 같이 훈련을 시작합니다. 기본값은 벽돌깨기 게임(&lt;code class=&quot;highlighter-rouge&quot;&gt;Breakout-v0&lt;/code&gt;)입니다. &lt;code class=&quot;highlighter-rouge&quot;&gt;--env_name=Breakout-v0&lt;/code&gt;을 옵션으로 주지 않은 것에 주목하시길 바랍니다.&lt;/p&gt;
 
-&lt;p&gt;을 추가하고 &lt;code class=&quot;highlighter-rouge&quot;&gt;reduce&lt;/code&gt;를 사용하는 부분을 &lt;code class=&quot;highlighter-rouge&quot;&gt;functools.reduce&lt;/code&gt;로 바꿉니다.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/images/2017-04-08/Python3.5.2-amd64_tensorflow-gpu1.1.0rc_NVIDIA_960M_Windows10-part1.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
-&lt;ol&gt;
-  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;agent.py&lt;/code&gt;에서 328번째 줄의&lt;/li&gt;
-&lt;/ol&gt;
+&lt;p&gt;NVIDIA 960M을 가지고 훈련/학습을 시작합니다. 중간에 보이는 &lt;code class=&quot;highlighter-rouge&quot;&gt;The TensorFlow library wasn't compiled to use SSE4.2 instructions, but these are available on your machine and could speed up CPU computations.&lt;/code&gt;라는 메시지는 tensorflow-gpu 소스 코드를 받아서 직접 컴파일하면 나타나지 않습니다. 소스 코드를 받아서 적절한 옵션으로 컴파일하면 CPU가 지원하는 vectorization을 이용할 수 있습니다. Linux에서는 테스트해보았으나 Windows에서는 아직 해보지 않았습니다. 자세한 내용은 &lt;a href=&quot;https://www.tensorflow.org/install/install_sources&quot;&gt;Installing TensorFlow from Sources&lt;/a&gt;를 참조하시길 바랍니다.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code class=&quot;language-Python&quot;&gt;self._saver = tf.train.Saver(self.w.values() + [self.step_op], max_to_keep=30)
-&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&quot;/images/2017-04-08/Python3.5.2-amd64_tensorflow-gpu1.1.0rc_NVIDIA_960M_Windows10-part2.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;을&lt;/p&gt;
+&lt;p&gt;위의 사진은 학습이 진행되는 과정입니다. 중간에 checkpoints 가 저장됩니다. &lt;code class=&quot;highlighter-rouge&quot;&gt;config.py&lt;/code&gt;에서 저장하는 빈도를 조절할 수 있습니다.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code class=&quot;language-Python&quot;&gt;self._saver = tf.train.Saver([v for k, v in self.w.items()] + [self.step_op], max_to_keep=30)
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;으로 바꿉니다.&lt;/p&gt;
+&lt;h2 id=&quot;section-1&quot;&gt;이 글에서 사용한 환경&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Windows 7&lt;/code&gt;과 &lt;code class=&quot;highlighter-rouge&quot;&gt;10&lt;/code&gt; 환경 각각에서 테스트 했습니다.&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Python 3.5.2&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;tensorflow-gpu 1.1.0rc&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;NVIDIA 960M + CUDA 8.0.44 + cuDNN v5.1&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;MSYS2&lt;/code&gt; + &lt;code class=&quot;highlighter-rouge&quot;&gt;CMAKE&lt;/code&gt;로 미리 컴파일한 &lt;code class=&quot;highlighter-rouge&quot;&gt;atari-py&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;pip install gym[atari]==0.7.0&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.lfd.uci.edu/~gohlke/pythonlibs/&quot;&gt;여기&lt;/a&gt;에서 받을 수 있는 &lt;code class=&quot;highlighter-rouge&quot;&gt;PyOpenGL_accelerate‑3.1.1‑cp35‑cp35m‑win_amd64.whl&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
 
 </description>
         <pubDate>Sat, 08 Apr 2017 00:00:00 +0000</pubDate>
