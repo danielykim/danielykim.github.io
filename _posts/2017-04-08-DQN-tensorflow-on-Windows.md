@@ -39,7 +39,6 @@ NVIDIA 960M을 가지고 훈련/학습을 시작합니다. 중간에 보이는 `
 
 위의 사진은 학습이 진행되는 과정입니다. 중간에 checkpoints 가 저장됩니다. `config.py`에서 저장하는 빈도를 조절할 수 있습니다.
 
-
 ## 이 글에서 사용한 환경
 - `Windows 7`과 `10` 환경 각각에서 테스트 했습니다.
 - `Python 3.5.2`
@@ -49,4 +48,6 @@ NVIDIA 960M을 가지고 훈련/학습을 시작합니다. 중간에 보이는 `
 - `pip install gym[atari]==0.7.0`
 - [여기](http://www.lfd.uci.edu/~gohlke/pythonlibs/)에서 받을 수 있는 `PyOpenGL_accelerate‑3.1.1‑cp35‑cp35m‑win_amd64.whl`
 
+## 기타 사항
+이 글에서 언급한 변경 사항들은 [DQN-tensorflow](https://github.com/devsisters/DQN-tensorflow)을 `fork`하여 [여기](https://github.com/danielykim/DQN-tensorflow)에 올려두었습니다.
 

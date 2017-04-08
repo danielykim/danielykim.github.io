@@ -5,8 +5,8 @@
     <description>Exploring Data</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 08 Apr 2017 06:05:29 +0000</pubDate>
-    <lastBuildDate>Sat, 08 Apr 2017 06:05:29 +0000</lastBuildDate>
+    <pubDate>Sat, 08 Apr 2017 06:09:22 +0000</pubDate>
+    <lastBuildDate>Sat, 08 Apr 2017 06:09:22 +0000</lastBuildDate>
     <generator>Jekyll v3.3.0</generator>
     
       <item>
@@ -57,6 +57,9 @@
   &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;pip install gym[atari]==0.7.0&lt;/code&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;http://www.lfd.uci.edu/~gohlke/pythonlibs/&quot;&gt;여기&lt;/a&gt;에서 받을 수 있는 &lt;code class=&quot;highlighter-rouge&quot;&gt;PyOpenGL_accelerate‑3.1.1‑cp35‑cp35m‑win_amd64.whl&lt;/code&gt;&lt;/li&gt;
 &lt;/ul&gt;
+
+&lt;h2 id=&quot;section-2&quot;&gt;기타 사항&lt;/h2&gt;
+&lt;p&gt;이 글에서 언급한 변경 사항들은 &lt;a href=&quot;https://github.com/devsisters/DQN-tensorflow&quot;&gt;DQN-tensorflow&lt;/a&gt;을 &lt;code class=&quot;highlighter-rouge&quot;&gt;fork&lt;/code&gt;하여 &lt;a href=&quot;https://github.com/danielykim/DQN-tensorflow&quot;&gt;여기&lt;/a&gt;에 올려두었습니다.&lt;/p&gt;
 
 </description>
         <pubDate>Sat, 08 Apr 2017 00:00:00 +0000</pubDate>
