@@ -7,7 +7,7 @@
   
   <link rel="icon" type="image/png" href="http://danielykim.me/images/myicon.png" />
   <title>Blog: Daniel Kim</title>
-  <meta name="description" content="Under construction">
+  <meta name="description" content="Exploring Data">
 
   <!-- Google Fonts loaded here depending on setting in _data/options.yml true loads font, blank does not-->
   
@@ -35,7 +35,7 @@
     <!--- Header and nav template site-wide -->
 <header>
     <nav class="group">
-    <h1>Under construction</h1>
+    <h1>Exploring Data</h1>
 	
 		
   	
@@ -71,6 +71,15 @@
     <article>
         <h1 class="content-listing-header sans">Articles</h1>
   <ul class="content-listing ">
+          
+        <li class="listing">
+          <hr class="slender">
+          <a href="/articles/2017/04/08/DQN-tensorflow-on-Windows"><h3 class="contrast">DQN-tensorflow on Windows 7 and 10</h3></a>
+          <br><span class="smaller">April 8, 2017</span>  <br/>
+          <div><p>이 글의 목적은 고전 게임을 심층강화학습하는 코드인 <a href="https://github.com/devsisters/DQN-tensorflow">DQN-tensorflow</a>를 Windows 7이나 10에서 실행하는 방법을 소개하는 것입니다. 혹시 코드와 관련된 이론적인 배경이 궁금하시다면 <a href="http://home.uchicago.edu/~arij/journalclub/papers/2015_Mnih_et_al.pdf">논문</a>을 직접 읽어보시거나 <a href="http://sanghyukchun.github.io/90/">천상혁님의 논문 리뷰</a>를 참조하시길 바랍니다.</p>
+
+</div> 
+        </li>
           
         <li class="listing">
           <hr class="slender">
@@ -281,7 +290,7 @@ Box, Jenkins, and Reinsel, 1994에 있는 시계열 F 데이터를 살펴보자.
 $$
 \begin{align*}
 X_{t} =& \delta + \phi_{1} X_{t-1} + \phi_{2} X_{t-2} + \cdots + \phi_{p} X_{t-p} + \\
-       & A_{t} - \theta_{1} A_{t-1} - \theta_{2} A_{t-2} - \cdots - \theta_{q} At - q
+& A_{t} - \theta_{1} A_{t-1} - \theta_{2} A_{t-2} - \cdots - \theta_{q} A_{t - q}
 \end{align*}
 $$
 위의 식은 AR과 MA 모델에서 봤던 것과 크게 다르지 않다.
@@ -345,10 +354,10 @@ $$
     <span class="marginnote">
 계절성
     </span>
-많은 시게열은 계절성을 나타낸다. 계절성은 주기적인 변동을 의미한다. 예를 들면, 소매 형태 판매량의 시계열은 크리스마스 기간에 최고조에 다다르고 나서 기간이 지나면 감소한다. 그래서 소매 형태 판매량의 시계열은 보통 9월부터 12월까지 증가하는 추세를, 1월과 2월에 감소하는 추세를 보인다.
+많은 시계열은 계절성을 나타낸다. 계절성은 주기적인 변동을 의미한다. 예를 들면, 소매 형태 판매량의 시계열은 크리스마스 기간에 최고조에 다다르고 나서 기간이 지나면 감소한다. 그래서 소매 형태 판매량의 시계열은 보통 9월부터 12월까지 증가하는 추세를, 1월과 2월에 감소하는 추세를 보인다.
   </p>
   <p>
-경제 분야 시게열에서 계절성은 아주 흔한 현상이지만, 공학이나 과학 분야 시계열에서는 그렇지 않다.
+경제 분야 시계열에서 계절성은 아주 흔한 현상이지만, 공학이나 과학 분야 시계열에서는 그렇지 않다.
   </p>
   <p>
 계절성이 나타나면, 시계열 모델에서 반드시 고려해야 한다. 이 절에서는 계절성을 감지하는 기법을 살펴보자. 계절성을 모델링하는 작업은 이후의 절에서 다루겠다.  
@@ -834,7 +843,7 @@ $$ S_{t+1} = \alpha y_{t} + (1 - \alpha)S_{t} \ , \quad 0 < \alpha \le 1, \quad 
       
   </ul>
 <div class="credits">
-<span>&copy; 2016 &nbsp;&nbsp;DANIEL KIM, PHD</span></br> <br>
+<span>&copy; 2017 &nbsp;&nbsp;DANIEL KIM, PHD</span></br> <br>
 <span>This site created with the <a href="//github.com/clayh53/tufte-jekyll">Tufte theme for  </a> in <a href="//jekyllrb.com">Jekyll</a>.</span> 
 </div>  
 </footer>

@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <link rel="icon" type="image/png" href="http://danielykim.me/images/myicon.png" />
+  <title>Blog: Daniel Kim</title>
+  <meta name="description" content="이 글의 목적은 고전 게임을 심층강화학습하는 코드인 DQN-tensorflow를 Windows 7이나 10에서 실행하는 방법을 소개하는 것입니다. 혹시 코드와 관련된 이론적인 배경이 궁금하시다면 논문을 직접 읽어보시거나 천상혁님의 논문 리뷰를 참조하시길 바랍니다.">
+
+  <!-- Google Fonts loaded here depending on setting in _data/options.yml true loads font, blank does not-->
+  
+  
+  <!-- Load up MathJax script if needed ... specify in /_data/options.yml file-->
+  <script type="text/javascript" async
+    src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+  </script>
+
+  <link rel="stylesheet" type="text/css" href="/css/tufte.css">
+  <link rel="stylesheet" type="text/css" href="/tufte.css">
+  <!-- <link rel="stylesheet" type="text/css" href="/css/print.css" media="print"> -->
+
+  <link rel="canonical" href="http://localhost:4000/articles/2017/04/08/DQN-tensorflow-on-Windows">
+
+  <link rel="alternate" type="application/rss+xml" title="Blog: Daniel Kim" href="http://localhost:4000/feed.xml" />
+
+  <script type="text/javascript" src="/js/pace.min.js"></script>
+
+  <link rel="stylesheet" type="text/css" href="/css/pace-flash.css">
+
+</head>
+
+  <body>
+    <!--- Header and nav template site-wide -->
+<header>
+    <nav class="group">
+    <h1>Exploring Data</h1>
+	
+		
+  	
+		
+		    
+		      <a href="/">blog</a>
+		    
+	    
+  	
+		
+		    
+		      <a href="/about/">About</a>
+		    
+	    
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+		    
+		      <a href="/feed.xslt.xml"></a>
+		    
+	    
+  	
+	</nav>
+</header>
+
+    <article class="group">
+      <h1>DQN-tensorflow on Windows 7 and 10</h1>
+
+<p class="subtitle">April 8, 2017</p>
+
+
+<p>이 글의 목적은 고전 게임을 심층강화학습하는 코드인 <a href="https://github.com/devsisters/DQN-tensorflow">DQN-tensorflow</a>를 Windows 7이나 10에서 실행하는 방법을 소개하는 것입니다. 혹시 코드와 관련된 이론적인 배경이 궁금하시다면 <a href="http://home.uchicago.edu/~arij/journalclub/papers/2015_Mnih_et_al.pdf">논문</a>을 직접 읽어보시거나 <a href="http://sanghyukchun.github.io/90/">천상혁님의 논문 리뷰</a>를 참조하시길 바랍니다.</p>
+
+<p><a href="https://github.com/devsisters/DQN-tensorflow">DQN-tensorflow</a> 라는 제목에서 알 수 있듯이, 내부에서 Python 라이브러리인 tensorflow 를 사용합니다.</p>
+
+<p>Windows 7과 10 환경 각각에서 Python 3.5.2와 tensorflow-gpu 1.1.0rc를 이용하여 진행했습니다.</p>
+
+<h2 id="windows-7----">Windows 7 파일 경로 길이 제한</h2>
+<p><a href="https://github.com/devsisters/DQN-tensorflow">DQN-tensorflow</a> 여기에서 구할 수 있는 코드는 Linux 환경에서 <code class="highlighter-rouge">git clone https://github.com/devsisters/DQN-tensorflow.git</code> 하고나서 Python 2.7.x 환경에서 repository에서 나와있는대로 실행하면 잘 돌아갑니다. 하지만, repository에 있는 checkpoints 안에 있는 하위 폴더 경로가 길어서 Windows 10에서는 경로명 제한을 해제한 후에 <code class="highlighter-rouge">clone</code> 해야하고 Windows 7에서는 압축파일을 받아서 적당한 곳에 직접 풀어서 진행해야합니다.</p>
+
+<p>Windows 7에서는 경로 길이 제한 때문에 checkpoints 안에 매개변수값과 관련된 폴더를 만들다가 오류가 생깁니다. 이러한 오류는 <code class="highlighter-rouge">dqn/base.py</code>에서 600-63 번째 줄에 있는 코드를 주석처리하면 발생하지 않습니다. 저는 60-63번째 줄을 주석처리하고 64번째 줄의</p>
+
+<pre><code class="language-Python">return model_dir + '/'
+</code></pre>
+
+<p>을 아래와 같이 임의로 바꿨습니다.</p>
+
+<pre><code class="language-Python">return model_dir + '20170408/'
+</code></pre>
+
+<h2 id="python-2--python-3">Python 2 → Python 3</h2>
+<p><a href="https://github.com/devsisters/DQN-tensorflow">DQN-tensorflow</a> 여기 있는 코드가 Python 2.7.x 를 지원하니 다음과 같이 Python 3.x 로 바꿉니다.</p>
+
+<ol>
+  <li>
+    <p><code class="highlighter-rouge">environment.py</code> 와 <code class="highlighter-rouge">agent.py</code>에 있는 <code class="highlighter-rouge">xrange</code>를 <code class="highlighter-rouge">range</code>로 바꿉니다.</p>
+  </li>
+  <li>
+    <p><code class="highlighter-rouge">agent.py</code>에서 201과 248번째 줄의 <code class="highlighter-rouge">reduce</code> 를 사용하기 위해 2번째 줄에</p>
+  </li>
+</ol>
+
+<pre><code class="language-Python">import functools
+</code></pre>
+
+<p>을 추가하고 <code class="highlighter-rouge">reduce</code>를 사용하는 부분을 <code class="highlighter-rouge">functools.reduce</code>로 바꿉니다.</p>
+
+<ol>
+  <li><code class="highlighter-rouge">agent.py</code>에서 328번째 줄의</li>
+</ol>
+
+<pre><code class="language-Python">self._saver = tf.train.Saver(self.w.values() + [self.step_op], max_to_keep=30)
+</code></pre>
+
+<p>을</p>
+
+<pre><code class="language-Python">self._saver = tf.train.Saver([v for k, v in self.w.items()] + [self.step_op], max_to_keep=30)
+</code></pre>
+
+<p>으로 바꿉니다.</p>
+
+
+
+
+<p>
+<div class="comments">
+	<div id="disqus_thread" style="max-width:60%;"></div>
+	<script type="text/javascript">
+    var disqus_config = function () {
+      this.page.url = "https://danielykim.github.io/articles/2017/04/08/DQN-tensorflow-on-Windows"; // <--- use canonical URL
+      this.page.identifier = "/articles/2017/04/08/DQN-tensorflow-on-Windows";
+    };
+    (function() { // DON'T EDIT BELOW THIS LINE
+    
+      var d = document, s = d.createElement('script');
+
+      s.src = '//danielykim.disqus.com/embed.js'; // <--- use Disqus shortname
+
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+</div>
+</p>
+
+
+
+
+    </article>
+    <span class="print-footer">DQN-tensorflow on Windows 7 and 10 - April 8, 2017 - Daniel Kim, PhD</span>
+    <footer>
+  <hr class="slender">
+  <ul class="footer-links">
+    <li><a href="mailto:daniel.youngho.kim@gmail.com"><span class="icon-mail"></span></a></li>    
+    <li><a href="https://www.linkedin.com/in/danielyounghokim"><span class="icon-info"></span></a></li>    
+      
+  </ul>
+<div class="credits">
+<span>&copy; 2017 &nbsp;&nbsp;DANIEL KIM, PHD</span></br> <br>
+<span>This site created with the <a href="//github.com/clayh53/tufte-jekyll">Tufte theme for  </a> in <a href="//jekyllrb.com">Jekyll</a>.</span> 
+</div>  
+</footer>
+
+    <script id="dsq-count-scr" src="//danielykim.disqus.com/count.js" async></script>
+    
+  </body>
+</html>
