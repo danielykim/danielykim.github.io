@@ -212,10 +212,20 @@
 </section>
 
 <script>
-  disqus_shortname = 'danielykim';
-  jQuery(document).ready(function() {
-    jQuery("p").inlineDisqussions();
-  });
+disqus_shortname = 'danielykim';
+
+jQuery(document).ready(function() {
+  jQuery("p").inlineDisqussions();
+});
+
+jQuery("p").inlineDisqussions({
+  identifier: 'disqussion',
+  displayCount: true,
+  highlighted: true,
+  position: 'right',
+  background: 'white',
+  maxWidth: 9999
+});
 </script>
 
 
