@@ -7,6 +7,10 @@
   <title>Blog: Daniel Kim</title>
   <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
 
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+
+  <script type="text/javascript" src="{{ "/js/pace.min.js" | prepend: site.baseurl }}"></script>
+
   <!-- Google Fonts loaded here depending on setting in _data/options.yml true loads font, blank does not-->
   {% if site.data.options.lato_font_load %}
     <link href='//fonts.googleapis.com/css?family=Lato:400,400italic' rel='stylesheet' type='text/css'>
@@ -25,10 +29,10 @@
 
   <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}" />
 
-  <script type="text/javascript" src="{{ "/js/pace.min.js" | prepend: site.baseurl }}"></script>
-
   <link rel="stylesheet" type="text/css" href="{{ "/css/pace-flash.css" | prepend: site.baseurl }}">
+
+  <script type="text/javascript" src="{{ "/js/inlineDisqussions.js" | prepend: site.baseurl }}"></script>
   
-  <script async defer src="https://hypothes.is/embed.js"></script>
+  <link rel="stylesheet" type="text/css" href="{{ "/css/inlineDisqussions.css" | prepend: site.baseurl }}" />
 
 </head>
