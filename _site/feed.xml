@@ -5,9 +5,123 @@
     <description>Exploring Data</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 08 Apr 2017 06:22:46 +0000</pubDate>
-    <lastBuildDate>Sat, 08 Apr 2017 06:22:46 +0000</lastBuildDate>
+    <pubDate>Sun, 16 Apr 2017 02:51:38 +0000</pubDate>
+    <lastBuildDate>Sun, 16 Apr 2017 02:51:38 +0000</lastBuildDate>
     <generator>Jekyll v3.3.0</generator>
+    
+      <item>
+        <title>데이터 과학자 되기 - 8단계 과정</title>
+        <description>&lt;section&gt;
+  &lt;p&gt;
+    이 글은 &quot;Karlijn Willems&quot;님이 DataCamp 블로그에 올리신 &lt;a href=&quot;https://www.datacamp.com/community/tutorials/learn-data-science-infographic&quot;&gt;&quot;Learn Data Science - Infographic&quot;&lt;/a&gt;라는 글을 한글로 옮겨 사용하여 글쓴이의 생각과 함께 남긴 것입니다. 영문 제목에서 나타난 것처럼 데이터 과학을 배우는 과정을 8단계로 소개하는 내용입니다. 순서는 아래와 같이 원문의 것을 따릅니다. 
+    &lt;ol&gt;
+      &lt;li&gt;&lt;a href=&quot;#01-Math-Stat-ML&quot;&gt;1. 수학, 통계, 기계학습을 공부하자&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#02-Learn-to-code&quot;&gt;2. 코딩을 배우자&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#03-Understand-DB&quot;&gt;3. 데이터베이스를 이해하자&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#04-Explore-Data-Science-Workflow&quot;&gt;4. 데이터 과학 업무 순서를 경험하자&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#05-Level-Up-With-Big-Data&quot;&gt;5. 빅데이터로 규모를 늘리자&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#06-Grow-Connect-Learn&quot;&gt;6. 성장하고, 만나고, 배우자&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#07-Grow-Connect-Learn&quot;&gt;7. 스스로 완벽하게 몰입하자&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#08-Engage-with-the-community&quot;&gt;8. 커뮤니티에 참여하자&lt;/a&gt;&lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/p&gt;
+&lt;/section&gt;
+
+&lt;section id=&quot;01-Math-Stat-ML&quot;&gt;
+  &lt;p&gt;
+    &lt;figure&gt;
+      &lt;label for=&quot;mn-figure-1&quot; class=&quot;margin-toggle&quot;&gt;&amp;#8853;&lt;/label&gt;
+      &lt;input type=&quot;checkbox&quot; id=&quot;mn-exports-imports&quot; class=&quot;margin-toggle&quot;/&gt;
+      &lt;span class=&quot;marginnote&quot;&gt;원문에서는 Get Good At Stats, Maths and Machine Learning 입니다.&lt;/span&gt;
+      &lt;img src=&quot;/images/2017-04-16/01-Math_Stat_ML.png&quot; alt=&quot;수학, 통계, 기계학습을 공부하자&quot; /&gt;
+    &lt;/figure&gt;
+  &lt;/p&gt;
+&lt;/section&gt;
+
+&lt;section id=&quot;02-Learn-to-code&quot;&gt;
+  &lt;p&gt;
+    &lt;figure&gt;
+      &lt;label for=&quot;mn-figure-2&quot; class=&quot;margin-toggle&quot;&gt;&amp;#8853;&lt;/label&gt;
+      &lt;input type=&quot;checkbox&quot; id=&quot;mn-exports-imports&quot; class=&quot;margin-toggle&quot;/&gt;
+      &lt;span class=&quot;marginnote&quot;&gt;원문에서는 Learn To Code 입니다.&lt;/span&gt;
+      &lt;img src=&quot;/images/2017-04-16/02-Learn_to_code.png&quot; alt=&quot;코딩을 배우자&quot; /&gt;
+    &lt;/figure&gt;
+  &lt;/p&gt;
+&lt;/section&gt;
+
+&lt;section id=&quot;03-Understand-DB&quot;&gt;
+  &lt;p&gt;
+    &lt;figure&gt;
+      &lt;label for=&quot;mn-figure-3&quot; class=&quot;margin-toggle&quot;&gt;&amp;#8853;&lt;/label&gt;
+      &lt;input type=&quot;checkbox&quot; id=&quot;mn-exports-imports&quot; class=&quot;margin-toggle&quot;/&gt;
+      &lt;span class=&quot;marginnote&quot;&gt;원문에서는 Understand Databases 입니다.&lt;/span&gt;
+      &lt;img src=&quot;/images/2017-04-16/03-Understand_DB.png&quot; alt=&quot;데이터베이스를 이해하자&quot; /&gt;
+    &lt;/figure&gt;
+  &lt;/p&gt;
+&lt;/section&gt;
+
+&lt;section id=&quot;04-Explore-Data-Science-Workflow&quot;&gt;
+  &lt;p&gt;
+    &lt;figure&gt;
+      &lt;label for=&quot;mn-figure-4&quot; class=&quot;margin-toggle&quot;&gt;&amp;#8853;&lt;/label&gt;
+      &lt;input type=&quot;checkbox&quot; id=&quot;mn-exports-imports&quot; class=&quot;margin-toggle&quot;/&gt;
+      &lt;span class=&quot;marginnote&quot;&gt;원문에서는 Explore The Data Science Workflow 입니다.&lt;/span&gt;
+      &lt;img src=&quot;/images/2017-04-16/04-Explore_Data_Science_Workflow.png&quot; alt=&quot;데이터 과학 업무 순서를 경험하자&quot; /&gt;
+    &lt;/figure&gt;
+  &lt;/p&gt;
+&lt;/section&gt;
+
+&lt;section id=&quot;05-Level-Up-With-Big-Data&quot;&gt;
+  &lt;p&gt;
+    &lt;figure&gt;
+      &lt;label for=&quot;mn-figure-5&quot; class=&quot;margin-toggle&quot;&gt;&amp;#8853;&lt;/label&gt;
+      &lt;input type=&quot;checkbox&quot; id=&quot;mn-exports-imports&quot; class=&quot;margin-toggle&quot;/&gt;
+      &lt;span class=&quot;marginnote&quot;&gt;원문에서는 Level Up With Big Data 입니다.&lt;/span&gt;
+      &lt;img src=&quot;/images/2017-04-16/05-Level_up_with_Big_data.png&quot; alt=&quot;빅데이터로 규모를 늘리자&quot; /&gt;
+    &lt;/figure&gt;
+  &lt;/p&gt;
+&lt;/section&gt;
+
+&lt;section id=&quot;06-Grow-Connect-Learn&quot;&gt;
+  &lt;p&gt;
+    &lt;figure&gt;
+      &lt;label for=&quot;mn-figure-6&quot; class=&quot;margin-toggle&quot;&gt;&amp;#8853;&lt;/label&gt;
+      &lt;input type=&quot;checkbox&quot; id=&quot;mn-exports-imports&quot; class=&quot;margin-toggle&quot;/&gt;
+      &lt;span class=&quot;marginnote&quot;&gt;원문에서는 Grow, Connect, and Learn 입니다.&lt;/span&gt;
+      &lt;img src=&quot;/images/2017-04-16/06-Grow_Meet_Learn.png&quot; alt=&quot;성장하고, 만나고, 배우자&quot; /&gt;
+    &lt;/figure&gt;
+  &lt;/p&gt;
+&lt;/section&gt;
+
+&lt;section id=&quot;07-Grow-Connect-Learn&quot;&gt;
+  &lt;p&gt;
+    &lt;figure&gt;
+      &lt;label for=&quot;mn-figure-7&quot; class=&quot;margin-toggle&quot;&gt;&amp;#8853;&lt;/label&gt;
+      &lt;input type=&quot;checkbox&quot; id=&quot;mn-exports-imports&quot; class=&quot;margin-toggle&quot;/&gt;
+      &lt;span class=&quot;marginnote&quot;&gt;원문에서는 Immerse Yourself Completely 입니다.&lt;/span&gt;
+      &lt;img src=&quot;/images/2017-04-16/07-Immerse_Yourself.png&quot; alt=&quot;스스로 완벽하게 몰입하자&quot; /&gt;
+    &lt;/figure&gt;
+  &lt;/p&gt;
+&lt;/section&gt;
+
+&lt;section id=&quot;08-Engage-with-the-community&quot;&gt;
+  &lt;p&gt;
+    &lt;figure&gt;
+      &lt;label for=&quot;mn-figure-8&quot; class=&quot;margin-toggle&quot;&gt;&amp;#8853;&lt;/label&gt;
+      &lt;input type=&quot;checkbox&quot; id=&quot;mn-exports-imports&quot; class=&quot;margin-toggle&quot;/&gt;
+      &lt;span class=&quot;marginnote&quot;&gt;원문에서는 Engage With The Community 입니다.&lt;/span&gt;
+      &lt;img src=&quot;/images/2017-04-16/08-Engage_with_the_community.png&quot; alt=&quot;커뮤니티에 참여하자&quot; /&gt;
+    &lt;/figure&gt;
+  &lt;/p&gt;
+&lt;/section&gt;
+
+</description>
+        <pubDate>Sun, 16 Apr 2017 00:00:00 +0000</pubDate>
+        <link>http://localhost:4000/articles/2017/04/16/Become-A-Data-Scientist</link>
+        <guid isPermaLink="true">http://localhost:4000/articles/2017/04/16/Become-A-Data-Scientist</guid>
+        
+        
+      </item>
     
       <item>
         <title>DQN-tensorflow on Windows 7 and 10</title>
@@ -53,7 +167,7 @@
   &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Python 3.5.2&lt;/code&gt;&lt;/li&gt;
   &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;tensorflow-gpu 1.1.0rc&lt;/code&gt;&lt;/li&gt;
   &lt;li&gt;NVIDIA 960M + CUDA 8.0.44 + cuDNN v5.1&lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;MSYS2&lt;/code&gt; + &lt;code class=&quot;highlighter-rouge&quot;&gt;CMAKE&lt;/code&gt;로 미리 컴파일한 &lt;code class=&quot;highlighter-rouge&quot;&gt;atari-py&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;MSYS2&lt;/code&gt; + &lt;code class=&quot;highlighter-rouge&quot;&gt;CMAKE&lt;/code&gt;로 미리 컴파일한 &lt;code class=&quot;highlighter-rouge&quot;&gt;atari-py&lt;/code&gt; 자세한 내용은 &lt;a href=&quot;http://ishuca.tistory.com/390&quot;&gt;“이슈카”님의 글&lt;/a&gt;을 참조하시길 바랍니다.&lt;/li&gt;
   &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;pip install gym[atari]==0.7.0&lt;/code&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;http://www.lfd.uci.edu/~gohlke/pythonlibs/&quot;&gt;여기&lt;/a&gt;에서 받을 수 있는 &lt;code class=&quot;highlighter-rouge&quot;&gt;PyOpenGL_accelerate‑3.1.1‑cp35‑cp35m‑win_amd64.whl&lt;/code&gt;&lt;/li&gt;
 &lt;/ul&gt;
@@ -1081,105 +1195,6 @@ Negiz 데이터 사례 연구에 부분 자기상관 그래프가 있다.
         <pubDate>Fri, 25 Nov 2016 00:00:00 +0000</pubDate>
         <link>http://localhost:4000/articles/2016/11/25/ESH-06-04-04-06-02</link>
         <guid isPermaLink="true">http://localhost:4000/articles/2016/11/25/ESH-06-04-04-06-02</guid>
-        
-        
-      </item>
-    
-      <item>
-        <title>6.4.4.6.1. 남방 진동 데이터에서 모델 판별</title>
-        <description>&lt;section&gt;
-  &lt;p&gt;
-    &lt;label for=&quot;mn-h01&quot; class=&quot;margin-toggle&quot;&gt;⊕ &lt;/label&gt;
-    &lt;input type=&quot;checkbox&quot; id=&quot;mn-h01&quot; class=&quot;margin-toggle&quot;&gt;
-    &lt;span class=&quot;marginnote&quot;&gt;
-남방 진동 예제
-    &lt;/span&gt;
-두 개의 서로 다른 예제에 대해 박스-젠킨스 모델링에서 시계열의 그래프로 모델 판별하는 과정을 살펴보자.
-  &lt;/p&gt;
-  &lt;p&gt;
-첫 번째 예제는 남방 진동 데이터이다. 먼저, 정상성(stationarity)과 계절성(seasonality)을 고려해야 하는지 판단하기 위해 진행 순서 그래프와 계절적인 부 시계열 그래프를 보자.  
-  &lt;/p&gt;
-&lt;/section&gt;
-
-&lt;section&gt;
-  &lt;p&gt;
-    &lt;label for=&quot;mn-h02&quot; class=&quot;margin-toggle&quot;&gt;⊕ &lt;/label&gt;
-    &lt;input type=&quot;checkbox&quot; id=&quot;mn-h02&quot; class=&quot;margin-toggle&quot;&gt;
-    &lt;span class=&quot;marginnote&quot;&gt;
-진행 순서 그래프
-    &lt;/span&gt;
-    &lt;figure&gt;
-      &lt;img src=&quot;http://www.itl.nist.gov/div898/handbook/pmc/section4/gifs/oscrunsq.gif&quot;&gt;
-    &lt;/figure&gt;
-  &lt;/p&gt;
-  &lt;p&gt;
-진행 순서 그래프(Run sequence plot)에서 정상성이 보인다.  
-  &lt;/p&gt;
-&lt;/section&gt;
-
-&lt;section&gt;
-  &lt;p&gt;
-    &lt;label for=&quot;mn-h03&quot; class=&quot;margin-toggle&quot;&gt;⊕ &lt;/label&gt;
-    &lt;input type=&quot;checkbox&quot; id=&quot;mn-h03&quot; class=&quot;margin-toggle&quot;&gt;
-    &lt;span class=&quot;marginnote&quot;&gt;
-계절적인 부 시계열 그래프
-    &lt;/span&gt;
-계절적인 부 시계열 그래프에서 계절성이 분명하게 보이지 않는다.
-  &lt;/p&gt;
-  &lt;p&gt;
-비-정상성이나 계절성이 보이지 않으니, 원 데이터의 자기상관과 부분 자기상관 그래프를 보자.
-
-  &lt;/p&gt;
-&lt;/section&gt;
-
-&lt;section&gt;
-  &lt;p&gt;
-    &lt;label for=&quot;mn-h04&quot; class=&quot;margin-toggle&quot;&gt;⊕ &lt;/label&gt;
-    &lt;input type=&quot;checkbox&quot; id=&quot;mn-h04&quot; class=&quot;margin-toggle&quot;&gt;
-    &lt;span class=&quot;marginnote&quot;&gt;
-자기상관 그래프
-    &lt;/span&gt;
-    &lt;figure&gt;
-      &lt;img src=&quot;http://www.itl.nist.gov/div898/handbook/pmc/section4/gifs/oscauto.gif&quot;&gt;
-    &lt;/figure&gt;
-  &lt;/p&gt;
-  &lt;p&gt;
-자기상관 그래프에서 지수적인 감소와 감쇠 사인 성분이 보인다. 이러한 상황에서는 1보다 큰 차수의 자동회귀 모델이 적절할 것이다. 차수를 결정하기 위해 부분 자기상관 함수를 봐야 한다.  
-  &lt;/p&gt;
-&lt;/section&gt;
-
-&lt;section&gt;
-  &lt;p&gt;
-    &lt;label for=&quot;mn-h05&quot; class=&quot;margin-toggle&quot;&gt;⊕ &lt;/label&gt;
-    &lt;input type=&quot;checkbox&quot; id=&quot;mn-h05&quot; class=&quot;margin-toggle&quot;&gt;
-    &lt;span class=&quot;marginnote&quot;&gt;
-부분 자기상관 그래프
-    &lt;/span&gt;
-    &lt;figure&gt;
-      &lt;img src=&quot;http://www.itl.nist.gov/div898/handbook/pmc/section4/gifs/oscauto.gif&quot;&gt;
-    &lt;/figure&gt;
-  &lt;/p&gt;
-  &lt;p&gt;
-부분 자기상관 그래프에서 보니 AR(2) 모델이 적절한 것 같다.  
-  &lt;/p&gt;
-  &lt;p&gt;
-요약하면, 계절적인 항이나 추세를 빼거나 제거하는 작업 없는 AR(2) 모델이 적합했다. 모델을 결정하기 전에 꼭 모델을 검증해야 한다.
-  &lt;/p&gt;
-&lt;/section&gt;
-
-&lt;section&gt;
-  &lt;ul class=&quot;pager&quot;&gt;
-    &lt;li class=&quot;previous&quot;&gt;&lt;a href=&quot;/articles/2016/11/25/ESH-06-04-04-06&quot;&gt;Previous&lt;/a&gt;&lt;/li&gt;
-    &lt;li class=&quot;next&quot;&gt;&lt;a href=&quot;/articles/2016/11/25/ESH-06-04-04-06-02&quot;&gt;Next&lt;/a&gt;&lt;/li&gt;      
-  &lt;/ul&gt;
-  &lt;p&gt;
-    &lt;a href=&quot;http://www.itl.nist.gov/div898/handbook/pmc/section4/pmc4461.htm&quot;&gt;원문 보기&lt;/a&gt;
-  &lt;/p&gt;
-&lt;/section&gt;
-</description>
-        <pubDate>Fri, 25 Nov 2016 00:00:00 +0000</pubDate>
-        <link>http://localhost:4000/articles/2016/11/25/ESH-06-04-04-06-01</link>
-        <guid isPermaLink="true">http://localhost:4000/articles/2016/11/25/ESH-06-04-04-06-01</guid>
         
         
       </item>

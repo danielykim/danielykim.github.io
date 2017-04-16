@@ -44,7 +44,7 @@ NVIDIA 960M을 가지고 훈련/학습을 시작합니다. 중간에 보이는 `
 - `Python 3.5.2`
 - `tensorflow-gpu 1.1.0rc`
 - NVIDIA 960M + CUDA 8.0.44 + cuDNN v5.1
-- `MSYS2` + `CMAKE`로 미리 컴파일한 `atari-py`
+- `MSYS2` + `CMAKE`로 미리 컴파일한 `atari-py` 자세한 내용은 ["이슈카"님의 글](http://ishuca.tistory.com/390)을 참조하시길 바랍니다.
 - `pip install gym[atari]==0.7.0`
 - [여기](http://www.lfd.uci.edu/~gohlke/pythonlibs/)에서 받을 수 있는 `PyOpenGL_accelerate‑3.1.1‑cp35‑cp35m‑win_amd64.whl`
 
