@@ -159,9 +159,19 @@ Negiz 사례 연구에서 박스-젠킨스 모델 맞추는 예제를 살펴볼 
 
 <script>
   disqus_shortname = 'danielykim';
+
   jQuery(document).ready(function() {
     jQuery("p").inlineDisqussions();
   });
+
+  jQuery("p").inlineDisqussions({
+    identifier: 'disqussion',
+    displayCount: true,
+    highlighted: true,
+    position: 'right',
+    background: '#fffff8',
+    maxWidth: 200
+});
 </script>
 
     <footer>

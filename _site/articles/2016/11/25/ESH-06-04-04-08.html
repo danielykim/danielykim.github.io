@@ -154,9 +154,19 @@ Negiz 데이터 사례 연구에 박스-젠킨스 모델에서 나머지를 분�
 
 <script>
   disqus_shortname = 'danielykim';
+
   jQuery(document).ready(function() {
     jQuery("p").inlineDisqussions();
   });
+
+  jQuery("p").inlineDisqussions({
+    identifier: 'disqussion',
+    displayCount: true,
+    highlighted: true,
+    position: 'right',
+    background: '#fffff8',
+    maxWidth: 200
+});
 </script>
 
     <footer>

@@ -348,9 +348,19 @@ S_{5} = \alpha \left[ (1-\alpha)^{0} y_{5-1} + (1-\alpha)^{1} y_{5-2} + (1-\alph
 
 <script>
   disqus_shortname = 'danielykim';
+
   jQuery(document).ready(function() {
     jQuery("p").inlineDisqussions();
   });
+
+  jQuery("p").inlineDisqussions({
+    identifier: 'disqussion',
+    displayCount: true,
+    highlighted: true,
+    position: 'right',
+    background: '#fffff8',
+    maxWidth: 200
+});
 </script>
 
     <footer>

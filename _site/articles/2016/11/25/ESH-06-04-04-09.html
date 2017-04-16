@@ -281,9 +281,19 @@ $$ X_{t} = \delta + \phi_{1} X_{t-1} + \phi_{2} X_{t-2} + A_{t} $$
 
 <script>
   disqus_shortname = 'danielykim';
+
   jQuery(document).ready(function() {
     jQuery("p").inlineDisqussions();
   });
+
+  jQuery("p").inlineDisqussions({
+    identifier: 'disqussion',
+    displayCount: true,
+    highlighted: true,
+    position: 'right',
+    background: '#fffff8',
+    maxWidth: 200
+});
 </script>
 
     <footer>

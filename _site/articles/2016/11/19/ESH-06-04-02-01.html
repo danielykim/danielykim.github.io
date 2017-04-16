@@ -181,9 +181,19 @@ $$ M_t = \frac{ X_{t} + X_{t-1} + \cdots + X_{t-N+1} }{N} $$
 
 <script>
   disqus_shortname = 'danielykim';
+
   jQuery(document).ready(function() {
     jQuery("p").inlineDisqussions();
   });
+
+  jQuery("p").inlineDisqussions({
+    identifier: 'disqussion',
+    displayCount: true,
+    highlighted: true,
+    position: 'right',
+    background: '#fffff8',
+    maxWidth: 200
+});
 </script>
 
     <footer>

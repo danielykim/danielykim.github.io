@@ -848,9 +848,19 @@ $$ S_{t+1} = \alpha y_{t} + (1 - \alpha)S_{t} \ , \quad 0 < \alpha \le 1, \quad 
 
 <script>
   disqus_shortname = 'danielykim';
+
   jQuery(document).ready(function() {
     jQuery("p").inlineDisqussions();
   });
+
+  jQuery("p").inlineDisqussions({
+    identifier: 'disqussion',
+    displayCount: true,
+    highlighted: true,
+    position: 'right',
+    background: '#fffff8',
+    maxWidth: 200
+});
 </script>
 
     <footer>

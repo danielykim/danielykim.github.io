@@ -328,9 +328,19 @@ $$ X_{t} - \delta = A_{t} + \theta_{1} A_{t-1} + \phi_{1} A_{t-12} + \theta_{1} 
 
 <script>
   disqus_shortname = 'danielykim';
+
   jQuery(document).ready(function() {
     jQuery("p").inlineDisqussions();
   });
+
+  jQuery("p").inlineDisqussions({
+    identifier: 'disqussion',
+    displayCount: true,
+    highlighted: true,
+    position: 'right',
+    background: '#fffff8',
+    maxWidth: 200
+});
 </script>
 
     <footer>
