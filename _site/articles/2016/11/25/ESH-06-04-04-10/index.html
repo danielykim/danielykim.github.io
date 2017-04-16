@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <link rel="icon" type="image/png" href="http://danielykim.me/images/myicon.png" />
+  <title>Blog: Daniel Kim</title>
+  <meta name="description" content="      ⊕         시계열 G    이 예제에서는 Box, Jenkins, and Reinsel 1994에 있는 시계열 데이터 G를 사용하여 계절적인 데이터에 대한 박스-젠킨스 시계열 분석 방법을 다룰 것이다. 아래 그림에서 볼 수 있듯이 144개의 관측값이 있다.  ">
+
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+
+  <script type="text/javascript" src="/js/pace.min.js"></script>
+
+  <!-- Google Fonts loaded here depending on setting in _data/options.yml true loads font, blank does not-->
+  
+  
+  <!-- Load up MathJax script if needed ... specify in /_data/options.yml file-->
+  <script type="text/javascript" async
+    src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+  </script>
+
+  <link rel="stylesheet" type="text/css" href="/css/tufte.css">
+  <link rel="stylesheet" type="text/css" href="/tufte.css">
+  <!-- <link rel="stylesheet" type="text/css" href="/css/print.css" media="print"> -->
+
+  <link rel="canonical" href="http://localhost:4000/articles/2016/11/25/ESH-06-04-04-10/">
+
+  <link rel="alternate" type="application/rss+xml" title="Blog: Daniel Kim" href="http://localhost:4000/feed.xml" />
+
+  <link rel="stylesheet" type="text/css" href="/css/pace-flash.css">
+
+  <script type="text/javascript" src="/js/inlineDisqussions.js"></script>
+ 
+  <!-- http://tsi.github.io/inlineDisqussions/ -->
+  <link rel="stylesheet" type="text/css" href="/css/inlineDisqussions.css" />
+
+</head>
+
+  <body>
+    <!--- Header and nav template site-wide -->
+<header>
+    <nav class="group">
+    <h1>Exploring Data</h1>
+	
+		
+  	
+		
+		    
+		      <a href="/">blog</a>
+		    
+	    
+  	
+		
+		    
+		      <a href="/about/">About</a>
+		    
+	    
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+		    
+		      <a href="/feed.xslt.xml"></a>
+		    
+	    
+  	
+	</nav>
+</header>
+
+    <article class="group">
+      <h1>6.4.4.10. 계절적인 데이터에 대한 박스-젠킨스 분석</h1>
+
+<p class="subtitle">November 25, 2016</p>
+
+
+<section>
+  <p>
+    <label for="mn-h01" class="margin-toggle">⊕ </label>
+    <input type="checkbox" id="mn-h01" class="margin-toggle">
+    <span class="marginnote">
+시계열 G
+    </span>
+이 예제에서는 Box, Jenkins, and Reinsel 1994에 있는 시계열 데이터 G를 사용하여 계절적인 데이터에 대한 박스-젠킨스 시계열 분석 방법을 다룰 것이다. 아래 그림에서 볼 수 있듯이 144개의 관측값이 있다.
+  </p>
+</section>
+
+<section>
+  <p>
+    <figure>
+      <img src="http://www.itl.nist.gov/div898/handbook/pmc/section4/pmc44a_r01.gif">
+    </figure>
+  </p>
+</section>
+
+<section>
+  <p>
+자연 로그 변환으로 일정하지 않은 분산 효과를 없앨 수 있다.
+    <figure>
+      <img src="http://www.itl.nist.gov/div898/handbook/pmc/section4/pmc44a_r02.gif">
+    </figure>
+  </p>
+  <p>
+그 다음, 뺄셈으로 시계열에서 추세를 없앤다. 결과 시계열은 다음과 같다.
+    <figure>
+      <img src="http://www.itl.nist.gov/div898/handbook/pmc/section4/pmc44a_r03.gif">
+    </figure>
+  </p>
+</section>
+
+<section>
+  <p>
+    <label for="mn-h02" class="margin-toggle">⊕ </label>
+    <input type="checkbox" id="mn-h02" class="margin-toggle">
+    <span class="marginnote">
+계절성에 대한 자기상관 그래프 분석
+    </span>
+적당한 모델을 판별하기 위해, 시계열의 ACF를 그리자.
+    <figure>
+      <img src="http://www.itl.nist.gov/div898/handbook/pmc/section4/pmc44a_r04.gif">
+    </figure>
+  </p>
+  <p>
+12 뒤처짐이나 24 뒤처짐 같이 \(n\) 주기 떨어져서 아주 큰 자기상관이 보이면, 주기성이 있다고 볼 수 있다. 자기상관을 줄이는 것이 판별 과정의 목적이니 이러한 효과는 제거해야 한다. 그래서 단순하게 차이를 구하는 것으로는 충분하지 않고, 4, 6, 12 같은 특정한 시기에 계절적인 차이를 구해보자. 이 예제에서는 12로 해보자.  
+  </p>
+  <p>
+  다음은 자연 로그를 취하고, 차이를 구하고, 계절적인 차이를 구해서 그린 시계열 G이다.
+  </p>
+  <figure>
+    <img src="http://www.itl.nist.gov/div898/handbook/pmc/section4/pmc449_r05.gif">
+  </figure>
+  <p>
+계절적인 항의 수가 거의 없다. 예측하는 함수의 형태를 안다면, 게절적인 AR 이나 계절적인 MA 모델에 대해 적절한 수의 항을 고를 수 있다.
+  </p>
+  <p>
+박스와 젠킨스의 책, 시계열 분석: 예측과 제어 Time Series Analysis Forecasting and Control (the later edition is Box, Jenkins and Reinsel, 1994), 326-328쪽에 관련 내용이 있다. 잘 모르겠지만 차이를 구하기 전에 증가하는 추세는 있다면, 계절적인 MA 항을 골라서 진단 과정에서 어떻게 나오는지 보라.  
+  </p>
+  <p>
+시계열 G의 자연 로그 차이와 계절적인 차이의 ACF 그래프는 다음과 같다.
+    <figure>
+      <img src="http://www.itl.nist.gov/div898/handbook/pmc/section4/pmc44a_r06.gif">
+    </figure>
+  </p>
+  <p>
+두드러지게 보이는 뾰족한 선 몇 개가 있지만, 자기상관이 거의 0이다. 이 말은, 계절적인 MA(1)가 적합하다는 이야기이다.  
+  </p>
+</section>
+
+  <div class="table-wrapper">
+    <table class="booktabs">
+      <thead>
+        <tr><th style="text-align: center"><b>뒤처짐</b></th><th style="text-align: center"><b>ACF</b></th></tr>
+      </thead>
+      <tbody>
+<tr><td style="text-align: center">   0</td><td style="text-align: center"> 1.000000000</td></tr>
+<tr><td style="text-align: center">   1</td><td style="text-align: center">-0.389878319</td></tr>
+<tr><td style="text-align: center">   2</td><td style="text-align: center"> 0.304394082</td></tr>
+<tr><td style="text-align: center">   3</td><td style="text-align: center">-0.165554717</td></tr>
+<tr><td style="text-align: center">   4</td><td style="text-align: center"> 0.070719321</td></tr>
+<tr><td style="text-align: center">   5</td><td style="text-align: center">-0.097039288</td></tr>
+<tr><td style="text-align: center">   6</td><td style="text-align: center">-0.047057692</td></tr>
+<tr><td style="text-align: center">   7</td><td style="text-align: center"> 0.035373112</td></tr>
+<tr><td style="text-align: center">   8</td><td style="text-align: center">-0.043458199</td></tr>
+<tr><td style="text-align: center">   9</td><td style="text-align: center">-0.004796162</td></tr>
+<tr><td style="text-align: center">  10</td><td style="text-align: center"> 0.014393137</td></tr>
+<tr><td style="text-align: center">  11</td><td style="text-align: center"> 0.109917200</td></tr>
+<tr><td style="text-align: center">  12</td><td style="text-align: center">-0.068778492</td></tr>
+<tr><td style="text-align: center">  13</td><td style="text-align: center"> 0.148034489</td></tr>
+<tr><td style="text-align: center">  14</td><td style="text-align: center"> 0.035768581</td></tr>
+<tr><td style="text-align: center">  15</td><td style="text-align: center">-0.006677806</td></tr>
+<tr><td style="text-align: center">  16</td><td style="text-align: center"> 0.173004275</td></tr>
+<tr><td style="text-align: center">  17</td><td style="text-align: center">-0.111342583</td></tr>
+<tr><td style="text-align: center">  18</td><td style="text-align: center"> 0.019970791</td></tr>
+<tr><td style="text-align: center">  19</td><td style="text-align: center">-0.047349722</td></tr>
+<tr><td style="text-align: center">  20</td><td style="text-align: center"> 0.016136806</td></tr>
+<tr><td style="text-align: center">  21</td><td style="text-align: center"> 0.022279561</td></tr>
+<tr><td style="text-align: center">  22</td><td style="text-align: center">-0.078710582</td></tr>
+<tr><td style="text-align: center">  23</td><td style="text-align: center">-0.009577413</td></tr>
+<tr><td style="text-align: center">  24</td><td style="text-align: center">-0.073114034</td></tr>
+<tr><td style="text-align: center">  25</td><td style="text-align: center">-0.019503289</td></tr>
+<tr><td style="text-align: center">  26</td><td style="text-align: center"> 0.041465024</td></tr>
+<tr><td style="text-align: center">  27</td><td style="text-align: center">-0.022134370</td></tr>
+<tr><td style="text-align: center">  28</td><td style="text-align: center"> 0.088887299</td></tr>
+<tr><td style="text-align: center">  29</td><td style="text-align: center"> 0.016247148</td></tr>
+<tr><td style="text-align: center">  30</td><td style="text-align: center"> 0.003946351</td></tr>
+<tr><td style="text-align: center">  31</td><td style="text-align: center"> 0.004584069</td></tr>
+<tr><td style="text-align: center">  32</td><td style="text-align: center">-0.024782198</td></tr>
+<tr><td style="text-align: center">  33</td><td style="text-align: center">-0.025905040</td></tr>
+<tr><td style="text-align: center">  34</td><td style="text-align: center">-0.062879966</td></tr>
+<tr><td style="text-align: center">  35</td><td style="text-align: center"> 0.026101117</td></tr>      
+      </tbody>
+    </table>
+  </div>
+
+
+<section>
+  <p>
+    <label for="mn-h03" class="margin-toggle">⊕ </label>
+    <input type="checkbox" id="mn-h03" class="margin-toggle">
+    <span class="marginnote">
+모델 맞추기
+    </span>
+계절적인 MA(1)을 데이터에 맞춰보자.
+$$ X_{t} - \delta = A_{t} + \theta_{1} A_{t-1} + \phi_{1} A_{t-12} + \theta_{1} \phi_{1} A_{t-13}, $$
+여기에서 \theta_{1}은 MA(1) 매개변수이고 \phi_{1}은 계절적인 매개변수이다. 모델 맞춘 결과는 다음과 같다.
+  </p>
+  <div class="table-wrapper">
+    <table class="booktabs">
+      <thead>
+        <tr><th style="text-align: center"><b>측정</b></th><th style="text-align: center"><b>MA(1)</b></th><th style="text-align: center"><b>계절적인 MA(1)</b></th></tr>
+      </thead>
+      <tbody>
+<tr><td style="text-align: center">매개변수</td><td style="text-align: center">-0.4018</td><td style="text-align: center">-0.5569</td></tr>
+<tr><td style="text-align: center">매개변수</td><td style="text-align: center"> 0.0896</td><td style="text-align: center"> 0.0731</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>
+    <blockquote>
+      <p>나머지 표준 편차 = 0.0367</p>
+      <p>로그 가능성(Log likelihood) = 244.7</p>
+      <p>AIC = -483.4</p>
+    </blockquote>
+  </p>
+  <p>
+박스-융 테스트로 30 뒤처짐까지 나머지의 무작위성을 확인하였다. 두 측정 매개변수에 대해 기각 영역에 대한 자유도를 맞춰야 한다.
+  </p>
+  <p>
+    <blockquote>
+      <p>\(H_{0}\) : 나머지가 무작위적이다.</p>
+      <p>\(H_{a}\) : 나머지가 무작위적이지 않다.</p>
+      <p>테스트 통계: \( Q = 29.4935 \)</p>
+      <p>유의미도: \( \alpha = 0.05 \)</p>
+      <p>자유도: \(h = 30 - 2 = 28\)</p>
+      <p>기각 값: \( \xi_{1-\alpha, h}^{2} = 41.3371\)</p>
+      <p>기각 영역: \(Q > 41.3371\) 일 때, \(H_{0}\) 기각</p>
+    </blockquote>
+  </p>
+  <p>
+박스-융 테스트의 귀무 가설이 기각되지 않았으니, 맞춘 모델이 적절하다고 볼 수 있다.  
+  </p>
+</section>
+
+<section>
+  <p>
+    <label for="mn-h04" class="margin-toggle">⊕ </label>
+    <input type="checkbox" id="mn-h04" class="margin-toggle">
+    <span class="marginnote">
+예측
+    </span>
+우리의 계절적인 MA(1) 모델로, 12 시점 앞을 예측하고 90% 신뢰 구간도 계산해보자.
+  </p>
+  <div class="table-wrapper">
+    <table class="booktabs">
+      <thead>
+        <tr><th style="text-align: center"><b>시점</b></th><th style="text-align: center"><b>상한값</b></th><th style="text-align: center"><b>예측</b></th><th style="text-align: center"><b>상한값</b></th></tr>
+      </thead>
+      <tbody>
+<tr><td style="text-align: center">  145</td><td style="text-align: center">424.0234</td><td style="text-align: center">450.7261</td><td style="text-align: center">478.4649</td></tr>
+<tr><td style="text-align: center">  146</td><td style="text-align: center">396.7861</td><td style="text-align: center">426.0042</td><td style="text-align: center">456.7577</td></tr>
+<tr><td style="text-align: center">  147</td><td style="text-align: center">442.5731</td><td style="text-align: center">479.3298</td><td style="text-align: center">518.4399</td></tr>
+<tr><td style="text-align: center">  148</td><td style="text-align: center">451.3902</td><td style="text-align: center">492.7365</td><td style="text-align: center">537.1454</td></tr>
+<tr><td style="text-align: center">  149</td><td style="text-align: center">463.3034</td><td style="text-align: center">509.3982</td><td style="text-align: center">559.3245</td></tr>
+<tr><td style="text-align: center">  150</td><td style="text-align: center">527.3754</td><td style="text-align: center">583.7383</td><td style="text-align: center">645.2544</td></tr>
+<tr><td style="text-align: center">  151</td><td style="text-align: center">601.9371</td><td style="text-align: center">670.4625</td><td style="text-align: center">745.7830</td></tr>
+<tr><td style="text-align: center">  152</td><td style="text-align: center">595.7602</td><td style="text-align: center">667.5274</td><td style="text-align: center">746.9323</td></tr>
+<tr><td style="text-align: center">  153</td><td style="text-align: center">495.7137</td><td style="text-align: center">558.5657</td><td style="text-align: center">628.5389</td></tr>
+<tr><td style="text-align: center">  154</td><td style="text-align: center">439.1900</td><td style="text-align: center">497.5430</td><td style="text-align: center">562.8899</td></tr>
+<tr><td style="text-align: center">  155</td><td style="text-align: center">377.7598</td><td style="text-align: center">430.1618</td><td style="text-align: center">489.1730</td></tr>
+<tr><td style="text-align: center">  156</td><td style="text-align: center">417.3149</td><td style="text-align: center">477.5643</td><td style="text-align: center">545.7760</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>
+    <figure>
+      <img src="http://www.itl.nist.gov/div898/handbook/pmc/section4/pmc44a_r07.gif">
+    </figure>
+이 면에서 사용한 모든 분석은 R 코드를 사용해서 재현할 수 있다.    
+  </p>
+</section>
+
+<section>
+  <ul class="pager">
+    <li class="previous"><a href="/articles/2016/11/25/ESH-06-04-04-09">Previous</a></li>
+    <li class="next"><a href="/articles/2016/11/25/ESH-06-04-04-10">Next</a></li>      
+  </ul>
+  <p>
+    <a href="http://www.itl.nist.gov/div898/handbook/pmc/section4/pmc44a.htm">원문 보기</a>
+  </p>
+</section>
+
+
+
+<p>
+<div class="comments">
+	<div id="disqus_thread" style="max-width:60%;"></div>
+	<script type="text/javascript">
+    var disqus_config = function () {
+      this.page.url = "https://danielykim.github.io/articles/2016/11/25/ESH-06-04-04-10/"; // <--- use canonical URL
+      this.page.identifier = "/articles/2016/11/25/ESH-06-04-04-10";
+    };
+    (function() { // DON'T EDIT BELOW THIS LINE
+    
+      var d = document, s = d.createElement('script');
+
+      s.src = '//danielykim.disqus.com/embed.js'; // <--- use Disqus shortname
+
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+</div>
+</p>
+
+
+
+
+    </article>
+    <span class="print-footer">6.4.4.10. 계절적인 데이터에 대한 박스-젠킨스 분석 - November 25, 2016 - Daniel Kim, PhD</span>
+
+
+    <footer>
+  <hr class="slender">
+  <ul class="footer-links">
+    <li><a href="mailto:daniel.youngho.kim@gmail.com"><span class="icon-mail"></span></a></li>    
+    <li><a href="https://www.linkedin.com/in/danielyounghokim"><span class="icon-info"></span></a></li>    
+      
+  </ul>
+<div class="credits">
+<span>&copy; 2017 &nbsp;&nbsp;DANIEL KIM, PHD</span></br> <br>
+<span>This site created with the <a href="//github.com/clayh53/tufte-jekyll">Tufte theme for  </a> in <a href="//jekyllrb.com">Jekyll</a>.</span> 
+</div>  
+</footer>
+
+    <script id="dsq-count-scr" src="//danielykim.disqus.com/count.js" async></script>
+    
+  </body>
+</html>

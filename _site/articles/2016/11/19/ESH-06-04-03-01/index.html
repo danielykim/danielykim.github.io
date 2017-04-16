@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <link rel="icon" type="image/png" href="http://danielykim.me/images/myicon.png" />
+  <title>Blog: Daniel Kim</title>
+  <meta name="description" content="      ⊕         지수 평활법은 미래 값을 예측하기 위해 과거 관측값을 지수적으로 감소하는 가중치로 다룬다        이 평활법은 \( S_{2} \) 를 \( y_{1} \)로 두는 것부터 시작한다. \( S_{i} \)는 평활화한 관측이나 EWMA (Exponent...">
+
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+
+  <script type="text/javascript" src="/js/pace.min.js"></script>
+
+  <!-- Google Fonts loaded here depending on setting in _data/options.yml true loads font, blank does not-->
+  
+  
+  <!-- Load up MathJax script if needed ... specify in /_data/options.yml file-->
+  <script type="text/javascript" async
+    src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+  </script>
+
+  <link rel="stylesheet" type="text/css" href="/css/tufte.css">
+  <link rel="stylesheet" type="text/css" href="/tufte.css">
+  <!-- <link rel="stylesheet" type="text/css" href="/css/print.css" media="print"> -->
+
+  <link rel="canonical" href="http://localhost:4000/articles/2016/11/19/ESH-06-04-03-01/">
+
+  <link rel="alternate" type="application/rss+xml" title="Blog: Daniel Kim" href="http://localhost:4000/feed.xml" />
+
+  <link rel="stylesheet" type="text/css" href="/css/pace-flash.css">
+
+  <script type="text/javascript" src="/js/inlineDisqussions.js"></script>
+ 
+  <!-- http://tsi.github.io/inlineDisqussions/ -->
+  <link rel="stylesheet" type="text/css" href="/css/inlineDisqussions.css" />
+
+</head>
+
+  <body>
+    <!--- Header and nav template site-wide -->
+<header>
+    <nav class="group">
+    <h1>Exploring Data</h1>
+	
+		
+  	
+		
+		    
+		      <a href="/">blog</a>
+		    
+	    
+  	
+		
+		    
+		      <a href="/about/">About</a>
+		    
+	    
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+		    
+		      <a href="/feed.xslt.xml"></a>
+		    
+	    
+  	
+	</nav>
+</header>
+
+    <article class="group">
+      <h1>6.4.3.1. 단일 지수 평활법</h1>
+
+<p class="subtitle">November 19, 2016</p>
+
+
+<section>
+  <p>
+    <label for="mn-h01" class="margin-toggle">⊕ </label>
+    <input type="checkbox" id="mn-h01" class="margin-toggle">
+    <span class="marginnote">
+지수 평활법은 미래 값을 예측하기 위해 과거 관측값을 지수적으로 감소하는 가중치로 다룬다
+    </span>
+    이 평활법은 \( S_{2} \) 를 \( y_{1} \)로 두는 것부터 시작한다. \( S_{i} \)는 평활화한 관측이나 EWMA (Exponentially Weighted Moving Average)를, \( y \)는 원래의 관측값을 나타낸다. 아래 첨자는 시기를 의미한다\( (1, 2, ..., n) \). 3번째 시기에 대해 다음과 같이 쓸 수 있다. \( S_{3} = \alpha y_{2} + (1-\alpha)S_{2} \). 다른 시기에 대해서도 마찬가지로 쓸 수 있지만, \( S_{1} \) 값은 없다.
+  </p>
+  <p>
+어떤 시기 \( t \)에 대해, 평활화한 값 \( S_{i} \) 는 다음과 같이 계산할 수 있다.
+  $$ S_t = \alpha y_{t-1} + (1-\alpha)S_{t-1} \qquad 0 < \alpha \le 1 \qquad t \ge 3 $$
+  </p>
+  <p>
+이것이 지수 평활법의 기본 등식이고, 상수 또는 매개변수 \( \alpha \) 를 평활 상수라고 한다.
+  </p>
+  <p>
+    <b>메모:</b> 기본 등식에서 \( y_{t-1} \)을 \( y_{t} \)로 바꾼 방법도 있다. EWMA 제어 차트 절에 Robert가 1959년에 제안한 이 방법을 서술하였다. 여기에서 사용하는 등식은 1986년에 Hunter가 제안한 것을 따른다.
+  </p>
+</section>
+
+<section>
+  <h3>첫 번째 EWMA 설정하기</h3>
+  <p>
+    <label for="mn-h02" class="margin-toggle">⊕ </label>
+    <input type="checkbox" id="mn-h02" class="margin-toggle">
+    <span class="marginnote">
+첫 번째 예측이 아주 중요하다
+    </span>
+    첫 번째 EWMA는 다음에 나오는 모든 EWMA 값을 계산하는데 중요한 역할을 한다. \( S_{2} \)를 \( y_{1} \)로 정하는 것은 일종의 초기화이다. 다른 방법으로 정할 수도 있다.
+  </p>
+  <p>
+처음 4개나 5개의 관측값을 평균할 것인지도 정할 수 있다.
+  </p>
+  <p>
+\( \alpha \) 값이 작을 수록 첫 번째 EWMA를 정하는 것이 중요하게 된다. 초기 설정을 확정하기 전에 몇 가지 방법들을 시도해보길 바란다(여기에서는 사용하는 소프트웨어가 이러한 기능을 지원하고 있다는 것을 가정하고 있다).    
+  </p>
+</section>
+
+<section>
+  <h3>왜 "지수"라는 말이 들어가는가?</h3>
+  <p>
+    <label for="mn-h03" class="margin-toggle">⊕ </label>
+    <input type="checkbox" id="mn-h03" class="margin-toggle">
+    <span class="marginnote">
+기본 등식을 전개하기
+    </span>
+먼저 S_{t-1}를 기본 등식에 대입해서 전개하면 다음과 같은 식을 얻을 수 있다.
+  $$ 
+  \begin{align*}  
+  S_{t} & = \alpha y_{t-1} + (1-\alpha)\left[ \alpha y_{t-2} + (1-\alpha)S_{t-2} \right] \\ 
+  & = \alpha y_{t-1} + \alpha(1-\alpha) y_{t-2} + (1-\alpha)^{2}S_{t-2} 
+  \end{align*}
+  $$
+  </p>
+</section>
+
+<section>
+  <p>
+    <label for="mn-h04" class="margin-toggle">⊕ </label>
+    <input type="checkbox" id="mn-h04" class="margin-toggle">
+    <span class="marginnote">
+기본 등식에 관한 합 공식
+    </span>
+\( S_{2} \)가 나올 때까지 \( S_{t-2}, S_{t-3}, \cdots \) 이런 식으로 대입하면 다음과 같은 전개식을 쓸 수 있다.
+  $$ 
+S_{t} = \alpha \sum_{i=1}^{t-2} (1-\alpha)^{i-1} y_{t-i} + (1-\alpha)^{t-2} S_{2} \ , \qquad t \ge 2
+  $$
+  </p>
+</section>
+
+<section>
+  <p>
+    <label for="mn-h05" class="margin-toggle">⊕ </label>
+    <input type="checkbox" id="mn-h05" class="margin-toggle">
+    <span class="marginnote">
+\( S_5 \)에 대하여 전개한 등식
+    </span>
+예를 들면, \( S_5 \)에 대해 전개한 식은 다음과 같다.
+  $$ 
+S_{5} = \alpha \left[ (1-\alpha)^{0} y_{5-1} + (1-\alpha)^{1} y_{5-2} + (1-\alpha)^{2} y_{5-3} \right] + (1-\alpha)^{3} S_{2}
+  $$
+  </p>
+</section>
+
+<section>
+  <p>
+    <label for="mn-h06" class="margin-toggle">⊕ </label>
+    <input type="checkbox" id="mn-h06" class="margin-toggle">
+    <span class="marginnote">
+지수적인 성질을 보인다
+    </span>
+이 식은 지수적인 성질을 보인다. 가중치 \( \alpha(1-\alpha)^{t} \) 는 기하적으로 감수하며, 기하 급수의 성질을 이용하면 다음과 같이 합은 1이다.
+  $$ 
+\alpha \sum_{i=0}^{t-1} (1-\alpha)^{i} = \alpha \left[ \frac{ 1 - (1-\alpha)^{t} }{ 1 - (1-\alpha) } \right] = 1 - (1-\alpha)^{t}
+  $$
+위의 식에서 보면, \( t \)가 증가할 수록 평활화한 \( S_t \)의 영향이 점점 작아지는 것을 알 수 있다.  
+  </p>
+</section>
+
+<section>
+  <p>
+    <label for="mn-h07" class="margin-toggle">⊕ </label>
+    <input type="checkbox" id="mn-h07" class="margin-toggle">
+    <span class="marginnote">
+\( \alpha=0.3 \) 일 때 예제
+    </span>
+\( \alpha=0.3 \)인 경우, 가중치 \( \alpha(1-\alpha)^{t} \)는 시간에 따라 지수적으로(기하적으로) 감소한다.
+  </p>
+  <div class="table-wrapper">
+    <table class="booktabs">
+      <thead>
+        <tr><th style="text-align: center"><b>값</b></th><th style="text-align: center"><b>가중치</b></th></tr>
+      </thead>
+      <tbody>
+        <tr><td style="text-align: center">\( y_{1} \)</td><td style="text-align: center">0.2100</td></tr>
+        <tr><td style="text-align: center">\( y_{2} \)</td><td style="text-align: center">0.1470</td></tr>
+        <tr><td style="text-align: center">\( y_{3} \)</td><td style="text-align: center">0.1029</td></tr>
+        <tr><td style="text-align: center">\( y_{4} \)</td><td style="text-align: center">0.0720</td></tr>
+      </tbody>
+    </table>
+  </div>  
+</section>
+
+<section>
+  <h3>어떤 \( \alpha \)가 "가장" 좋은 값인가?</h3>
+  <p>
+    <label for="mn-h08" class="margin-toggle">⊕ </label>
+    <input type="checkbox" id="mn-h08" class="margin-toggle">
+    <span class="marginnote">
+가중치 매개변수를 어떻게 선택할 것인가?
+    </span>
+오래된 값을 평활화하는 빠르기는 \( \alpha \)값의 함수이다. \( \alpha \)가 1에 가까우면 빠르게 평활화가 일어나고, 0에 가까우면 느리게 일어난다. 다음의 표는 이와 같은 과정을 보여준다.
+  </p>
+  <p>
+  과거의 관측값 방향</br>
+  → → → → → → → 
+  </p>
+  <div class="table-wrapper">
+    <table class="booktabs">
+      <thead>
+          <tr><th style="text-align: center"><b>\( \alpha \)</b></th><th style="text-align: center"><b>\( (1-\alpha) \)</b></th><th style="text-align: center"><b>\( (1-\alpha)^{2} \)</b></th><th style="text-align: center"><b>\( (1-\alpha)^{3} \)</b></th><th style="text-align: center"><b>\( (1-\alpha)^{4} \)</b></th></tr>
+      </thead>
+      <tbody>
+        <tr><td style="text-align: center">0.9</td><td style="text-align: center">0.1</td><td style="text-align: center">0.01</td><td style="text-align: center">0.001</td><td style="text-align: center">0.0001</td></tr>
+        <tr><td style="text-align: center">0.5</td><td style="text-align: center">0.5</td><td style="text-align: center">0.25</td><td style="text-align: center">0.125</td><td style="text-align: center">0.0625</td></tr>
+        <tr><td style="text-align: center">0.1</td><td style="text-align: center">0.9</td><td style="text-align: center">0.81</td><td style="text-align: center">0.729</td><td style="text-align: center">0.6561</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>
+가장 작은 MSE를 얻을 수 있는 \( \alpha \) 값이 가장 좋은 값이다.  
+  </p>
+</section>
+
+<section>
+  <p>
+    <label for="mn-h09" class="margin-toggle">⊕ </label>
+    <input type="checkbox" id="mn-h09" class="margin-toggle">
+    <span class="marginnote">
+예제
+    </span>
+지금까지의 배운 내용을 가지고 예제 하나를 다뤄보자. 다음과 같이 시간에 따라 수집한 12개의 관측값이 있는 상황을 생각해보자.
+  </p>
+  <div class="table-wrapper">
+    <table class="booktabs">
+      <thead>
+          <tr><th style="text-align: center"><b>시점</b></th><th style="text-align: center"><b>\( y_{t} \)</b></th><th style="text-align: center"><b>\( S(\alpha=0.1) \)</b></th><th style="text-align: center"><b>오차</b></th><th style="text-align: center"><b>제곱 오차</b></th></tr>
+      </thead>
+      <tbody>
+<tr><td style="text-align: center">1</td><td style="text-align: center">71</td><td style="text-align: center"></td><td style="text-align: center"></td><td style="text-align: center"></td></tr>
+<tr><td style="text-align: center">2</td><td style="text-align: center">70</td><td style="text-align: center">71 </td><td style="text-align: center">-1.00</td><td style="text-align: center">1.00</td></tr>
+<tr><td style="text-align: center">3</td><td style="text-align: center">69</td><td style="text-align: center">70.9 </td><td style="text-align: center">-1.90</td><td style="text-align: center">3.61</td></tr>
+<tr><td style="text-align: center">4</td><td style="text-align: center">68</td><td style="text-align: center">70.71 </td><td style="text-align: center">-2.71</td><td style="text-align: center">7.34</td></tr>
+<tr><td style="text-align: center">5</td><td style="text-align: center">64</td><td style="text-align: center">70.44 </td><td style="text-align: center">-6.44</td><td style="text-align: center">41.47</td></tr>
+<tr><td style="text-align: center">6</td><td style="text-align: center">65</td><td style="text-align: center">69.80 </td><td style="text-align: center">-4.80</td><td style="text-align: center">23.04</td></tr>
+<tr><td style="text-align: center">7</td><td style="text-align: center">72</td><td style="text-align: center">69.32 </td><td style="text-align: center">2.68</td><td style="text-align: center">7.18</td></tr>
+<tr><td style="text-align: center">8</td><td style="text-align: center">78</td><td style="text-align: center">69.58 </td><td style="text-align: center">8.42</td><td style="text-align: center">70.90</td></tr>
+<tr><td style="text-align: center">9</td><td style="text-align: center">75</td><td style="text-align: center">70.43 </td><td style="text-align: center">4.57</td><td style="text-align: center">20.88</td></tr>
+<tr><td style="text-align: center">10</td><td style="text-align: center">75</td><td style="text-align: center">70.88 </td><td style="text-align: center">4.12</td><td style="text-align: center">16.97</td></tr>
+<tr><td style="text-align: center">11</td><td style="text-align: center">75</td><td style="text-align: center">71.29 </td><td style="text-align: center">3.71</td><td style="text-align: center">13.76</td></tr>
+<tr><td style="text-align: center">12</td><td style="text-align: center">70</td><td style="text-align: center">71.67 </td><td style="text-align: center">-1.67</td><td style="text-align: center">2.79</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>
+제곱 오차의 합(SSE)은 208.94이고, 제곱 오차의 평균(MSE)은 SSE / 11 = 19.0 이다.
+  </p>
+</section>
+
+<section>
+  <p>
+    <label for="mn-h10" class="margin-toggle">⊕ </label>
+    <input type="checkbox" id="mn-h10" class="margin-toggle">
+    <span class="marginnote">
+다른 \( \alpha \) 값에 대해 계산하기
+    </span>
+\( \alpha=0.5 \) 인 경우에 MSE를 계산하면 16.29를 얻을 수 있다. 더 좋은 값을 얻을 수 있을까? 시행착오(trial-and-error) 접근법을 적용해볼 수 있다. \( \alpha \)를 0.1부터 0.9까지 탐색하고 그 중에서 가장 좋은 \( \alpha \)를 선택한 다음, \( \alpha-\Delta \)와 \( \alpha+\Delta \) 범위에서 작업을 반복한다. 한 번 더 반복하면, 소수점 3째 자리 정확도를 가지는 \( \alpha \)를 찾을 수 있다.
+  </p>
+</section>
+
+<section>
+  <p>
+    <label for="mn-h11" class="margin-toggle">⊕ </label>
+    <input type="checkbox" id="mn-h11" class="margin-toggle">
+    <span class="marginnote">
+비선형 최적화를 사용할 수 있다
+    </span>
+하지만 마르쿼트(Marquardt) 방법 같은 더 좋은 탐색법이 있다. 이 방법은 실제 값과 추정 값의 차이(residual) 제곱 합을 최소화하는 비선형 최적화 기법이다. 일반적으로 보통 좋은 통계 프로그램들은 MSE를 최소화하는 \( \alpha\)를 찾아준다.
+  </p>
+</section>
+
+<section>
+  <p>
+    <label for="mn-h12" class="margin-toggle">⊕ </label>
+    <input type="checkbox" id="mn-h12" class="margin-toggle">
+    <span class="marginnote">
+2개의 \( \alpha \) 에 대해 평활화한 데이터를 보여주는 그래프
+    </span>
+  </p>
+  <figure>
+    <img src="http://www.itl.nist.gov/div898/handbook/pmc/section4/gifs/tseries2.gif" alt="Exponential Smoothing: Original and Smoothed Values">
+  </figure>
+</section>
+
+<section>
+  <ul class="pager">
+    <li class="previous"><a href="/articles/2016/11/19/ESH-06-04-03">Previous</a></li>
+    <li class="next"><a href="/articles/2016/11/19/ESH-06-04-03-02">Next</a></li>      
+  </ul>
+  <p>
+    <a href="http://www.itl.nist.gov/div898/handbook/pmc/section4/pmc431.htm">원문 보기</a>
+  </p>
+</section>
+
+
+
+<p>
+<div class="comments">
+	<div id="disqus_thread" style="max-width:60%;"></div>
+	<script type="text/javascript">
+    var disqus_config = function () {
+      this.page.url = "https://danielykim.github.io/articles/2016/11/19/ESH-06-04-03-01/"; // <--- use canonical URL
+      this.page.identifier = "/articles/2016/11/19/ESH-06-04-03-01";
+    };
+    (function() { // DON'T EDIT BELOW THIS LINE
+    
+      var d = document, s = d.createElement('script');
+
+      s.src = '//danielykim.disqus.com/embed.js'; // <--- use Disqus shortname
+
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+</div>
+</p>
+
+
+
+
+    </article>
+    <span class="print-footer">6.4.3.1. 단일 지수 평활법 - November 19, 2016 - Daniel Kim, PhD</span>
+
+
+    <footer>
+  <hr class="slender">
+  <ul class="footer-links">
+    <li><a href="mailto:daniel.youngho.kim@gmail.com"><span class="icon-mail"></span></a></li>    
+    <li><a href="https://www.linkedin.com/in/danielyounghokim"><span class="icon-info"></span></a></li>    
+      
+  </ul>
+<div class="credits">
+<span>&copy; 2017 &nbsp;&nbsp;DANIEL KIM, PHD</span></br> <br>
+<span>This site created with the <a href="//github.com/clayh53/tufte-jekyll">Tufte theme for  </a> in <a href="//jekyllrb.com">Jekyll</a>.</span> 
+</div>  
+</footer>
+
+    <script id="dsq-count-scr" src="//danielykim.disqus.com/count.js" async></script>
+    
+  </body>
+</html>
