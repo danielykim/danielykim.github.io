@@ -1,18 +1,2 @@
 <span class="print-footer">{% if page.date %}{{ page.title }} - {{ page.date | date: "%B %-d, %Y" }} - {{site.author}}{% else %}{{ page.title }} - {{site.author}}{% endif %}</span>
 
-<script>
-  disqus_shortname = 'danielykim';
-
-  jQuery(document).ready(function() {
-    jQuery("p").inlineDisqussions();
-  });
-
-  jQuery("p").inlineDisqussions({
-    identifier: 'disqussion',
-    displayCount: true,
-    highlighted: true,
-    position: 'right',
-    background: '#fffff8',
-    maxWidth: 200
-});
-</script>
