@@ -2,18 +2,156 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Blog: Daniel Kim</title>
-    <description>Exploring Data</description>
+    <description>Exploring Adjacent Possibles</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 16 Apr 2017 02:51:38 +0000</pubDate>
-    <lastBuildDate>Sun, 16 Apr 2017 02:51:38 +0000</lastBuildDate>
+    <pubDate>Sat, 22 Apr 2017 07:41:13 +0000</pubDate>
+    <lastBuildDate>Sat, 22 Apr 2017 07:41:13 +0000</lastBuildDate>
     <generator>Jekyll v3.3.0</generator>
+    
+      <item>
+        <title>탐험적 데이터 분석</title>
+        <description>&lt;section&gt;
+  &lt;p&gt;
+  &lt;i&gt;탐험적 데이터 분석(Exploratory Data Analysis; EDA)&lt;/i&gt;은 일반적인 과학 활동&lt;label for=&quot;sn-extensive-use-of-sidenotes&quot; class=&quot;margin-toggle sidenote-number&quot;&gt;&lt;/label&gt;&lt;input type=&quot;checkbox&quot; id=&quot;sn-extensive-use-of-sidenotes&quot; class=&quot;margin-toggle&quot;/&gt;&lt;span class=&quot;sidenote&quot;&gt;일반적인 과학 활동에 대한 구체적인 내용은 &lt;a href=&quot;https://en.wikipedia.org/wiki/Scientific_method&quot;&gt;Scientific Method&lt;/a&gt;을 참조하시길 바랍니다.&lt;/span&gt;의 부분집합입니다. 특별히 이 글에서는 비즈니스 상황에서 데이터 과학자가 일하는 방식과 마주하는 상황을 중심으로 &lt;i&gt;탐험적 데이터 분석&lt;/i&gt;에 관한 이야기를 하겠습니다. 
+  &lt;/p&gt;
+  &lt;p&gt;
+아래 그림은 Hadley Wickham&lt;label for=&quot;sn-extensive-use-of-sidenotes&quot; class=&quot;margin-toggle sidenote-number&quot;&gt;&lt;/label&gt;&lt;input type=&quot;checkbox&quot; id=&quot;sn-extensive-use-of-sidenotes&quot; class=&quot;margin-toggle&quot;/&gt;&lt;span class=&quot;sidenote&quot;&gt;&lt;a href=&quot;https://www.rdocumentation.org/trends&quot;&gt;R 사용자들이 지금까지 가장 많이 내려받은 패키지&lt;/a&gt;인 dplyr와 ggplot2를 만든 사람입니다.&lt;/span&gt;의 &lt;a href=&quot;http://r4ds.had.co.nz/explore-intro.html&quot;&gt;&lt;em&gt;R for Data Science&lt;/em&gt;.&lt;/a&gt;라는 책 2장에 있는 diagram입니다.  
+  &lt;/p&gt;
+&lt;/section&gt;
+
+
+&lt;section&gt;
+  &lt;figure&gt;
+    &lt;label for=&quot;mn-exports-imports&quot; class=&quot;margin-toggle&quot;&gt;&amp;#8853;&lt;/label&gt;&lt;input type=&quot;checkbox&quot; id=&quot;mn-exports-imports&quot; class=&quot;margin-toggle&quot;/&gt;&lt;span class=&quot;marginnote&quot;&gt;출처: Hadley Wickham, &lt;a href=&quot;http://r4ds.had.co.nz/explore-intro.html&quot;&gt;&lt;em&gt;R for Data Science&lt;/em&gt;.&lt;/a&gt;&lt;br/&gt; 이 그림은 &lt;a href=&quot;https://creativecommons.org/licenses/by-nc-nd/3.0/us/&quot;&gt;미국 Creative Commons Attribution-NonCommercial-NoDerivs 3.0 라이선스&lt;/a&gt;에 의해 보호 받고 있습니다. 이 그림은 상업적으로 이용할 수 없고, 재조합하거나 변형해서 배포할 수 없습니다.&lt;/span&gt;
+    &lt;img src=&quot;http://r4ds.had.co.nz/diagrams/data-science-explore.png&quot; alt=&quot;탐험적 데이터 분석 - 탐색&quot; /&gt;
+  &lt;/figure&gt;
+&lt;/section&gt;
+
+
+&lt;section&gt;
+  &lt;p&gt;
+  데이터 과학자의 학문적인 배경&lt;label for=&quot;sn-extensive-use-of-sidenotes&quot; class=&quot;margin-toggle sidenote-number&quot;&gt;&lt;/label&gt;&lt;input type=&quot;checkbox&quot; id=&quot;sn-extensive-use-of-sidenotes&quot; class=&quot;margin-toggle&quot;/&gt;&lt;span class=&quot;sidenote&quot;&gt;연구 주제와 보유 기술에 따라 자세한 구분이 필요하지만 일반적으로 업계에서 데이터 과학자가 될 수 있는 학문적인 배경인 컴퓨터 과학/공학/전산학, 통계학, 생물학, 물리학, 수학 등이 있습니다. 수학과 컴퓨터를 잘한다면 경제학과와 사회학과도 가능합니다.&lt;/span&gt;에 상관 없이 데이터 과학자라면 위의 순서로 일합니다. 6가지 단계 각각을 살펴보겠습니다.
+  &lt;/p&gt;
+&lt;/section&gt;
+
+&lt;section&gt;
+  &lt;h2&gt;1. 부르기 Import&lt;/h2&gt;
+  &lt;p&gt;
+  &lt;/p&gt;
+&lt;/section&gt;
+
+&lt;section&gt;
+  &lt;h2&gt;2. 다듬기 Tidy&lt;/h2&gt;
+  &lt;p&gt;
+  &lt;/p&gt;
+&lt;/section&gt;
+
+&lt;section&gt;
+  &lt;h2&gt;3. 바꾸기 Transform&lt;/h2&gt;
+  &lt;p&gt;
+  aggregation, filter, 
+  &lt;/p&gt;
+&lt;/section&gt;
+
+&lt;section&gt;
+  &lt;h2&gt;4. 시각화 Visualise&lt;/h2&gt;
+  &lt;p&gt;
+  sidenote
+  영국식 영어에서는 Visualize에서 z를 s로 바꾸어 Visualise로 씁니다.
+  &lt;/p&gt;
+&lt;/section&gt;
+
+&lt;!--section&gt;
+  &lt;div class=&quot;epigraph&quot;&gt;
+    &lt;blockquote&gt;
+      &quot;Simplicity is the ultimate sophistication.&quot;
+      &lt;footer&gt;- Leonardo da Vinci&lt;/footer&gt;
+    &lt;/blockquote&gt;
+    &lt;blockquote&gt;
+      &quot;Make things as simple as possible, but not simpler.&quot;
+      &lt;footer&gt;- Albert Einstein&lt;/footer&gt;
+    &lt;/blockquote&gt;
+  &lt;/div&gt;
+&lt;/section--&gt;
+
+&lt;section&gt;
+  &lt;figure&gt;
+    &lt;label for=&quot;mn-exports-imports&quot; class=&quot;margin-toggle&quot;&gt;&amp;#8853;&lt;/label&gt;&lt;input type=&quot;checkbox&quot; id=&quot;mn-exports-imports&quot; class=&quot;margin-toggle&quot;/&gt;&lt;span class=&quot;marginnote&quot;&gt;출처: Hadley Wickham, &lt;a href=&quot;http://r4ds.had.co.nz/explore-intro.html&quot;&gt;&lt;em&gt;R for Data Science&lt;/em&gt;.&lt;/a&gt;&lt;br/&gt; 이 그림은 &lt;a href=&quot;https://creativecommons.org/licenses/by-nc-nd/3.0/us/&quot;&gt;미국 Creative Commons Attribution-NonCommercial-NoDerivs 3.0&lt;/a&gt; 라이선스에 의해 보호 받고 있습니다. 이 그림은 상업적으로 이용할 수 없고, 재조합하거나 변형해서 배포할 수 없습니다.&lt;/span&gt;
+    &lt;img src=&quot;/images/2017-04-17/Quotations-Leonardo_da_Vinci-Albert_Einstein.png&quot; alt=&quot;탐험적 데이터 분석 - 탐색&quot; /&gt;
+  &lt;/figure&gt;
+&lt;/section&gt;
+
+&lt;section&gt;
+  &lt;h2&gt;5. 모델링 Model&lt;/h2&gt;
+  &lt;p&gt;
+  원 데이터raw data를 모으는 것 자체는 집을 지을 때 건축 자재를 일단 몽땅 가져다 놓기만 하는 것.
+  데이터를 엄청나게 많이 모으는 것이나 굉장히 많이 보관하는 하는 것은 기술적으로 참 대단한 일인 것은 분명하다.
+  모아둔 데이터 자체만으로는 별 의미가 없는 경우가 많다. 
+  김진철 CERN 데이터
+  체계적인 설명이 필요하다.
+  문제를 먼저 분명하게 정하는 것이 필요하다.
+  탐험적 데이터 분석 과정의 결과를 보다가 정한 문제가 바뀌거나 잘못 정제한 데이터를 발견하기도 한다. 정한 문제를 풀기 위해 필요 없다고 생각했던 변수를 다시 넣어야 할 수도 있다.
+  위의 diagram은 확정된 것이나 고정된 것이 아니다.
+
+  analogy, 스파게티 모델을 피하자, 비즈니스 상황에서는 법칙을 찾을 필요는 없다. adaptive, flexible 해도 괜찮다. 잘 맞추되 변하면서 아름답게.
+  정말 큰 데이터는 아무도 기본 통계조차 살펴보지 않은 미개척지. 모델링하면 좋겠지만 모델링을 굳이 안 해도 결과에 따라 아주 뻔하지만 않으면 가치를 가질 수도 있다.
+
+  &lt;/p&gt;
+&lt;/section&gt;
+
+
+
+&lt;section&gt;
+  &lt;figure&gt;
+    &lt;label for=&quot;mn-exports-imports&quot; class=&quot;margin-toggle&quot;&gt;&amp;#8853;&lt;/label&gt;&lt;input type=&quot;checkbox&quot; id=&quot;mn-exports-imports&quot; class=&quot;margin-toggle&quot;/&gt;&lt;span class=&quot;marginnote&quot;&gt;출처: Hadley Wickham, &lt;a href=&quot;http://r4ds.had.co.nz/explore-intro.html&quot;&gt;&lt;em&gt;R for Data Science&lt;/em&gt;.&lt;/a&gt;&lt;br/&gt; 이 그림은 &lt;a href=&quot;https://creativecommons.org/licenses/by-nc-nd/3.0/us/&quot;&gt;미국 Creative Commons Attribution-NonCommercial-NoDerivs 3.0&lt;/a&gt; 라이선스에 의해 보호 받고 있습니다. 이 그림은 상업적으로 이용할 수 없고, 재조합하거나 변형해서 배포할 수 없습니다.&lt;/span&gt;
+    &lt;img src=&quot;http://r4ds.had.co.nz/diagrams/data-science.png&quot; alt=&quot;탐험적 데이터 분석 - 이해&quot; /&gt;
+  &lt;/figure&gt;
+&lt;/section&gt;
+
+
+
+
+&lt;script type=&quot;text/javascript&quot; src=&quot;/js/footnotes.js&quot;&gt;&lt;/script&gt;
+&lt;script type=&quot;text/javascript&quot; src=&quot;/js/highlight.pack.js&quot;&gt;&lt;/script&gt;
+&lt;script&gt;hljs.initHighlightingOnLoad();&lt;/script&gt;
+&lt;!-- http://tsi.github.io/inlineDisqussions/ --&gt;
+&lt;script type=&quot;text/javascript&quot; src=&quot;/js/inlineDisqussions.js&quot;&gt;&lt;/script&gt;
+
+&lt;script&gt;
+disqus_shortname = 'danielykim';
+
+jQuery(document).ready(function() {
+  jQuery(&quot;p&quot;).inlineDisqussions();
+});
+
+jQuery(&quot;p&quot;).inlineDisqussions({
+  identifier: 'disqussion',
+  displayCount: true,
+  highlighted: true,
+  position: 'right',
+  background: '#FFFFF9',
+  maxWidth: 250
+});
+&lt;/script&gt;
+</description>
+        <pubDate>Sat, 22 Apr 2017 00:00:00 +0000</pubDate>
+        <link>http://localhost:4000/articles/2017/04/22/Exploratory-Data-Analysis/</link>
+        <guid isPermaLink="true">http://localhost:4000/articles/2017/04/22/Exploratory-Data-Analysis/</guid>
+        
+        
+      </item>
     
       <item>
         <title>데이터 과학자 되기 - 8단계 과정</title>
         <description>&lt;section&gt;
   &lt;p&gt;
-    이 글은 &quot;Karlijn Willems&quot;님이 DataCamp 블로그에 올리신 &lt;a href=&quot;https://www.datacamp.com/community/tutorials/learn-data-science-infographic&quot;&gt;&quot;Learn Data Science - Infographic&quot;&lt;/a&gt;라는 글을 한글로 옮겨 사용하여 글쓴이의 생각과 함께 남긴 것입니다. 영문 제목에서 나타난 것처럼 데이터 과학을 배우는 과정을 8단계로 소개하는 내용입니다. 순서는 아래와 같이 원문의 것을 따릅니다. 
+    이 글은 &quot;Karlijn Willems&quot;님이 DataCamp 블로그에 올리신 &lt;a href=&quot;https://www.datacamp.com/community/tutorials/learn-data-science-infographic&quot;&gt;&quot;Learn Data Science - Infographic&quot;&lt;/a&gt;라는 글을 한글로 옮겨 사용하여 글쓴이의 생각과 함께 남긴 것입니다. 데이터 과학자가 되는 과정을 8단계로 소개하는 내용입니다. 순서는 아래와 같이 원문의 것을 따릅니다. 
+  &lt;/p&gt;
+&lt;/section&gt;
+
+&lt;section&gt;
+  &lt;p&gt;
     &lt;ol&gt;
       &lt;li&gt;&lt;a href=&quot;#01-Math-Stat-ML&quot;&gt;1. 수학, 통계, 기계학습을 공부하자&lt;/a&gt;&lt;/li&gt;
       &lt;li&gt;&lt;a href=&quot;#02-Learn-to-code&quot;&gt;2. 코딩을 배우자&lt;/a&gt;&lt;/li&gt;
@@ -21,7 +159,7 @@
       &lt;li&gt;&lt;a href=&quot;#04-Explore-Data-Science-Workflow&quot;&gt;4. 데이터 과학 업무 순서를 경험하자&lt;/a&gt;&lt;/li&gt;
       &lt;li&gt;&lt;a href=&quot;#05-Level-Up-With-Big-Data&quot;&gt;5. 빅데이터로 규모를 늘리자&lt;/a&gt;&lt;/li&gt;
       &lt;li&gt;&lt;a href=&quot;#06-Grow-Connect-Learn&quot;&gt;6. 성장하고, 만나고, 배우자&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#07-Grow-Connect-Learn&quot;&gt;7. 스스로 완벽하게 몰입하자&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#07-Immerse-Yourself&quot;&gt;7. 스스로 완벽하게 몰입하자&lt;/a&gt;&lt;/li&gt;
       &lt;li&gt;&lt;a href=&quot;#08-Engage-with-the-community&quot;&gt;8. 커뮤니티에 참여하자&lt;/a&gt;&lt;/li&gt;
     &lt;/ol&gt;
   &lt;/p&gt;
@@ -36,6 +174,9 @@
       &lt;img src=&quot;/images/2017-04-16/01-Math_Stat_ML.png&quot; alt=&quot;수학, 통계, 기계학습을 공부하자&quot; /&gt;
     &lt;/figure&gt;
   &lt;/p&gt;
+  &lt;p&gt;
+  위의 슬라이드에서는 수학, 통계, 기계학습을 온라인으로 공부할 수 있는 곳을 소개합니다. &lt;a href=&quot;https://ko.khanacademy.org/&quot;&gt;칸 아카데미(Khan Academy)&lt;/a&gt;, &lt;a href=&quot;https://ocw.mit.edu/index.htm&quot;&gt;MIT OpenCourseWare (MIT OCW)&lt;/a&gt;, &lt;a href=&quot;https://www.openintro.org/stat/&quot;&gt;OpenIntro Statistics&lt;/a&gt;, &lt;a href=&quot;https://www.udacity.com/&quot;&gt;Udacity&lt;/a&gt;, &lt;a href=&quot;https://www.datacamp.com/&quot;&gt;DataCamp&lt;/a&gt;, &lt;a href=&quot;http://online.stanford.edu/&quot;&gt;Stanford Online&lt;/a&gt;, &lt;a href=&quot;https://www.coursera.org/&quot;&gt;Coursera&lt;/a&gt; 등이 있습니다. 비슷한 국내 무료 강의는 KAIST의 &lt;a href=&quot;http://kooc.kaist.ac.kr/&quot;&gt;KOOC&lt;/a&gt;, 서울대의 &lt;a href=&quot;http://snuon.snu.ac.kr/&quot;&gt;SNUON&lt;/a&gt; 등이 있습니다. 여러 가지 그래프를 직접 보면서 통계 이론을 배울 수 있는 &lt;a href=&quot;http://students.brown.edu/seeing-theory/&quot;&gt;이곳&lt;/a&gt;도 추천합니다.
+  &lt;/p&gt;
 &lt;/section&gt;
 
 &lt;section id=&quot;02-Learn-to-code&quot;&gt;
@@ -46,6 +187,12 @@
       &lt;span class=&quot;marginnote&quot;&gt;원문에서는 Learn To Code 입니다.&lt;/span&gt;
       &lt;img src=&quot;/images/2017-04-16/02-Learn_to_code.png&quot; alt=&quot;코딩을 배우자&quot; /&gt;
     &lt;/figure&gt;
+  &lt;/p&gt;
+  &lt;p&gt;
+    &lt;a href=&quot;https://www.datacamp.com/&quot;&gt;DataCamp&lt;/a&gt;에 올라온 포스팅이라서 그런지 이 슬라이드에서는 &lt;a href=&quot;https://www.datacamp.com/&quot;&gt;DataCamp&lt;/a&gt;만 소개하고 있습니다. 하지만, &lt;a href=&quot;http://www.learnpython.org/&quot;&gt;learnpython.org&lt;/a&gt;에 가면, 브라우저에서 직접 코드를 입력하고 바로 확인하는 식으로 배울 수 있습니다. &lt;a href=&quot;https://wikidocs.net/&quot;&gt;WikiDocs&lt;/a&gt;에 있는 &lt;a href=&quot;https://wikidocs.net/book/2&quot;&gt;왕초보를 위한 Python 2.7&lt;/a&gt;, &lt;a href=&quot;https://wikidocs.net/book/1&quot;&gt;점프 투 파이썬&lt;/a&gt; 한글 자료로 배우는 것도 좋습니다. 어느정도 익숙하다면 &lt;a href=&quot;https://github.com/wesm/pydata-book&quot;&gt;PyData Book&lt;/a&gt;이나 &lt;a href=&quot;http://python-guide-kr.readthedocs.io/ko/latest/writing/style.html&quot;&gt;The Hitchhiker's Guide to Python&lt;/a&gt;을 추천합니다.    
+  &lt;/p&gt;
+  &lt;p&gt;
+    R도 &lt;a href=&quot;http://tryr.codeschool.com/&quot;&gt;Code School - Try R&lt;/a&gt;에 가면 브라우저에서 직접 코드를 입력하고 바로 확인하는 식으로 배울 수 있습니다. 기본 문법을 익히고 R로 작업하는 것이 어느정도 익숙하다면 Hadley Wickham의 &lt;a href=&quot;http://r4ds.had.co.nz/&quot;&gt;R for Data Science&lt;/a&gt;도 추천합니다.
   &lt;/p&gt;
 &lt;/section&gt;
 
@@ -58,6 +205,9 @@
       &lt;img src=&quot;/images/2017-04-16/03-Understand_DB.png&quot; alt=&quot;데이터베이스를 이해하자&quot; /&gt;
     &lt;/figure&gt;
   &lt;/p&gt;
+  &lt;p&gt;
+  데이터가 어떤 형태로 어떻게 저장되는지 그리고 저장된 것을 어떻게 불러오는지 이해하는 것은 중요합니다.
+  &lt;/p&gt;
 &lt;/section&gt;
 
 &lt;section id=&quot;04-Explore-Data-Science-Workflow&quot;&gt;
@@ -68,6 +218,9 @@
       &lt;span class=&quot;marginnote&quot;&gt;원문에서는 Explore The Data Science Workflow 입니다.&lt;/span&gt;
       &lt;img src=&quot;/images/2017-04-16/04-Explore_Data_Science_Workflow.png&quot; alt=&quot;데이터 과학 업무 순서를 경험하자&quot; /&gt;
     &lt;/figure&gt;
+  &lt;/p&gt;
+  &lt;p&gt;
+  아무리 강조해도 지나치지 않을 정도로 정말 중요한 순서를 담고 있는 슬라이드입니다. 데이터 과학자는 이런 순서로 일을 합니다. 이 중에서도 탐험적 데이터 분석(Exploratory Data Anaalysis)에 해당하는 부분이 가장 중요한데, 이 글의 목적이 짧고 간결하게 각 과정을 다루는 것이니 여기에서는 자세히 다루지 않고 이 부분만 따로 떼어 하나의 글로 다루겠습니다. 
   &lt;/p&gt;
 &lt;/section&gt;
 
@@ -91,9 +244,12 @@
       &lt;img src=&quot;/images/2017-04-16/06-Grow_Meet_Learn.png&quot; alt=&quot;성장하고, 만나고, 배우자&quot; /&gt;
     &lt;/figure&gt;
   &lt;/p&gt;
+  &lt;p&gt;
+  비즈니스 환경은 급속도로 변하고 있고, 최신 이론, 분석 패키지나 라이브러리 등은 끊임없이 쏟아져 나오고 있습니다. 이러한 시대의 흐름에 뒤처지지 않기 위해 끊임없이 전문가들을 만나고 교류하며 배워야합니다. 이런 이유에서 특별히 데이터 과학자는 무엇이든 열린 마음으로 빠르게 잘 배울 수 있어야 합니다. 가장 빠르게 잘 배울 수 있고, 몸에 녹아들어가는 경험을 쌓을 수 있는 방법은 실제 연구나 프로젝트를 수행하는 것입니다. 지속적으로 데이터를 다루면서 자라가야합니다. 그렇지 않으면 무뎌지는 것은 한순간입니다. 당시에는 놀라운 결과였을지라도 한물 간 따분한 것으로 치부되는 것도 순식간에 벌어집니다. 어리고 뛰어난 사람들이 항상 치고 올라올 때 폼을 유지하더라도 능력의 격차를 줄어드는 것을 막기란 쉽지 않을텐데 경력 단절로 동향을 따라가지 못한다면 어떻겠습니까?
+  &lt;/p&gt;
 &lt;/section&gt;
 
-&lt;section id=&quot;07-Grow-Connect-Learn&quot;&gt;
+&lt;section id=&quot;07-Immerse-Yourself&quot;&gt;
   &lt;p&gt;
     &lt;figure&gt;
       &lt;label for=&quot;mn-figure-7&quot; class=&quot;margin-toggle&quot;&gt;&amp;#8853;&lt;/label&gt;
@@ -101,6 +257,9 @@
       &lt;span class=&quot;marginnote&quot;&gt;원문에서는 Immerse Yourself Completely 입니다.&lt;/span&gt;
       &lt;img src=&quot;/images/2017-04-16/07-Immerse_Yourself.png&quot; alt=&quot;스스로 완벽하게 몰입하자&quot; /&gt;
     &lt;/figure&gt;
+  &lt;/p&gt;
+  &lt;p&gt;
+  스스로 완벽하게 미친듯이 몰입하여 더욱 나아가는 것이 중요합니다.
   &lt;/p&gt;
 &lt;/section&gt;
 
@@ -115,10 +274,32 @@
   &lt;/p&gt;
 &lt;/section&gt;
 
+&lt;script type=&quot;text/javascript&quot; src=&quot;/js/footnotes.js&quot;&gt;&lt;/script&gt;
+&lt;script type=&quot;text/javascript&quot; src=&quot;/js/highlight.pack.js&quot;&gt;&lt;/script&gt;
+&lt;script&gt;hljs.initHighlightingOnLoad();&lt;/script&gt;
+&lt;!-- http://tsi.github.io/inlineDisqussions/ --&gt;
+&lt;script type=&quot;text/javascript&quot; src=&quot;/js/inlineDisqussions.js&quot;&gt;&lt;/script&gt;
+
+&lt;script&gt;
+disqus_shortname = 'danielykim';
+
+jQuery(document).ready(function() {
+  jQuery(&quot;p&quot;).inlineDisqussions();
+});
+
+jQuery(&quot;p&quot;).inlineDisqussions({
+  identifier: 'disqussion',
+  displayCount: true,
+  highlighted: true,
+  position: 'right',
+  background: '#FFFFF9',
+  maxWidth: 250
+});
+&lt;/script&gt;
 </description>
         <pubDate>Sun, 16 Apr 2017 00:00:00 +0000</pubDate>
-        <link>http://localhost:4000/articles/2017/04/16/Become-A-Data-Scientist</link>
-        <guid isPermaLink="true">http://localhost:4000/articles/2017/04/16/Become-A-Data-Scientist</guid>
+        <link>http://localhost:4000/articles/2017/04/16/Become-A-Data-Scientist/</link>
+        <guid isPermaLink="true">http://localhost:4000/articles/2017/04/16/Become-A-Data-Scientist/</guid>
         
         
       </item>
@@ -179,8 +360,8 @@
 
 </description>
         <pubDate>Sat, 08 Apr 2017 00:00:00 +0000</pubDate>
-        <link>http://localhost:4000/articles/2017/04/08/DQN-tensorflow-on-Windows</link>
-        <guid isPermaLink="true">http://localhost:4000/articles/2017/04/08/DQN-tensorflow-on-Windows</guid>
+        <link>http://localhost:4000/articles/2017/04/08/DQN-tensorflow-on-Windows/</link>
+        <guid isPermaLink="true">http://localhost:4000/articles/2017/04/08/DQN-tensorflow-on-Windows/</guid>
         
         
       </item>
@@ -195,6 +376,11 @@
 시계열 G
     &lt;/span&gt;
 이 예제에서는 Box, Jenkins, and Reinsel 1994에 있는 시계열 데이터 G를 사용하여 계절적인 데이터에 대한 박스-젠킨스 시계열 분석 방법을 다룰 것이다. 아래 그림에서 볼 수 있듯이 144개의 관측값이 있다.
+  &lt;/p&gt;
+&lt;/section&gt;
+
+&lt;section&gt;
+  &lt;p&gt;
     &lt;figure&gt;
       &lt;img src=&quot;http://www.itl.nist.gov/div898/handbook/pmc/section4/pmc44a_r01.gif&quot;&gt;
     &lt;/figure&gt;
@@ -398,8 +584,8 @@ $$ X_{t} - \delta = A_{t} + \theta_{1} A_{t-1} + \phi_{1} A_{t-12} + \theta_{1} 
 &lt;/section&gt;
 </description>
         <pubDate>Fri, 25 Nov 2016 00:00:00 +0000</pubDate>
-        <link>http://localhost:4000/articles/2016/11/25/ESH-06-04-04-10</link>
-        <guid isPermaLink="true">http://localhost:4000/articles/2016/11/25/ESH-06-04-04-10</guid>
+        <link>http://localhost:4000/articles/2016/11/25/ESH-06-04-04-10/</link>
+        <guid isPermaLink="true">http://localhost:4000/articles/2016/11/25/ESH-06-04-04-10/</guid>
         
         
       </item>
@@ -414,17 +600,21 @@ $$ X_{t} - \delta = A_{t} + \theta_{1} A_{t-1} + \phi_{1} A_{t-12} + \theta_{1} 
 시계열 F
     &lt;/span&gt;
 Box, Jenkins, and Reinsel, 1994에 있는 시계열 F 데이터를 살펴보자. 다음 그래프에서 볼 수 있는 것처럼 원본 데이터에는 70개의 점이 있다.    
+  &lt;/p&gt;
+&lt;/section&gt;
+
+&lt;section&gt;
+  &lt;p&gt;
     &lt;figure&gt;
       &lt;img src=&quot;http://www.itl.nist.gov/div898/handbook/pmc/section4/pmc449_r01.gif&quot;&gt;
-    &lt;/figure&gt;
+    &lt;/figure&gt;  
   &lt;/p&gt;
   &lt;p&gt;
 데이터에 계절적인 성분이나 눈에 띄는 추세가 있는 것 같진 않다. (직선을 데이터에 맞춰 시계열의 정상성을 확인했다. 0에서 많이 차이나는 기울기가 보이진 않았다. p-값 = 0.2)
   &lt;/p&gt;
   &lt;p&gt;
 6.4.4.10절에서 나머지 시계열에 박스-융 테스트를 다루는 예제가 있다.
-
-  &lt;/p&gt;
+  &lt;/p&gt;  
 &lt;/section&gt;
 
 &lt;section&gt;
@@ -571,8 +761,8 @@ $$ X_{t} = \delta + \phi_{1} X_{t-1} + \phi_{2} X_{t-2} + A_{t} $$
 &lt;/section&gt;
 </description>
         <pubDate>Fri, 25 Nov 2016 00:00:00 +0000</pubDate>
-        <link>http://localhost:4000/articles/2016/11/25/ESH-06-04-04-09</link>
-        <guid isPermaLink="true">http://localhost:4000/articles/2016/11/25/ESH-06-04-04-09</guid>
+        <link>http://localhost:4000/articles/2016/11/25/ESH-06-04-04-09/</link>
+        <guid isPermaLink="true">http://localhost:4000/articles/2016/11/25/ESH-06-04-04-09/</guid>
         
         
       </item>
@@ -621,8 +811,8 @@ Negiz 데이터 사례 연구에 박스-젠킨스 모델에서 나머지를 분�
 &lt;/section&gt;
 </description>
         <pubDate>Fri, 25 Nov 2016 00:00:00 +0000</pubDate>
-        <link>http://localhost:4000/articles/2016/11/25/ESH-06-04-04-08</link>
-        <guid isPermaLink="true">http://localhost:4000/articles/2016/11/25/ESH-06-04-04-08</guid>
+        <link>http://localhost:4000/articles/2016/11/25/ESH-06-04-04-08/</link>
+        <guid isPermaLink="true">http://localhost:4000/articles/2016/11/25/ESH-06-04-04-08/</guid>
         
         
       </item>
@@ -689,8 +879,8 @@ Negiz 데이터 사례 연구에 박스-젠킨스 모델에서 나머지를 분�
 &lt;/section&gt;
 </description>
         <pubDate>Fri, 25 Nov 2016 00:00:00 +0000</pubDate>
-        <link>http://localhost:4000/articles/2016/11/25/ESH-06-04-04-08-01</link>
-        <guid isPermaLink="true">http://localhost:4000/articles/2016/11/25/ESH-06-04-04-08-01</guid>
+        <link>http://localhost:4000/articles/2016/11/25/ESH-06-04-04-08-01/</link>
+        <guid isPermaLink="true">http://localhost:4000/articles/2016/11/25/ESH-06-04-04-08-01/</guid>
         
         
       </item>
@@ -744,8 +934,8 @@ Negiz 사례 연구에서 박스-젠킨스 모델 맞추는 예제를 살펴볼 
 &lt;/section&gt;
 </description>
         <pubDate>Fri, 25 Nov 2016 00:00:00 +0000</pubDate>
-        <link>http://localhost:4000/articles/2016/11/25/ESH-06-04-04-07</link>
-        <guid isPermaLink="true">http://localhost:4000/articles/2016/11/25/ESH-06-04-04-07</guid>
+        <link>http://localhost:4000/articles/2016/11/25/ESH-06-04-04-07/</link>
+        <guid isPermaLink="true">http://localhost:4000/articles/2016/11/25/ESH-06-04-04-07/</guid>
         
         
       </item>
@@ -926,8 +1116,8 @@ Negiz 사례 연구에서 박스-젠킨스 모델 맞추는 예제를 살펴볼 
 &lt;/section&gt;
 </description>
         <pubDate>Fri, 25 Nov 2016 00:00:00 +0000</pubDate>
-        <link>http://localhost:4000/articles/2016/11/25/ESH-06-04-04-06</link>
-        <guid isPermaLink="true">http://localhost:4000/articles/2016/11/25/ESH-06-04-04-06</guid>
+        <link>http://localhost:4000/articles/2016/11/25/ESH-06-04-04-06/</link>
+        <guid isPermaLink="true">http://localhost:4000/articles/2016/11/25/ESH-06-04-04-06/</guid>
         
         
       </item>
@@ -1053,148 +1243,8 @@ Negiz 데이터 사례 연구에 부분 자기상관 그래프가 있다.
 &lt;/section&gt;
 </description>
         <pubDate>Fri, 25 Nov 2016 00:00:00 +0000</pubDate>
-        <link>http://localhost:4000/articles/2016/11/25/ESH-06-04-04-06-03</link>
-        <guid isPermaLink="true">http://localhost:4000/articles/2016/11/25/ESH-06-04-04-06-03</guid>
-        
-        
-      </item>
-    
-      <item>
-        <title>6.4.4.6.2. 이산화탄소 농도 데이터에서 모델 판별</title>
-        <description>&lt;section&gt;
-  &lt;p&gt;
-    &lt;label for=&quot;mn-h01&quot; class=&quot;margin-toggle&quot;&gt;⊕ &lt;/label&gt;
-    &lt;input type=&quot;checkbox&quot; id=&quot;mn-h01&quot; class=&quot;margin-toggle&quot;&gt;
-    &lt;span class=&quot;marginnote&quot;&gt;
-월별 이산화탄소 농도 에제
-    &lt;/span&gt;
-두 번째 예제는 월별 이산화탄소 농도 데이터이다. 첫 번째 예제처럼, 먼저 정상성을 확인하기 위해 진행 순서 그래프(Run sequence plot)를 보자.
-  &lt;/p&gt;
-&lt;/section&gt;
-
-&lt;section&gt;
-  &lt;p&gt;
-    &lt;label for=&quot;mn-h02&quot; class=&quot;margin-toggle&quot;&gt;⊕ &lt;/label&gt;
-    &lt;input type=&quot;checkbox&quot; id=&quot;mn-h02&quot; class=&quot;margin-toggle&quot;&gt;
-    &lt;span class=&quot;marginnote&quot;&gt;
-진행 순서 그래프
-    &lt;/span&gt;
-    &lt;figure&gt;
-      &lt;img src=&quot;http://www.itl.nist.gov/div898/handbook/pmc/section4/gifs/co2runsq.gif&quot;&gt;
-    &lt;/figure&gt;
-  &lt;/p&gt;
-  &lt;p&gt;
-데이터의 진행 순서 그래프에서 증가 추세가 보인다. 단순한 직선으로 증가 추세를 충분히 맞출 수 있을 것 같다.
-  &lt;/p&gt;
-&lt;/section&gt;
-
-&lt;section&gt;
-  &lt;p&gt;
-    &lt;label for=&quot;mn-h03&quot; class=&quot;margin-toggle&quot;&gt;⊕ &lt;/label&gt;
-    &lt;input type=&quot;checkbox&quot; id=&quot;mn-h03&quot; class=&quot;margin-toggle&quot;&gt;
-    &lt;span class=&quot;marginnote&quot;&gt;
-계절적인 부 시계열 그래프
-    &lt;/span&gt;
-    &lt;figure&gt;
-      &lt;img src=&quot;http://www.itl.nist.gov/div898/handbook/pmc/section4/gifs/co2res.gif&quot;&gt;
-    &lt;/figure&gt;
-  &lt;/p&gt;
-  &lt;p&gt;
-여기에서 \(y\)축은 원 데이터에서 맞춘 직선을 뺀 나머지이다. 선형 추세를 제거하고나니, 진행 순서 그래프는 일정한 위치에 놓였고 일정한 분산을 가지는 것을 볼 수 있다. 이러한 경향은 정상성(stationarity)을 의미한다.
-  &lt;/p&gt;
-  &lt;p&gt;
-하지만, 그래프에 게절성(seasonality)이 없다. 주기를 정하기 위해 자기상관함수를 확인하고 주기적 부 시계열 그래프를 살펴보자.
-  &lt;/p&gt;
-&lt;/section&gt;
-
-&lt;section&gt;
-  &lt;p&gt;
-    &lt;label for=&quot;mn-h04&quot; class=&quot;margin-toggle&quot;&gt;⊕ &lt;/label&gt;
-    &lt;input type=&quot;checkbox&quot; id=&quot;mn-h04&quot; class=&quot;margin-toggle&quot;&gt;
-    &lt;span class=&quot;marginnote&quot;&gt;
-자기상관 그래프
-    &lt;/span&gt;
-    &lt;figure&gt;
-      &lt;img src=&quot;http://www.itl.nist.gov/div898/handbook/pmc/section4/gifs/co2auto.gif&quot;&gt;
-    &lt;/figure&gt;
-  &lt;/p&gt;
-  &lt;p&gt;
-자기상관 그래프에서 뾰족한 양수와 음수 막대가 반복하여 나타난다. 12 뒤처짐마다 패턴이 반복되는 것도 보인다. 이것은 계절성 효과와 관련 있다.
-  &lt;/p&gt;
-  &lt;p&gt;
-자기상관 그래프에서 두 선은 자기상관의 통계적인 유의미함에 대한 95%와 99% 신뢰 구간이다.  
-  &lt;/p&gt;
-&lt;/section&gt;
-
-&lt;section&gt;
-  &lt;p&gt;
-    &lt;label for=&quot;mn-h05&quot; class=&quot;margin-toggle&quot;&gt;⊕ &lt;/label&gt;
-    &lt;input type=&quot;checkbox&quot; id=&quot;mn-h05&quot; class=&quot;margin-toggle&quot;&gt;
-    &lt;span class=&quot;marginnote&quot;&gt;
-계절적인 부 시계열 그래프
-    &lt;/span&gt;
-    &lt;figure&gt;
-      &lt;img src=&quot;http://www.itl.nist.gov/div898/handbook/pmc/section4/gifs/co2seas.gif&quot;&gt;
-    &lt;/figure&gt;
-  &lt;/p&gt;
-  &lt;p&gt;
-그래프에서 의미있는 계절적인 패턴이 분명하게 보이니, 박스-젠킨스 모델을 맞출 때 계절적인 항을 추가해야 한다. 월별 데이터라서 12 뒤처짐 계절적인 자동회귀나(와) 이동 평균 항을 추가하자.
-
-  &lt;/p&gt;
-  &lt;p&gt;
-비-계절적 성분을 잘 판별하기 위해 12라는 계절적인 차이를 고려하고 계절적인 차이를 고려한 데이터에서 자기상관 그래프를 보자.
-
-  &lt;/p&gt;
-&lt;/section&gt;
-
-&lt;section&gt;
-  &lt;p&gt;
-    &lt;label for=&quot;mn-h06&quot; class=&quot;margin-toggle&quot;&gt;⊕ &lt;/label&gt;
-    &lt;input type=&quot;checkbox&quot; id=&quot;mn-h06&quot; class=&quot;margin-toggle&quot;&gt;
-    &lt;span class=&quot;marginnote&quot;&gt;
-계절적인 차이를 고려한 데이터의 자기상관 그래프
-    &lt;/span&gt;
-    &lt;figure&gt;
-      &lt;img src=&quot;http://www.itl.nist.gov/div898/handbook/pmc/section4/gifs/co2sauto.gif&quot;&gt;
-    &lt;/figure&gt;
-  &lt;/p&gt;
-  &lt;p&gt;
-위의 자기상관 그래프에 지수적인 감소와 감쇠 사인 패턴이 혼합된 형태가 보인다. 차수가 1보다 큰 AR 모델이 적절한 것 같다. 차수를 잘 판별하기 위해 부분 자기상관 그래프를 보자.
-  &lt;/p&gt;
-&lt;/section&gt;
-
-&lt;section&gt;
-  &lt;p&gt;
-    &lt;label for=&quot;mn-h07&quot; class=&quot;margin-toggle&quot;&gt;⊕ &lt;/label&gt;
-    &lt;input type=&quot;checkbox&quot; id=&quot;mn-h07&quot; class=&quot;margin-toggle&quot;&gt;
-    &lt;span class=&quot;marginnote&quot;&gt;
-계절적인 차이를 고려한 데이터의 자기상관 그래프
-    &lt;/span&gt;
-    &lt;figure&gt;
-      &lt;img src=&quot;http://www.itl.nist.gov/div898/handbook/pmc/section4/gifs/co2spart.gif&quot;&gt;
-    &lt;/figure&gt;
-  &lt;/p&gt;
-  &lt;p&gt;
-부분 자기상관 그래프에서 부분 자기상관이 두 번째 뒤처짐부터 0이 되는 것을 보니 AR(2) 모델이 적합한 것 같다. 어떤 종류의 나머지 계절성을 의미하는 뒤처짐 12도 두드러지게 보인다.
-  &lt;/p&gt;
-  &lt;p&gt;
-요약하면, 선형 추세를 제거한 데이터에 대한 계절적인 AR(12) 항이 있는 AR(2) 모델이 적합했다. 계절적인 차이를 적용했을 때와 그렇지 않았을 때도 할 수 있을 것이다. 모델을 결정하기 전에 꼭 모델을 검증해야 한다.  
-  &lt;/p&gt;
-&lt;/section&gt;
-
-&lt;section&gt;
-  &lt;ul class=&quot;pager&quot;&gt;
-    &lt;li class=&quot;previous&quot;&gt;&lt;a href=&quot;/articles/2016/11/25/ESH-06-04-04-06-01&quot;&gt;Previous&lt;/a&gt;&lt;/li&gt;
-    &lt;li class=&quot;next&quot;&gt;&lt;a href=&quot;/articles/2016/11/25/ESH-06-04-04-06-03&quot;&gt;Next&lt;/a&gt;&lt;/li&gt;      
-  &lt;/ul&gt;
-  &lt;p&gt;
-    &lt;a href=&quot;http://www.itl.nist.gov/div898/handbook/pmc/section4/pmc4462.htm&quot;&gt;원문 보기&lt;/a&gt;
-  &lt;/p&gt;
-&lt;/section&gt;
-</description>
-        <pubDate>Fri, 25 Nov 2016 00:00:00 +0000</pubDate>
-        <link>http://localhost:4000/articles/2016/11/25/ESH-06-04-04-06-02</link>
-        <guid isPermaLink="true">http://localhost:4000/articles/2016/11/25/ESH-06-04-04-06-02</guid>
+        <link>http://localhost:4000/articles/2016/11/25/ESH-06-04-04-06-03/</link>
+        <guid isPermaLink="true">http://localhost:4000/articles/2016/11/25/ESH-06-04-04-06-03/</guid>
         
         
       </item>

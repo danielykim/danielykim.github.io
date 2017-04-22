@@ -1,0 +1,254 @@
+---
+layout: post
+title: 탐험적 데이터 분석
+subtitle: Exploratory Data Analysis
+---
+
+
+<section>
+  <p>
+  아래는 Hadley Wickham<label for="sn-extensive-use-of-sidenotes" class="margin-toggle sidenote-number"></label><input type="checkbox" id="sn-extensive-use-of-sidenotes" class="margin-toggle"/><span class="sidenote"><a href="https://www.rdocumentation.org/trends">R 사용자들이 지금까지 가장 많이 내려받은 패키지</a>인 dplyr와 ggplot2를 만든 사람입니다.</span>이 지은 <a href="http://r4ds.had.co.nz/explore-intro.html"><em>R for Data Science</em></a> 1장과 2장에 있는 그림입니다. 이 글에서는 아래의 그림에 나타난 순서대로 <em>탐험적 데이터 분석</em>에서 모델링을 잘 하는 것이 왜 중요한 지 강조하겠습니다.<label for="sn-extensive-use-of-sidenotes" class="margin-toggle sidenote-number"></label><input type="checkbox" id="sn-extensive-use-of-sidenotes" class="margin-toggle"/><span class="sidenote">아주 짧게 결론부터 이야기하면, 이 모델링에서 가치가 창출되기 때문입니다. 구체적인 내용은 아래에서 다루겠습니다.</span> 그리고 일반적인 과학 활동보다는 비즈니스 상황에서 데이터 과학자가 일하는 방식, 겪게되는 상황 등을 위주로 다루겠습니다.
+  </p>
+</section>
+
+
+<section>
+  <figure>
+    <label for="mn-exports-imports" class="margin-toggle">&#8853;</label><input type="checkbox" id="mn-exports-imports" class="margin-toggle"/><span class="marginnote">출처: Hadley Wickham, <a href="http://r4ds.had.co.nz/explore-intro.html"><em>R for Data Science</em>.</a><br/> 이 그림은 <a href="https://creativecommons.org/licenses/by-nc-nd/3.0/us/">미국 Creative Commons Attribution-NonCommercial-NoDerivs 3.0 라이선스</a>에 의해 보호 받고 있습니다. 이 그림은 상업적으로 이용할 수 없고, 재조합하거나 변형해서 배포할 수 없습니다.</span>
+    <img src="http://r4ds.had.co.nz/diagrams/data-science-explore.png" alt="탐험적 데이터 분석 - 탐색" />
+  </figure>
+  <p>
+  그림에서 왼쪽부터 번호를 붙여 하나씩 살펴보겠습니다.
+    <ol>
+      <li>1. 부르기 Import</li>
+      <li>2. 깔끔하게 만들기 Tidy</li>
+      <li>3. 바꾸기 Transform</li>
+      <li>4. 시각화 Visualise<label for="sn-extensive-use-of-sidenotes" class="margin-toggle sidenote-number"></label><input type="checkbox" id="sn-extensive-use-of-sidenotes" class="margin-toggle"/><span class="sidenote">원문 그림을 따라 <i>Visualize</i> 대신 영국식 영어 철자 <i>Visualise</i> 로 표기합니다.</span></li>
+      <li>5. 모델링 Model</li>
+      <li>6. 소통 Communicate</li>
+    </ol>
+  </p>
+  <p>
+  데이터 과학자라면 학문적인 배경<label for="sn-extensive-use-of-sidenotes" class="margin-toggle sidenote-number"></label><input type="checkbox" id="sn-extensive-use-of-sidenotes" class="margin-toggle"/><span class="sidenote">흔히 비즈니스 상황에서 데이터 과학자가 될 수 있는 학문적인 배경에는 컴퓨터 과학/공학/전산학, 통계학, 생물학, 물리학, 수학 등이 있습니다. 수학과 컴퓨터를 잘한다면 경제학이나 사회학도 가능합니다. 물론, 보유 기술과 연구 주제에 따라 자세한 구분이 필요합니다.</span>에 상관 없이 주로 위의 순서로 일합니다. 모든 단계가 중요하지만 탐험적 데이터 분석의 핵심이라고 할 수 있는 3번부터 5번이 특별히 더 중요합니다. 그럼 이제 각 단계를 하나씩 살펴보겠습니다.
+  </p>
+</section>
+
+
+<section>
+  <h2>1. 부르기 Import</h2>
+  <p>
+  당연하게도 데이터를 불러오지 않으면 데이터가 있을 수가 없습니다. 이 과정이 없으면 데이터 없는 데이터 과학자가 됩니다. 데이터 엔지니어(Data Engineer)가 불러오는 작업을 맡는 경우에는 데이터 과학자가 직접 불러오지 않아도 됩니다. 직접 맡지 않더라도 <i>풀려고 하는 비즈니스 문제</i>에 맞는 데이터를 불러오도록 충분한 협의가 필요합니다. 협의 과정에서 <i>해당 문제</i>를 풀 때 필요한 데이터가 없다는 것을 알게 될 수도 있습니다. 이렇게 데이터가 부족한 경우에는 의뢰인과 협의하며 풀려는 문제를 수정해야할 수도 있습니다.
+  </p>
+  <p>
+문제를 구체적으로 잘 정하는 것은 아무리 강조해도 지나치지 않을만큼 정말 중요합니다. 과정의 시작부터 잘 정하지 못하더라도 탐험적 데이터 과정을 통해 문제를 수정하거나 이상한 데이터를 찾을 수도 있습니다. 어떤 경우에는 처음 정한 문제에만 딱 맞게 데이터를 불러와서 문제가 수정되었을 때 데이터가 큰데도 새로 불러와야 하는 경우가 생깁니다. 따라서 가능한 변수의 합집합을 미리 추리면서 쓸모 없는 변수를 정성적으로 쳐내는 과정도 중요합니다.
+  </p>
+</section>
+
+<section>
+  <h2>2. 깔끔하게 만들기 Tidy</h2>
+  <p>
+  이 Tidy 과정은 분석하기 좋도록 깔끔하게 만드는 과정입니다. 단순한 원본 데이터를 단순하게 정리data cleaning하는 것보다 체계적인 의미가 있습니다. 1번 과정처럼 2번 과정 역시 데이터 엔지니어가 맡는다면 데이터 과학자가 직접 하지 않아도 됩니다.
+  </p>
+  <p>
+  분석하기 좋도록 깔끔하게 만든 데이터는 다음과 같은 성질이 있습니다.<label for="sn-extensive-use-of-sidenotes" class="margin-toggle sidenote-number"></label><input type="checkbox" id="sn-extensive-use-of-sidenotes" class="margin-toggle"/><span class="sidenote">출처: <a href="http://vita.had.co.nz/papers/tidy-data.html">Hadley Wickham, "Tidy Data", <i>The Journal of Statistical Software</i>, <b>59</b> (2014).</a></span>
+    <ol>
+      <li>1. 각 변수가 한 열을 구성합니다.</li>
+      <li>2. 각 관측이 한 행을 구성합니다.</li>
+      <li>3. 각 관측 단위의 종류가 하나의 표를 구성합니다.</li>
+    </ol>
+  </p>
+  <p>
+  위의 성질을 이해하는데 도움이 되도록 아래에 표 3개<label for="sn-extensive-use-of-sidenotes" class="margin-toggle sidenote-number"></label><input type="checkbox" id="sn-extensive-use-of-sidenotes" class="margin-toggle"/><span class="sidenote">Hadley Wickham이 <a href="http://vita.had.co.nz/papers/tidy-data.html">논문</a>에서 사용했던 예제 표 3개를 한글로 옮긴 것입니다.</a></span>를 인용하였습니다. 바로 아래에 있는 표1에는 사람마다 처방 종류에 따라 결과값이 있습니다.
+  </p>
+  
+  <table style="width:25%; margin-left:0px;">
+    <caption>표 1.</caption>
+    <tr>
+      <th style="text-align:center;"> </th>
+      <th style="text-align:center;">처방a</th>
+      <th style="text-align:center;">처방b</th>
+    </tr>
+    <tr>
+      <td style="text-align:center;">사람1</td>
+      <td style="text-align:center;">-</td>
+      <td style="text-align:center;">2</td>
+    </tr>
+    <tr>
+      <td style="text-align:center;">사람2</td>
+      <td style="text-align:center;">16</td>
+      <td style="text-align:center;">11</td>
+    </tr>
+    <tr>
+      <td style="text-align:center;">사람3</td>
+      <td style="text-align:center;">3</td>
+      <td style="text-align:center;">1</td>
+    </tr>
+  </table>
+
+  <p>
+  아래의 표2는 위의 표1에서 가로와 세로만 뒤집은 것입니다.
+  </p>
+
+  <table style="width:25%; margin-left:0px;">
+    <caption>표 2.</caption>
+    <tr>
+      <th style="text-align:center;"> </th>
+      <th style="text-align:center;">사람1</th>
+      <th style="text-align:center;">사람2</th>
+      <th style="text-align:center;">사람3</th>
+    </tr>
+    <tr>
+      <td style="text-align:center;">처방a</td>
+      <td style="text-align:center;">-</td>
+      <td style="text-align:center;">16</td>
+      <td style="text-align:center;">3</td>
+    </tr>
+    <tr>
+      <td style="text-align:center;">처방b</td>
+      <td style="text-align:center;">2</td>
+      <td style="text-align:center;">11</td>
+      <td style="text-align:center;">1</td>
+    </tr>
+  </table>
+  
+  <p>
+  표3은 표1과 표2에서 사용한 것과 정확하게 같은 데이터를 나타낸 것입니다. 하지만 표1과 표2와는 다르게, 표3에서는 변수마다 열을 이루고 각 관측값이 행을 이룹니다.
+  </p>
+
+  <table style="width:25%; margin-left:0px;">
+    <caption>표 3.</caption>
+    <tr>
+      <th style="text-align:center;">이름</th>
+      <th style="text-align:center;">처방</th>
+      <th style="text-align:center;">결과</th>
+    </tr>
+    <tr>
+      <td style="text-align:center;">사람1</td>
+      <td style="text-align:center;">a</td>
+      <td style="text-align:center;">-</td>
+    </tr>
+    <tr>
+      <td style="text-align:center;">사람2</td>
+      <td style="text-align:center;">a</td>
+      <td style="text-align:center;">16</td>
+    </tr>
+    <tr>
+      <td style="text-align:center;">사람3</td>
+      <td style="text-align:center;">a</td>
+      <td style="text-align:center;">3</td>
+    </tr>
+    <tr>
+      <td style="text-align:center;">사람1</td>
+      <td style="text-align:center;">b</td>
+      <td style="text-align:center;">2</td>
+    </tr>
+    <tr>
+      <td style="text-align:center;">사람2</td>
+      <td style="text-align:center;">b</td>
+      <td style="text-align:center;">11</td>
+    </tr>
+    <tr>
+      <td style="text-align:center;">사람3</td>
+      <td style="text-align:center;">b</td>
+      <td style="text-align:center;">1</td>
+    </tr>
+  </table>
+ 
+  <p>
+  표3과 같이 나타내면 여러 가지 장점이 있겠습니다만 한 가지만 들어보겠습니다. <a href="https://en.wikipedia.org/wiki/Iris_flower_data_set">Iris data</a>를 가지고 그린 아래 그림에서처럼 종(Species)마다 색을 입혀서 종별로 패턴을 비교할 수 있게 됩니다.
+  </p>
+
+  <figure>
+    <label for="mn-exports-imports" class="margin-toggle">&#8853;</label><input type="checkbox" id="mn-exports-imports" class="margin-toggle"/><span class="marginnote">출처: <a href="https://www.mailman.columbia.edu/sites/default/files/media/fdawg_ggplot2.html">Data Visualization with ggplot2</a></span>
+    <img src="{{ site.baseurl }}/images/2017-04-22/sepal_length_vs_sepal_width.png" alt="" />
+  </figure>
+
+  
+</section>
+
+
+<section>
+  <h2>3. 바꾸기 Transform</h2>
+  <p>
+  이 단계부터가 본격적인 <i>탐험적 데이터 분석</i> 과정입니다. 파이썬 pandas 라이브러리 문서의 <a href="http://pandas.pydata.org/pandas-docs/stable/groupby.html">Group By 항목</a>에서 설명하는 것처럼, 무리지어 종합하거나, 수학적으로 값을 적절히 변환하거나, 데이터에서 일부를 추출할 수도 있습니다. 문제를 풀려고 세운 가설을 검증하는데 도움이 될만한 패턴을 찾기 위해서 이런 작업을 합니다. 이 단계를 종종 여러번 수행하기 때문에 데이터가 너무 클 때는 전체 데이터를 가지고 하기보다는, 데이터 전체를 대표하는 항목들을 가지고 합니다. 또는 데이터 전체를 대표하는 항목을 여러번 골라서 통계적인 분석을 수행하기도 합니다. 다양한 방법 중에서 문제를 풀려고 세운 가설에 적합한 방식을 고릅니다. 
+  </p>
+</section>
+
+
+<section>
+  <h2>4. 시각화 Visualise</h2>
+  <p>
+  이 과정에서는 변수 각각의 통계적인 패턴을 보기도 하고, 변수마다 나타나는 통계적인 패턴을 서로 비교하기도 합니다. 또는 이러한 패턴의 시간적인 변화를 보기도 합니다. 이 역시 문제를 풀려고 세운 가설을 검증하는데 도움이 될만한 패턴을 찾기 위해서 이런 작업을 수행합니다. 때때로 같은 데이터라도 시각화 방법에 따라 다른 직관을 줄 수도 있기 때문에 같은 데이터를 다양한 방식으로 여러번 그리기도 합니다. 시각화 방식에 따라 잃는 정보의 수준이 다를 수도 있습니다. 이 과정에서 특이하거나 이상한 값을 발견하기도 합니다.<label for="sn-extensive-use-of-sidenotes" class="margin-toggle sidenote-number"></label><input type="checkbox" id="sn-extensive-use-of-sidenotes" class="margin-toggle"/><span class="sidenote">이러한 상황이 생기면 3단계를 다시 수행하거나 심각하면 1단계부터 다시 해야할 수도 있습니다.</span> 데이터 과학자의 숙련도에 따라, 데이터 속에서 적절한 패턴을 찾기 위해 헤메는 시간이 줄어들 것입니다.
+  </p>
+</section>
+
+<!--section>
+  <div class="epigraph">
+    <blockquote>
+      "Simplicity is the ultimate sophistication."
+      <footer>- Leonardo da Vinci</footer>
+    </blockquote>
+    <blockquote>
+      "Make things as simple as possible, but not simpler."
+      <footer>- Albert Einstein</footer>
+    </blockquote>
+  </div>
+</section-->
+
+<section>
+</section>
+
+<section>
+  <h2>5. 모델링 Model</h2>
+  <p>
+  모델링 과정은 <i>탐험적 데이터 분석</i>의 핵심이고 데이터 과학자의 역할이라고도 할 수 있겠습니다. 데이터에서 나타나는 패턴을 설명하는 과정입니다. 데이터를 산더미 같이 많이 모으는 것은 기술적으로는 대단한 일이고 중요한 일입니다. 하지만 그 데이터 자체만으로는 별 의미가 없습니다. 데이터를 많이 모으는 것은 데이터 과학자의 정체성이 아닙니다. 결국에는 잘 설명해야합니다. 데이터를 설명하지 않는 것은 뭔가를 지을 때 건축 자재를 일단 몽땅 가져다 놓기만 하고 아무일도 하지 않는 것과 같습니다. 열심히 모은 데이터를 체계적인 설명해야 여기에서 가치가 나올 수 있습니다.<label for="sn-extensive-use-of-sidenotes" class="margin-toggle sidenote-number"></label><input type="checkbox" id="sn-extensive-use-of-sidenotes" class="margin-toggle"/><span class="sidenote">물론, 엉뚱한 데이터를 쓸데없이 많이 모으기만 하면 안 나오겠습니다.</span>
+  </p>
+  <p>
+  잘 설명하려면 먼저 문제를 분명하게 정하는 것이 중요합니다.
+  </p>
+  <p>
+  이미 알려진 시스템에 관한 설명을 많이 알고 있으면, 다루고 있는 시스템에서 나타나는 현상과 비교하여 비유를 통해 잘 설명할 수도 있습니다. 꼭 정량적인 설명이 아닐 수도 있습니다. 융합적인 생각이 중요할 수 있습니다.
+  </p>
+  <figure>
+    <img src="{{ site.baseurl }}/images/2017-04-22/Quotations-Leonardo_da_Vinci-Albert_Einstein.png" alt="탐험적 데이터 분석 - 탐색" />
+  </figure>
+  <p>
+  또한 세련된 설명은 위의 그림에서 다빈치와 아인슈타인의 말과 같이 단순해야한다고 생각합니다.<label for="sn-extensive-use-of-sidenotes" class="margin-toggle sidenote-number"></label><input type="checkbox" id="sn-extensive-use-of-sidenotes" class="margin-toggle"/><span class="sidenote">물론, 너무 단순해서 설명을 잘 못하면 안 되겠습니다.</span> 복잡해지면 유지 보수 운영 측면에서 걷잡을 수 없는 혼란에 빠지기 쉽상입니다. 처음부터 모델을 복잡하게 세우면, 잘 세웠다면 유지 보수 운영하는 사람들이 굳이 하지 않아도 될 일이 생깁니다. 다루는 시스템에서 굳이 넣을 필요 없는 수학적인 방법을 몽땅 때려 넣고 온갖 조건문으로 뒤범벅되어있는 <i>스파게티 모델</i><label for="sn-extensive-use-of-sidenotes" class="margin-toggle sidenote-number"></label><input type="checkbox" id="sn-extensive-use-of-sidenotes" class="margin-toggle"/><span class="sidenote"><i>스파게티 코드</i>와 비슷한 의미에서 사용했습니다.</span>을 피합시다!
+  </p>
+  <p>
+  이는 비즈니스 상황에서 법칙을 찾자는 이야기가 결코 아닙니다. 비즈니스 상황에서는 모델이 adaptive하고 flexible 해도 괜찮습니다. 기업에 커다란 손해를 끼치 수 있는 <i>스파게티 모델</i>을 피하자는 것입니다. 어떻게 피해야 하겠습니까? 먼저, 데이터 과학자 본인이 통계, 수학 등 이론적인 부분을 챙기면서 꾸준한 프로젝트 참여를 통해 뒤처지지 않아야겠습니다. 그렇다고 생기지 않는 것은 아닙니다. 데이터 과학 업무를 의뢰하는 회사나 담당자도 마케팅 측면에서 말도 안되는 방식으로 수학적인 기법을 무리하게 동원하도록 강제하는 일이 없어야 겠습니다.<label for="sn-extensive-use-of-sidenotes" class="margin-toggle sidenote-number"></label><input type="checkbox" id="sn-extensive-use-of-sidenotes" class="margin-toggle"/><span class="sidenote">예를 들면, "우리 회사도 요즘 유행하는 A라는 기법을 사용하여 혁신을 이뤄냈습니다"라고 말하고 싶어하는 과도한 욕심을 자제하시라는 것입니다.</span>
+  </p>
+</section>
+
+
+<section>
+  <h2>6. 소통</h2>
+  <p>
+  이 과정에서는 설명한 결과를 가지고 의뢰한 회사나 담당자와 함께 이야기합니다.<label for="sn-extensive-use-of-sidenotes" class="margin-toggle sidenote-number"></label><input type="checkbox" id="sn-extensive-use-of-sidenotes" class="margin-toggle"/><span class="sidenote">일방적인 보고가 될 수도 있겠지만</span> 기존에 정성적으로 알고 있었거나 사용하고 있던 방식과 비교하기도 합니다. 3, 4, 5단계를 순서대로 거쳐 6단계에 도착하기보다는, 각 단계에서 언제든지 소통이 필요하면 이 단계로 넘어와서 다시 돌아갑니다. 해당 업종을 잘 알고 있는 데이터 과학자라면 이 단계를 덜 거치겠지만, 그렇지 않은 경우에는 열린 마음으로 이 과정을 많이 거치는 것이 모두가 만족할 수 있는 결과로 이어집니다.
+  </p>
+</section>
+
+
+
+<script type="text/javascript" src="{{ "/js/footnotes.js" | prepend: site.baseurl }}"></script>
+<script type="text/javascript" src="{{ "/js/highlight.pack.js" | prepend: site.baseurl }}"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+<!-- http://tsi.github.io/inlineDisqussions/ -->
+<script type="text/javascript" src="{{ "/js/inlineDisqussions.js" | prepend: site.baseurl }}"></script>
+
+<script>
+disqus_shortname = 'danielykim';
+
+jQuery(document).ready(function() {
+  jQuery("p").inlineDisqussions();
+});
+
+jQuery("p").inlineDisqussions({
+  identifier: 'disqussion',
+  displayCount: true,
+  highlighted: true,
+  position: 'right',
+  background: '#FFFFF9',
+  maxWidth: 250
+});
+</script>
