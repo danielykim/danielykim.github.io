@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <link rel="icon" type="image/png" href="http://danielykim.me/images/myicon.png" />
+  <title>Blog: Daniel Kim</title>
+  <meta name="description" content="    이 글에서는 대학원생이 그래프를 그릴 때 꼭 해야할 것을 이야기하려고 합니다. 여기에서 이야기하는 내용은 아주 중요한 필수 사항입니다. 이러한 필수 사항을 안 챙기고 그림을 급하게 그려서 지도 교수님께 가져가면 거의 100% 혼날 것입니다.성격이 좋으면 안 혼나겠습니다. 물...">
+
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+
+  <script type="text/javascript" src="/js/pace.min.js"></script>
+
+  <!-- Google Fonts loaded here depending on setting in _data/options.yml true loads font, blank does not-->
+  
+  
+  <!-- Load up MathJax script if needed ... specify in /_data/options.yml file-->
+  <script type="text/javascript" async
+    src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+  </script>
+
+  <link rel="stylesheet" type="text/css" href="/css/tufte.css">
+  <link rel="stylesheet" type="text/css" href="/tufte.css">
+  <!-- <link rel="stylesheet" type="text/css" href="/css/print.css" media="print"> -->
+
+  <link rel="canonical" href="http://localhost:4000/articles/2017/04/23/Give-first-aid-to-your-figures-part1/">
+
+  <link rel="alternate" type="application/rss+xml" title="Blog: Daniel Kim" href="http://localhost:4000/feed.xml" />
+
+  <link rel="stylesheet" type="text/css" href="/css/pace-flash.css">
+
+  <link rel="stylesheet" type="text/css" href="/css/inlineDisqussions.css" />
+
+  <script id="dsq-count-scr" src="//danielykim.disqus.com/count.js" async></script>
+
+</head>
+
+  <body>
+    <!--- Header and nav template site-wide -->
+<header>
+    <nav class="group">
+      <h1>Exploring Adjacent Possibles</h1>
+	
+		
+  	
+		
+		    
+		      <a href="/">blog</a>
+		    
+	    
+  	
+		
+		    
+		      <a href="/about/">About</a>
+		    
+	    
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+		    
+		      <a href="/feed.xslt.xml"></a>
+		    
+	    
+  	
+	</nav>
+</header>
+
+    <article class="group">
+      <h1>대학원생 그래프에 반드시 필요한 것들</h1>
+
+<h3>Give first aid to your figures - part 1</h3>
+
+<p class="subtitle">April 23, 2017</p>
+
+
+<section>
+  <p>
+  이 글에서는 대학원생이 그래프를 그릴 때 꼭 해야할 것을 이야기하려고 합니다. 여기에서 이야기하는 내용은 아주 중요한 필수 사항입니다. 이러한 필수 사항을 안 챙기고 그림을 급하게 그려서 지도 교수님께 가져가면 거의 100% 혼날 것입니다.<label for="sn-extensive-use-of-sidenotes" class="margin-toggle sidenote-number"></label><input type="checkbox" id="sn-extensive-use-of-sidenotes" class="margin-toggle"/><span class="sidenote">성격이 좋으면 안 혼나겠습니다. 물론 잘 그려가도 혼날 수 있습니다.</span>
+  </p>
+</section>
+
+<section>
+  <p>
+    아래 내용은 반드시 챙깁시다.
+    <ol>
+      <li>1. 가로축과 세로축 라벨을 항상 붙입시다. 그렇지 않으면 아무 의미 없는 그림 파일일 뿐입니다.</li>
+      <li>2. 두 종류 이상의 서로 다른 데이터를 line graph, scatter plot 등으로 나타낼 때는 범례(legend)를 항상 넣읍시다. 그렇지 않으면 도대체 뭐가 뭔지 알 수 없을 것입니다.</li>
+      <li>3. 여러 표본(sample)에 대해 반복하여 결과를 얻었으면 error bar<label for="sn-extensive-use-of-sidenotes" class="margin-toggle sidenote-number"></label><input type="checkbox" id="sn-extensive-use-of-sidenotes" class="margin-toggle"/><span class="sidenote">이건 최소한의 조언입니다. 상황에 따라 <a href="http://blog.revolutionanalytics.com/2009/09/making-barplots-with-error-bars-in-r.html">Box plot</a>, <a href="http://www.originlab.com/doc/Tutorials/ErrorBar-FillArea">Shaded area plot</a>, <a href="http://seaborn.pydata.org/generated/seaborn.violinplot.html">Violin plot</a>등으로 나타냅시다. 개인적으로는 Box plot을 그릴 바에는 Violin plot을 그리겠습니다.</span>를 그립시다.</li>
+    </ol>
+  </p>
+  <p>
+  그래프를 그리는 것은 이공계 대학원생<label for="sn-extensive-use-of-sidenotes" class="margin-toggle sidenote-number"></label><input type="checkbox" id="sn-extensive-use-of-sidenotes" class="margin-toggle"/><span class="sidenote">실험을 하는 연구실이나 하지 않는 이론 연구실 모두.</span>이 가장 많이 하는 작업 중의 하나일 것입니다. 연구하는 과정에서 얻은 중간 결과를 graph, figures, illustration 등으로 나타냅니다. 그래프 그리는 일은 대학원생의 일상이라고 할 수 있겠습니다. 지도 교수님 포함하여 연구실 사람들이 참여하는 랩미팅 시간에 이야기하거나 지도 교수님과 1:1로 이야기 할 때, 그린 것을 가지고 간다음 같이 보면서 이야기합니다. 얻은 중간 결과 그림을 잘못 그리거나 이상하게 그리면, 하려는 이야기를 제대로 전달하기 힘들고, 심지어 데이터가 틀리지 않았더라도 연구 결과가 의심받을 수도 있습니다.
+  </p>
+  <p>
+  오늘 이야기는 최소한의 조언입니다. 이 정도로는 여러 가지 면<label for="sn-extensive-use-of-sidenotes" class="margin-toggle sidenote-number"></label><input type="checkbox" id="sn-extensive-use-of-sidenotes" class="margin-toggle"/><span class="sidenote">Informative한 그림이 되기에. 눈에 띄는 그림이 되기에. 논문 그림이 되기에.</span>에서 한참 부족합니다. 다음 글에서는 그래프를 더욱 잘 그리는 방법을 다루겠습니다.
+  </p>
+</section>
+
+
+
+
+
+<script type="text/javascript" src="/js/footnotes.js"></script>
+<script type="text/javascript" src="/js/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+<!-- http://tsi.github.io/inlineDisqussions/ -->
+<script type="text/javascript" src="/js/inlineDisqussions.js"></script>
+
+<script>
+disqus_shortname = 'danielykim';
+
+jQuery(document).ready(function() {
+  jQuery("p").inlineDisqussions();
+});
+
+jQuery("p").inlineDisqussions({
+  identifier: 'disqussion',
+  displayCount: true,
+  highlighted: true,
+  position: 'right',
+  background: '#FFFFF9',
+  maxWidth: 250
+});
+</script>
+
+
+
+<p>
+<div class="comments">
+	<div id="disqus_thread" style="max-width:55%;"></div>
+	<script type="text/javascript">
+    var disqus_config = function () {
+      this.page.url = "https://danielykim.github.io/articles/2017/04/23/Give-first-aid-to-your-figures-part1/"; // <--- use canonical URL
+      this.page.identifier = "/articles/2017/04/23/Give-first-aid-to-your-figures-part1";
+    };
+    (function() { // DON'T EDIT BELOW THIS LINE
+    
+      var d = document, s = d.createElement('script');
+
+      s.src = '//danielykim.disqus.com/embed.js'; // <--- use Disqus shortname
+
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+</div>
+</p>
+
+
+
+
+    </article>
+    <span class="print-footer">대학원생 그래프에 반드시 필요한 것들 - April 23, 2017 - Daniel Kim, PhD</span>
+
+
+    <footer>
+  <hr class="slender">
+  <ul class="footer-links">
+    <li><a href="mailto:daniel.youngho.kim@gmail.com"><span class="icon-mail"></span></a></li>    
+    <li><a href="https://www.linkedin.com/in/danielyounghokim"><span class="icon-info"></span></a></li>    
+      
+  </ul>
+<div class="credits">
+<span>&copy; 2017 &nbsp;&nbsp;DANIEL KIM, PHD</span></br> <br>
+<span>This site created with the <a href="//github.com/clayh53/tufte-jekyll">Tufte theme for  </a> in <a href="//jekyllrb.com">Jekyll</a>.</span> 
+</div>  
+</footer>
+
+    
+  </body>
+</html>
