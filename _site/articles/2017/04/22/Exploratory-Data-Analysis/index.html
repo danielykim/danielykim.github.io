@@ -247,7 +247,7 @@
 </section>
 
 
-<section>
+<section id="03-transform">
   <h2>3. 바꾸기 Transform</h2>
   <p>
   이 단계부터가 본격적인 <i>탐험적 데이터 분석</i> 과정입니다. 파이썬 pandas 라이브러리 문서의 <a href="http://pandas.pydata.org/pandas-docs/stable/groupby.html">Group By 항목</a>에서 설명하는 것처럼, 무리지어 종합하거나, 수학적으로 값을 적절히 변환하거나, 데이터에서 일부를 추출할 수도 있습니다. 문제를 풀려고 세운 가설을 검증하는데 도움이 될만한 패턴을 찾기 위해서 이런 작업을 합니다. 이 단계를 종종 여러번 수행하기 때문에 데이터가 너무 클 때는 전체 데이터를 가지고 하기보다는, 데이터 전체를 대표하는 항목들을 가지고 합니다. 또는 데이터 전체를 대표하는 항목을 여러번 골라서 통계적인 분석을 수행하기도 합니다. 다양한 방법 중에서 문제를 풀려고 세운 가설에 적합한 방식을 고릅니다. 
@@ -255,7 +255,7 @@
 </section>
 
 
-<section>
+<section id="04-visualise">
   <h2>4. 시각화 Visualise</h2>
   <p>
   이 과정에서는 변수 각각의 통계적인 패턴을 보기도 하고, 변수마다 나타나는 통계적인 패턴을 서로 비교하기도 합니다. 또는 이러한 패턴의 시간적인 변화를 보기도 합니다. 이 역시 문제를 풀려고 세운 가설을 검증하는데 도움이 될만한 패턴을 찾기 위해서 이런 작업을 수행합니다. 때때로 같은 데이터라도 시각화 방법에 따라 다른 직관을 줄 수도 있기 때문에 같은 데이터를 다양한 방식으로 여러번 그리기도 합니다. 시각화 방식에 따라 잃는 정보의 수준이 다를 수도 있습니다. 이 4번째 단계에서 특이하거나 이상한 값을 발견하기도 합니다.<label for="sn-extensive-use-of-sidenotes" class="margin-toggle sidenote-number"></label><input type="checkbox" id="sn-extensive-use-of-sidenotes" class="margin-toggle"/><span class="sidenote">이러한 상황이 생기면 3단계를 다시 수행하거나 심각하면 1단계부터 다시 해야할 수도 있습니다.</span> 데이터 과학자의 숙련도에 따라, 데이터 속에서 적절한 패턴을 찾기 위해 헤메는 시간이 줄어들 것입니다.
@@ -278,7 +278,7 @@
   </div>
 </section-->
 
-<section>
+<section id="05-model">
   <h2>5. 모델링 Model</h2>
   <p>
   모델링 과정은 <i>탐험적 데이터 분석</i>의 핵심이고 데이터 과학자의 역할이라고도 할 수 있겠습니다. 데이터에서 나타나는 패턴을 설명하는 과정입니다. 데이터를 산더미 같이 많이 모으는 것은 기술적으로는 대단한 일이고 중요한 일입니다. 하지만 그 데이터 자체만으로는 별 의미가 없습니다. 데이터를 많이 모으는 것은 데이터 과학자의 정체성이 아닙니다. 결국에는 잘 설명해야합니다. 데이터를 설명하지 않는 것은 뭔가를 지을 때 건축 자재를 일단 몽땅 가져다 놓기만 하고 아무일도 하지 않는 것과 같습니다. 열심히 모은 데이터를 체계적인 설명해야 정량적인 기준이나 예측이 따라 나올 수 있습니다.<label for="sn-extensive-use-of-sidenotes" class="margin-toggle sidenote-number"></label><input type="checkbox" id="sn-extensive-use-of-sidenotes" class="margin-toggle"/><span class="sidenote">물론, 엉뚱한 데이터를 쓸데없이 많이 모으기만 하면 안 나오겠습니다.</span>
@@ -296,13 +296,16 @@
   또한 세련된 설명은 위의 그림에서 다빈치와 아인슈타인의 말과 같이 단순해야한다고 생각합니다.<label for="sn-extensive-use-of-sidenotes" class="margin-toggle sidenote-number"></label><input type="checkbox" id="sn-extensive-use-of-sidenotes" class="margin-toggle"/><span class="sidenote">물론, 너무 단순해서 설명을 잘 못하면 안 되겠습니다.</span> 복잡해지면 유지 보수 운영 측면에서 걷잡을 수 없는 혼란에 빠지기 쉽상입니다. 처음부터 모델을 복잡하게 세우면, 잘 세웠다면 유지 보수 운영하는 사람들이 굳이 하지 않아도 될 일이 생깁니다. 다루는 시스템에서 굳이 넣을 필요 없는 수학적인 방법을 몽땅 때려 넣고 온갖 조건문으로 뒤범벅되어있는 <i>스파게티 모델</i><label for="sn-extensive-use-of-sidenotes" class="margin-toggle sidenote-number"></label><input type="checkbox" id="sn-extensive-use-of-sidenotes" class="margin-toggle"/><span class="sidenote"><i>스파게티 코드</i>와 비슷한 의미에서 사용했습니다.</span>을 피합시다!
   </p>
   <p>
-  이는 비즈니스 상황에서 법칙을 찾자는 이야기가 결코 아닙니다. 비즈니스 상황에서는 모델이 adaptive하고 flexible 해도 괜찮습니다. 기업에 커다란 손해를 끼치 수 있는 <i>스파게티 모델</i>을 피하자는 것입니다. 어떻게 피해야 하겠습니까? 먼저, 데이터 과학자 본인이 통계, 수학 등 이론적인 부분을 챙기면서 꾸준한 프로젝트 참여를 통해 뒤처지지 않아야겠습니다. 소속 회사에서 동료 데이터 과학자들과 함께 자신의 모델링 과정을 peer review 받는 것도 필요합니다.
+  이는 비즈니스 상황에서 법칙을 찾자는 이야기가 결코 아닙니다. 비즈니스 상황에서는 모델이 adaptive하고 flexible 해도 괜찮습니다. 기업에 커다란 손해를 끼치 수 있는 <i>스파게티 모델</i>을 피하자는 것입니다. 어떻게 피해야 하겠습니까? 먼저, 데이터 과학자 본인이 통계, 수학 등 이론적인 부분을 챙기면서 꾸준한 프로젝트 참여를 통해 뒤처지지 않아야겠습니다. 소속 회사에서 동료 데이터 과학자들과 함께 자신의 모델링 과정을 peer review 받는 것도 훌륭하게 모델링할 때 도움이 될 것입니다.
   </p>
   <p>
-  그렇다고 데이터 과학자 혼자 노력한다고 해서 이런 참극이 반드시 생기지 않는 것은 아닙니다. 데이터 과학 업무를 의뢰하는 회사나 담당자도 마케팅 측면에서 말도 안되는 방식으로 수학적인 기법을 무리하게 동원하도록 강제하는 일이 없어야 하겠습니다.<label for="sn-extensive-use-of-sidenotes" class="margin-toggle sidenote-number"></label><input type="checkbox" id="sn-extensive-use-of-sidenotes" class="margin-toggle"/><span class="sidenote">예를 들면, "우리 회사도 요즘 유행하는 A라는 기법을 사용하여 혁신을 이뤄냈습니다"라고 말하고 싶어하는 과도한 욕심을 자제하시라는 것입니다.</span>
+  그렇다고 데이터 과학자 혼자 노력한다고 해서 <i>스파게티 모델</i>이 반드시 생기지 않는 것은 아닙니다. 데이터 과학 업무를 의뢰하는 회사나 담당자로부터 마케팅 측면에서 말도 안되는 방식으로 수학적인 기법을 무리하게 동원하도록 압박을 받아서 강제로 생기기도 합니다.<label for="sn-extensive-use-of-sidenotes" class="margin-toggle sidenote-number"></label><input type="checkbox" id="sn-extensive-use-of-sidenotes" class="margin-toggle"/><span class="sidenote">의뢰하는 측은 "우리 회사도 (요즘 유행하는) A라는 기법을 사용하여 혁신을 이뤄냈습니다!"라고 말하고 싶어하는 과도한 욕심을 자제할 필요가 있습니다.</span> 보통 이런 참사는 의뢰하는 고객사가 인건비 때문에 데이터 과학자를 운용하기 힘든 기업인 경우보다는, 고객사가 경제적으로 풍족하고 특정 업종을 선도하는 기업인 경우에 일어납니다. 물론, 자체적으로 데이터도 많고 데이터 과학자를 운용할 경제적인 여유가 있으면 좋겠지만 모두가 이와 같을 수 없습니다.
   </p>
   <p>
   약간 벗어나는 다른 이야기지만, 모델링과 관련 있는 짧은 일화를 하나 소개하려고 합니다. 비즈니스 상황에서는 탐험적 데이터 분석 과정을 통해 단순하고 세련된 모델을 세우면 "그건 저도 할 수 있겠습니다"라고 무시하는 투가 섞인 말을 듣는 경우도 있습니다. 결코 쉽지 않은 과정을 통해서 얻은 결과인데도 말입니다. 때로는 학계에서 사용하던 기법에 비해 덜 복잡하다는 의미에서나 구현하는데 시간이 덜 든다는 의미에서 쉽다고 말하면, 듣는 사람들이 순진하게 곧이곧대로 받아들여 전문가가 아니더라도 누구나 쉽게 할 수 있는 것처럼 오해받는 경우도 있습니다.
+  </p>
+  <p>
+  여기까지가 Transform, Visualise, Model (TVM) 으로 정리할 수 있는 Exploratory Data Analysis (EDA)의 핵심 내용입니다. 이렇게 의미있는 패턴이나 특징을 찾아내기 위해서 다양한 수학적인 양을 측정해서 보고 비교하는 TVM 과정은 보통 한 번에 끝나지 않을 수 있습니다.<label for="sn-extensive-use-of-sidenotes" class="margin-toggle sidenote-number"></label><input type="checkbox" id="sn-extensive-use-of-sidenotes" class="margin-toggle"/><span class="sidenote">수행하는 데이터 과학자가 이미 잘 알고 있는 현상에 관한 데이터를 다룰 때는 비교적 수월할 것입니다.</span> TVM 과정을 여러번 반복하다보면 작성한 코드나 얻은 부산물/산출물 등이 지저분하게 흩어지기 쉽습니다. 그래서 구현, 유지, 보수 등이 어렵게 됩니다. 처음부터 알아보기 쉽게 정리한다면 이후에 넘겨 받는 사람에게 굳이 하지 않아도 될 번거로운 일이 생기지 않을 것입니다. 
   </p>
 </section>
 
@@ -310,7 +313,7 @@
 <section>
   <h2>6. 소통</h2>
   <p>
-  이 과정에서는 설명한 결과를 가지고 의뢰한 회사나 담당자와 함께 이야기합니다.<label for="sn-extensive-use-of-sidenotes" class="margin-toggle sidenote-number"></label><input type="checkbox" id="sn-extensive-use-of-sidenotes" class="margin-toggle"/><span class="sidenote">일방적인 보고가 될 수도 있겠지만</span> 기존에 정성적으로 알고 있었거나 사용하고 있던 방식과 비교하기도 합니다. 3, 4, 5단계를 순서대로 거쳐 6단계에 도착하기보다는, 각 단계에서 언제든지 소통이 필요하면 이 단계로 넘어와서 다시 돌아갑니다. 해당 업종을 잘 알고 있는 데이터 과학자라면 이 단계를 덜 거치겠지만, 그렇지 않은 경우에는 열린 마음으로 이 과정을 많이 거치는 것이 모두가 만족할 수 있는 결과로 이어집니다.
+  이 과정에서는 설명한 결과를 가지고 의뢰한 회사나 담당자와 함께 이야기합니다.<label for="sn-extensive-use-of-sidenotes" class="margin-toggle sidenote-number"></label><input type="checkbox" id="sn-extensive-use-of-sidenotes" class="margin-toggle"/><span class="sidenote">일방적인 보고가 될 수도 있겠지만</span> 기존에 정성적으로 알고 있었거나 사용하고 있던 방식과 비교하기도 합니다. 3, 4, 5단계를 순서대로 거쳐 6단계에 도착하기보다는, 각 단계에서 언제든지 소통이 필요하면 이 단계로 넘어와서 다시 돌아갑니다. 해당 업종을 잘 알고 있는 데이터 과학자라면 이 단계를 덜 거치겠지만, 그렇지 않은 경우에는 열린 마음으로 이 과정을 많이 거치는 것이 모두가 만족할 수 있는 결과로 이어질 것입니다.
   </p>
 </section>
 
