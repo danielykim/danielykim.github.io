@@ -108,7 +108,9 @@
     <pre class="code">
   ogr2ogr -s_srs EPSG:5178 -t_srs crs:84 -f GeoJSON -skipfailures --config SHAPE_ENCODING "CP949" TL_SCCO_SIG_crs84.geojson TL_SCCO_SIG.shp
     </pre>
-  위의 작업은 Ubuntu 14.04 에서 하였습니다.
+  </p>
+  <p>
+  위의 작업은 Ubuntu 14.04 에서 하였습니다.  
   </p>
 </section>
 
@@ -181,14 +183,20 @@
     <pre class="code">
     npm install -g topojson
     </pre>
+  </p>
+  <p>
   Windows에서는 설치해도 잘 작동하지 않아서 아래 작업은 Ubuntu 14.04 에서 하였습니다.  
     <pre class="code">
     geo2topo TL_SCCO_SIG_crs84-m2s.geojson > TL_SCCO_SIG_crs84-m2s-topo.json
     </pre>
+  </p>
+  <p>
     이제 TopoJSON 파일을 얻었습니다. 하지만 아직도 10MB 가량으로 웹에서 사용하기에는 용량이 큽니다. 그래서 다음과 같이 압축합니다.<label for="sn-extensive-use-of-sidenotes" class="margin-toggle sidenote-number"></label><input type="checkbox" id="sn-extensive-use-of-sidenotes" class="margin-toggle"/><span class="sidenote">이 내용은 <a href="https://d3js.org/"><i>d3.js</i></a>를 만든 <a href="https://medium.com/@mbostock/command-line-cartography-part-3-1158e4c55a1e">Mike Bostock 님의 글</a>을 참조하였습니다.</span>
     <pre class="code">
     topoquantize 1e4 < TL_SCCO_SIG_crs84-m2s-topo.json > TL_SCCO_SIG_crs84-m2s-quantized1e4-topo.json
     </pre>
+  </p>
+  <p>
     이제 2MB 미만이 되었습니다! 위의 명령어는 topojson 패키지를 설치하면 사용할 수 있습니다. 2016년 2월 SHP 파일을 가지고 만든 시군구 TopoJSON 지도를 <a href="http://danielykim.me/visualizations/South_Korea_population_density/json/TL_SCCO_SIG_crs84-m2s-quantized1e3-topo.json">여기</a>에 올려두었고 자유롭게 내려받아 사용하시길 바랍니다. <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="크리에이티브 커먼즈 라이선스" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br />이 저작물은 <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">크리에이티브 커먼즈 저작자표시-동일조건변경허락 4.0 국제 라이선스</a>에 따라 이용할 수 있습니다.
   </p>
 </section>
