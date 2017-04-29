@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <link rel="icon" type="image/png" href="http://danielykim.me/images/myicon.png" />
+  <title>Blog: Daniel Kim</title>
+  <meta name="description" content="    작업하는 자료를 d3.js로 대한민국 시군구 단위로 시각화하려는데 최신 TopoJSON 지도 파일을 찾기 힘들었습니다. 찾을 수 있는 파일에서는 세종시가 없거나, 세종시가 있더라도 청주 청원구와 서원구2014년 7월 1일 청원군과 통합하면서 청원구와 서원구가 새로 설치되었습...">
+
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+
+  <script type="text/javascript" src="/js/pace.min.js"></script>
+
+  <!-- Google Fonts loaded here depending on setting in _data/options.yml true loads font, blank does not-->
+  
+  
+  <!-- Load up MathJax script if needed ... specify in /_data/options.yml file-->
+  <script type="text/javascript" async
+    src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+  </script>
+
+  <link rel="stylesheet" type="text/css" href="/css/tufte.css">
+  <link rel="stylesheet" type="text/css" href="/tufte.css">
+  <!-- <link rel="stylesheet" type="text/css" href="/css/print.css" media="print"> -->
+
+  <link rel="canonical" href="http://localhost:4000/articles/2017/04/29/Korea-TopoJSON-map-for-d3/">
+
+  <link rel="alternate" type="application/rss+xml" title="Blog: Daniel Kim" href="http://localhost:4000/feed.xml" />
+
+  <link rel="stylesheet" type="text/css" href="/css/pace-flash.css">
+
+  <script id="dsq-count-scr" src="//danielykim.disqus.com/count.js" async></script>
+
+  <!-- http://tsi.github.io/inlineDisqussions/ -->
+  <link rel="stylesheet" type="text/css" href="/css/inlineDisqussions.css" />
+  <script type="text/javascript" src="/js/inlineDisqussions.js"></script>
+
+
+</head>
+
+  <body>
+    <!--- Header and nav template site-wide -->
+<header>
+    <nav class="group">
+      <h1>Exploring Adjacent Possibles</h1>
+	
+		
+  	
+		
+		    
+		      <a href="/">blog</a>
+		    
+	    
+  	
+		
+		    
+		      <a href="/about/">About</a>
+		    
+	    
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+		    
+		      <a href="/feed.xslt.xml"></a>
+		    
+	    
+  	
+	</nav>
+</header>
+
+    <article class="group">
+      <h1>대한민국 시군구 행정구역 TopoJSON 지도(2016년2월)</h1>
+
+<h3>Republic of Korea (South Korea) TopoJSON map (Feb. 2016)</h3>
+
+<p class="subtitle">April 29, 2017</p>
+
+
+<section>
+  <p>
+  작업하는 자료를 <a href="https://d3js.org/"><i>d3.js</i></a>로 대한민국 시군구 단위로 시각화하려는데 최신 <a href="https://github.com/topojson/topojson">TopoJSON</a> 지도 파일을 찾기 힘들었습니다. 찾을 수 있는 파일에서는 세종시가 없거나, 세종시가 있더라도 <a href="https://ko.wikipedia.org/wiki/%EC%B2%AD%EC%A3%BC%EC%8B%9C%EC%9D%98_%ED%96%89%EC%A0%95_%EA%B5%AC%EC%97%AD">청주 청원구와 서원구</a><label for="sn-extensive-use-of-sidenotes" class="margin-toggle sidenote-number"></label><input type="checkbox" id="sn-extensive-use-of-sidenotes" class="margin-toggle"/><span class="sidenote">2014년 7월 1일 청원군과 통합하면서 청원구와 서원구가 새로 설치되었습니다.</span>가 없었습니다. 그래서 대한민국 시군구 TopoJSON 지도를 직접 만들었습니다. 이 글에서는 만든 과정과 결과 파일을 소개하겠습니다.
+  </p>
+</section>
+
+
+<section>
+  <h2>1. 데이터</h2>
+  <p>
+  <a href="http://www.gisdeveloper.co.kr/?p=2332">이곳</a>에서 2016년 2월 대한민국 시군구 행정구역 <a href="https://en.wikipedia.org/wiki/Shapefile">SHP 파일</a>을 내려받습니다. 압축을 풀고 <code>TL_SCCO_SIG.shp</code> 파일을 사용합니다.
+  </p>
+</section>
+
+
+<section>
+  <h2>2. SHP → GeoJSON</h2>
+  <p>
+  내려받은 SHP 파일은 EPSG:5178 좌표계를 사용합니다. 다음과 같이 crs:84 좌표계를 사용하는 GeoJSON 으로 바꿉니다. CP949 인코딩으로 기록된 행정구역명 인코딩을 좌표계와 형식을 바꿀 때 보존합니다. 
+    <label for="mn-demo" class="margin-toggle">&#8853;</label><input type="checkbox" id="mn-demo" class="margin-toggle"/><span class="marginnote">출처: <a href="https://www.slideshare.net/jangbi882/1geo-server-30331526">여기</a>의 33번째 슬라이드</span>
+    <pre class="code">
+  ogr2ogr -s_srs EPSG:5178 -t_srs crs:84 -f GeoJSON -skipfailures --config SHAPE_ENCODING "CP949" TL_SCCO_SIG_crs84.geojson TL_SCCO_SIG.shp
+    </pre>
+  위의 작업은 Ubuntu 14.04 에서 하였습니다.
+  </p>
+</section>
+
+
+<section>
+  <h2>3. 지도 매끄럽게 하기</h2>
+  <p>
+  2번 과정에서 얻은 GeoJSON 파일에는 행정구역 구분선, 해안선, 섬 등이 자세하게 나와있어서 용량이 큽니다. QGIS 최신 버전으로 지도를 매끄럽게 하여 용량을 줄였습니다.
+  </p>
+  <h3><code>multiparts → single part</code></h3>
+  <p>
+  QGIS로 파일을 열면 다음과 같이 화면에 지도가 나옵니다.
+  </p>
+  <figure class="fullwidth">
+    <img src="/images/2017-04-29/QGIS-open-default.png"/>
+  </figure>
+  <p>
+  <code>Ctrl + a</code>로 모든 구역을 선택하면 색이 바뀝니다.
+  </p>
+  <figure class="fullwidth">
+    <img src="/images/2017-04-29/multi-to-single-01.png"/>
+  </figure>
+  <figure class="fullwidth">
+    <img src="/images/2017-04-29/multi-to-single-02.png"/>
+  </figure>
+  <p>
+  위와 같이 Run 버튼을 클릭하면 아래와 같이 한 행정구역이지만 붙어있지 않은 섬 같은 부분을 분리합니다.
+  </p>
+  <figure class="fullwidth">
+    <img src="/images/2017-04-29/multi-to-single-03.png"/>
+  </figure>
+
+
+  <h3>Select by <code>$area</code></h3>
+  <p>
+  Single part로 분리하면 이제 닫힌 shape의 면적을 기준으로 너무 작은 섬들을 골라낼 수 있습니다. 다음과 같이 "계산식으로 선택..." 메뉴를 열어봅시다. 
+  </p>
+  <figure class="fullwidth">
+    <img src="/images/2017-04-29/select-by-expression-01.png"/>
+  </figure>
+  <p>
+  아래와 같이 면적 0.01로 입력하니 너무 작아서 선택이 안 되는 곳도 있습니다. 개인적으로는 선택 버튼을 눌러도 해당 창이 닫히지 않으니 값을 바꾸면서 확인하고 선택할 수 있는 부분이 마음에 듭니다.
+  </p>
+  <figure class="fullwidth">
+    <img src="/images/2017-04-29/select-by-expression-02.png"/>
+  </figure>
+  <p>
+  더 줄였더니 독도의 서도만 선택이 됩니다.
+  </p>
+  <figure class="fullwidth">
+    <img src="/images/2017-04-29/select-by-expression-03.png"/>
+  </figure>
+  <p>
+  아래와 같이 살짝 더 줄이니 동도와 서도 모두 선택이 됩니다. 그리고 주변의 작은 섬은 선택이 되지 않습니다. 저는 독도의 동도와 서도가 모두 선택되는 이 값을 기준으로 너무 작은 섬들을 걸러냈습니다.
+  </p>
+  <figure class="fullwidth">
+    <img src="/images/2017-04-29/select-by-expression-04.png"/>
+  </figure>
+  <p>
+  이제 걸러낸 결과를 GeoJSON 형태로 저장합니다. 저는 <code>TL_SCCO_SIG_crs84-m2s.geojson</code>라고 저장하였습니다.
+  </p>
+  
+</section>
+
+
+<section>
+  <h2>4. GeoJSON → TopoJSON</h2>
+  <p>
+  아래와 같이 TopoJSON CLI (Command Line Interface)을 설치합니다. 설치하려면 node.js package manager (npm)을 먼저 설치하시길 바랍니다. 
+    <pre class="code">
+    npm install -g topojson
+    </pre>
+  Windows에서는 설치해도 잘 작동하지 않아서 아래 작업은 Ubuntu 14.04 에서 하였습니다.  
+    <pre class="code">
+    geo2topo TL_SCCO_SIG_crs84-m2s.geojson > TL_SCCO_SIG_crs84-m2s-topo.json
+    </pre>
+    이제 TopoJSON 파일을 얻었습니다. 하지만 아직도 10MB 가량으로 웹에서 사용하기에는 용량이 큽니다. 그래서 다음과 같이 압축합니다.<label for="sn-extensive-use-of-sidenotes" class="margin-toggle sidenote-number"></label><input type="checkbox" id="sn-extensive-use-of-sidenotes" class="margin-toggle"/><span class="sidenote">이 내용은 <a href="https://d3js.org/"><i>d3.js</i></a>를 만든 <a href="https://medium.com/@mbostock/command-line-cartography-part-3-1158e4c55a1e">Mike Bostock 님의 글</a>을 참조하였습니다.</span>
+    <pre class="code">
+    topoquantize 1e4 < TL_SCCO_SIG_crs84-m2s-topo.json > TL_SCCO_SIG_crs84-m2s-quantized1e4-topo.json
+    </pre>
+    이제 2MB 미만이 되었습니다! 위의 명령어는 topojson 패키지를 설치하면 사용할 수 있습니다. 2016년 2월 SHP 파일을 가지고 만든 시군구 TopoJSON 지도를 <a href="http://danielykim.me/visualizations/South_Korea_population_density/json/TL_SCCO_SIG_crs84-m2s-quantized1e3-topo.json">여기</a>에 올려두었고 자유롭게 내려받아 사용하시길 바랍니다.
+  </p>
+</section>
+
+
+<section>
+  <h2>5. 예제: 대한민국 인구밀도</h2>
+  <p>
+  <a href="http://kosis.kr/statisticsList/statisticsList_01List.jsp?vwcd=MT_ZTITLE&parentId=H#SubCont">국가통계포털</a>에서 행정구역별 인구는 2015 인구주택총조사 자료를, 면적은 2017년 자료를 내려받아 사용하였습니다. d3.js v4를 이용하여 인구밀도를 <a href="http://danielykim.me/visualizations/South_Korea_population_density/black.html">검은 배경</a>과 <a href="http://danielykim.me/visualizations/South_Korea_population_density/white.html">흰 배경</a> 두 가지로 나타냈습니다.
+  </p>
+</section>
+
+
+<script type="text/javascript" src="/js/footnotes.js"></script>
+<script type="text/javascript" src="/js/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+<!-- http://tsi.github.io/inlineDisqussions/ -->
+
+<script>
+disqus_shortname = 'danielykim';
+
+jQuery(document).ready(function() {
+  jQuery("p").inlineDisqussions();
+});
+
+jQuery("p").inlineDisqussions({
+  identifier: 'disqussion',
+  displayCount: true,
+  highlighted: true,
+  position: 'right',
+  background: '#FFFFF9',
+  maxWidth: 200
+});
+</script>
+
+
+
+<div class="comments">
+	<div id="disqus_thread" style="max-width:55%;"></div>
+	<script type="text/javascript">
+    var disqus_config = function () {
+      this.page.url = "https://danielykim.github.io/articles/2017/04/29/Korea-TopoJSON-map-for-d3/"; // <--- use canonical URL
+      this.page.identifier = "/articles/2017/04/29/Korea-TopoJSON-map-for-d3";
+    };
+    (function() { // DON'T EDIT BELOW THIS LINE
+    
+      var d = document, s = d.createElement('script');
+
+      s.src = '//danielykim.disqus.com/embed.js'; // <--- use Disqus shortname
+
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+</div>
+
+
+
+
+    </article>
+    <span class="print-footer">대한민국 시군구 행정구역 TopoJSON 지도(2016년2월) - April 29, 2017 - Daniel Kim, PhD</span>
+
+
+    <footer>
+  <hr class="slender">
+  <ul class="footer-links">
+    <li><a href="mailto:daniel.youngho.kim@gmail.com"><span class="icon-mail"></span></a></li>    
+    <li><a href="https://www.linkedin.com/in/danielyounghokim"><span class="icon-info"></span></a></li>    
+      
+  </ul>
+<div class="credits">
+<span>&copy; 2017 &nbsp;&nbsp;DANIEL KIM, PHD</span></br> <br>
+<span>This blog created with the <a href="//github.com/clayh53/tufte-jekyll">Tufte theme for  </a> in <a href="//jekyllrb.com">Jekyll</a>.</span> 
+</div>  
+</footer>
+
+    
+  </body>
+</html>
