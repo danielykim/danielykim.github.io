@@ -5,12 +5,93 @@
     <description>Exploring Adjacent Possibles</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 29 Apr 2017 04:59:01 +0000</pubDate>
-    <lastBuildDate>Sat, 29 Apr 2017 04:59:01 +0000</lastBuildDate>
+    <pubDate>Wed, 10 May 2017 15:22:12 +0000</pubDate>
+    <lastBuildDate>Wed, 10 May 2017 15:22:12 +0000</lastBuildDate>
     <generator>Jekyll v3.3.0</generator>
     
       <item>
-        <title>대한민국 시군구 행정구역 TopoJSON 지도(2016년 2월 자료 이용)</title>
+        <title>논문 한글 요약 - arXiv:1608.07249v7</title>
+        <description>&lt;section&gt;
+  &lt;p&gt;
+  이 글은 &lt;a href=&quot;https://arxiv.org/abs/1608.07249v7&quot;&gt;arXiv:1608.07249v7&lt;/a&gt; 내용을 아주 간단하게 요약한 것입니다. 논문에서는 최신 딥러닝 소프트웨어 5가지&lt;label for=&quot;sn-extensive-use-of-sidenotes&quot; class=&quot;margin-toggle sidenote-number&quot;&gt;&lt;/label&gt;&lt;input type=&quot;checkbox&quot; id=&quot;sn-extensive-use-of-sidenotes&quot; class=&quot;margin-toggle&quot;/&gt;&lt;span class=&quot;sidenote&quot;&gt;&lt;a href=&quot;http://caffe.berkeleyvision.org/&quot;&gt;Caffe&lt;/a&gt;, &lt;a href=&quot;https://github.com/microsoft/cntk&quot;&gt;CNTK&lt;/a&gt;, &lt;a href=&quot;http://mxnet.io/&quot;&gt;MXNet&lt;/a&gt;, &lt;a href=&quot;https://www.tensorflow.org/&quot;&gt;TensorFlow&lt;/a&gt;, &lt;a href=&quot;http://torch.ch/&quot;&gt;Torch&lt;/a&gt;&lt;/span&gt;의 단위 학습량 당 걸리는 시간을 크게 3가지&lt;label for=&quot;sn-extensive-use-of-sidenotes&quot; class=&quot;margin-toggle sidenote-number&quot;&gt;&lt;/label&gt;&lt;input type=&quot;checkbox&quot; id=&quot;sn-extensive-use-of-sidenotes&quot; class=&quot;margin-toggle&quot;/&gt;&lt;span class=&quot;sidenote&quot;&gt;CPU only, single GPU, multi-GPU&lt;/span&gt; 상황에서 3가지 신경망&lt;label for=&quot;sn-extensive-use-of-sidenotes&quot; class=&quot;margin-toggle sidenote-number&quot;&gt;&lt;/label&gt;&lt;input type=&quot;checkbox&quot; id=&quot;sn-extensive-use-of-sidenotes&quot; class=&quot;margin-toggle&quot;/&gt;&lt;span class=&quot;sidenote&quot;&gt;Fully Connected Network (FCN), Convolutional Neural Network (CNN), Recurrent Neural Network (RNN)&lt;/span&gt;을 단위 학습량 규모를 바꾸면서 비교합니다. 비교할 때 결과 요약은 다음과 같습니다.
+  &lt;/p&gt;
+&lt;/section&gt;
+
+
+&lt;section&gt;
+  &lt;h2&gt;1. CPU only: BEST - TensorFlow&lt;/h2&gt;
+  &lt;p&gt;
+  TensorFlow가 가장 좋았습니다. 비교할 때 16개의 CPU core를 사용했다고 합니다.
+  &lt;/p&gt;
+  
+  &lt;h2&gt;2. Single GPU&lt;/h2&gt;
+  &lt;p&gt;
+  &lt;ul&gt;
+    &lt;li&gt;Fully Connected Network (FCN): &lt;a href=&quot;http://caffe.berkeleyvision.org/&quot;&gt;Caffe&lt;/a&gt;, &lt;a href=&quot;https://github.com/microsoft/cntk&quot;&gt;CNTK&lt;/a&gt;, &lt;a href=&quot;http://torch.ch/&quot;&gt;Torch&lt;/a&gt; &gt; &lt;a href=&quot;http://mxnet.io/&quot;&gt;MXNet&lt;/a&gt;, &lt;a href=&quot;https://www.tensorflow.org/&quot;&gt;TensorFlow&lt;/a&gt; 라고 합니다.&lt;/li&gt;
+    &lt;li&gt;Convolutional Neural Network (CNN): network가 큰 경우는 &lt;a href=&quot;http://mxnet.io/&quot;&gt;MXNet&lt;/a&gt;, 작은 경우는 &lt;a href=&quot;http://caffe.berkeleyvision.org/&quot;&gt;Caffe&lt;/a&gt;와 &lt;a href=&quot;https://github.com/microsoft/cntk&quot;&gt;CNTK&lt;/a&gt;도 좋았다고 합니다.&lt;/li&gt;
+    &lt;li&gt;Recurrent Neural Network (RNN): &lt;a href=&quot;https://github.com/microsoft/cntk&quot;&gt;CNTK&lt;/a&gt;가 다른 4가지에 비해 LSTM RNN&lt;label for=&quot;sn-extensive-use-of-sidenotes&quot; class=&quot;margin-toggle sidenote-number&quot;&gt;&lt;/label&gt;&lt;input type=&quot;checkbox&quot; id=&quot;sn-extensive-use-of-sidenotes&quot; class=&quot;margin-toggle&quot;/&gt;&lt;span class=&quot;sidenote&quot;&gt;자세한 내용은 &lt;a href=&quot;http://aikorea.org/cs231n/convolutional-networks/&quot;&gt;이 글&lt;/a&gt;을 참조하시길 바랍니다.&lt;/span&gt;으로 5-10배 빠르게 학습한다고 합니다. &lt;/li&gt;
+  &lt;/ul&gt;  
+  &lt;/p&gt;
+
+  &lt;figure class=&quot;fullwidth&quot;&gt;
+    &lt;img src=&quot;/images/2017-05-10/arXiv-1608-07249-v7-Figure1.png&quot;/&gt;    
+  &lt;/figure&gt;
+
+  &lt;h2&gt;3. Multi-GPU&lt;/h2&gt;
+  &lt;p&gt;
+  &lt;ul&gt;
+    &lt;li&gt;FCN: &lt;a href=&quot;https://github.com/microsoft/cntk&quot;&gt;CNTK&lt;/a&gt;와 &lt;a href=&quot;http://mxnet.io/&quot;&gt;MXNet&lt;/a&gt;의 경우에, 학습량 규모를 고정하고 GPU 수를 1, 2, 4로 늘릴 때 처리 시간이 가장 잘 줄어든다고 합니다. GPU 개수를 늘릴 때 처리 시간이 잘 줄어들수록 여러개의 GPU를 더 효율적으로 사용한다는 의미입니다.&lt;/li&gt;
+    &lt;li&gt;CNN(AlexNet): &lt;a href=&quot;http://mxnet.io/&quot;&gt;MXNet&lt;/a&gt;과 &lt;a href=&quot;http://torch.ch/&quot;&gt;Torch&lt;/a&gt;의 경우에, GPU 수를 위와 같이 늘리면 처리 시간이 가장 잘 줄어든다고 합니다. &lt;a href=&quot;https://github.com/microsoft/cntk&quot;&gt;CNTK&lt;/a&gt;는 &lt;a href=&quot;http://mxnet.io/&quot;&gt;MXNet&lt;/a&gt;과 &lt;a href=&quot;http://torch.ch/&quot;&gt;Torch&lt;/a&gt;에 비해 줄어드는 정도가 살짝 작지만 &lt;a href=&quot;http://caffe.berkeleyvision.org/&quot;&gt;Caffe&lt;/a&gt;나 &lt;a href=&quot;https://www.tensorflow.org/&quot;&gt;TensorFlow&lt;/a&gt;보다는 훨씬 더 잘 줄어든다고 합니다.&lt;/li&gt;
+    &lt;li&gt;CNN(ResNet): GPU를 1개만 사용했을 때는 &lt;a href=&quot;http://mxnet.io/&quot;&gt;MXNet&lt;/a&gt;이 가장 좋았지만, 여러개를 사용했을 때는 &lt;a href=&quot;http://torch.ch/&quot;&gt;Torch&lt;/a&gt;가 더 효율적인 것으로 나타났다고 합니다.&lt;/li&gt;
+  &lt;/ul&gt;
+  &lt;/p&gt;
+&lt;/section&gt;
+
+
+&lt;section&gt;
+  &lt;h2&gt;기타 사항&lt;/h2&gt;
+  &lt;p&gt;
+  &lt;ul&gt;
+    &lt;li&gt;NVIDIA® GTX 980, NVIDIA® GTX 1080, NVIDIA® Tesla K80 GK210 중에서 NVIDIA® GTX 1080이 가장 좋았다고 합니다.&lt;/li&gt;
+    &lt;li&gt;GPU를 사용할 때는 cuDNN을 꼭 설치하여 소프트웨어가 사용할 수 있도록 하기를 권장하고 있습니다.&lt;/li&gt;    
+    &lt;li&gt;Convolution을 직접 계산하기보다는 FFT를 하기를 권장하고 있습니다.&lt;/li&gt;        
+  &lt;/ul&gt;
+  &lt;/p&gt;
+&lt;/section&gt;
+
+
+
+&lt;script type=&quot;text/javascript&quot; src=&quot;/js/footnotes.js&quot;&gt;&lt;/script&gt;
+&lt;script type=&quot;text/javascript&quot; src=&quot;/js/highlight.pack.js&quot;&gt;&lt;/script&gt;
+&lt;script&gt;hljs.initHighlightingOnLoad();&lt;/script&gt;
+&lt;!-- http://tsi.github.io/inlineDisqussions/ --&gt;
+
+&lt;script&gt;
+disqus_shortname = 'danielykim';
+
+jQuery(document).ready(function() {
+  jQuery(&quot;p&quot;).inlineDisqussions();
+});
+
+jQuery(&quot;p&quot;).inlineDisqussions({
+  identifier: 'disqussion',
+  displayCount: true,
+  highlighted: true,
+  position: 'right',
+  background: '#FFFFF9',
+  maxWidth: 200
+});
+&lt;/script&gt;
+</description>
+        <pubDate>Wed, 10 May 2017 00:00:00 +0000</pubDate>
+        <link>http://localhost:4000/articles/2017/05/10/Summary-arXiv-1608-07249-v7/</link>
+        <guid isPermaLink="true">http://localhost:4000/articles/2017/05/10/Summary-arXiv-1608-07249-v7/</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>대한민국 시군구 행정구역 TopoJSON 지도(2016년2월)</title>
         <description>&lt;section&gt;
   &lt;p&gt;
   작업하는 자료를 &lt;a href=&quot;https://d3js.org/&quot;&gt;&lt;i&gt;d3.js&lt;/i&gt;&lt;/a&gt;로 대한민국 시군구 단위로 시각화하려는데 최신 &lt;a href=&quot;https://github.com/topojson/topojson&quot;&gt;TopoJSON&lt;/a&gt; 지도 파일을 찾기 힘들었습니다. 찾을 수 있는 파일에서는 세종시가 없거나, 세종시가 있더라도 &lt;a href=&quot;https://ko.wikipedia.org/wiki/%EC%B2%AD%EC%A3%BC%EC%8B%9C%EC%9D%98_%ED%96%89%EC%A0%95_%EA%B5%AC%EC%97%AD&quot;&gt;청주 청원구와 서원구&lt;/a&gt;&lt;label for=&quot;sn-extensive-use-of-sidenotes&quot; class=&quot;margin-toggle sidenote-number&quot;&gt;&lt;/label&gt;&lt;input type=&quot;checkbox&quot; id=&quot;sn-extensive-use-of-sidenotes&quot; class=&quot;margin-toggle&quot;/&gt;&lt;span class=&quot;sidenote&quot;&gt;2014년 7월 1일 청원군과 통합하면서 청원구와 서원구가 새로 설치되었습니다.&lt;/span&gt;가 없었습니다. 그래서 대한민국 시군구 TopoJSON 지도를 직접 만들었습니다. 이 글에서는 만든 과정과 결과 파일을 소개하겠습니다.
@@ -21,35 +102,124 @@
 &lt;section&gt;
   &lt;h2&gt;1. 데이터&lt;/h2&gt;
   &lt;p&gt;
-  &lt;a href=&quot;http://www.gisdeveloper.co.kr/?p=2332&quot;&gt;이곳&lt;/a&gt;에서 대한민국 시군구 행정구역 &lt;a href=&quot;https://en.wikipedia.org/wiki/Shapefile&quot;&gt;SHP 파일&lt;/a&gt;을 내려받아서 사용하였습니다. 
+  &lt;a href=&quot;http://www.gisdeveloper.co.kr/?p=2332&quot;&gt;이곳&lt;/a&gt;에서 2016년 2월 대한민국 시군구 행정구역 &lt;a href=&quot;https://en.wikipedia.org/wiki/Shapefile&quot;&gt;SHP 파일&lt;/a&gt;을 내려받습니다. 압축을 풀고 &lt;code&gt;TL_SCCO_SIG.shp&lt;/code&gt; 파일을 사용합니다.
   &lt;/p&gt;
 &lt;/section&gt;
 
 
 &lt;section&gt;
-  &lt;h2&gt;2. SHP → geojson&lt;/h2&gt;
+  &lt;h2&gt;2. SHP → GeoJSON&lt;/h2&gt;
   &lt;p&gt;
-  내려받은 SHP 파일은 EPSG:5178 좌표계를 사용합니다. 다음과 같이 crs:84 좌표계를 사용하는 GeoJSON 으로 바꾸었습니다. CP949 인코딩으로 기록된 행정구역명 인코딩을 좌표계와 형식을 바꿀 때 보존합니다.
-  &lt;/p&gt;
-  &lt;label for=&quot;mn-demo&quot; class=&quot;margin-toggle&quot;&gt;&amp;#8853;&lt;/label&gt;&lt;input type=&quot;checkbox&quot; id=&quot;mn-demo&quot; class=&quot;margin-toggle&quot;/&gt;&lt;span class=&quot;marginnote&quot;&gt;출처: &lt;a href=&quot;https://www.slideshare.net/jangbi882/1geo-server-30331526&quot;&gt;여기&lt;/a&gt;의 33번째 슬라이드&lt;/span&gt;
-  &lt;pre class=&quot;code&quot;&gt;
+  내려받은 SHP 파일은 EPSG:5178 좌표계를 사용합니다. 다음과 같이 crs:84 좌표계를 사용하는 GeoJSON 으로 바꿉니다. CP949 인코딩으로 기록된 행정구역명 인코딩을 좌표계와 형식을 바꿀 때 보존합니다. 
+    &lt;label for=&quot;mn-demo&quot; class=&quot;margin-toggle&quot;&gt;&amp;#8853;&lt;/label&gt;&lt;input type=&quot;checkbox&quot; id=&quot;mn-demo&quot; class=&quot;margin-toggle&quot;/&gt;&lt;span class=&quot;marginnote&quot;&gt;출처: &lt;a href=&quot;https://www.slideshare.net/jangbi882/1geo-server-30331526&quot;&gt;여기&lt;/a&gt;의 33번째 슬라이드&lt;/span&gt;
+    &lt;pre class=&quot;code&quot;&gt;
   ogr2ogr -s_srs EPSG:5178 -t_srs crs:84 -f GeoJSON -skipfailures --config SHAPE_ENCODING &quot;CP949&quot; TL_SCCO_SIG_crs84.geojson TL_SCCO_SIG.shp
-  &lt;/pre&gt;
+    &lt;/pre&gt;
+  &lt;/p&gt;
   &lt;p&gt;
-
+  위의 작업은 Ubuntu 14.04 에서 하였습니다.  
   &lt;/p&gt;
 &lt;/section&gt;
 
 
 &lt;section&gt;
+  &lt;h2&gt;3. 지도 매끄럽게 하기&lt;/h2&gt;
   &lt;p&gt;
-  그래프를 그리는 것은 이공계 대학원생&lt;label for=&quot;sn-extensive-use-of-sidenotes&quot; class=&quot;margin-toggle sidenote-number&quot;&gt;&lt;/label&gt;&lt;input type=&quot;checkbox&quot; id=&quot;sn-extensive-use-of-sidenotes&quot; class=&quot;margin-toggle&quot;/&gt;&lt;span class=&quot;sidenote&quot;&gt;실험을 하는 연구실이나 하지 않는 이론 연구실 모두.&lt;/span&gt;이 가장 많이 하는 작업 중의 하나일 것입니다. 연구하는 과정에서 얻은 중간 결과를 graph, figures, illustration 등으로 나타냅니다. 그래프 그리는 일은 대학원생의 일상이라고 할 수 있겠습니다. 지도 교수님 포함하여 연구실 사람들이 참여하는 랩미팅 시간에 이야기하거나 지도 교수님과 1:1로 이야기 할 때, 그린 것을 가지고 간다음 같이 보면서 이야기합니다. 얻은 중간 결과 그림을 잘못 그리거나 이상하게 그리면, 하려는 이야기를 제대로 전달하기 힘들고, 심지어 데이터가 틀리지 않았더라도 연구 결과가 의심받을 수도 있습니다.
+  2번 과정에서 얻은 GeoJSON 파일에는 행정구역 구분선, 해안선, 섬 등이 자세하게 나와있어서 용량이 큽니다. QGIS 최신 버전으로 지도를 매끄럽게 하여 용량을 줄입니다.
+  &lt;/p&gt;
+  &lt;h3&gt;&lt;code&gt;multiparts → single part&lt;/code&gt;&lt;/h3&gt;
+  &lt;p&gt;
+  QGIS로 파일을 열면 다음과 같이 화면에 지도가 나옵니다.
+  &lt;/p&gt;
+  &lt;figure class=&quot;fullwidth&quot;&gt;
+    &lt;img src=&quot;/images/2017-04-29/QGIS-open-default.png&quot;/&gt;
+  &lt;/figure&gt;
+  &lt;p&gt;
+  &lt;code&gt;Ctrl + a&lt;/code&gt;로 모든 구역을 선택하면 색이 바뀝니다.
+  &lt;/p&gt;
+  &lt;figure class=&quot;fullwidth&quot;&gt;
+    &lt;img src=&quot;/images/2017-04-29/multi-to-single-01.png&quot;/&gt;
+  &lt;/figure&gt;
+  &lt;figure class=&quot;fullwidth&quot;&gt;
+    &lt;img src=&quot;/images/2017-04-29/multi-to-single-02.png&quot;/&gt;
+  &lt;/figure&gt;
+  &lt;p&gt;
+  위와 같이 Run 버튼을 클릭하면 아래와 같이 한 행정구역이지만 붙어있지 않은 섬 같은 부분을 분리합니다.
+  &lt;/p&gt;
+  &lt;figure class=&quot;fullwidth&quot;&gt;
+    &lt;img src=&quot;/images/2017-04-29/multi-to-single-03.png&quot;/&gt;
+  &lt;/figure&gt;
+
+
+  &lt;h3&gt;Select by &lt;code&gt;$area&lt;/code&gt;&lt;/h3&gt;
+  &lt;p&gt;
+  Single part로 분리하면 이제 닫힌 shape의 면적을 기준으로 너무 작은 섬들을 골라낼 수 있습니다. 다음과 같이 &quot;계산식으로 선택...&quot; 메뉴를 열어봅시다. 
+  &lt;/p&gt;
+  &lt;figure class=&quot;fullwidth&quot;&gt;
+    &lt;img src=&quot;/images/2017-04-29/select-by-expression-01.png&quot;/&gt;
+  &lt;/figure&gt;
+  &lt;p&gt;
+  아래와 같이 면적 0.01로 입력하니 너무 작아서 선택이 안 되는 곳도 있습니다. 개인적으로는 선택 버튼을 눌러도 해당 창이 닫히지 않으니 값을 바꾸면서 확인하고 선택할 수 있는 부분이 마음에 듭니다.
+  &lt;/p&gt;
+  &lt;figure class=&quot;fullwidth&quot;&gt;
+    &lt;img src=&quot;/images/2017-04-29/select-by-expression-02.png&quot;/&gt;
+  &lt;/figure&gt;
+  &lt;p&gt;
+  더 줄였더니 독도의 서도만 선택이 됩니다.
+  &lt;/p&gt;
+  &lt;figure class=&quot;fullwidth&quot;&gt;
+    &lt;img src=&quot;/images/2017-04-29/select-by-expression-03.png&quot;/&gt;
+  &lt;/figure&gt;
+  &lt;p&gt;
+  아래와 같이 살짝 더 줄이니 동도와 서도 모두 선택이 됩니다. 그리고 주변의 작은 섬은 선택이 되지 않습니다. 저는 대한민국의 영토인 독도의 동도와 서도가 모두 선택되는 이 값을 기준으로 너무 작은 섬들을 걸러냈습니다.
+  &lt;/p&gt;
+  &lt;figure class=&quot;fullwidth&quot;&gt;
+    &lt;img src=&quot;/images/2017-04-29/select-by-expression-04.png&quot;/&gt;
+  &lt;/figure&gt;
+  &lt;p&gt;
+  이제 걸러낸 결과를 GeoJSON 형태로 저장합니다. 저는 &lt;code&gt;TL_SCCO_SIG_crs84-m2s.geojson&lt;/code&gt;라고 저장하였습니다.
+  &lt;/p&gt;
+  
+&lt;/section&gt;
+
+
+&lt;section&gt;
+  &lt;h2&gt;4. GeoJSON → TopoJSON&lt;/h2&gt;
+  &lt;p&gt;
+  아래와 같이 TopoJSON CLI (Command Line Interface)을 설치합니다. 설치하려면 node.js package manager (npm)을 먼저 설치하시길 바랍니다. 
+    &lt;pre class=&quot;code&quot;&gt;
+    npm install -g topojson
+    &lt;/pre&gt;
   &lt;/p&gt;
   &lt;p&gt;
-  오늘 이야기는 최소한의 조언입니다. 이 정도로는 여러 가지 면&lt;label for=&quot;sn-extensive-use-of-sidenotes&quot; class=&quot;margin-toggle sidenote-number&quot;&gt;&lt;/label&gt;&lt;input type=&quot;checkbox&quot; id=&quot;sn-extensive-use-of-sidenotes&quot; class=&quot;margin-toggle&quot;/&gt;&lt;span class=&quot;sidenote&quot;&gt;Informative한 그림이 되기에. 눈에 띄는 그림이 되기에. 논문 그림이 되기에.&lt;/span&gt;에서 한참 부족합니다. 다음 글에서는 그래프를 더욱 잘 그리는 방법을 다루겠습니다.
+  Windows에서는 topojson 패키지가 잘 작동하지 않아서 아래 작업은 Ubuntu 14.04 에서 하였습니다.  
+    &lt;pre class=&quot;code&quot;&gt;
+    geo2topo TL_SCCO_SIG_crs84-m2s.geojson &gt; TL_SCCO_SIG_crs84-m2s-topo.json
+    &lt;/pre&gt;
+  &lt;/p&gt;
+  &lt;p&gt;
+    이제 TopoJSON 파일을 얻었습니다. 하지만 아직도 10MB 가량으로 웹에서 사용하기에는 용량이 큽니다. 그래서 다음과 같이 압축합니다.&lt;label for=&quot;sn-extensive-use-of-sidenotes&quot; class=&quot;margin-toggle sidenote-number&quot;&gt;&lt;/label&gt;&lt;input type=&quot;checkbox&quot; id=&quot;sn-extensive-use-of-sidenotes&quot; class=&quot;margin-toggle&quot;/&gt;&lt;span class=&quot;sidenote&quot;&gt;이 내용은 &lt;a href=&quot;https://d3js.org/&quot;&gt;&lt;i&gt;d3.js&lt;/i&gt;&lt;/a&gt;를 만든 &lt;a href=&quot;https://medium.com/@mbostock/command-line-cartography-part-3-1158e4c55a1e&quot;&gt;Mike Bostock 님의 글&lt;/a&gt;을 참조하였습니다.&lt;/span&gt;
+    &lt;pre class=&quot;code&quot;&gt;
+    topoquantize 1e4 &lt; TL_SCCO_SIG_crs84-m2s-topo.json &gt; TL_SCCO_SIG_crs84-m2s-quantized1e4-topo.json
+    &lt;/pre&gt;
+  &lt;/p&gt;
+  &lt;p&gt;
+    이제 2MB 미만이 되었습니다! 위의 명령어는 topojson 패키지를 설치하면 사용할 수 있습니다. 2016년 2월 SHP 파일을 가지고 만든 시군구 TopoJSON 지도를 &lt;a href=&quot;http://danielykim.me/visualizations/South_Korea_population_density/json/TL_SCCO_SIG_crs84-m2s-quantized1e3-topo.json&quot;&gt;여기&lt;/a&gt;에 올려두었고 자유롭게 내려받아 사용하시길 바랍니다. &lt;a rel=&quot;license&quot; href=&quot;http://creativecommons.org/licenses/by-sa/4.0/&quot;&gt;&lt;img alt=&quot;크리에이티브 커먼즈 라이선스&quot; style=&quot;border-width:0&quot; src=&quot;https://i.creativecommons.org/l/by-sa/4.0/88x31.png&quot; /&gt;&lt;/a&gt;&lt;br /&gt;이 저작물은 &lt;a rel=&quot;license&quot; href=&quot;http://creativecommons.org/licenses/by-sa/4.0/&quot;&gt;크리에이티브 커먼즈 저작자표시-동일조건변경허락 4.0 국제 라이선스&lt;/a&gt;에 따라 이용할 수 있습니다.
   &lt;/p&gt;
 &lt;/section&gt;
 
+
+&lt;section&gt;
+  &lt;h2&gt;5. 예제: 대한민국 인구밀도&lt;/h2&gt;
+  &lt;p&gt;
+  &lt;a href=&quot;http://kosis.kr/statisticsList/statisticsList_01List.jsp?vwcd=MT_ZTITLE&amp;parentId=H#SubCont&quot;&gt;국가통계포털&lt;/a&gt;에서 행정구역별 인구는 2015 인구주택총조사 자료를, 면적은 2017년 자료를 내려받아 사용하였습니다. d3.js v4를 이용하여 인구밀도를 &lt;a href=&quot;http://danielykim.me/visualizations/South_Korea_population_density/black.html&quot;&gt;검은 배경&lt;/a&gt;과 &lt;a href=&quot;http://danielykim.me/visualizations/South_Korea_population_density/white.html&quot;&gt;흰 배경&lt;/a&gt; 두 가지로 나타냈습니다. 특별히 &lt;a href=&quot;http://danielykim.me/visualizations/South_Korea_population_density/black.html&quot;&gt;검은 배경&lt;/a&gt;에서는 &lt;a href=&quot;https://github.com/bokeh/colorcet&quot;&gt;fire&lt;/a&gt; 색상 팔레트를 사용하였습니다.
+  &lt;/p&gt;
+  &lt;figure class=&quot;fullwidth&quot;&gt;
+    &lt;a href=&quot;http://danielykim.me/visualizations/South_Korea_population_density/&quot;&gt;
+    &lt;img src=&quot;/images/2017-04-29/South-Korea-population-density-maps.png&quot;/&gt;    
+    &lt;/a&gt;
+  &lt;/figure&gt;
+&lt;/section&gt;
 
 
 &lt;script type=&quot;text/javascript&quot; src=&quot;/js/footnotes.js&quot;&gt;&lt;/script&gt;
@@ -174,7 +344,7 @@ jQuery(&quot;p&quot;).inlineDisqussions({
 &lt;section&gt;
   &lt;h2&gt;1. 부르기 Import&lt;/h2&gt;
   &lt;p&gt;
-  당연하게도 데이터를 불러오지 않으면 데이터가 있을 수가 없습니다. 이 과정이 없으면 데이터 없는 데이터 과학자가 됩니다. 데이터 엔지니어(Data Engineer)가 불러오는 작업을 맡는 경우에는 데이터 과학자가 직접 불러오지 않아도 됩니다. 직접 맡지 않더라도 &lt;i&gt;풀려고 하는 비즈니스 문제&lt;/i&gt;에 맞는 데이터를 불러오도록 충분한 협의가 필요합니다. 협의 과정에서 &lt;i&gt;해당 문제&lt;/i&gt;를 풀 때 필요한 데이터가 없다는 것을 알게 될 수도 있습니다. 이렇게 데이터가 부족한 경우에는 의뢰인과 협의하며 풀려는 문제를 수정해야할 수도 있습니다.
+  당연하게도 데이터를 불러오지 않으면 데이터가 있을 수가 없습니다. 이 과정이 없으면 데이터 없는 데이터 과학자가 됩니다. 데이터 엔지니어(Data Engineer)가 불러오는 작업을 맡는 경우에는 데이터 과학자가 직접 불러오지 않아도 됩니다. 직접 맡지 않더라도 &lt;i&gt;풀려고 하는 비즈니스 문제&lt;/i&gt;&lt;label for=&quot;sn-extensive-use-of-sidenotes&quot; class=&quot;margin-toggle sidenote-number&quot;&gt;&lt;/label&gt;&lt;input type=&quot;checkbox&quot; id=&quot;sn-extensive-use-of-sidenotes&quot; class=&quot;margin-toggle&quot;/&gt;&lt;span class=&quot;sidenote&quot;&gt;이 부분에 관하여 더욱 자세한 논의는 &lt;a href=&quot;http://www.ciokorea.com/news/33206&quot;&gt;김진철 님께서 CIO Korea에 기고하신 글&lt;/a&gt;을 참조하시길 바랍니다.&lt;/span&gt;에 맞는 데이터를 불러오도록 충분한 협의가 필요합니다. 협의 과정에서 &lt;i&gt;해당 문제&lt;/i&gt;를 풀 때 필요한 데이터가 없다는 것을 알게 될 수도 있습니다. 이렇게 데이터가 부족한 경우에는 의뢰인과 협의하며 풀려는 문제를 수정해야할 수도 있습니다.
   &lt;/p&gt;
   &lt;p&gt;
 문제를 구체적으로 잘 정하는 것은 아무리 강조해도 지나치지 않을만큼 정말 중요합니다. 과정의 시작부터 잘 정하지 못하더라도 탐험적 데이터 과정을 통해 문제를 수정하거나 이상한 데이터를 찾을 수도 있습니다. 어떤 경우에는 처음 정한 문제에만 딱 맞게 데이터를 불러와서 문제가 수정되었을 때 데이터가 큰데도 새로 불러와야 하는 경우가 생깁니다. 따라서 가능한 변수의 합집합을 미리 추리면서 쓸모 없는 변수를 정성적으로 쳐내는 과정도 중요합니다.
@@ -353,7 +523,7 @@ jQuery(&quot;p&quot;).inlineDisqussions({
   또한 세련된 설명은 위의 그림에서 다빈치와 아인슈타인의 말과 같이 단순해야한다고 생각합니다.&lt;label for=&quot;sn-extensive-use-of-sidenotes&quot; class=&quot;margin-toggle sidenote-number&quot;&gt;&lt;/label&gt;&lt;input type=&quot;checkbox&quot; id=&quot;sn-extensive-use-of-sidenotes&quot; class=&quot;margin-toggle&quot;/&gt;&lt;span class=&quot;sidenote&quot;&gt;물론, 너무 단순해서 설명을 잘 못하면 안 되겠습니다.&lt;/span&gt; 복잡해지면 유지 보수 운영 측면에서 걷잡을 수 없는 혼란에 빠지기 쉽상입니다. 처음부터 모델을 복잡하게 세우면, 잘 세웠다면 유지 보수 운영하는 사람들이 굳이 하지 않아도 될 일이 생깁니다. 다루는 시스템에서 굳이 넣을 필요 없는 수학적인 방법을 몽땅 때려 넣고 온갖 조건문으로 뒤범벅되어있는 &lt;i&gt;스파게티 모델&lt;/i&gt;&lt;label for=&quot;sn-extensive-use-of-sidenotes&quot; class=&quot;margin-toggle sidenote-number&quot;&gt;&lt;/label&gt;&lt;input type=&quot;checkbox&quot; id=&quot;sn-extensive-use-of-sidenotes&quot; class=&quot;margin-toggle&quot;/&gt;&lt;span class=&quot;sidenote&quot;&gt;&lt;i&gt;스파게티 코드&lt;/i&gt;와 비슷한 의미에서 사용했습니다.&lt;/span&gt;을 피합시다!
   &lt;/p&gt;
   &lt;p&gt;
-  이는 비즈니스 상황에서 법칙을 찾자는 이야기가 결코 아닙니다. 비즈니스 상황에서는 모델이 adaptive하고 flexible 해도 괜찮습니다. 기업에 커다란 손해를 끼치 수 있는 &lt;i&gt;스파게티 모델&lt;/i&gt;을 피하자는 것입니다. 어떻게 피해야 하겠습니까? 먼저, 데이터 과학자 본인이 통계, 수학 등 이론적인 부분을 챙기면서 꾸준한 프로젝트 참여를 통해 뒤처지지 않아야겠습니다. 소속 회사에서 동료 데이터 과학자들과 함께 자신의 모델링 과정을 peer review 받는 것도 훌륭하게 모델링할 때 도움이 될 것입니다.
+  이는 회사를 다니면서 궁극의 법칙을 찾자는 이야기가 결코 아닙니다. 비즈니스 상황에서는 모델이 adaptive하고 flexible 해도 괜찮습니다. 기업에 커다란 손해를 끼치 수 있는 &lt;i&gt;스파게티 모델&lt;/i&gt;을 피하자는 것입니다. 이것을 어떻게 피해야 하겠습니까? 먼저, 데이터 과학자 본인이 통계, 수학 등 이론적인 부분을 챙기면서 꾸준한 프로젝트 참여를 통해 뒤처지지 않아야겠습니다. 소속 회사에서 동료 데이터 과학자들과 함께 자신의 모델링 과정을 peer review 받는 것도 훌륭하게 모델링할 때 도움이 될 것입니다.
   &lt;/p&gt;
   &lt;p&gt;
   그렇다고 데이터 과학자 혼자 노력한다고 해서 &lt;i&gt;스파게티 모델&lt;/i&gt;이 반드시 생기지 않는 것은 아닙니다. 데이터 과학 업무를 의뢰하는 회사나 담당자로부터 마케팅 측면에서 말도 안되는 방식으로 수학적인 기법을 무리하게 동원하도록 압박을 받아서 강제로 생기기도 합니다.&lt;label for=&quot;sn-extensive-use-of-sidenotes&quot; class=&quot;margin-toggle sidenote-number&quot;&gt;&lt;/label&gt;&lt;input type=&quot;checkbox&quot; id=&quot;sn-extensive-use-of-sidenotes&quot; class=&quot;margin-toggle&quot;/&gt;&lt;span class=&quot;sidenote&quot;&gt;의뢰하는 측은 &quot;우리 회사도 (요즘 유행하는) A라는 기법을 사용하여 혁신을 이뤄냈습니다!&quot;라고 말하고 싶어하는 과도한 욕심을 자제할 필요가 있습니다.&lt;/span&gt; 보통 이런 참사는 의뢰하는 고객사가 인건비 때문에 데이터 과학자를 운용하기 힘든 기업인 경우보다는, 고객사가 경제적으로 풍족하고 특정 업종을 선도하는 기업인 경우에 일어납니다. 물론, 자체적으로 데이터도 많고 데이터 과학자를 운용할 경제적인 여유가 있으면 좋겠지만 모두가 이와 같을 수 없습니다.
@@ -362,7 +532,7 @@ jQuery(&quot;p&quot;).inlineDisqussions({
   약간 벗어나는 다른 이야기지만, 모델링과 관련 있는 짧은 일화를 하나 소개하려고 합니다. 비즈니스 상황에서는 탐험적 데이터 분석 과정을 통해 단순하고 세련된 모델을 세우면 &quot;그건 저도 할 수 있겠습니다&quot;라고 무시하는 투가 섞인 말을 듣는 경우도 있습니다. 결코 쉽지 않은 과정을 통해서 얻은 결과인데도 말입니다. 때로는 학계에서 사용하던 기법에 비해 덜 복잡하다는 의미에서나 구현하는데 시간이 덜 든다는 의미에서 쉽다고 말하면, 듣는 사람들이 순진하게 곧이곧대로 받아들여 전문가가 아니더라도 누구나 쉽게 할 수 있는 것처럼 오해받는 경우도 있습니다.
   &lt;/p&gt;
   &lt;p&gt;
-  여기까지가 Transform, Visualise, Model (TVM) 으로 정리할 수 있는 Exploratory Data Analysis (EDA)의 핵심 내용입니다. 이렇게 의미있는 패턴이나 특징을 찾아내기 위해서 다양한 수학적인 양을 측정해서 보고 비교하는 TVM 과정은 보통 한 번에 끝나지 않을 수 있습니다.&lt;label for=&quot;sn-extensive-use-of-sidenotes&quot; class=&quot;margin-toggle sidenote-number&quot;&gt;&lt;/label&gt;&lt;input type=&quot;checkbox&quot; id=&quot;sn-extensive-use-of-sidenotes&quot; class=&quot;margin-toggle&quot;/&gt;&lt;span class=&quot;sidenote&quot;&gt;수행하는 데이터 과학자가 이미 잘 알고 있는 현상에 관한 데이터를 다룰 때는 비교적 수월할 것입니다.&lt;/span&gt; TVM 과정을 여러번 반복하다보면 작성한 코드나 얻은 부산물/산출물 등이 지저분하게 흩어지기 쉽습니다. 그래서 구현, 유지, 보수 등이 어렵게 됩니다. 처음부터 알아보기 쉽게 정리한다면 이후에 넘겨 받는 사람에게 굳이 하지 않아도 될 번거로운 일이 생기지 않을 것입니다. 
+  여기까지가 Transform, Visualise, Model (TVM) 으로 정리할 수 있는 Exploratory Data Analysis (EDA)의 핵심 내용입니다. 이렇게 의미있는 패턴이나 특징을 찾아내기 위해서 다양한 수학적인 양을 측정해서 보고 비교하는 TVM 과정은 보통 한 번에 끝나지 않을 수 있습니다.&lt;label for=&quot;sn-extensive-use-of-sidenotes&quot; class=&quot;margin-toggle sidenote-number&quot;&gt;&lt;/label&gt;&lt;input type=&quot;checkbox&quot; id=&quot;sn-extensive-use-of-sidenotes&quot; class=&quot;margin-toggle&quot;/&gt;&lt;span class=&quot;sidenote&quot;&gt;수행하는 데이터 과학자가 이미 잘 알고 있는 현상에 관한 데이터를 다룰 때는 비교적 수월할 것입니다.&lt;/span&gt; 반복될 수 있기 때문에 처음부터 모든 데이터를 가지고 TVM을 하기보다는 데이터를 잘 대표하는 표본을 가지고 작업한 다음에 일반화 합니다. 가볍고 빠르게 TVM을 반복하기 위해 Python &lt;a href=&quot;https://jupyter.org/&quot;&gt;Jupyter&lt;/a&gt; notebook이나 &lt;a href=&quot;https://www.rstudio.com/&quot;&gt;R Studio&lt;/a&gt; 등을 적절하게 사용하는 것을 권장합니다. 한편, TVM 과정을 여러번 반복하다보면 작성한 코드나 얻은 부산물/산출물 등이 지저분하게 흩어지기 쉽습니다. 그래서 구현, 유지, 보수 등이 어렵게 됩니다. 처음부터 알아보기 쉽게 정리한다면 이후에 넘겨 받는 사람에게 굳이 하지 않아도 될 번거로운 일이 생기지 않을 것입니다.
   &lt;/p&gt;
 &lt;/section&gt;
 
@@ -1145,61 +1315,6 @@ Negiz 데이터 사례 연구에 박스-젠킨스 모델에서 나머지를 분�
         <pubDate>Fri, 25 Nov 2016 00:00:00 +0000</pubDate>
         <link>http://localhost:4000/articles/2016/11/25/ESH-06-04-04-08-01/</link>
         <guid isPermaLink="true">http://localhost:4000/articles/2016/11/25/ESH-06-04-04-08-01/</guid>
-        
-        
-      </item>
-    
-      <item>
-        <title>6.4.4.7. 박스-젠킨스 모델 측정</title>
-        <description>&lt;section&gt;
-  &lt;p&gt;
-    &lt;label for=&quot;mn-h01&quot; class=&quot;margin-toggle&quot;&gt;⊕ &lt;/label&gt;
-    &lt;input type=&quot;checkbox&quot; id=&quot;mn-h01&quot; class=&quot;margin-toggle&quot;&gt;
-    &lt;span class=&quot;marginnote&quot;&gt;
-소프트웨어 사용
-    &lt;/span&gt;
-박스-젠킨스 모델에서 매개변수를 측정하는 것은 상당히 복잡한 비선형 계산 문제이다. 이러한 이유에서, 매개변수 측정은 박스-젠킨스 모델을 잘 맞추는 좋은 소프트웨어의 몫으로 남겨두자. 다행히, 요즘은 많은 상용 통계 소프트웨어에서 박스-젠킨스 모델로 맞출 수 있다.
-  &lt;/p&gt;
-&lt;/section&gt;
-
-&lt;section&gt;
-  &lt;p&gt;
-    &lt;label for=&quot;mn-h02&quot; class=&quot;margin-toggle&quot;&gt;⊕ &lt;/label&gt;
-    &lt;input type=&quot;checkbox&quot; id=&quot;mn-h02&quot; class=&quot;margin-toggle&quot;&gt;
-    &lt;span class=&quot;marginnote&quot;&gt;
-접근법
-    &lt;/span&gt;
-주로 비선형 최소 제곱법(non-linear least squares)이나 최대가능성측정법(maximum likelihood estimation)으로 박스-젠킨스 모델을 맞춘다.
-  &lt;/p&gt;
-  &lt;p&gt;
-일반적으로 최대가능성측정법을 좀 더 많이 사용한다. 전체 박스-젠킨스 모델의 가능성 식(likelihood equations)은 복잡하며 이곳에서 소개하지 않겠다. 자세한 내용은 Brockwell and Davis, 1991을 참조하라.
-  &lt;/p&gt;
-&lt;/section&gt;
-
-&lt;section&gt;
-  &lt;p&gt;
-    &lt;label for=&quot;mn-h03&quot; class=&quot;margin-toggle&quot;&gt;⊕ &lt;/label&gt;
-    &lt;input type=&quot;checkbox&quot; id=&quot;mn-h03&quot; class=&quot;margin-toggle&quot;&gt;
-    &lt;span class=&quot;marginnote&quot;&gt;
-모델 측정 예제
-    &lt;/span&gt;
-Negiz 사례 연구에서 박스-젠킨스 모델 맞추는 예제를 살펴볼 수 있다.
-  &lt;/p&gt;
-&lt;/section&gt;
-
-&lt;section&gt;
-  &lt;ul class=&quot;pager&quot;&gt;
-    &lt;li class=&quot;previous&quot;&gt;&lt;a href=&quot;/articles/2016/11/25/ESH-06-04-04-06-03&quot;&gt;Previous&lt;/a&gt;&lt;/li&gt;
-    &lt;li class=&quot;next&quot;&gt;&lt;a href=&quot;/articles/2016/11/25/ESH-06-04-04-08&quot;&gt;Next&lt;/a&gt;&lt;/li&gt;      
-  &lt;/ul&gt;
-  &lt;p&gt;
-    &lt;a href=&quot;http://www.itl.nist.gov/div898/handbook/pmc/section4/pmc447.htm&quot;&gt;원문 보기&lt;/a&gt;
-  &lt;/p&gt;
-&lt;/section&gt;
-</description>
-        <pubDate>Fri, 25 Nov 2016 00:00:00 +0000</pubDate>
-        <link>http://localhost:4000/articles/2016/11/25/ESH-06-04-04-07/</link>
-        <guid isPermaLink="true">http://localhost:4000/articles/2016/11/25/ESH-06-04-04-07/</guid>
         
         
       </item>
