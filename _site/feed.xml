@@ -5,15 +5,96 @@
     <description>Exploring Adjacent Possibles</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 10 May 2017 15:22:12 +0000</pubDate>
-    <lastBuildDate>Wed, 10 May 2017 15:22:12 +0000</lastBuildDate>
+    <pubDate>Sun, 27 Aug 2017 05:47:04 +0000</pubDate>
+    <lastBuildDate>Sun, 27 Aug 2017 05:47:04 +0000</lastBuildDate>
     <generator>Jekyll v3.3.0</generator>
+    
+      <item>
+        <title>데이터 과학은 정말로 과학인가?</title>
+        <description>&lt;section&gt;
+  &lt;p&gt;
+  제목의 질문을 다음과 같이 바꿀 수도 있겠습니다. &quot;데이터 과학자&quot;는 정말로 &quot;과학자&quot;인가? 이외에도 관련된 여러 파생 질문이 가능하겠습니다만, &quot;데이터&quot;, &quot;과학&quot;, &quot;과학자&quot; 이렇게 세 가지 단어의 정의를 각각 살펴보고 종합하여 현실과 일관적인지 따져보면, 그리 만족스럽진 않더라도 첫 시작으로는 꽤 괜찮은 답을 할 수 있겠습니다.
+  &lt;/p&gt;
+&lt;/section&gt;
+
+
+&lt;section&gt;
+  &lt;p&gt;
+  제가 직접 질문에 답하기 보다는 앞서 고민한 사람들의 이야기를 먼저 살펴보겠습니다. 아래는 미국 시카고 대학교의 Rayid Ghani 님이 2013년 7월 13일 블로그에 작성하신 글&lt;label for=&quot;sn-extensive-use-of-sidenotes&quot; class=&quot;margin-toggle sidenote-number&quot;&gt;&lt;/label&gt;&lt;input type=&quot;checkbox&quot; id=&quot;sn-extensive-use-of-sidenotes&quot; class=&quot;margin-toggle&quot;/&gt;&lt;span class=&quot;sidenote&quot;&gt;출처: &lt;a href=&quot;http://www.rayidghani.com/is-data-science-a-real-science&quot;&gt;Is Data Science a Real Science?&lt;/a&gt;&lt;/span&gt;을 제가 한글로 옮긴 것입니다.
+  &lt;/p&gt;
+  &lt;div class=&quot;epigraph&quot;&gt;
+    &lt;blockquote&gt;
+      &lt;p&gt;
+      저를 포함하여 많은 사람들은 종종 &quot;과학&quot;이라는 단어가 들어가면 아마도 진짜 과학이 아닐 것이라고 말합니다. 컴퓨터 과학, 정치 과학, 사회 과학, 로켓 과학...&lt;label for=&quot;sn-extensive-use-of-sidenotes&quot; class=&quot;margin-toggle sidenote-number&quot;&gt;&lt;/label&gt;&lt;input type=&quot;checkbox&quot; id=&quot;sn-extensive-use-of-sidenotes&quot; class=&quot;margin-toggle&quot;/&gt;&lt;span class=&quot;sidenote&quot;&gt;엄밀하게 이야기하면 과학과 공학은 다릅니다. 과학이 자연의 원리를 이해하는 학문이라면 공학은 과학에서 얻은 원리를 인류를 위해 응용하는 학문입니다.&lt;/span&gt;
+거기에 어떤 진실이 있다고 해도, 완전하게 신뢰하진 않습니다. 그렇다면 데이터 과학은 어떻겠습니까?
+      &lt;/p&gt;
+      &lt;p&gt;
+뭐, 현재의 데이터 과학이라는 단어와 (분야와 관련하여) 비슷한 신조어들이 많습니다(이 단어가 어떤 의미가 있는지는 잠시 무시하고, 이 단어를 잠시 데이터 마이닝, 기계 학습, 애널리틱스 등의 다른 데이터 관련 신조어의 유의어로 부릅시다.) 기업들은 뭔가를 합리적인 방식으로 하는 것에 어떠한 가치가 있다는 것을 깨닫고 있습니다. 데이터를 모으는데 더 많은 자원을 투자하고 있습니다. 심지어 데이터를 무엇을 할 수 있는지 묻고 있습니다. 사실 데이터 주도(data driven) 분석에 기반하여 판단을 내리는 방식으로 변하는 것은 정말 혁신적인 모습입니다.
+      &lt;/p&gt;
+      &lt;p&gt;
+그렇다고 해서 이러한 모습이 데이터 과학을 과학으로 만들어주겠습니까? 사실 그렇지 않습니다. 데이터를 가지고 의사결정을 향상시키는 것은 좋고 쓸모 있는 일입니다만 그렇다고해서 과학은 아닙니다.
+동시에, 저 같은 사람이 하는 일에는 분명히 수많은 과학이 깔려 있습니다. 과학에 근거하여 모델을 세웁니다. 통계적이고 과학적인 타당성을 가지는 실험들을 합니다. 일반화하는, 예견하는, (필요한 경우에) 어떤 때는 설명력과 인과력을 가진 예측값들을 냅니다. 이것이 과학입니다. 
+      &lt;/p&gt;
+      &lt;p&gt;
+어떤 사람들은 제 의견에 동의하지 않고, 훌륭하고 오래된 &quot;생성 가설&quot;, &quot;실험 실행&quot;, &quot;과학에 대한 이론적 접근&quot; 등의 방식을 고수할 수 있겠지만 저는 그것이 유일한 과학적 방식이라고 생각하지 않습니다. 수많은 진짜 과학은 가설과 관련이 있지만, 그 중 많은 부분은 답을 찾는 것과 그 답을 제공 할 수 있는 시스템을 만들 필요에서 유래합니다. 
+      &lt;/p&gt;
+      &lt;p&gt; 
+저는 분명히 좋은 데이터 과학자는 데이터 해커와 다르다고 생각합니다. 데이터 해킹은 확실히 쓸모가 있습니다만 (그리고 가치가 있기도 합니다만) 적절한 주의 사항, 제한 사항, 면책 조항 등을 수반하지 않을 경우 위험합니다.
+      &lt;/p&gt;
+      &lt;p&gt;
+(중략)
+      &lt;/p&gt;
+      &lt;p&gt;
+두 가지 이야기를 말씀드리려고 합니다. 첫 번째는 다음과 같습니다. 큰 회사가 허리케인이 생기기 몇 달 전에 허리케인을 예측하는 것을 부탁했습니다. 그 회사는 데이터에 관한 과장 광고를 들었고, 허리케인에 관한 지난 100년간의 데이터가 있었기 때문에, 데이터를 많이 보유할 수록 무엇이든 예측할 수 있다고 생각했습니다(아니면 일부 전문가의 말을 단순하게 인용했을 수도 있습니다). 이렇게 데이터를 모으는 작업이 1년 뒤 일어날 일을 예측할 수 있도록 만들지 않습니다.
+      &lt;/p&gt;
+      &lt;p&gt;
+(중략)
+      &lt;/p&gt;
+      &lt;p&gt;
+답변을 할 수 있다는 것은 중요합니다만, 여러분이 얻은 답이 적합한지 판단하는 능력도 똑같이 중요합니다. 여러분의 분석 방식을 언제 적용할지 적용하지 말아야 하겠습니까? 그것이 얼마나 일반화되겠습니까? 여러분은 어떤 가정을 세우셨습니까?
+      &lt;/p&gt;
+      &lt;p&gt;
+그래서, 저는 분명히 데이터 과학에 수많은 과학적인 요소가 있다고 생각하고, 러한 작업을 하기 위해 과학적인 전문성이 필요하다고 생각하고, 이러한 작업을 할 때 과학적인 원리를 따를 필요가 있다고 생각하며, 그리고 이러한 것들을 익히는 작업이 여러분을 더욱 훌륭한 (가치있는) 데이터 과학자가 되도록 만든다고 나는 데이터 과학이 유용한 과학이라면, 그것이 진짜 과학이건 가짜 과학이건 상관 없다고 생각합니다.
+      &lt;/p&gt;
+    &lt;/blockquote&gt;
+  &lt;/div&gt;
+&lt;/section&gt;
+
+
+&lt;script type=&quot;text/javascript&quot; src=&quot;/js/footnotes.js&quot;&gt;&lt;/script&gt;
+&lt;script type=&quot;text/javascript&quot; src=&quot;/js/highlight.pack.js&quot;&gt;&lt;/script&gt;
+&lt;script&gt;hljs.initHighlightingOnLoad();&lt;/script&gt;
+&lt;!-- http://tsi.github.io/inlineDisqussions/ --&gt;
+
+&lt;script&gt;
+disqus_shortname = 'danielykim';
+
+jQuery(document).ready(function() {
+  jQuery(&quot;p&quot;).inlineDisqussions();
+});
+
+jQuery(&quot;p&quot;).inlineDisqussions({
+  identifier: 'disqussion',
+  displayCount: true,
+  highlighted: true,
+  position: 'right',
+  background: '#FFFFF9',
+  maxWidth: 200
+});
+&lt;/script&gt;
+</description>
+        <pubDate>Sun, 27 Aug 2017 00:00:00 +0000</pubDate>
+        <link>http://localhost:4000/articles/2017/08/27/Is-data-science-a-real-science/</link>
+        <guid isPermaLink="true">http://localhost:4000/articles/2017/08/27/Is-data-science-a-real-science/</guid>
+        
+        
+      </item>
     
       <item>
         <title>논문 한글 요약 - arXiv:1608.07249v7</title>
         <description>&lt;section&gt;
   &lt;p&gt;
-  이 글은 &lt;a href=&quot;https://arxiv.org/abs/1608.07249v7&quot;&gt;arXiv:1608.07249v7&lt;/a&gt; 내용을 아주 간단하게 요약한 것입니다. 논문에서는 최신 딥러닝 소프트웨어 5가지&lt;label for=&quot;sn-extensive-use-of-sidenotes&quot; class=&quot;margin-toggle sidenote-number&quot;&gt;&lt;/label&gt;&lt;input type=&quot;checkbox&quot; id=&quot;sn-extensive-use-of-sidenotes&quot; class=&quot;margin-toggle&quot;/&gt;&lt;span class=&quot;sidenote&quot;&gt;&lt;a href=&quot;http://caffe.berkeleyvision.org/&quot;&gt;Caffe&lt;/a&gt;, &lt;a href=&quot;https://github.com/microsoft/cntk&quot;&gt;CNTK&lt;/a&gt;, &lt;a href=&quot;http://mxnet.io/&quot;&gt;MXNet&lt;/a&gt;, &lt;a href=&quot;https://www.tensorflow.org/&quot;&gt;TensorFlow&lt;/a&gt;, &lt;a href=&quot;http://torch.ch/&quot;&gt;Torch&lt;/a&gt;&lt;/span&gt;의 단위 학습량 당 걸리는 시간을 크게 3가지&lt;label for=&quot;sn-extensive-use-of-sidenotes&quot; class=&quot;margin-toggle sidenote-number&quot;&gt;&lt;/label&gt;&lt;input type=&quot;checkbox&quot; id=&quot;sn-extensive-use-of-sidenotes&quot; class=&quot;margin-toggle&quot;/&gt;&lt;span class=&quot;sidenote&quot;&gt;CPU only, single GPU, multi-GPU&lt;/span&gt; 상황에서 3가지 신경망&lt;label for=&quot;sn-extensive-use-of-sidenotes&quot; class=&quot;margin-toggle sidenote-number&quot;&gt;&lt;/label&gt;&lt;input type=&quot;checkbox&quot; id=&quot;sn-extensive-use-of-sidenotes&quot; class=&quot;margin-toggle&quot;/&gt;&lt;span class=&quot;sidenote&quot;&gt;Fully Connected Network (FCN), Convolutional Neural Network (CNN), Recurrent Neural Network (RNN)&lt;/span&gt;을 단위 학습량 규모를 바꾸면서 비교합니다. 비교할 때 결과 요약은 다음과 같습니다.
+  이 글은 &quot;Benchmarking State-of-the-Art Deep Learning Software Tools&quot;라는 제목의 논문(&lt;a href=&quot;https://arxiv.org/abs/1608.07249v7&quot;&gt;arXiv:1608.07249v7&lt;/a&gt;) 내용을 아주 간단하게 요약한 것입니다. 논문에서는 최신 딥러닝 소프트웨어 5가지&lt;label for=&quot;sn-extensive-use-of-sidenotes&quot; class=&quot;margin-toggle sidenote-number&quot;&gt;&lt;/label&gt;&lt;input type=&quot;checkbox&quot; id=&quot;sn-extensive-use-of-sidenotes&quot; class=&quot;margin-toggle&quot;/&gt;&lt;span class=&quot;sidenote&quot;&gt;&lt;a href=&quot;http://caffe.berkeleyvision.org/&quot;&gt;Caffe&lt;/a&gt;, &lt;a href=&quot;https://github.com/microsoft/cntk&quot;&gt;CNTK&lt;/a&gt;, &lt;a href=&quot;http://mxnet.io/&quot;&gt;MXNet&lt;/a&gt;, &lt;a href=&quot;https://www.tensorflow.org/&quot;&gt;TensorFlow&lt;/a&gt;, &lt;a href=&quot;http://torch.ch/&quot;&gt;Torch&lt;/a&gt;&lt;/span&gt;의 단위 학습량 당 걸리는 시간을 크게 3가지&lt;label for=&quot;sn-extensive-use-of-sidenotes&quot; class=&quot;margin-toggle sidenote-number&quot;&gt;&lt;/label&gt;&lt;input type=&quot;checkbox&quot; id=&quot;sn-extensive-use-of-sidenotes&quot; class=&quot;margin-toggle&quot;/&gt;&lt;span class=&quot;sidenote&quot;&gt;CPU only, single GPU, multi-GPU&lt;/span&gt; 상황에서 3가지 신경망&lt;label for=&quot;sn-extensive-use-of-sidenotes&quot; class=&quot;margin-toggle sidenote-number&quot;&gt;&lt;/label&gt;&lt;input type=&quot;checkbox&quot; id=&quot;sn-extensive-use-of-sidenotes&quot; class=&quot;margin-toggle&quot;/&gt;&lt;span class=&quot;sidenote&quot;&gt;Fully Connected Network (FCN), Convolutional Neural Network (CNN), Recurrent Neural Network (RNN)&lt;/span&gt;을 단위 학습량 규모를 바꾸면서 비교합니다. 내용 요약은 다음과 같습니다.
   &lt;/p&gt;
 &lt;/section&gt;
 
@@ -21,7 +102,7 @@
 &lt;section&gt;
   &lt;h2&gt;1. CPU only: BEST - TensorFlow&lt;/h2&gt;
   &lt;p&gt;
-  TensorFlow가 가장 좋았습니다. 비교할 때 16개의 CPU core를 사용했다고 합니다.
+  TensorFlow가 가장 좋았습니다. 비교할 때 16개의 물리적인 CPU core까지 늘리면서 진행했다고 합니다.
   &lt;/p&gt;
   
   &lt;h2&gt;2. Single GPU&lt;/h2&gt;
@@ -29,13 +110,16 @@
   &lt;ul&gt;
     &lt;li&gt;Fully Connected Network (FCN): &lt;a href=&quot;http://caffe.berkeleyvision.org/&quot;&gt;Caffe&lt;/a&gt;, &lt;a href=&quot;https://github.com/microsoft/cntk&quot;&gt;CNTK&lt;/a&gt;, &lt;a href=&quot;http://torch.ch/&quot;&gt;Torch&lt;/a&gt; &gt; &lt;a href=&quot;http://mxnet.io/&quot;&gt;MXNet&lt;/a&gt;, &lt;a href=&quot;https://www.tensorflow.org/&quot;&gt;TensorFlow&lt;/a&gt; 라고 합니다.&lt;/li&gt;
     &lt;li&gt;Convolutional Neural Network (CNN): network가 큰 경우는 &lt;a href=&quot;http://mxnet.io/&quot;&gt;MXNet&lt;/a&gt;, 작은 경우는 &lt;a href=&quot;http://caffe.berkeleyvision.org/&quot;&gt;Caffe&lt;/a&gt;와 &lt;a href=&quot;https://github.com/microsoft/cntk&quot;&gt;CNTK&lt;/a&gt;도 좋았다고 합니다.&lt;/li&gt;
-    &lt;li&gt;Recurrent Neural Network (RNN): &lt;a href=&quot;https://github.com/microsoft/cntk&quot;&gt;CNTK&lt;/a&gt;가 다른 4가지에 비해 LSTM RNN&lt;label for=&quot;sn-extensive-use-of-sidenotes&quot; class=&quot;margin-toggle sidenote-number&quot;&gt;&lt;/label&gt;&lt;input type=&quot;checkbox&quot; id=&quot;sn-extensive-use-of-sidenotes&quot; class=&quot;margin-toggle&quot;/&gt;&lt;span class=&quot;sidenote&quot;&gt;자세한 내용은 &lt;a href=&quot;http://aikorea.org/cs231n/convolutional-networks/&quot;&gt;이 글&lt;/a&gt;을 참조하시길 바랍니다.&lt;/span&gt;으로 5-10배 빠르게 학습한다고 합니다. &lt;/li&gt;
+    &lt;li&gt;Recurrent Neural Network (RNN): &lt;a href=&quot;https://github.com/microsoft/cntk&quot;&gt;CNTK&lt;/a&gt;가 다른 4가지에 비해 LSTM을 이용하는 RNN&lt;label for=&quot;sn-extensive-use-of-sidenotes&quot; class=&quot;margin-toggle sidenote-number&quot;&gt;&lt;/label&gt;&lt;input type=&quot;checkbox&quot; id=&quot;sn-extensive-use-of-sidenotes&quot; class=&quot;margin-toggle&quot;/&gt;&lt;span class=&quot;sidenote&quot;&gt;자세한 내용은 &lt;a href=&quot;http://aikorea.org/cs231n/convolutional-networks/&quot;&gt;이 글&lt;/a&gt;을 참조하시길 바랍니다.&lt;/span&gt;을 5-10배 빠르게 학습시킨다고 합니다. &lt;/li&gt;
   &lt;/ul&gt;  
   &lt;/p&gt;
 
-  &lt;figure class=&quot;fullwidth&quot;&gt;
+  &lt;p&gt;
+  &lt;figure&gt;
     &lt;img src=&quot;/images/2017-05-10/arXiv-1608-07249-v7-Figure1.png&quot;/&gt;    
   &lt;/figure&gt;
+  위의 그림은 &lt;a href=&quot;https://arxiv.org/abs/1608.07249v7&quot;&gt;arXiv:1608.07249v7&lt;/a&gt;의 Figure 1입니다.
+  &lt;/p&gt;
 
   &lt;h2&gt;3. Multi-GPU&lt;/h2&gt;
   &lt;p&gt;
@@ -54,7 +138,8 @@
   &lt;ul&gt;
     &lt;li&gt;NVIDIA® GTX 980, NVIDIA® GTX 1080, NVIDIA® Tesla K80 GK210 중에서 NVIDIA® GTX 1080이 가장 좋았다고 합니다.&lt;/li&gt;
     &lt;li&gt;GPU를 사용할 때는 cuDNN을 꼭 설치하여 소프트웨어가 사용할 수 있도록 하기를 권장하고 있습니다.&lt;/li&gt;    
-    &lt;li&gt;Convolution을 직접 계산하기보다는 FFT를 하기를 권장하고 있습니다.&lt;/li&gt;        
+    &lt;li&gt;Convolution을 직접 계산하기보다는 FFT 하기를 권장하고 있습니다.&lt;/li&gt;
+    &lt;li&gt;Multi-GPU 경우에 TensorFlow는 GPU 숫자를 1, 2, 4개로 늘려도 눈에 띄게 빨라지지는 않는다고 합니다.&lt;/li&gt;
   &lt;/ul&gt;
   &lt;/p&gt;
 &lt;/section&gt;
@@ -1247,74 +1332,6 @@ Negiz 데이터 사례 연구에 박스-젠킨스 모델에서 나머지를 분�
         <pubDate>Fri, 25 Nov 2016 00:00:00 +0000</pubDate>
         <link>http://localhost:4000/articles/2016/11/25/ESH-06-04-04-08/</link>
         <guid isPermaLink="true">http://localhost:4000/articles/2016/11/25/ESH-06-04-04-08/</guid>
-        
-        
-      </item>
-    
-      <item>
-        <title>6.4.4.8.1 박스-융 테스트</title>
-        <description>&lt;section&gt;
-  &lt;p&gt;
-    &lt;label for=&quot;mn-h01&quot; class=&quot;margin-toggle&quot;&gt;⊕ &lt;/label&gt;
-    &lt;input type=&quot;checkbox&quot; id=&quot;mn-h01&quot; class=&quot;margin-toggle&quot;&gt;
-    &lt;span class=&quot;marginnote&quot;&gt;
-적합성에 대한 테스트
-    &lt;/span&gt;
-박스-융 테스트(1978)는 시계열이 모델에 잘 맞는지 진단하는 방법이다.
-  &lt;/p&gt;
-  &lt;p&gt;
-데이터를 ARMA(p,q) 모델로 맞춘 다음, 시계열의 나머지에 테스트를 적용하면 된다. 테스트에서 나머지에 대한 m개의 자기상관을 검사한다. 자기상관이 아주 작다면, 모델이 적합하지 않다고 말할 수 없다는 결과를 준다.
-
-  &lt;/p&gt;
-  &lt;p&gt;
-6.4.4.10절에서 나머지 시계열에 박스-융 테스트를 다루는 예제가 있다.
-
-  &lt;/p&gt;
-&lt;/section&gt;
-
-&lt;section&gt;
-  &lt;p&gt;
-    &lt;label for=&quot;mn-h02&quot; class=&quot;margin-toggle&quot;&gt;⊕ &lt;/label&gt;
-    &lt;input type=&quot;checkbox&quot; id=&quot;mn-h02&quot; class=&quot;margin-toggle&quot;&gt;
-    &lt;span class=&quot;marginnote&quot;&gt;
-정의
-    &lt;/span&gt;
-일반적으로, 박스-융 테스트는 다음과 같이 정의한다.
-    &lt;blockquote&gt;
-      &lt;p&gt;\(H_{0}\) : 모델이 적합하지 않다는 모습이 안 보인다.&lt;/p&gt;
-      &lt;p&gt;\(H_{a}\) : 모델이 적합하지 않다고 보인다.&lt;/p&gt;
-      &lt;p&gt;
-      테스트 통계: 길이 \(n\)인 주어진 시계열 \(Y\)가 있을 때, 테스트 통계는 다음과 같다.
-      $$ Q = n(n+2) \sum_{k=1}^{m} \frac{ r_{k}^{2} }{ n - k } $$
-여기에서 r_{k}는 뒤처짐 k에서 측정한 시계열의 자기상관이고, m은 테스트하는 뒤처짐의 갯수이다.
-      &lt;/p&gt;
-      &lt;p&gt;유의미도: \(\alpha\)&lt;/p&gt;
-      &lt;p&gt;
-      기각 영역(critical region): 박스-융 테스트는 다음과 같은 경우 귀무 가설(null hypothesis; 유의미하게 모델이 적합하지 않은 경우)을 기각한다.
-      $$ Q &gt; \chi_{1-\alpha, h}^{2} $$
-      여기에서 \(\chi_{1-\alpha, h}^{2}\)는 자유도가 \(h\), 유의미도가 \(\alpha\)일 때 카이 제곱 분포표 값이다.
-      &lt;/p&gt;
-    &lt;/blockquote&gt;
-  &lt;/p&gt;
-  &lt;p&gt;
-테스트를 나머지에 적용했기 때문에, 반드시 자유도가 \( h=m-p-q \)가 되도록 처리해야한다. 여기에서 \(p\)와 \(q\)는 데이터를 맞추는 \(ARMA(p,q)\) 모델에서 매개변수의 수이다.
-
-  &lt;/p&gt;
-&lt;/section&gt;
-
-&lt;section&gt;
-  &lt;ul class=&quot;pager&quot;&gt;
-    &lt;li class=&quot;previous&quot;&gt;&lt;a href=&quot;/articles/2016/11/25/ESH-06-04-04-08&quot;&gt;Previous&lt;/a&gt;&lt;/li&gt;
-    &lt;li class=&quot;next&quot;&gt;&lt;a href=&quot;/articles/2016/11/25/ESH-06-04-04-09&quot;&gt;Next&lt;/a&gt;&lt;/li&gt;      
-  &lt;/ul&gt;
-  &lt;p&gt;
-    &lt;a href=&quot;http://www.itl.nist.gov/div898/handbook/pmc/section4/pmc4481.htm&quot;&gt;원문 보기&lt;/a&gt;
-  &lt;/p&gt;
-&lt;/section&gt;
-</description>
-        <pubDate>Fri, 25 Nov 2016 00:00:00 +0000</pubDate>
-        <link>http://localhost:4000/articles/2016/11/25/ESH-06-04-04-08-01/</link>
-        <guid isPermaLink="true">http://localhost:4000/articles/2016/11/25/ESH-06-04-04-08-01/</guid>
         
         
       </item>
