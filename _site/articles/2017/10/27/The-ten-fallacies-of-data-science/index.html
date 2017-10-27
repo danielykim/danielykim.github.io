@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <link rel="icon" type="image/png" href="http://danielykim.me/images/myicon.png" />
+  <title>Blog: Daniel Kim</title>
+  <meta name="description" content="            현재 머신러닝과 데이터 과학을 둘러싼 과장 광고가 많은 것이 사실이다. 학계에서 최첨단 기술로 무언가를 할 줄 아는 것과 실제 이뤄낸 것 사이에는 엄청난 격차가 있다.            기드온 만(블룸버그 데이터 과학 총괄)            이 글은 Sh...">
+
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+
+  <script type="text/javascript" src="/js/pace.min.js"></script>
+
+  <!-- Google Fonts loaded here depending on setting in _data/options.yml true loads font, blank does not-->
+  
+  
+  <!-- Load up MathJax script if needed ... specify in /_data/options.yml file-->
+  <script type="text/javascript" async
+    src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+  </script>
+
+  <link rel="stylesheet" type="text/css" href="/css/tufte.css">
+  <link rel="stylesheet" type="text/css" href="/tufte.css">
+  <!-- <link rel="stylesheet" type="text/css" href="/css/print.css" media="print"> -->
+
+  <link rel="canonical" href="http://localhost:4000/articles/2017/10/27/The-ten-fallacies-of-data-science/">
+
+  <link rel="alternate" type="application/rss+xml" title="Blog: Daniel Kim" href="http://localhost:4000/feed.xml" />
+
+  <link rel="stylesheet" type="text/css" href="/css/pace-flash.css">
+
+  <script id="dsq-count-scr" src="//danielykim.disqus.com/count.js" async></script>
+
+  <!-- http://tsi.github.io/inlineDisqussions/ -->
+  <link rel="stylesheet" type="text/css" href="/css/inlineDisqussions.css" />
+  <script type="text/javascript" src="/js/inlineDisqussions.js"></script>
+
+
+</head>
+
+  <body>
+    <!--- Header and nav template site-wide -->
+<header>
+    <nav class="group">
+      <h1>Exploring Adjacent Possibles</h1>
+	
+		
+  	
+		
+		    
+		      <a href="/">blog</a>
+		    
+	    
+  	
+		
+		    
+		      <a href="/about/">About</a>
+		    
+	    
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+		    
+		      <a href="/feed.xslt.xml"></a>
+		    
+	    
+  	
+	</nav>
+</header>
+
+    <article class="group">
+      <h1>산업계 데이터 과학 업무에 대한 10가지 오해</h1>
+
+<h3>The Ten Fallacies of Data Science</h3>
+
+<p class="subtitle">October 27, 2017</p>
+
+
+<section>
+  <div class="epigraph">
+    <blockquote>
+      <p>
+현재 머신러닝과 데이터 과학을 둘러싼 과장 광고가 많은 것이 사실이다. 학계에서 최첨단 기술로 무언가를 할 줄 아는 것과 실제 이뤄낸 것 사이에는 엄청난 격차가 있다.
+      </p>
+      <footer>기드온 만(블룸버그 데이터 과학 총괄)</footer>
+    </blockquote>  
+  </div>
+  <p>
+  이 글은 Shane Brennan 님이 2017년 9월 18일 <a href="https://medium.com/">Medium</a>에 작성하신 글을 제가 한글로 옮긴 것입니다.<label for="sn-extensive-use-of-sidenotes" class="margin-toggle sidenote-number"></label><input type="checkbox" id="sn-extensive-use-of-sidenotes" class="margin-toggle"/><span class="sidenote">출처: <a href="https://medium.com/towards-data-science/the-ten-fallacies-of-data-science-9b2af78a1862e">The Ten Fallacies of Data Science</a></span> 원래의 제목에는 산업계를 가리키는 표현이 없습니다. 하지만 이 글의 전반적인 내용이 산업계에서 데이터 과학 업무를 맡아본 적이 없거나 맡은지 얼마되지 않은 신입들이 하기 쉬운 생각이나 겪게 되는 일을 다루고 있어서 한글로 옮기며 관련 단어를 추가했습니다. 아래 단락부터가 옮긴 글의 내용입니다.
+  </p>
+</section>
+
+
+<section>
+  <figure>
+    <img src="https://cdn-images-1.medium.com/max/1000/1*SHEtxnBMgbmjdcAWbefqpg.jpeg"/>    
+  </figure>
+  <p>
+  데이터 과학을 배우는 학생들과 최근에 입사한 사람들이 바라보는 이상향과 그들이 산업계에서 실제 데이터 과학 문제를 마주하며 종종 겪는 어려움들 사이에는 겉으로 드러나지 않는 차이가 있습니다. 대학에서 열리는 이러한 데이터 분석 기법 관련 강좌들의 목적은 학생들에게 코딩, 통계, 데이터 재구성 등을 가르치는 것입니다. 하지만, 산업계에서 실제로 데이터 과학 업무를 수행하며 여러분이 이겨내야 할 어려움들을 이러한 과목에서는 접하기 매우 어렵습니다.
+  </p>
+  <p>
+  분석 기법 강좌에서는 (종종 사용할 도구와) 데이터를 제공하고 여러분에게 잘 알려진 결과를 내라고 합니다만, 산업계에서는 데이터가 없을 수도 있고, 적절하다고 정해진 도구들이 딱히 없을 수도 있고, 심지어 예상되는 결과가 뭔지 전혀 모를 수도 있습니다. 게다가 산업계에서는 종종 훨씬 더 엄격한 마감일이 있고, 옆에서 여러분의 분석 작업을 안내해주지 않으며, 분석을 요청한 사람이 통계학을 잘 모르기도 합니다.
+  </p>
+  <p>
+  몇몇 쓸모 있는 분석 작업을 위해 필요한 기술들을 고른다는 맥락에서 보면, 대학 강좌들에서 여러 진입 장벽들을 의도적으로 낮춰 여러분이 데이터 과학의 핵심적인 내용에 집중할 수 있도록 하는 것이 당연합니다. 통계 분포들, 가설 검증,   분류기들, R, SPSS, Python, RapidMiner 같은 다양한 도구들을 소개하는 강의 자료를 통해 조금씩 배워나갑니다. 기본적인 내용을 이해한 다음에는, 깔끔하고 좋은 데이터 모음을 얻게 되고, 몇 가지 random forest 기법과 다른 종류의 분류기들을 비교하는 요청을 받습니다.
+  </p>
+  <p>
+  여기에서 오해하지 마시길 바랍니다. 이러한 방식으로 배우는 것은 여러분의
+경력을 쌓으며 나중에 할 수도 있는 일에서도 중요합니다만, 책으로 공부해서 할 수 있는 것과 별반 다르지 않습니다. 위와 같은 이상적인 프로젝트는 고통스럽고 끝이 보이지 않는 기나긴 시간을 지나 실제 업무 사례들이 됩니다. 그리고 이러한 과정 중에서 초보 데이터 과학자들은 그들에게 새로운 역할이 주어질 때 흔히 저지르기 쉬운 오류들과 마주하게 됩니다. 여기에는 종종 눈물과 이를 갈게되는 모습이 동반되기도 합니다.
+  </p>
+</section>
+
+<section>
+  <figure>
+    <img src="https://cdn-images-1.medium.com/max/1000/1*ZHukqK7hBn5aGrVF_Xi-bA.jpeg"/>    
+  </figure>
+  <h2>1. 데이터가 존재한다.</h2>
+  <p>
+급하게 분석 업무를 요청하는 내용에는 이 업무에 대한 근간을 이루는 데이터를 사용할 수 있다는 가정이 언제나 들어있습니다. 이것은 가장 기본적인 가정 같이 보입니다만, 어떤 데이터를 데이터 분석해달라는 요청을 하기에 너무 적어서가 아니라, 데이터가 아예 없거나, 데이터를 사용할 수 없거나, 공통 식별자가 없거나 너무 과도하게 합산(aggregate)하거나 요약했다는 것을 고객에게 깨닫게하는 일이 될 수도 있습니다. 
+  </p>  
+  <p>
+  모든 작업을 시작할 때 필요한 가장 첫 번째 질문은 "기초가 되는 중요한 데이터가 존재하느냐" 입니다. 문제에 몰입하여 파고들기 전에 또는 분석을 특정한 기한까지 끝내기로 합의하기 전에 이 질문을 묻는 것이 필요합니다. 최악의 경우에 여러분은 데이터 없이 완전히 고립되어, 여러분에게 목표를 달성할 수 없는 분석을 하라는 압박과, 결과에 대한 기대만 받을 수 있습니다. 이런 상황에서 곳곳에 구멍이 숭숭 뚫린 스위스 치즈처럼 빈 곳이 많은 데이터로 분석한 결과를 보고하고 싶은 유혹에 흔들릴 수 있습니다. 이러한 데이터에서는 잘못된 결론이 불가피하게 나올 수 있고, 이로 인해 공적 사회의 극심한 지탄을 받게될 것입니다. 
+  </p>
+  <p>
+  데이터가 아예 없다면, 빨리 그리고 자주 알려야 합니다. 소리지르듯이 말입니다. 작업할 때 몇몇 불완전한 데이터가 있다면, 이 경우에도 마찬가지로 똑같이 그래야 합니다만, 데이터 공학자 요정들이 여러분을 위한 완벽한 데이터를마법처럼 수집해주기 전까지는, 이 불완전한 데이터를 사용하지 맙시다. 대신 일하지 않고 놀 수 있는 아주 좋은 핑계거리가 하나 생기게 됩니다.
+  </p>
+</section>
+
+<section>
+  <h2>2. 접근할 수 있는 데이터이다.</h2>
+  <p>
+좋습니다. 여러분에게 실제로 필요한 데이터가 어딘가 존재하고 아주 완벽하다는 소문을 확인했습니다. 이제, 다음 장애물은 이 데이터를 그럴듯한 시간 안에 사용할 수 있도록 만들 수 있느냐 입니다. 회사 안의 서로 다른 부서들 사이의 정치적인 역학관계, 외부 업체 컨설턴트들이 적재해둔 데이터, 장기 휴가를 떠난 직원들, 데이터 접근 권한을 팔아 돈을 손쉽게 벌려는 제3자 회사들, 그 외의 다른 여러 이유들도 이 장애물 주위를 둘러싸고 있습니다. 
+  </p>
+  <p>
+저장해둔 정보를 무료로 쉽게 접근할 수 있는 권한을 주는 것은 데이터를 보유하고 있는 측에서 법적 제한, 계약 관계상, 또는 경제적 제한 조건 때문에 저장해둔 정보를 무료로 쉽게 접근할 수 있는 권한을 주지 않을 수도 있고, 그저 단지 보유하고 있는 측에서 자신들의 현재 역할을 유지하고 싶어서 해당 권한을 주지 않을 수도 있습니다.
+  </p>
+  <p>
+매우 합리적으로 데이터를 요청한 것 같이 보여도 심지어 개인 회사들에게까지 이 요청 때문에 인정사정없이 문전박대 당할 수도 있습니다. 돈이 되는 지점에서, 특별히 여러분의 데이터 전달 경로 중 어떠한 지점에 여러 외부 개입이 있다면, 동일하게 규모가 큰 금액의 어떤 큰 프로젝트가 될 한 줄짜리 SQL 질의를 찾을 수 있습니다.
+  </p>
+  <p>
+따라서 어떤 뛰어난 기술을 가진 데이터 과학자의 목표는, 데이터의 각 부분의 소유권을 갖고 어떠한 데이터 요청이 들어와도 적어도 어느 정도는 유연하게 대처할 수 있도록, 보유한 데이터 전달 경로 각각 그리고 모든 단계의 공동 관리자가 되는 것입니다.
+  </p>
+</section>
+
+<section>
+  <h2>3. 일관성이 있는 데이터이다.</h2>
+  <p>
+  대단히 합리적인 이유에서, 잘 짜여져 있고 자기 일관성이 있으며 잘 정의된 형식의 일관성 있는 데이터를 찾는 것은 매우 좋습니다. 하지만 데이터 파일에서 열의 수가 갑자기 19개에서 20개가 되었다가 다시 19개가 되거나, 같은 데이터의 서로 다른 버전 사이에 열 순서가 변경되기도 합니다. 별로 반갑지 않은 깜짝 소식들이 늘 그렇듯이, 이런 종류의 문제가 종종 마지막 순간(R Studio에서 데이터를 살펴보려고 read.csv() 함수를 부를 때)에 나타날 수 있습니다. 
+  </p>
+  <p>
+데이터에 일관성이 있는 것처럼 보이더라도, 이상한 UTF-8 문자들이나 한 파일 안에서 날짜 형식이 YYYYMMDD에서 MM-DD-YY로 변하는 것이나 이런 말도 안 되는 몇몇 부분을 볼 때, 머리를 쥐어 뜯으며 욕설을 남발할 수 있습니다. 특별히 구형 시스템에 의존하는 데이터 전달 경로에 있어서, 명심해야 할 기본 원칙은 데이터 과학자나 데이터 공학자가 데이터를 축적하는 작업을 디자인하지 않았다면, 서로 다른 작동 조건에 대해 누구나 별의별 방식으로 불쾌함을 나타낼 수 있습니다.
+  </p>
+</section>
+
+<section>
+  <h2>4. 관련이 있는 데이터이다.</h2>
+  <p>
+  모든 일이 잘 진행되고 있다가, 오래 기다렸던 데이터 모음이 분석에 필요한 최신 정보가 아니거나 분석에 필요한 수준에 미치지 못할 수 있다는 것을 발견할 수도 있습니다. 웹에서의 사용자 행동에 대해 거의 틀림없이 가장 널리 사용되는 Google Analytics (GA)에는 몇 가지 성가신 문제들이 있습니다. 이는 GA로 상세한 분석을 하지 못하게 하여 생기는 문제입니다. 첫째, 웹 사용자를 구별하기 힘든 점이 있습니다. 둘째,GA는 실제 통계 값 대신에 전체 방문자 수의 추정 값들을 나타내는데서 생기는 불안함이 있습니다. 따라서, 그럴듯하게 들리는 요청은 별로 상관없는 데이터 때문에 실현 불가능한 것이 됩니다. 예를 들어, 여러분이 웹사이트 X에 로그인한 고객들에 대해 고객 유지율을 예측해달라는 요청을 받았다면, GA 데이터는 자체적으로 사이트에서 보유하고 있는 것만큼이나 쓸모 없을 것입니다.
+  </p>
+</section>
+
+<section>
+  <h2>5. 직관적으로 이해할 수 있는 데이터이다.</h2>
+  <p>
+  데이터를 받기 위해 너무 많이 기다린 다음, 받고나서 살펴보니, 결국에 고대 앗시리아 점토판을 해독하는 것 같을 수도 있습니다. 업계 종사자만 아는 코드들(domain-specific codes), 잘라낸 텍스트 필드들(truncated text fields), 참조표가 없거나, 머리글(header; 열 이름 정보)이 없거나 이상하게 이름이 지어진 경우 등이 이해하기 어려운 데이터를 만듭니다. 쓸데없는 것이 입력되면, 출력되는 것도 쓸데없는 것만 나온다는 정책을 엄격하게 따르는 것은 결과를 낼 때 해독 불가능한 데이터를 무시하는 경향이 있다면 최선이고, HEADER_1 같은 필드의 의미를 찾아나서는 것 같은 부가적인 문제들이 생기는 것은 최악이라는 의미입니다. 어떤 분석 과정에서 데이터를 설명하는 잘 정리된 문서가 없다면  도대체 무엇을 측정하는지 알 수 없을 것입니다.
+  </p>
+</section>
+
+<section>
+  <h2>6. 데이터를 처리할 수 있다.</h2>
+  <p>
+  완벽합니다. 이제 600MB CSV 파일을 손에 넣었습니다. 사업장 규정에 따라 제공된 구식 노트북을 가지고 Excel의 VLOOKUP 함수를 이용해서 이 파일을 또다른 600MB CSV 파일과 함께 다뤄야 합니다. 종종 데이터 과학 도구들을 IT 분야의 다른 소프트웨어와 별반 다를 것 없는 것으로 취급하는 모습은 신입 (특히 더욱 잘 갖춰진 대규모 회사에서 이직한) 데이터 과학자들을 놀라게 할지도 모릅니다. 오픈 소스 도구들을 못마땅해하거나, 설치 권한을 받을 수 없거나, 모든 도구는 겉으로만 그럴싸하고 아무도 본 적이 없는 마법같은 IT 보안 인증을 받아야만 하기도 합니다. 
+  </p>
+  <p>
+  저는 잘 정립된 어떤 소프트웨어 패키지의 세부 보안 인증을 제출하라는 요청을 받은 적이 있습니다. 저는 산업계 IT 상사들이 완벽하게 작동하며 시장을 선도하고 있는 소프트웨어를 거절하는 것을 목격하기도 했습니다. 거절한 이유는 판매 업체가 "너무 싸다" 또는 "XYZ의 공급자로 지정된 업체가 아니다"였습니다. 큰 데이터를 처리하는 것과 관련된 단순한 기술적인 문제들을 넘어, IT 규정이나 규제로 작업을 쉽게 처리하기 위한 충분한 처리 도구들을 손에 넣지 못하도록 막는 음모가 있을 수 있습니다. 두 데이터 모음을 결합하는 방식으로 Excel의 VLookup 함수들만 이용하라고 강요받은 사람의 이야기를 들은 적이 있습니다. 글쎄요, 아무도 더 좋은 방식으로 이 작업을 할 수 없을 것이라는 것이 강요의 이유였다고 합니다. 이런 종류의 단기 IT 규제 때문에 코딩과 병렬화해서 자동으로 몇 분만에 할 수 있는 파일 하나 처리하는 작업이 몇 시간 걸릴 수 있습니다.
+  </p>
+</section>
+
+<section>
+  <figure>
+    <img src="https://cdn-images-1.medium.com/max/1000/1*fwQhy0s2nOODuJlzu9jgNg.jpeg"/>    
+  </figure>
+  <h2>7. 분석 작업들을 쉽게 다시 진행할 수 있다.</h2>
+  <p>
+  여러분은 세 달 전에 했던 분석을 기억하십니까? 분석을 의뢰한 고객이 다음과 같이 말하기도 합니다. "여기 업데이트된 마케팅 제휴 데이터가 있습니다. 빠른 시일 내에 분석 코드를 다시 돌려주시겠습니까?" 여러분은 어쩌면 다음과 같이 말할지도 모릅니다. "감사합니다!!! 좋습니다... 어디에서 시작해야할까요!!!" 이런 상황은 직소 퍼즐을 다 맞추고 난 다음 바로 헝클어서 박스에 넣었는데, 여러분에게 퍼즐을 다시 주고 엄청나게 빠른 시간 안에 퍼즐을 다시 맞추라고 하는 것과 비슷합니다. 또는 과거 어느 시점에는 살만했지만 이제는 폐가가 되어버린 곳에서 생활하라는 요청을 받은 상황과 비슷합니다. 
+  </p>
+  <p>
+다시 실행할 수 있게 분석 코드를 분명하게 구성하지 않았고 데이터를 현재 것만 사용하도록 작업했다면, 업데이트된 분석 결과를 얻기 위해 모든 것을 업데이트하고 모든 것을 다시 불러와야하는 작업 때문에 새로 얻은 업무 기회들이 고통으로 바뀔 것입니다. 이건 여러분이 사용한 데이터가 바뀔지 고려하지 않은 것이 아닙니다. 데이터베이스 스키마 변경을 고려했어야만 한 것도 아닙니다. 입력값 목록이 바뀌어서 그런 것도 아닙니다. 분석 업무에서 중요한 부분처럼 보이는 작업을 요청 받았다면, 이상적으로는 버튼 하나만 클릭하거나 또는 별로 노력하지 않아도 쉽게 작업을 다시 실행할 수 있도록 작업을 디자인하시길 바랍니다.
+  </p>
+</section>
+
+<section>
+  <h2>8. 암호화는 어느 곳에서도 필요 없다.</h2>
+  <p>
+  아, 그렇습니다, 고전적인 것들 말입니다. 여러분은 분석을 마쳤고, 문제에 대해 몇 장의 슬라이드와 훌륭한 보고서로 정리했으며, 이제 검토를 위해 누군가에게 데이터를 보내야하는 상황입니다. 모든 세부 고객 정보를 단순 텍스트로 메일에 붙여넣기할 예정인데, 이런 상황에서는 무엇이 잘못되겠습니까? 뭐, 한 가지 예를 들면, 자동 완성 때문에 연락처에 있는 사람 중에서 보내면 안 되는 사람에게 메일을 보내는 것은 그리 어렵지 않습니다. 여러분의 보물을 아무도 모르는 곳에 잘 보관하시길 바랍니다. 또는, 한 회사에 대한 상세한 재무 분석을 <i>실수로</i> 경쟁사에 보낸 제 이전 동료 같은 실수를 할 수도 있습니다!
+  </p>
+  <p>
+  정보 보안에 있는 좋은 사람들이 여러분이 보낼 때 모든 데이터를 암호화하라고 요청하는 이유가 있습니다. 주로 보여주기식 보안조치가 최우선이고, 실수해도 봐주는 것이 아마도 그 다음일 것 같지만, 겉으로 보여지는 보안 외에도 충분히 많은 그럴듯한 이유들이 있습니다.
+  </p>
+  <p>
+  여러분이 <b>어떤 것</b>을 <b>어떤 이</b>에게 보내기 전에 첫 번째로 할 일은 적절한 수준의 암호화에 동의하는 것과 원본 데이터와 분석 결과 둘 다를 평가하는 것입니다. 이상적으로는 안전한 시스템에서만 일하여, 택시에 뭔가 두고 내리는 일과 같은 상황이 생기지 않도록 또는 꼬치꼬치 캐묻는 사람에게 평가 받지 않도록 미리 대비합시다. 필요하다면 암호화가 표준이 되도록 투쟁해야합니다... 타협하지 마시길 바랍니다. 그러면 여러분 자신의 개인 보안 표준은 기술적으로 전문적일 것이고 IT 정책들보다 더 안전하게 될 것입니다. 그러니 꼭 명심하시길 바랍니다!
+  </p>
+  <p>
+  (보안 정책들을 위반할 수도 있어서) 어떤 GPG 클라이언트 설치하는 작업을 허락 받지 못했다면, 암호로 보호된 Excel 파일이나 암호화된 zip 같은 암호화된 형식으로 반드시 암호화를 해야만 합니다. 뭐라고요? 이메일 서버에서 암호화된 zip 파일이 차단됐고, 클라이언트에 SFTP나 파일 공유 서버가 없다고요? <b>설마요.</b> 시간을 아끼려고 '그냥 이번 한 번만'이라고 하면서 여러분의 데이터 보안 표준 사항들을 포기하는 일이 절대로 없도록 합시다. 그렇지 않으면 결국에는, 여러분은 자리를 뜨게 될 것이고, 여러분이 새로운 직장을 찾고 있는 동안에, 분석 때문에 여러분에게 소리지르던 사람들이 그들의 방식대로 일을 진행하게 될 것입니다.
+  </p>
+</section>
+
+<section>
+  <h2>9. 분석 결과물을 쉽게 공유하고 이해할 수 있다.</h2>
+  <p>
+현실을 직시합시다 -- 여러분의 발표를 듣는 사람들의 대부분은 구체적인 분석 내용을 이해하지 못할 것입니다. 무지한 티를 내면 약해보일 수 있기 때문에 얼버무리거나 이해하는 척 할 것입니다. 더 많은 특징들을 가지고 여러분의 분석을 향상시키라고 요청할 것이고, 분석 결과는 사용되기 전에 수학적으로 증명돼야 한다고 주장할 것이며, 여러분의 발표를 듣고 나서 당혹스러움을 감추기 위해 온갖 종류의 속임수를 사용할 것이고, 갖가지 것들로 산만하게 방해할 것입니다. 
+  </p>
+  <p>
+어떤 이들은 단순히 특정한 <i>p</i>-값을 찾고, 다른 어떤 이들은 직감에 의존하지만, 여러분은 여러분의 상세 분석 결과가 의심 받는 것이나, 질문을 받거나, 무시 당하는 것을 목격하게 될 것입니다. 또는 다르게 말하면... 어떤 충분히 고급 분석은 마법과 다를 바 없는 것처럼 여겨질 것입니다. 그러므로 제기된 문제를 여러분이 해결했는지 여부에 상관 없이, 결과를 접하는 사람들이 쉽게 이해할 수 있도록 되도록이면 수식을 줄이고 말로 표현하는 것이 여러분의 주된 업무입니다.
+  </p>
+</section>
+
+<section>
+  <h2>10. 처음부터 여러분이 찾고 있는 답이 있다.</h2>
+  <p>
+  마치 보물찾기 놀이처럼, 몇 가지 적은 수의 도구로 약간의 조사할 시간이 주어진 상황에서 어떤 데이터 과학 프로젝트의 원하는 목표에 실제로 도달할 수 있다고 생각하기도 합니다. 보물찾기는 찾으면 보물인지 쉽게 알 수 있습니다만, 데이터 과학 프로젝트는 보물찾기와는 다르게 뭔가 찾아도 그게 보물인지 아닌지 알 수 없을 수도 있습니다. 즉, 실제 프로젝트에서는 어느 누구도 어떤 것을 증명하는데 도움이 될 적당한 통찰력이나 힌트를 데이터에 의도적으로 입히지 않습니다. 이번 달 웹사이트의 클릭율이 왜 떨어졌는지 알아내고 싶습니까? 제품 Y보다 제품 X를 선호하는 고객들을 찾아내고 싶습니까? 이런 질문들에는 예상되는 결과가 이미 있습니다. 이런 식의 뻔한 질문과 답변은 종종 제대로 된 과학적 탐구 방식을 해칩니다.
+  </p>
+</section>
+
+
+<script type="text/javascript" src="/js/footnotes.js"></script>
+<script type="text/javascript" src="/js/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+<!-- http://tsi.github.io/inlineDisqussions/ -->
+
+<script>
+disqus_shortname = 'danielykim';
+
+jQuery(document).ready(function() {
+  jQuery("p").inlineDisqussions();
+});
+
+jQuery("p").inlineDisqussions({
+  identifier: 'disqussion',
+  displayCount: true,
+  highlighted: true,
+  position: 'right',
+  background: '#FFFFF9',
+  maxWidth: 200
+});
+</script>
+
+
+
+<div class="comments">
+	<div id="disqus_thread" style="max-width:55%;"></div>
+	<script type="text/javascript">
+    var disqus_config = function () {
+      this.page.url = "https://danielykim.github.io/articles/2017/10/27/The-ten-fallacies-of-data-science/"; // <--- use canonical URL
+      this.page.identifier = "/articles/2017/10/27/The-ten-fallacies-of-data-science";
+    };
+    (function() { // DON'T EDIT BELOW THIS LINE
+    
+      var d = document, s = d.createElement('script');
+
+      s.src = '//danielykim.disqus.com/embed.js'; // <--- use Disqus shortname
+
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+</div>
+
+
+
+
+    </article>
+    <span class="print-footer">산업계 데이터 과학 업무에 대한 10가지 오해 - October 27, 2017 - Daniel Kim, PhD</span>
+
+
+    <footer>
+  <hr class="slender">
+  <ul class="footer-links">
+    <li><a href="mailto:daniel.youngho.kim@gmail.com"><span class="icon-mail"></span></a></li>    
+    <li><a href="https://www.linkedin.com/in/danielyounghokim"><span class="icon-info"></span></a></li>    
+      
+  </ul>
+<div class="credits">
+<span>&copy; 2017 &nbsp;&nbsp;DANIEL KIM, PHD</span></br> <br>
+<span>This blog created with the <a href="//github.com/clayh53/tufte-jekyll">Tufte theme for  </a> in <a href="//jekyllrb.com">Jekyll</a>.</span> 
+</div>  
+</footer>
+
+    
+  </body>
+</html>
