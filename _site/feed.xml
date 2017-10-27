@@ -5,8 +5,8 @@
     <description>Exploring Adjacent Possibles</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 27 Oct 2017 12:55:26 +0000</pubDate>
-    <lastBuildDate>Fri, 27 Oct 2017 12:55:26 +0000</lastBuildDate>
+    <pubDate>Fri, 27 Oct 2017 12:57:29 +0000</pubDate>
+    <lastBuildDate>Fri, 27 Oct 2017 12:57:29 +0000</lastBuildDate>
     <generator>Jekyll v3.3.0</generator>
     
       <item>
@@ -15,7 +15,7 @@
   &lt;div class=&quot;epigraph&quot;&gt;
     &lt;blockquote&gt;
       &lt;p&gt;
-현재 머신러닝과 데이터 과학을 둘러싼 과장 광고가 많은 것이 사실이다. 학계에서 최첨단 기술로 무언가를 할 줄 아는 것과 실제 이뤄낸 것 사이에는 엄청난 격차가 있다.
+&quot;현재 머신러닝과 데이터 과학을 둘러싼 과장 광고가 많은 것이 사실이다. 학계에서 최첨단 기술로 무언가를 할 줄 아는 것과 실제 이뤄낸 것 사이에는 엄청난 격차가 있다.&quot;
       &lt;/p&gt;
       &lt;footer&gt;기드온 만(블룸버그 데이터 과학 총괄)&lt;/footer&gt;
     &lt;/blockquote&gt;  
