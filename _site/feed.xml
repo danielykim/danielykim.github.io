@@ -5,8 +5,8 @@
     <description>Exploring Adjacent Possibles</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 27 Oct 2017 12:59:05 +0000</pubDate>
-    <lastBuildDate>Fri, 27 Oct 2017 12:59:05 +0000</lastBuildDate>
+    <pubDate>Fri, 27 Oct 2017 13:00:59 +0000</pubDate>
+    <lastBuildDate>Fri, 27 Oct 2017 13:00:59 +0000</lastBuildDate>
     <generator>Jekyll v3.3.0</generator>
     
       <item>
@@ -47,9 +47,11 @@
 
 &lt;section&gt;
   &lt;h2&gt;1. 데이터가 존재한다.&lt;/h2&gt;
+  &lt;p&gt;
   &lt;figure&gt;
     &lt;img src=&quot;https://cdn-images-1.medium.com/max/1000/1*ZHukqK7hBn5aGrVF_Xi-bA.jpeg&quot;/&gt;    
   &lt;/figure&gt;
+  &lt;/p&gt;
   &lt;p&gt;
 급하게 분석 업무를 요청하는 내용에는 이 업무에 대한 근간을 이루는 데이터를 사용할 수 있다는 가정이 언제나 들어있습니다. 이것은 가장 기본적인 가정 같이 보입니다만, 어떤 데이터를 데이터 분석해달라는 요청을 하기에 너무 적어서가 아니라, 데이터가 아예 없거나, 데이터를 사용할 수 없거나, 공통 식별자가 없거나 너무 과도하게 합산(aggregate)하거나 요약했다는 것을 고객에게 깨닫게하는 일이 될 수도 있습니다. 
   &lt;/p&gt;  
