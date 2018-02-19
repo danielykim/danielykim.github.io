@@ -5,9 +5,59 @@
     <description>Exploring Adjacent Possibles</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 29 Oct 2017 13:05:26 +0000</pubDate>
-    <lastBuildDate>Sun, 29 Oct 2017 13:05:26 +0000</lastBuildDate>
+    <pubDate>Mon, 19 Feb 2018 13:08:30 +0000</pubDate>
+    <lastBuildDate>Mon, 19 Feb 2018 13:08:30 +0000</lastBuildDate>
     <generator>Jekyll v3.3.0</generator>
+    
+      <item>
+        <title>Ubuntu 16.04 데스크탑 NVIDIA 드라이버 설치</title>
+        <description>&lt;section&gt;
+  &lt;p&gt;
+  Ubuntu 16.04 데스크탑 버전에서 NVIDIA 최신 드라이버를 설치하는 방법입니다.
+  &lt;/p&gt;
+&lt;/section&gt;
+
+
+&lt;section&gt;
+  &lt;p&gt;
+  먼저, 터미널에서 다음과 같이 입력합니다.
+    &lt;pre class=&quot;code&quot;&gt;
+$ sudo add-apt-repository ppa:graphics-drivers/ppa
+$ sudo apt-get update
+    &lt;/pre&gt;
+  &lt;/p&gt;
+
+&lt;/section&gt;
+
+
+&lt;script type=&quot;text/javascript&quot; src=&quot;/js/footnotes.js&quot;&gt;&lt;/script&gt;
+&lt;script type=&quot;text/javascript&quot; src=&quot;/js/highlight.pack.js&quot;&gt;&lt;/script&gt;
+&lt;script&gt;hljs.initHighlightingOnLoad();&lt;/script&gt;
+&lt;!-- http://tsi.github.io/inlineDisqussions/ --&gt;
+
+&lt;script&gt;
+disqus_shortname = 'danielykim';
+
+jQuery(document).ready(function() {
+  jQuery(&quot;p&quot;).inlineDisqussions();
+});
+
+jQuery(&quot;p&quot;).inlineDisqussions({
+  identifier: 'disqussion',
+  displayCount: true,
+  highlighted: true,
+  position: 'right',
+  background: '#FFFFF9',
+  maxWidth: 200
+});
+&lt;/script&gt;
+</description>
+        <pubDate>Mon, 19 Feb 2018 00:00:00 +0000</pubDate>
+        <link>http://localhost:4000/articles/2018/02/19/Install-NVIDIA-driver-on-Ubuntu1604/</link>
+        <guid isPermaLink="true">http://localhost:4000/articles/2018/02/19/Install-NVIDIA-driver-on-Ubuntu1604/</guid>
+        
+        
+      </item>
     
       <item>
         <title>산업계 데이터 과학 업무에서 조심해야 할 10가지 오류</title>
@@ -1349,183 +1399,6 @@ $$ X_{t} - \delta = A_{t} + \theta_{1} A_{t-1} + \phi_{1} A_{t-12} + \theta_{1} 
         <pubDate>Fri, 25 Nov 2016 00:00:00 +0000</pubDate>
         <link>http://localhost:4000/articles/2016/11/25/ESH-06-04-04-10/</link>
         <guid isPermaLink="true">http://localhost:4000/articles/2016/11/25/ESH-06-04-04-10/</guid>
-        
-        
-      </item>
-    
-      <item>
-        <title>6.4.4.9. 단변량 박스-젠킨스 분석 예제</title>
-        <description>&lt;section&gt;
-  &lt;p&gt;
-    &lt;label for=&quot;mn-h01&quot; class=&quot;margin-toggle&quot;&gt;⊕ &lt;/label&gt;
-    &lt;input type=&quot;checkbox&quot; id=&quot;mn-h01&quot; class=&quot;margin-toggle&quot;&gt;
-    &lt;span class=&quot;marginnote&quot;&gt;
-시계열 F
-    &lt;/span&gt;
-Box, Jenkins, and Reinsel, 1994에 있는 시계열 F 데이터를 살펴보자. 다음 그래프에서 볼 수 있는 것처럼 원본 데이터에는 70개의 점이 있다.    
-  &lt;/p&gt;
-&lt;/section&gt;
-
-&lt;section&gt;
-  &lt;p&gt;
-    &lt;figure&gt;
-      &lt;img src=&quot;http://www.itl.nist.gov/div898/handbook/pmc/section4/pmc449_r01.gif&quot;&gt;
-    &lt;/figure&gt;  
-  &lt;/p&gt;
-  &lt;p&gt;
-데이터에 계절적인 성분이나 눈에 띄는 추세가 있는 것 같진 않다. (직선을 데이터에 맞춰 시계열의 정상성을 확인했다. 0에서 많이 차이나는 기울기가 보이진 않았다. p-값 = 0.2)
-  &lt;/p&gt;
-  &lt;p&gt;
-6.4.4.10절에서 나머지 시계열에 박스-융 테스트를 다루는 예제가 있다.
-  &lt;/p&gt;  
-&lt;/section&gt;
-
-&lt;section&gt;
-  &lt;p&gt;
-    &lt;label for=&quot;mn-h02&quot; class=&quot;margin-toggle&quot;&gt;⊕ &lt;/label&gt;
-    &lt;input type=&quot;checkbox&quot; id=&quot;mn-h02&quot; class=&quot;margin-toggle&quot;&gt;
-    &lt;span class=&quot;marginnote&quot;&gt;
-모델 판별
-    &lt;/span&gt;
-데이터를 맞추기 위한 모델의 종류를 정하기 위해 첫 35 뒤처짐에 대한 데이터의 자기상관 함수(ACF)를 보자. 결과와 ACF를 95% 신뢰 구간과 함께 뒤처짐에 따라 그려보자.
-  &lt;/p&gt;
-  &lt;div class=&quot;table-wrapper&quot;&gt;
-    &lt;table class=&quot;booktabs&quot;&gt;
-      &lt;thead&gt;
-        &lt;tr&gt;&lt;th style=&quot;text-align: center&quot;&gt;&lt;b&gt;뒤처짐&lt;/b&gt;&lt;/th&gt;&lt;th style=&quot;text-align: center&quot;&gt;&lt;b&gt;ACF&lt;/b&gt;&lt;/th&gt;&lt;/tr&gt;
-      &lt;/thead&gt;
-      &lt;tbody&gt;
-&lt;tr&gt;&lt;td style=&quot;text-align: center&quot;&gt;   0&lt;/td&gt;&lt;td style=&quot;text-align: center&quot;&gt; 1.000000000&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td style=&quot;text-align: center&quot;&gt;   1&lt;/td&gt;&lt;td style=&quot;text-align: center&quot;&gt;-0.389878319&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td style=&quot;text-align: center&quot;&gt;   2&lt;/td&gt;&lt;td style=&quot;text-align: center&quot;&gt; 0.304394082&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td style=&quot;text-align: center&quot;&gt;   3&lt;/td&gt;&lt;td style=&quot;text-align: center&quot;&gt;-0.165554717&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td style=&quot;text-align: center&quot;&gt;   4&lt;/td&gt;&lt;td style=&quot;text-align: center&quot;&gt; 0.070719321&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td style=&quot;text-align: center&quot;&gt;   5&lt;/td&gt;&lt;td style=&quot;text-align: center&quot;&gt;-0.097039288&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td style=&quot;text-align: center&quot;&gt;   6&lt;/td&gt;&lt;td style=&quot;text-align: center&quot;&gt;-0.047057692&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td style=&quot;text-align: center&quot;&gt;   7&lt;/td&gt;&lt;td style=&quot;text-align: center&quot;&gt; 0.035373112&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td style=&quot;text-align: center&quot;&gt;   8&lt;/td&gt;&lt;td style=&quot;text-align: center&quot;&gt;-0.043458199&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td style=&quot;text-align: center&quot;&gt;   9&lt;/td&gt;&lt;td style=&quot;text-align: center&quot;&gt;-0.004796162&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td style=&quot;text-align: center&quot;&gt;  10&lt;/td&gt;&lt;td style=&quot;text-align: center&quot;&gt; 0.014393137&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td style=&quot;text-align: center&quot;&gt;  11&lt;/td&gt;&lt;td style=&quot;text-align: center&quot;&gt; 0.109917200&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td style=&quot;text-align: center&quot;&gt;  12&lt;/td&gt;&lt;td style=&quot;text-align: center&quot;&gt;-0.068778492&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td style=&quot;text-align: center&quot;&gt;  13&lt;/td&gt;&lt;td style=&quot;text-align: center&quot;&gt; 0.148034489&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td style=&quot;text-align: center&quot;&gt;  14&lt;/td&gt;&lt;td style=&quot;text-align: center&quot;&gt; 0.035768581&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td style=&quot;text-align: center&quot;&gt;  15&lt;/td&gt;&lt;td style=&quot;text-align: center&quot;&gt;-0.006677806&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td style=&quot;text-align: center&quot;&gt;  16&lt;/td&gt;&lt;td style=&quot;text-align: center&quot;&gt; 0.173004275&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td style=&quot;text-align: center&quot;&gt;  17&lt;/td&gt;&lt;td style=&quot;text-align: center&quot;&gt;-0.111342583&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td style=&quot;text-align: center&quot;&gt;  18&lt;/td&gt;&lt;td style=&quot;text-align: center&quot;&gt; 0.019970791&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td style=&quot;text-align: center&quot;&gt;  19&lt;/td&gt;&lt;td style=&quot;text-align: center&quot;&gt;-0.047349722&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td style=&quot;text-align: center&quot;&gt;  20&lt;/td&gt;&lt;td style=&quot;text-align: center&quot;&gt; 0.016136806&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td style=&quot;text-align: center&quot;&gt;  21&lt;/td&gt;&lt;td style=&quot;text-align: center&quot;&gt; 0.022279561&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td style=&quot;text-align: center&quot;&gt;  22&lt;/td&gt;&lt;td style=&quot;text-align: center&quot;&gt;-0.078710582&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td style=&quot;text-align: center&quot;&gt;  23&lt;/td&gt;&lt;td style=&quot;text-align: center&quot;&gt;-0.009577413&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td style=&quot;text-align: center&quot;&gt;  24&lt;/td&gt;&lt;td style=&quot;text-align: center&quot;&gt;-0.073114034&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td style=&quot;text-align: center&quot;&gt;  25&lt;/td&gt;&lt;td style=&quot;text-align: center&quot;&gt;-0.019503289&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td style=&quot;text-align: center&quot;&gt;  26&lt;/td&gt;&lt;td style=&quot;text-align: center&quot;&gt; 0.041465024&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td style=&quot;text-align: center&quot;&gt;  27&lt;/td&gt;&lt;td style=&quot;text-align: center&quot;&gt;-0.022134370&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td style=&quot;text-align: center&quot;&gt;  28&lt;/td&gt;&lt;td style=&quot;text-align: center&quot;&gt; 0.088887299&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td style=&quot;text-align: center&quot;&gt;  29&lt;/td&gt;&lt;td style=&quot;text-align: center&quot;&gt; 0.016247148&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td style=&quot;text-align: center&quot;&gt;  30&lt;/td&gt;&lt;td style=&quot;text-align: center&quot;&gt; 0.003946351&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td style=&quot;text-align: center&quot;&gt;  31&lt;/td&gt;&lt;td style=&quot;text-align: center&quot;&gt; 0.004584069&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td style=&quot;text-align: center&quot;&gt;  32&lt;/td&gt;&lt;td style=&quot;text-align: center&quot;&gt;-0.024782198&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td style=&quot;text-align: center&quot;&gt;  33&lt;/td&gt;&lt;td style=&quot;text-align: center&quot;&gt;-0.025905040&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td style=&quot;text-align: center&quot;&gt;  34&lt;/td&gt;&lt;td style=&quot;text-align: center&quot;&gt;-0.062879966&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td style=&quot;text-align: center&quot;&gt;  35&lt;/td&gt;&lt;td style=&quot;text-align: center&quot;&gt; 0.026101117&lt;/td&gt;&lt;/tr&gt;      
-      &lt;/tbody&gt;
-    &lt;/table&gt;
-  &lt;/div&gt;
-  &lt;figure&gt;
-    &lt;img src=&quot;http://www.itl.nist.gov/div898/handbook/pmc/section4/pmc449_r02.gif&quot;&gt;
-  &lt;/figure&gt;
-  &lt;p&gt;
-ACF 값의 부호가 왔다갔다하다가 2 뒤처짐 이후로 빠르게 감소한다. 이것은 AR(2) 모델이 데이터에 적합하다는 의미이다.  
-  &lt;/p&gt;
-&lt;/section&gt;
-
-&lt;section&gt;
-  &lt;p&gt;
-    &lt;label for=&quot;mn-h03&quot; class=&quot;margin-toggle&quot;&gt;⊕ &lt;/label&gt;
-    &lt;input type=&quot;checkbox&quot; id=&quot;mn-h03&quot; class=&quot;margin-toggle&quot;&gt;
-    &lt;span class=&quot;marginnote&quot;&gt;
-모델 맞추기
-    &lt;/span&gt;
-AR(2) 모델을 데이터에 맞추자.
-$$ X_{t} = \delta + \phi_{1} X_{t-1} + \phi_{2} X_{t-2} + A_{t} $$
-  &lt;/p&gt;
-  &lt;p&gt;
-아래는 모델을 맞춘 결과이다.  
-  &lt;/p&gt;
-  &lt;div class=&quot;table-wrapper&quot;&gt;
-    &lt;table class=&quot;booktabs&quot;&gt;
-      &lt;thead&gt;
-        &lt;tr&gt;&lt;th style=&quot;text-align: center&quot;&gt;&lt;b&gt;소스&lt;/b&gt;&lt;/th&gt;&lt;th style=&quot;text-align: center&quot;&gt;&lt;b&gt;측정&lt;/b&gt;&lt;/th&gt;&lt;th style=&quot;text-align: center&quot;&gt;&lt;b&gt;표준 오차&lt;/b&gt;&lt;/th&gt;&lt;/tr&gt;
-      &lt;/thead&gt;
-      &lt;tbody&gt;
-        &lt;tr&gt;&lt;th style=&quot;text-align: center&quot;&gt;\( \phi_{1} \)&lt;/th&gt;&lt;th style=&quot;text-align: center&quot;&gt;-0.3198&lt;/th&gt;&lt;th style=&quot;text-align: center&quot;&gt; 0.1202 &lt;/th&gt;&lt;/tr&gt;
-        &lt;tr&gt;&lt;th style=&quot;text-align: center&quot;&gt;\( \phi_{2} \)&lt;/th&gt;&lt;th style=&quot;text-align: center&quot;&gt; 0.1797&lt;/th&gt;&lt;th style=&quot;text-align: center&quot;&gt; 0.1202 &lt;/th&gt;&lt;/tr&gt;
-      &lt;/tbody&gt;
-    &lt;/table&gt;
-  &lt;/div&gt;
-  &lt;p&gt;
-    &lt;blockquote&gt;
-      &lt;p&gt;\( \delta = 51.1286 \)&lt;/p&gt;
-      &lt;p&gt;나머지 표준 편차 = 10.9599&lt;/p&gt;
-      &lt;p&gt;
-        나머지의 테스트 무작위성:&lt;br/&gt;
-        표준화된 통계&lt;br/&gt;
-        Z = 0.4887, p-값 = 0.625
-      &lt;/p&gt;
-    &lt;/blockquote&gt;
-  &lt;/p&gt;
-  
-  &lt;/p&gt;
-&lt;/section&gt;
-
-&lt;section&gt;
-  &lt;p&gt;
-    &lt;label for=&quot;mn-h04&quot; class=&quot;margin-toggle&quot;&gt;⊕ &lt;/label&gt;
-    &lt;input type=&quot;checkbox&quot; id=&quot;mn-h04&quot; class=&quot;margin-toggle&quot;&gt;
-    &lt;span class=&quot;marginnote&quot;&gt;
-예측
-    &lt;/span&gt;
-지금까지 다룬 AR(2) 모델로 6 시점 앞까지 예측해보자.
-  &lt;/p&gt;
-  &lt;div class=&quot;table-wrapper&quot;&gt;
-    &lt;table class=&quot;booktabs&quot;&gt;
-      &lt;thead&gt;
-        &lt;tr&gt;&lt;th style=&quot;text-align: center&quot;&gt;&lt;b&gt;시점&lt;/b&gt;&lt;/th&gt;&lt;th style=&quot;text-align: center&quot;&gt;&lt;b&gt;예측&lt;/b&gt;&lt;/th&gt;&lt;th style=&quot;text-align: center&quot;&gt;&lt;b&gt;표준 오차&lt;/b&gt;&lt;/th&gt;&lt;/tr&gt;
-      &lt;/thead&gt;
-      &lt;tbody&gt;
-        &lt;tr&gt;&lt;th style=&quot;text-align: center&quot;&gt;71&lt;/th&gt;&lt;th style=&quot;text-align: center&quot;&gt;60.6405&lt;/th&gt;&lt;th style=&quot;text-align: center&quot;&gt;10.9479&lt;/th&gt;&lt;/tr&gt;
-        &lt;tr&gt;&lt;th style=&quot;text-align: center&quot;&gt;72&lt;/th&gt;&lt;th style=&quot;text-align: center&quot;&gt;43.0317&lt;/th&gt;&lt;th style=&quot;text-align: center&quot;&gt;11.4941&lt;/th&gt;&lt;/tr&gt;
-        &lt;tr&gt;&lt;th style=&quot;text-align: center&quot;&gt;73&lt;/th&gt;&lt;th style=&quot;text-align: center&quot;&gt;55.4274&lt;/th&gt;&lt;th style=&quot;text-align: center&quot;&gt;11.9015 &lt;/th&gt;&lt;/tr&gt;
-        &lt;tr&gt;&lt;th style=&quot;text-align: center&quot;&gt;74&lt;/th&gt;&lt;th style=&quot;text-align: center&quot;&gt;48.2987&lt;/th&gt;&lt;th style=&quot;text-align: center&quot;&gt;12.0108&lt;/th&gt;&lt;/tr&gt;
-        &lt;tr&gt;&lt;th style=&quot;text-align: center&quot;&gt;75&lt;/th&gt;&lt;th style=&quot;text-align: center&quot;&gt;52.8061&lt;/th&gt;&lt;th style=&quot;text-align: center&quot;&gt;12.0585 &lt;/th&gt;&lt;/tr&gt;
-        &lt;tr&gt;&lt;th style=&quot;text-align: center&quot;&gt;76&lt;/th&gt;&lt;th style=&quot;text-align: center&quot;&gt;50.0835&lt;/th&gt;&lt;th style=&quot;text-align: center&quot;&gt;12.0751&lt;/th&gt;&lt;/tr&gt;
-      &lt;/tbody&gt;
-    &lt;/table&gt;
-  &lt;/div&gt;
-  &lt;p&gt;
-이전 데이터와 예측한 값을 (90% 신뢰 구간과 함께) 그리면 다음과 같다.
-    &lt;figure&gt;
-      &lt;img src=&quot;http://www.itl.nist.gov/div898/handbook/pmc/section4/pmc449_r03.gif&quot;&gt;
-    &lt;/figure&gt;
-  &lt;/p&gt;
-&lt;/section&gt;
-
-&lt;section&gt;
-  &lt;ul class=&quot;pager&quot;&gt;
-    &lt;li class=&quot;previous&quot;&gt;&lt;a href=&quot;/articles/2016/11/25/ESH-06-04-04-08-01&quot;&gt;Previous&lt;/a&gt;&lt;/li&gt;
-    &lt;li class=&quot;next&quot;&gt;&lt;a href=&quot;/articles/2016/11/25/ESH-06-04-04-10&quot;&gt;Next&lt;/a&gt;&lt;/li&gt;      
-  &lt;/ul&gt;
-  &lt;p&gt;
-    &lt;a href=&quot;http://www.itl.nist.gov/div898/handbook/pmc/section4/pmc449.htm&quot;&gt;원문 보기&lt;/a&gt;
-  &lt;/p&gt;
-&lt;/section&gt;
-</description>
-        <pubDate>Fri, 25 Nov 2016 00:00:00 +0000</pubDate>
-        <link>http://localhost:4000/articles/2016/11/25/ESH-06-04-04-09/</link>
-        <guid isPermaLink="true">http://localhost:4000/articles/2016/11/25/ESH-06-04-04-09/</guid>
         
         
       </item>

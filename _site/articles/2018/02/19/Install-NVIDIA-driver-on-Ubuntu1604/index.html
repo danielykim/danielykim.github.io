@@ -7,7 +7,7 @@
   
   <link rel="icon" type="image/png" href="http://danielykim.me/images/myicon.png" />
   <title>Blog: Daniel Kim</title>
-  <meta name="description" content="  요약      ⊕         지수 평활법은 유용하다고 입증된 방법이다    지수 평활법은 많은 시간에 걸쳐 예측이 필요한 많은 경우에 있어서 아주 유용하다고 입증된 방법이다. 1957년 C. C. 홀트(Holt)가 계절성과 추세가 없는 시계열에 사용하려고 처음 고안하였다. ...">
+  <meta name="description" content="    Ubuntu 16.04 Desktop 버전에서 NVIDIA 최신 드라이버를 나름 쉽게 설치하는 방법입니다.  ">
 
   <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
 
@@ -25,7 +25,7 @@
   <link rel="stylesheet" type="text/css" href="/tufte.css">
   <!-- <link rel="stylesheet" type="text/css" href="/css/print.css" media="print"> -->
 
-  <link rel="canonical" href="http://localhost:4000/articles/2016/11/19/ESH-06-04-03-07/">
+  <link rel="canonical" href="http://localhost:4000/articles/2018/02/19/Install-NVIDIA-driver-on-Ubuntu1604/">
 
   <link rel="alternate" type="application/rss+xml" title="Blog: Daniel Kim" href="http://localhost:4000/feed.xml" />
 
@@ -78,49 +78,61 @@
 </header>
 
     <article class="group">
-      <h1>6.4.3.7. 지수 평활법 요약</h1>
+      <h1>Ubuntu 16.04 Desktop에서 NVIDIA 최신 driver 쉽게 설치하기</h1>
 
-<p class="subtitle">November 19, 2016</p>
+<h3>Install NVIDIA driver on Ubuntu 16.04 desktop</h3>
 
+<p class="subtitle">February 19, 2018</p>
 
-<section>
-  <h3>요약</h3>
-  <p>
-    <label for="mn-h01" class="margin-toggle">⊕ </label>
-    <input type="checkbox" id="mn-h01" class="margin-toggle">
-    <span class="marginnote">
-지수 평활법은 유용하다고 입증된 방법이다
-    </span>
-지수 평활법은 많은 시간에 걸쳐 예측이 필요한 많은 경우에 있어서 아주 유용하다고 입증된 방법이다. 1957년 C. C. 홀트(Holt)가 계절성과 추세가 없는 시계열에 사용하려고 처음 고안하였다. 이후 홀트는 1958년에 추세를 다루는 방법을 제시하였다. 1965년 윈터스(Winters)가 이 방법에 계절성을 넣어 일반화했기 때문에 "홀트-윈터스 기법"이라는 이름이 붙었다.
-  </p>
-</section>
 
 <section>
   <p>
-    <label for="mn-h02" class="margin-toggle">⊕ </label>
-    <input type="checkbox" id="mn-h02" class="margin-toggle">
-    <span class="marginnote">
-홀트-윈터스는 갱신하는 식 3개로 구성된다
-    </span>
-홀트-윈터스 기법은 3개의 갱신하는 식으로 구성된다. 각각에는 0과 1 사이의 상수가 있다. 이 식은 최근 관측값에 더 큰 가중치를 주고 오래될 수록 더 작은 가중치를 준다.    
-  </p>
-  <p>
-이러한 가중치는 어떤 상수 비율에 따라 지수적으로 감소한다.
-  </p>
-  <p>
-HW 과정은 소프트웨어로 사용하기 쉽도록 완전하게 자동화 할 수 있다.
+  Ubuntu 16.04 Desktop 버전에서 NVIDIA 최신 드라이버를 나름 쉽게 설치하는 방법입니다.
   </p>
 </section>
 
+
 <section>
-  <ul class="pager">
-    <li class="previous"><a href="/articles/2016/11/19/ESH-06-04-03-06">Previous</a></li>
-    <li class="next"><a href="/articles/2016/11/23/ESH-06-04-04">Next</a></li>      
-  </ul>
   <p>
-    <a href="http://www.itl.nist.gov/div898/handbook/pmc/section4/pmc437.htm">원문 보기</a>
+  1. 터미널에서 다음과 같이 입력합니다.
+    <pre class="code">
+$ sudo add-apt-repository ppa:graphics-drivers/ppa
+$ sudo apt-get update
+    </pre>
+  </p>
+  <p>
+  2. "Additional Drivers"를 실행합니다.<label for="sn-extensive-use-of-sidenotes" class="margin-toggle sidenote-number"></label><input type="checkbox" class="margin-toggle"/><span class="sidenote">출처: <br/><a href="https://www.youtube.com/watch?v=PeWTSprpq1M">Install Nvidia Driver on Ubuntu 16.04 (GUI Method for Beginners)</a></span> 2번 항목부터는 출처에 있는 내용과 거의 같습니다. 최신 버전이 나오는 것만 다릅니다.
+  </p>
+  <p>
+  3. "Using NVIDIA binary driver - version xxx.xx from nvidia-xxx" 을 선택합니다. 이 과정은 몇 분 걸립니다. 여기에서 xxx.xx 나 xxx 는 버전을 가리키는 숫자입니다. 참고로 저는 CUDA 9.1을 설치하기 위해<label for="sn-extensive-use-of-sidenotes" class="margin-toggle sidenote-number"></label><input type="checkbox" class="margin-toggle"/><span class="sidenote">출처: <a href="https://developer.nvidia.com/cuda-downloads?target_os=Linux&target_arch=x86_64&target_distro=Ubuntu&target_version=1604&target_type=debnetwork">CUDA Toolkit 9.1 Download</a></span> 390.xx 버전을 설치했습니다.
+  </p>
+  <p>
+  4. 드라이버 설치가 끝나면 재부팅합니다.
   </p>
 </section>
+
+
+<script type="text/javascript" src="/js/footnotes.js"></script>
+<script type="text/javascript" src="/js/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+<!-- http://tsi.github.io/inlineDisqussions/ -->
+
+<script>
+disqus_shortname = 'danielykim';
+
+jQuery(document).ready(function() {
+  jQuery("p").inlineDisqussions();
+});
+
+jQuery("p").inlineDisqussions({
+  identifier: 'disqussion',
+  displayCount: true,
+  highlighted: true,
+  position: 'right',
+  background: '#FFFFF9',
+  maxWidth: 200
+});
+</script>
 
 
 
@@ -128,8 +140,8 @@ HW 과정은 소프트웨어로 사용하기 쉽도록 완전하게 자동화 �
 	<div id="disqus_thread" style="max-width:55%;"></div>
 	<script type="text/javascript">
     var disqus_config = function () {
-      this.page.url = "https://danielykim.github.io/articles/2016/11/19/ESH-06-04-03-07/"; // <--- use canonical URL
-      this.page.identifier = "/articles/2016/11/19/ESH-06-04-03-07";
+      this.page.url = "https://danielykim.github.io/articles/2018/02/19/Install-NVIDIA-driver-on-Ubuntu1604/"; // <--- use canonical URL
+      this.page.identifier = "/articles/2018/02/19/Install-NVIDIA-driver-on-Ubuntu1604";
     };
     (function() { // DON'T EDIT BELOW THIS LINE
     
@@ -148,7 +160,7 @@ HW 과정은 소프트웨어로 사용하기 쉽도록 완전하게 자동화 �
 
 
     </article>
-    <span class="print-footer">6.4.3.7. 지수 평활법 요약 - November 19, 2016 - Daniel Kim, PhD</span>
+    <span class="print-footer">Ubuntu 16.04 Desktop에서 NVIDIA 최신 driver 쉽게 설치하기 - February 19, 2018 - Daniel Kim, PhD</span>
 
 
     <footer>
