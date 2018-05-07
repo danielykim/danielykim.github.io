@@ -5,8 +5,8 @@
     <description>Exploring Adjacent Possibles</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 07 May 2018 15:16:33 +0000</pubDate>
-    <lastBuildDate>Mon, 07 May 2018 15:16:33 +0000</lastBuildDate>
+    <pubDate>Mon, 07 May 2018 15:26:01 +0000</pubDate>
+    <lastBuildDate>Mon, 07 May 2018 15:26:01 +0000</lastBuildDate>
     <generator>Jekyll v3.3.0</generator>
     
       <item>
@@ -23,24 +23,17 @@
     &lt;/blockquote&gt;  
   &lt;/div&gt;  
   &lt;p&gt;
-  이 글에서는 정말로 최근의 데이터 과학 분야에 별로 새로운 것이 없는지 살펴보겠습니다.
-  &lt;/p&gt;
-&lt;/section&gt;
-
-
-&lt;section&gt;
-  &lt;p&gt;
-  크게 2가지 관점에서 데이터 마이닝과 데이터 과학을 비교해보겠습니다.&lt;label for=&quot;sn-extensive-use-of-sidenotes&quot; class=&quot;margin-toggle sidenote-number&quot;&gt;&lt;/label&gt;&lt;input type=&quot;checkbox&quot; class=&quot;margin-toggle&quot;/&gt;&lt;span class=&quot;sidenote&quot;&gt;순전히 개인적인 의견입니다. 아직은 초안입니다. 시간 생기는대로 업데이트하려고 합니다.&lt;/span&gt;
-  &lt;/p&gt;
+  이 글에서는 크게 2가지 관점에서 데이터 마이닝과 데이터 과학을 비교하여 무엇이 새로운지 살펴보겠습니다.&lt;label for=&quot;sn-extensive-use-of-sidenotes&quot; class=&quot;margin-toggle sidenote-number&quot;&gt;&lt;/label&gt;&lt;input type=&quot;checkbox&quot; class=&quot;margin-toggle&quot;/&gt;&lt;span class=&quot;sidenote&quot;&gt;순전히 개인적인 의견입니다. 아직은 초안입니다. 시간 생기는대로 업데이트하려고 합니다.&lt;/span&gt;
+  &lt;/p&gt;  
   &lt;ol&gt;
-    &lt;li&gt;1. 데이터: 데이터 종류, 데이터 관련 기반 기술 등 포함&lt;/li&gt;
+    &lt;li&gt;1. 데이터&lt;/li&gt;
     &lt;li&gt;2. 업무 수행&lt;/li&gt;
   &lt;/ol&gt;
 &lt;/section&gt;
 
 
 &lt;section&gt;
-  &lt;h2&gt;1. 데이터&lt;/h2&gt;
+  &lt;h2&gt;1. 데이터: 데이터 종류, 데이터 관련 기반 기술 등 포함&lt;/h2&gt;
   &lt;p&gt;
   데이터 마이닝(90년대 후반 ~ 2007 또는 2008)
     &lt;ul&gt;
@@ -87,12 +80,15 @@
 
 
 &lt;section&gt;
-  &lt;h2&gt;요약&lt;/h2&gt;
+  &lt;h2&gt;마무리하며&lt;/h2&gt;
   &lt;p&gt;
   현재의 데이터 과학 분야는 이전의 데이터 마이닝 분야를 포함합니다. 하지만 예전과 다를바가 없다고는 말하기 힘듭니다. (업데이트 예정)
   &lt;/p&gt;
   &lt;p&gt;
-  이 글의 맨 앞에서 소개한 이야기로 돌아가봅시다. 이는 지나치게 확대해석하는 모습에 대한 반발 같습니다. 개인적으로는 어느정도 일리가 있는 반발이라고 생각합니다. 즉, 예전부터 있었던 해오던 데이터 마이닝 업무의 연장선상에서 언어만 Python 이나 R 로 바꾸고 데이터 과학 업무한다고 주장하는 것을 가리켜 반발하는 것 같습니다. 업무 수행 전반을 아우르는 패러다임까지 변해야 현대적인 데이터 과학자라고 할 수 있겠습니다. (업데이트 예정)
+  이 글의 맨 앞에서 소개한 이야기로 돌아가봅시다. 개인적으로는 어느정도 일리가 있는 이야기라고 생각합니다. 즉, 예전부터 있었던 해오던 데이터 마이닝 업무의 연장선상에서 언어만 Python 이나 R 로 바꾸고 데이터 과학 업무한다고 주장하는 것을 가리켜 반발하는 것 같습니다. 업무 수행 전반을 아우르는 패러다임까지 변해야 현대적인 데이터 과학자라고 할 수 있겠습니다. (업데이트 예정)
+  &lt;/p&gt;
+  &lt;p&gt;
+  데이터 마이닝 업무에서 데이터 종류, 분석 기법, 추가된 변수 등이 없는데도 데이터 과학 시대라고 떠들면서 무분별하게 편승하는 행태도 잘 구별할 필요가 있겠습니다.
   &lt;/p&gt;
 &lt;/section&gt;
 
