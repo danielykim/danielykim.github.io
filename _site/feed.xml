@@ -5,28 +5,142 @@
     <description>Exploring Adjacent Possibles</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 19 Feb 2018 13:08:30 +0000</pubDate>
-    <lastBuildDate>Mon, 19 Feb 2018 13:08:30 +0000</lastBuildDate>
+    <pubDate>Mon, 07 May 2018 15:04:01 +0000</pubDate>
+    <lastBuildDate>Mon, 07 May 2018 15:04:01 +0000</lastBuildDate>
     <generator>Jekyll v3.3.0</generator>
     
       <item>
-        <title>Ubuntu 16.04 데스크탑 NVIDIA 드라이버 설치</title>
+        <title>Data Mining vs. Data Science</title>
         <description>&lt;section&gt;
   &lt;p&gt;
-  Ubuntu 16.04 데스크탑 버전에서 NVIDIA 최신 드라이버를 설치하는 방법입니다.
+  일하다보면 다음과 같은 이야기를 가끔 듣습니다.
+  &lt;/p&gt;
+  &lt;div class=&quot;epigraph&quot;&gt;
+    &lt;blockquote&gt;
+      &lt;p&gt;
+      &quot;데이터 과학, 사실 그거 알고보면 다 데이터 마이닝 시절부터 있던 겁니다. 별로 새로운 것이 없습니다.&quot;
+      &lt;/p&gt;
+    &lt;/blockquote&gt;  
+  &lt;/div&gt;  
+  &lt;p&gt;
+  이 글에서는 정말로 최근의 데이터 과학 분야에 별로 새로운 것이 없는지 살펴보겠습니다.
   &lt;/p&gt;
 &lt;/section&gt;
 
 
 &lt;section&gt;
   &lt;p&gt;
-  먼저, 터미널에서 다음과 같이 입력합니다.
+  크게 2가지 관점에서 데이터 마이닝과 데이터 과학을 비교해보겠습니다.&lt;label for=&quot;sn-extensive-use-of-sidenotes&quot; class=&quot;margin-toggle sidenote-number&quot;&gt;&lt;/label&gt;&lt;input type=&quot;checkbox&quot; class=&quot;margin-toggle&quot;/&gt;&lt;span class=&quot;sidenote&quot;&gt;순전히 개인적인 의견입니다. 아직은 초안입니다.&lt;/span&gt;
+  &lt;/p&gt;
+  &lt;ol&gt;
+    &lt;li&gt;1. 데이터: 데이터 종류, 데이터 관련 기반 기술 등 포함&lt;/li&gt;
+    &lt;li&gt;2. 업무 수행&lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/section&gt;
+
+
+&lt;section&gt;
+  &lt;h2&gt;1. 데이터&lt;/h2&gt;
+  &lt;p&gt;
+  데이터 마이닝(90년대 후반 ~ 2007 또는 2008)
+    &lt;ul&gt;
+      &lt;li&gt;제조업 생산 관련 정보: 설비, 수율 등&lt;/li&gt;      
+      &lt;li&gt;금융/카드 회사 고객 정보&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/p&gt;
+  &lt;p&gt;
+  데이터 과학(2010 ~ 현재)
+    &lt;ul&gt;
+      &lt;li&gt;위의 데이터 마이닝 포함&lt;/li&gt;
+      &lt;li&gt;스마트폰 사용 패턴 데이터: 앱 사용, 각종 통신사 고객 사용 패턴 등&lt;/li&gt;
+      &lt;li&gt;게임 데이터: 자체 경제 시스템, 사용자 데이터 등&lt;/li&gt;
+      &lt;li&gt;검색 엔진 트렌드 데이터&lt;/li&gt;
+      &lt;li&gt;이미지 데이터: 딥러닝 관련&lt;/li&gt;
+      &lt;li&gt;음성 데이터: 딥러닝 관련&lt;/li&gt;
+      &lt;li&gt;대화형 데이터 시각화 Interactive Data Visualization&lt;/li&gt;
+      &lt;li&gt;High Availability Hadoop Ecosystem&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/p&gt;
+&lt;/section&gt;
+
+
+&lt;section&gt;
+  &lt;h2&gt;2. 업무 수행&lt;/h2&gt;
+  &lt;p&gt;
+  데이터 마이닝(90년대 후반 ~ 2007 또는 2008)
+    &lt;ul&gt;
+      &lt;li&gt;프로그래밍 언어: 컴파일 + 스크립팅(느림)&lt;/li&gt;
+      &lt;li&gt;직접 구현 또는 비싼 상용 프로그램: 문서화 ㅠㅠ 유지 보수 ㅠㅠ&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/p&gt;
+  &lt;p&gt;
+  데이터 과학(2010 ~ 현재)
+    &lt;ul&gt;
+      &lt;li&gt;훨씬 더 빠른 스크립팅 언어: 예) Intel® Python + Cython&lt;/li&gt;
+      &lt;li&gt;오픈소스 대중화, GitHub&lt;/li&gt;
+      &lt;li&gt;훨씬 더 가볍고 빠르게 작업: Jupyter notebook&lt;/li&gt;
+      &lt;li&gt;자동화된 문서화 도구&lt;/li&gt;
+      &lt;li&gt;웹 기반 공동 작업 환경: Google Colab 등&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/p&gt;
+&lt;/section&gt;
+
+
+&lt;script type=&quot;text/javascript&quot; src=&quot;/js/footnotes.js&quot;&gt;&lt;/script&gt;
+&lt;script type=&quot;text/javascript&quot; src=&quot;/js/highlight.pack.js&quot;&gt;&lt;/script&gt;
+&lt;script&gt;hljs.initHighlightingOnLoad();&lt;/script&gt;
+&lt;!-- http://tsi.github.io/inlineDisqussions/ --&gt;
+
+&lt;script&gt;
+disqus_shortname = 'danielykim';
+
+jQuery(document).ready(function() {
+  jQuery(&quot;p&quot;).inlineDisqussions();
+});
+
+jQuery(&quot;p&quot;).inlineDisqussions({
+  identifier: 'disqussion',
+  displayCount: true,
+  highlighted: true,
+  position: 'right',
+  background: '#FFFFF9',
+  maxWidth: 200
+});
+&lt;/script&gt;
+</description>
+        <pubDate>Mon, 07 May 2018 00:00:00 +0000</pubDate>
+        <link>http://localhost:4000/articles/2018/05/07/Data-mining-vs-data-science/</link>
+        <guid isPermaLink="true">http://localhost:4000/articles/2018/05/07/Data-mining-vs-data-science/</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>Ubuntu 16.04 Desktop에서 NVIDIA 최신 driver 쉽게 설치하기</title>
+        <description>&lt;section&gt;
+  &lt;p&gt;
+  Ubuntu 16.04 Desktop 버전에서 NVIDIA 최신 드라이버를 나름 쉽게 설치하는 방법입니다.
+  &lt;/p&gt;
+&lt;/section&gt;
+
+
+&lt;section&gt;
+  &lt;p&gt;
+  1. 터미널에서 다음과 같이 입력합니다.&lt;label for=&quot;sn-extensive-use-of-sidenotes&quot; class=&quot;margin-toggle sidenote-number&quot;&gt;&lt;/label&gt;&lt;input type=&quot;checkbox&quot; class=&quot;margin-toggle&quot;/&gt;&lt;span class=&quot;sidenote&quot;&gt;출처: &lt;a href=&quot;https://launchpad.net/~graphics-drivers/+archive/ubuntu/ppa&quot;&gt;Proprietary GPU Drivers&lt;/a&gt;&lt;/span&gt;
     &lt;pre class=&quot;code&quot;&gt;
 $ sudo add-apt-repository ppa:graphics-drivers/ppa
 $ sudo apt-get update
     &lt;/pre&gt;
   &lt;/p&gt;
-
+  &lt;p&gt;
+  2. &quot;Additional Drivers&quot;를 실행합니다.&lt;label for=&quot;sn-extensive-use-of-sidenotes&quot; class=&quot;margin-toggle sidenote-number&quot;&gt;&lt;/label&gt;&lt;input type=&quot;checkbox&quot; class=&quot;margin-toggle&quot;/&gt;&lt;span class=&quot;sidenote&quot;&gt;출처: &lt;a href=&quot;https://www.youtube.com/watch?v=PeWTSprpq1M&quot;&gt;Install Nvidia Driver on Ubuntu 16.04 (GUI Method for Beginners)&lt;/a&gt;&lt;/span&gt; 2번 항목부터는 출처에 있는 내용과 거의 같습니다. 최신 버전이 나오는 것만 다릅니다.
+  &lt;/p&gt;
+  &lt;p&gt;
+  3. &quot;Using NVIDIA binary driver - version xxx.xx from nvidia-xxx&quot; 을 선택합니다. 이 과정은 몇 분 걸립니다. 여기에서 xxx.xx 나 xxx 는 버전을 가리키는 숫자입니다. 참고로 저는 CUDA 9.1을 설치하기 위해&lt;label for=&quot;sn-extensive-use-of-sidenotes&quot; class=&quot;margin-toggle sidenote-number&quot;&gt;&lt;/label&gt;&lt;input type=&quot;checkbox&quot; class=&quot;margin-toggle&quot;/&gt;&lt;span class=&quot;sidenote&quot;&gt;출처: &lt;a href=&quot;https://developer.nvidia.com/cuda-downloads?target_os=Linux&amp;target_arch=x86_64&amp;target_distro=Ubuntu&amp;target_version=1604&amp;target_type=debnetwork&quot;&gt;CUDA Toolkit 9.1 Download&lt;/a&gt;&lt;/span&gt; 390.xx 버전을 설치했습니다.
+  &lt;/p&gt;
+  &lt;p&gt;
+  4. 드라이버 설치가 끝나면 재부팅합니다.
+  &lt;/p&gt;
 &lt;/section&gt;
 
 
@@ -1175,230 +1289,6 @@ jQuery(&quot;p&quot;).inlineDisqussions({
         <pubDate>Sat, 08 Apr 2017 00:00:00 +0000</pubDate>
         <link>http://localhost:4000/articles/2017/04/08/DQN-tensorflow-on-Windows/</link>
         <guid isPermaLink="true">http://localhost:4000/articles/2017/04/08/DQN-tensorflow-on-Windows/</guid>
-        
-        
-      </item>
-    
-      <item>
-        <title>6.4.4.10. 계절적인 데이터에 대한 박스-젠킨스 분석</title>
-        <description>&lt;section&gt;
-  &lt;p&gt;
-    &lt;label for=&quot;mn-h01&quot; class=&quot;margin-toggle&quot;&gt;⊕ &lt;/label&gt;
-    &lt;input type=&quot;checkbox&quot; id=&quot;mn-h01&quot; class=&quot;margin-toggle&quot;&gt;
-    &lt;span class=&quot;marginnote&quot;&gt;
-시계열 G
-    &lt;/span&gt;
-이 예제에서는 Box, Jenkins, and Reinsel 1994에 있는 시계열 데이터 G를 사용하여 계절적인 데이터에 대한 박스-젠킨스 시계열 분석 방법을 다룰 것이다. 아래 그림에서 볼 수 있듯이 144개의 관측값이 있다.
-  &lt;/p&gt;
-&lt;/section&gt;
-
-&lt;section&gt;
-  &lt;p&gt;
-    &lt;figure&gt;
-      &lt;img src=&quot;http://www.itl.nist.gov/div898/handbook/pmc/section4/pmc44a_r01.gif&quot;&gt;
-    &lt;/figure&gt;
-  &lt;/p&gt;
-&lt;/section&gt;
-
-&lt;section&gt;
-  &lt;p&gt;
-자연 로그 변환으로 일정하지 않은 분산 효과를 없앨 수 있다.
-    &lt;figure&gt;
-      &lt;img src=&quot;http://www.itl.nist.gov/div898/handbook/pmc/section4/pmc44a_r02.gif&quot;&gt;
-    &lt;/figure&gt;
-  &lt;/p&gt;
-  &lt;p&gt;
-그 다음, 뺄셈으로 시계열에서 추세를 없앤다. 결과 시계열은 다음과 같다.
-    &lt;figure&gt;
-      &lt;img src=&quot;http://www.itl.nist.gov/div898/handbook/pmc/section4/pmc44a_r03.gif&quot;&gt;
-    &lt;/figure&gt;
-  &lt;/p&gt;
-&lt;/section&gt;
-
-&lt;section&gt;
-  &lt;p&gt;
-    &lt;label for=&quot;mn-h02&quot; class=&quot;margin-toggle&quot;&gt;⊕ &lt;/label&gt;
-    &lt;input type=&quot;checkbox&quot; id=&quot;mn-h02&quot; class=&quot;margin-toggle&quot;&gt;
-    &lt;span class=&quot;marginnote&quot;&gt;
-계절성에 대한 자기상관 그래프 분석
-    &lt;/span&gt;
-적당한 모델을 판별하기 위해, 시계열의 ACF를 그리자.
-    &lt;figure&gt;
-      &lt;img src=&quot;http://www.itl.nist.gov/div898/handbook/pmc/section4/pmc44a_r04.gif&quot;&gt;
-    &lt;/figure&gt;
-  &lt;/p&gt;
-  &lt;p&gt;
-12 뒤처짐이나 24 뒤처짐 같이 \(n\) 주기 떨어져서 아주 큰 자기상관이 보이면, 주기성이 있다고 볼 수 있다. 자기상관을 줄이는 것이 판별 과정의 목적이니 이러한 효과는 제거해야 한다. 그래서 단순하게 차이를 구하는 것으로는 충분하지 않고, 4, 6, 12 같은 특정한 시기에 계절적인 차이를 구해보자. 이 예제에서는 12로 해보자.  
-  &lt;/p&gt;
-  &lt;p&gt;
-  다음은 자연 로그를 취하고, 차이를 구하고, 계절적인 차이를 구해서 그린 시계열 G이다.
-  &lt;/p&gt;
-  &lt;figure&gt;
-    &lt;img src=&quot;http://www.itl.nist.gov/div898/handbook/pmc/section4/pmc449_r05.gif&quot;&gt;
-  &lt;/figure&gt;
-  &lt;p&gt;
-계절적인 항의 수가 거의 없다. 예측하는 함수의 형태를 안다면, 게절적인 AR 이나 계절적인 MA 모델에 대해 적절한 수의 항을 고를 수 있다.
-  &lt;/p&gt;
-  &lt;p&gt;
-박스와 젠킨스의 책, 시계열 분석: 예측과 제어 Time Series Analysis Forecasting and Control (the later edition is Box, Jenkins and Reinsel, 1994), 326-328쪽에 관련 내용이 있다. 잘 모르겠지만 차이를 구하기 전에 증가하는 추세는 있다면, 계절적인 MA 항을 골라서 진단 과정에서 어떻게 나오는지 보라.  
-  &lt;/p&gt;
-  &lt;p&gt;
-시계열 G의 자연 로그 차이와 계절적인 차이의 ACF 그래프는 다음과 같다.
-    &lt;figure&gt;
-      &lt;img src=&quot;http://www.itl.nist.gov/div898/handbook/pmc/section4/pmc44a_r06.gif&quot;&gt;
-    &lt;/figure&gt;
-  &lt;/p&gt;
-  &lt;p&gt;
-두드러지게 보이는 뾰족한 선 몇 개가 있지만, 자기상관이 거의 0이다. 이 말은, 계절적인 MA(1)가 적합하다는 이야기이다.  
-  &lt;/p&gt;
-&lt;/section&gt;
-
-  &lt;div class=&quot;table-wrapper&quot;&gt;
-    &lt;table class=&quot;booktabs&quot;&gt;
-      &lt;thead&gt;
-        &lt;tr&gt;&lt;th style=&quot;text-align: center&quot;&gt;&lt;b&gt;뒤처짐&lt;/b&gt;&lt;/th&gt;&lt;th style=&quot;text-align: center&quot;&gt;&lt;b&gt;ACF&lt;/b&gt;&lt;/th&gt;&lt;/tr&gt;
-      &lt;/thead&gt;
-      &lt;tbody&gt;
-&lt;tr&gt;&lt;td style=&quot;text-align: center&quot;&gt;   0&lt;/td&gt;&lt;td style=&quot;text-align: center&quot;&gt; 1.000000000&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td style=&quot;text-align: center&quot;&gt;   1&lt;/td&gt;&lt;td style=&quot;text-align: center&quot;&gt;-0.389878319&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td style=&quot;text-align: center&quot;&gt;   2&lt;/td&gt;&lt;td style=&quot;text-align: center&quot;&gt; 0.304394082&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td style=&quot;text-align: center&quot;&gt;   3&lt;/td&gt;&lt;td style=&quot;text-align: center&quot;&gt;-0.165554717&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td style=&quot;text-align: center&quot;&gt;   4&lt;/td&gt;&lt;td style=&quot;text-align: center&quot;&gt; 0.070719321&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td style=&quot;text-align: center&quot;&gt;   5&lt;/td&gt;&lt;td style=&quot;text-align: center&quot;&gt;-0.097039288&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td style=&quot;text-align: center&quot;&gt;   6&lt;/td&gt;&lt;td style=&quot;text-align: center&quot;&gt;-0.047057692&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td style=&quot;text-align: center&quot;&gt;   7&lt;/td&gt;&lt;td style=&quot;text-align: center&quot;&gt; 0.035373112&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td style=&quot;text-align: center&quot;&gt;   8&lt;/td&gt;&lt;td style=&quot;text-align: center&quot;&gt;-0.043458199&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td style=&quot;text-align: center&quot;&gt;   9&lt;/td&gt;&lt;td style=&quot;text-align: center&quot;&gt;-0.004796162&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td style=&quot;text-align: center&quot;&gt;  10&lt;/td&gt;&lt;td style=&quot;text-align: center&quot;&gt; 0.014393137&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td style=&quot;text-align: center&quot;&gt;  11&lt;/td&gt;&lt;td style=&quot;text-align: center&quot;&gt; 0.109917200&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td style=&quot;text-align: center&quot;&gt;  12&lt;/td&gt;&lt;td style=&quot;text-align: center&quot;&gt;-0.068778492&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td style=&quot;text-align: center&quot;&gt;  13&lt;/td&gt;&lt;td style=&quot;text-align: center&quot;&gt; 0.148034489&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td style=&quot;text-align: center&quot;&gt;  14&lt;/td&gt;&lt;td style=&quot;text-align: center&quot;&gt; 0.035768581&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td style=&quot;text-align: center&quot;&gt;  15&lt;/td&gt;&lt;td style=&quot;text-align: center&quot;&gt;-0.006677806&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td style=&quot;text-align: center&quot;&gt;  16&lt;/td&gt;&lt;td style=&quot;text-align: center&quot;&gt; 0.173004275&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td style=&quot;text-align: center&quot;&gt;  17&lt;/td&gt;&lt;td style=&quot;text-align: center&quot;&gt;-0.111342583&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td style=&quot;text-align: center&quot;&gt;  18&lt;/td&gt;&lt;td style=&quot;text-align: center&quot;&gt; 0.019970791&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td style=&quot;text-align: center&quot;&gt;  19&lt;/td&gt;&lt;td style=&quot;text-align: center&quot;&gt;-0.047349722&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td style=&quot;text-align: center&quot;&gt;  20&lt;/td&gt;&lt;td style=&quot;text-align: center&quot;&gt; 0.016136806&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td style=&quot;text-align: center&quot;&gt;  21&lt;/td&gt;&lt;td style=&quot;text-align: center&quot;&gt; 0.022279561&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td style=&quot;text-align: center&quot;&gt;  22&lt;/td&gt;&lt;td style=&quot;text-align: center&quot;&gt;-0.078710582&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td style=&quot;text-align: center&quot;&gt;  23&lt;/td&gt;&lt;td style=&quot;text-align: center&quot;&gt;-0.009577413&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td style=&quot;text-align: center&quot;&gt;  24&lt;/td&gt;&lt;td style=&quot;text-align: center&quot;&gt;-0.073114034&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td style=&quot;text-align: center&quot;&gt;  25&lt;/td&gt;&lt;td style=&quot;text-align: center&quot;&gt;-0.019503289&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td style=&quot;text-align: center&quot;&gt;  26&lt;/td&gt;&lt;td style=&quot;text-align: center&quot;&gt; 0.041465024&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td style=&quot;text-align: center&quot;&gt;  27&lt;/td&gt;&lt;td style=&quot;text-align: center&quot;&gt;-0.022134370&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td style=&quot;text-align: center&quot;&gt;  28&lt;/td&gt;&lt;td style=&quot;text-align: center&quot;&gt; 0.088887299&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td style=&quot;text-align: center&quot;&gt;  29&lt;/td&gt;&lt;td style=&quot;text-align: center&quot;&gt; 0.016247148&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td style=&quot;text-align: center&quot;&gt;  30&lt;/td&gt;&lt;td style=&quot;text-align: center&quot;&gt; 0.003946351&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td style=&quot;text-align: center&quot;&gt;  31&lt;/td&gt;&lt;td style=&quot;text-align: center&quot;&gt; 0.004584069&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td style=&quot;text-align: center&quot;&gt;  32&lt;/td&gt;&lt;td style=&quot;text-align: center&quot;&gt;-0.024782198&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td style=&quot;text-align: center&quot;&gt;  33&lt;/td&gt;&lt;td style=&quot;text-align: center&quot;&gt;-0.025905040&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td style=&quot;text-align: center&quot;&gt;  34&lt;/td&gt;&lt;td style=&quot;text-align: center&quot;&gt;-0.062879966&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td style=&quot;text-align: center&quot;&gt;  35&lt;/td&gt;&lt;td style=&quot;text-align: center&quot;&gt; 0.026101117&lt;/td&gt;&lt;/tr&gt;      
-      &lt;/tbody&gt;
-    &lt;/table&gt;
-  &lt;/div&gt;
-
-
-&lt;section&gt;
-  &lt;p&gt;
-    &lt;label for=&quot;mn-h03&quot; class=&quot;margin-toggle&quot;&gt;⊕ &lt;/label&gt;
-    &lt;input type=&quot;checkbox&quot; id=&quot;mn-h03&quot; class=&quot;margin-toggle&quot;&gt;
-    &lt;span class=&quot;marginnote&quot;&gt;
-모델 맞추기
-    &lt;/span&gt;
-계절적인 MA(1)을 데이터에 맞춰보자.
-$$ X_{t} - \delta = A_{t} + \theta_{1} A_{t-1} + \phi_{1} A_{t-12} + \theta_{1} \phi_{1} A_{t-13}, $$
-여기에서 \theta_{1}은 MA(1) 매개변수이고 \phi_{1}은 계절적인 매개변수이다. 모델 맞춘 결과는 다음과 같다.
-  &lt;/p&gt;
-  &lt;div class=&quot;table-wrapper&quot;&gt;
-    &lt;table class=&quot;booktabs&quot;&gt;
-      &lt;thead&gt;
-        &lt;tr&gt;&lt;th style=&quot;text-align: center&quot;&gt;&lt;b&gt;측정&lt;/b&gt;&lt;/th&gt;&lt;th style=&quot;text-align: center&quot;&gt;&lt;b&gt;MA(1)&lt;/b&gt;&lt;/th&gt;&lt;th style=&quot;text-align: center&quot;&gt;&lt;b&gt;계절적인 MA(1)&lt;/b&gt;&lt;/th&gt;&lt;/tr&gt;
-      &lt;/thead&gt;
-      &lt;tbody&gt;
-&lt;tr&gt;&lt;td style=&quot;text-align: center&quot;&gt;매개변수&lt;/td&gt;&lt;td style=&quot;text-align: center&quot;&gt;-0.4018&lt;/td&gt;&lt;td style=&quot;text-align: center&quot;&gt;-0.5569&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td style=&quot;text-align: center&quot;&gt;매개변수&lt;/td&gt;&lt;td style=&quot;text-align: center&quot;&gt; 0.0896&lt;/td&gt;&lt;td style=&quot;text-align: center&quot;&gt; 0.0731&lt;/td&gt;&lt;/tr&gt;
-      &lt;/tbody&gt;
-    &lt;/table&gt;
-  &lt;/div&gt;
-  &lt;p&gt;
-    &lt;blockquote&gt;
-      &lt;p&gt;나머지 표준 편차 = 0.0367&lt;/p&gt;
-      &lt;p&gt;로그 가능성(Log likelihood) = 244.7&lt;/p&gt;
-      &lt;p&gt;AIC = -483.4&lt;/p&gt;
-    &lt;/blockquote&gt;
-  &lt;/p&gt;
-  &lt;p&gt;
-박스-융 테스트로 30 뒤처짐까지 나머지의 무작위성을 확인하였다. 두 측정 매개변수에 대해 기각 영역에 대한 자유도를 맞춰야 한다.
-  &lt;/p&gt;
-  &lt;p&gt;
-    &lt;blockquote&gt;
-      &lt;p&gt;\(H_{0}\) : 나머지가 무작위적이다.&lt;/p&gt;
-      &lt;p&gt;\(H_{a}\) : 나머지가 무작위적이지 않다.&lt;/p&gt;
-      &lt;p&gt;테스트 통계: \( Q = 29.4935 \)&lt;/p&gt;
-      &lt;p&gt;유의미도: \( \alpha = 0.05 \)&lt;/p&gt;
-      &lt;p&gt;자유도: \(h = 30 - 2 = 28\)&lt;/p&gt;
-      &lt;p&gt;기각 값: \( \xi_{1-\alpha, h}^{2} = 41.3371\)&lt;/p&gt;
-      &lt;p&gt;기각 영역: \(Q &gt; 41.3371\) 일 때, \(H_{0}\) 기각&lt;/p&gt;
-    &lt;/blockquote&gt;
-  &lt;/p&gt;
-  &lt;p&gt;
-박스-융 테스트의 귀무 가설이 기각되지 않았으니, 맞춘 모델이 적절하다고 볼 수 있다.  
-  &lt;/p&gt;
-&lt;/section&gt;
-
-&lt;section&gt;
-  &lt;p&gt;
-    &lt;label for=&quot;mn-h04&quot; class=&quot;margin-toggle&quot;&gt;⊕ &lt;/label&gt;
-    &lt;input type=&quot;checkbox&quot; id=&quot;mn-h04&quot; class=&quot;margin-toggle&quot;&gt;
-    &lt;span class=&quot;marginnote&quot;&gt;
-예측
-    &lt;/span&gt;
-우리의 계절적인 MA(1) 모델로, 12 시점 앞을 예측하고 90% 신뢰 구간도 계산해보자.
-  &lt;/p&gt;
-  &lt;div class=&quot;table-wrapper&quot;&gt;
-    &lt;table class=&quot;booktabs&quot;&gt;
-      &lt;thead&gt;
-        &lt;tr&gt;&lt;th style=&quot;text-align: center&quot;&gt;&lt;b&gt;시점&lt;/b&gt;&lt;/th&gt;&lt;th style=&quot;text-align: center&quot;&gt;&lt;b&gt;상한값&lt;/b&gt;&lt;/th&gt;&lt;th style=&quot;text-align: center&quot;&gt;&lt;b&gt;예측&lt;/b&gt;&lt;/th&gt;&lt;th style=&quot;text-align: center&quot;&gt;&lt;b&gt;상한값&lt;/b&gt;&lt;/th&gt;&lt;/tr&gt;
-      &lt;/thead&gt;
-      &lt;tbody&gt;
-&lt;tr&gt;&lt;td style=&quot;text-align: center&quot;&gt;  145&lt;/td&gt;&lt;td style=&quot;text-align: center&quot;&gt;424.0234&lt;/td&gt;&lt;td style=&quot;text-align: center&quot;&gt;450.7261&lt;/td&gt;&lt;td style=&quot;text-align: center&quot;&gt;478.4649&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td style=&quot;text-align: center&quot;&gt;  146&lt;/td&gt;&lt;td style=&quot;text-align: center&quot;&gt;396.7861&lt;/td&gt;&lt;td style=&quot;text-align: center&quot;&gt;426.0042&lt;/td&gt;&lt;td style=&quot;text-align: center&quot;&gt;456.7577&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td style=&quot;text-align: center&quot;&gt;  147&lt;/td&gt;&lt;td style=&quot;text-align: center&quot;&gt;442.5731&lt;/td&gt;&lt;td style=&quot;text-align: center&quot;&gt;479.3298&lt;/td&gt;&lt;td style=&quot;text-align: center&quot;&gt;518.4399&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td style=&quot;text-align: center&quot;&gt;  148&lt;/td&gt;&lt;td style=&quot;text-align: center&quot;&gt;451.3902&lt;/td&gt;&lt;td style=&quot;text-align: center&quot;&gt;492.7365&lt;/td&gt;&lt;td style=&quot;text-align: center&quot;&gt;537.1454&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td style=&quot;text-align: center&quot;&gt;  149&lt;/td&gt;&lt;td style=&quot;text-align: center&quot;&gt;463.3034&lt;/td&gt;&lt;td style=&quot;text-align: center&quot;&gt;509.3982&lt;/td&gt;&lt;td style=&quot;text-align: center&quot;&gt;559.3245&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td style=&quot;text-align: center&quot;&gt;  150&lt;/td&gt;&lt;td style=&quot;text-align: center&quot;&gt;527.3754&lt;/td&gt;&lt;td style=&quot;text-align: center&quot;&gt;583.7383&lt;/td&gt;&lt;td style=&quot;text-align: center&quot;&gt;645.2544&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td style=&quot;text-align: center&quot;&gt;  151&lt;/td&gt;&lt;td style=&quot;text-align: center&quot;&gt;601.9371&lt;/td&gt;&lt;td style=&quot;text-align: center&quot;&gt;670.4625&lt;/td&gt;&lt;td style=&quot;text-align: center&quot;&gt;745.7830&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td style=&quot;text-align: center&quot;&gt;  152&lt;/td&gt;&lt;td style=&quot;text-align: center&quot;&gt;595.7602&lt;/td&gt;&lt;td style=&quot;text-align: center&quot;&gt;667.5274&lt;/td&gt;&lt;td style=&quot;text-align: center&quot;&gt;746.9323&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td style=&quot;text-align: center&quot;&gt;  153&lt;/td&gt;&lt;td style=&quot;text-align: center&quot;&gt;495.7137&lt;/td&gt;&lt;td style=&quot;text-align: center&quot;&gt;558.5657&lt;/td&gt;&lt;td style=&quot;text-align: center&quot;&gt;628.5389&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td style=&quot;text-align: center&quot;&gt;  154&lt;/td&gt;&lt;td style=&quot;text-align: center&quot;&gt;439.1900&lt;/td&gt;&lt;td style=&quot;text-align: center&quot;&gt;497.5430&lt;/td&gt;&lt;td style=&quot;text-align: center&quot;&gt;562.8899&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td style=&quot;text-align: center&quot;&gt;  155&lt;/td&gt;&lt;td style=&quot;text-align: center&quot;&gt;377.7598&lt;/td&gt;&lt;td style=&quot;text-align: center&quot;&gt;430.1618&lt;/td&gt;&lt;td style=&quot;text-align: center&quot;&gt;489.1730&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td style=&quot;text-align: center&quot;&gt;  156&lt;/td&gt;&lt;td style=&quot;text-align: center&quot;&gt;417.3149&lt;/td&gt;&lt;td style=&quot;text-align: center&quot;&gt;477.5643&lt;/td&gt;&lt;td style=&quot;text-align: center&quot;&gt;545.7760&lt;/td&gt;&lt;/tr&gt;
-      &lt;/tbody&gt;
-    &lt;/table&gt;
-  &lt;/div&gt;
-  &lt;p&gt;
-    &lt;figure&gt;
-      &lt;img src=&quot;http://www.itl.nist.gov/div898/handbook/pmc/section4/pmc44a_r07.gif&quot;&gt;
-    &lt;/figure&gt;
-이 면에서 사용한 모든 분석은 R 코드를 사용해서 재현할 수 있다.    
-  &lt;/p&gt;
-&lt;/section&gt;
-
-&lt;section&gt;
-  &lt;ul class=&quot;pager&quot;&gt;
-    &lt;li class=&quot;previous&quot;&gt;&lt;a href=&quot;/articles/2016/11/25/ESH-06-04-04-09&quot;&gt;Previous&lt;/a&gt;&lt;/li&gt;
-    &lt;li class=&quot;next&quot;&gt;&lt;a href=&quot;/articles/2016/11/25/ESH-06-04-04-10&quot;&gt;Next&lt;/a&gt;&lt;/li&gt;      
-  &lt;/ul&gt;
-  &lt;p&gt;
-    &lt;a href=&quot;http://www.itl.nist.gov/div898/handbook/pmc/section4/pmc44a.htm&quot;&gt;원문 보기&lt;/a&gt;
-  &lt;/p&gt;
-&lt;/section&gt;
-</description>
-        <pubDate>Fri, 25 Nov 2016 00:00:00 +0000</pubDate>
-        <link>http://localhost:4000/articles/2016/11/25/ESH-06-04-04-10/</link>
-        <guid isPermaLink="true">http://localhost:4000/articles/2016/11/25/ESH-06-04-04-10/</guid>
         
         
       </item>

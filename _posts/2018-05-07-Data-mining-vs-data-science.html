@@ -1,0 +1,102 @@
+---
+layout: post
+title: Data Mining vs. Data Science
+---
+
+
+<section>
+  <p>
+  일하다보면 다음과 같은 이야기를 가끔 듣습니다.
+  </p>
+  <div class="epigraph">
+    <blockquote>
+      <p>
+      "데이터 과학, 사실 그거 알고보면 다 데이터 마이닝 시절부터 있던 겁니다. 별로 새로운 것이 없습니다."
+      </p>
+    </blockquote>  
+  </div>  
+  <p>
+  이 글에서는 정말로 최근의 데이터 과학 분야에 별로 새로운 것이 없는지 살펴보겠습니다.
+  </p>
+</section>
+
+
+<section>
+  <p>
+  크게 2가지 관점에서 데이터 마이닝과 데이터 과학을 비교해보겠습니다.<label for="sn-extensive-use-of-sidenotes" class="margin-toggle sidenote-number"></label><input type="checkbox" class="margin-toggle"/><span class="sidenote">순전히 개인적인 의견입니다. 아직은 초안입니다.</span>
+  </p>
+  <ol>
+    <li>1. 데이터: 데이터 종류, 데이터 관련 기반 기술 등 포함</li>
+    <li>2. 업무 수행</li>
+  </ol>
+</section>
+
+
+<section>
+  <h2>1. 데이터</h2>
+  <p>
+  데이터 마이닝(90년대 후반 ~ 2007 또는 2008)
+    <ul>
+      <li>제조업 생산 관련 정보: 설비, 수율 등</li>      
+      <li>금융/카드 회사 고객 정보</li>
+    </ul>
+  </p>
+  <p>
+  데이터 과학(2010 ~ 현재)
+    <ul>
+      <li>위의 데이터 마이닝 포함</li>
+      <li>스마트폰 사용 패턴 데이터: 앱 사용, 각종 통신사 고객 사용 패턴 등</li>
+      <li>게임 데이터: 자체 경제 시스템, 사용자 데이터 등</li>
+      <li>검색 엔진 트렌드 데이터</li>
+      <li>이미지 데이터: 딥러닝 관련</li>
+      <li>음성 데이터: 딥러닝 관련</li>
+      <li>대화형 데이터 시각화 Interactive Data Visualization</li>
+      <li>High Availability Hadoop Ecosystem</li>
+    </ul>
+  </p>
+</section>
+
+
+<section>
+  <h2>2. 업무 수행</h2>
+  <p>
+  데이터 마이닝(90년대 후반 ~ 2007 또는 2008)
+    <ul>
+      <li>프로그래밍 언어: 컴파일 + 스크립팅(느림)</li>
+      <li>직접 구현 또는 비싼 상용 프로그램: 문서화 ㅠㅠ 유지 보수 ㅠㅠ</li>
+    </ul>
+  </p>
+  <p>
+  데이터 과학(2010 ~ 현재)
+    <ul>
+      <li>훨씬 더 빠른 스크립팅 언어: 예) Intel® Python + Cython</li>
+      <li>오픈소스 대중화, GitHub</li>
+      <li>훨씬 더 가볍고 빠르게 작업: Jupyter notebook</li>
+      <li>자동화된 문서화 도구</li>
+      <li>웹 기반 공동 작업 환경: Google Colab 등</li>
+    </ul>
+  </p>
+</section>
+
+
+<script type="text/javascript" src="{{ "/js/footnotes.js" | prepend: site.baseurl }}"></script>
+<script type="text/javascript" src="{{ "/js/highlight.pack.js" | prepend: site.baseurl }}"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+<!-- http://tsi.github.io/inlineDisqussions/ -->
+
+<script>
+disqus_shortname = 'danielykim';
+
+jQuery(document).ready(function() {
+  jQuery("p").inlineDisqussions();
+});
+
+jQuery("p").inlineDisqussions({
+  identifier: 'disqussion',
+  displayCount: true,
+  highlighted: true,
+  position: 'right',
+  background: '#FFFFF9',
+  maxWidth: 200
+});
+</script>

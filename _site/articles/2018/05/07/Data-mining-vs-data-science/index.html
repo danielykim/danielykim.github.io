@@ -7,7 +7,7 @@
   
   <link rel="icon" type="image/png" href="http://danielykim.me/images/myicon.png" />
   <title>Blog: Daniel Kim</title>
-  <meta name="description" content="    Ubuntu 16.04 Desktop 버전에서 NVIDIA 최신 드라이버를 나름 쉽게 설치하는 방법입니다.  ">
+  <meta name="description" content="    일하다보면 다음과 같은 이야기를 가끔 듣습니다.                    "데이터 과학, 사실 그거 알고보면 다 데이터 마이닝 시절부터 있던 겁니다. 별로 새로운 것이 없습니다."                    이 글에서는 정말로 최근의 데이터 과학 분야에 별로...">
 
   <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
 
@@ -25,7 +25,7 @@
   <link rel="stylesheet" type="text/css" href="/tufte.css">
   <!-- <link rel="stylesheet" type="text/css" href="/css/print.css" media="print"> -->
 
-  <link rel="canonical" href="http://localhost:4000/articles/2018/02/19/Install-NVIDIA-driver-on-Ubuntu1604/">
+  <link rel="canonical" href="http://localhost:4000/articles/2018/05/07/Data-mining-vs-data-science/">
 
   <link rel="alternate" type="application/rss+xml" title="Blog: Daniel Kim" href="http://localhost:4000/feed.xml" />
 
@@ -78,36 +78,82 @@
 </header>
 
     <article class="group">
-      <h1>Ubuntu 16.04 Desktop에서 NVIDIA 최신 driver 쉽게 설치하기</h1>
+      <h1>Data Mining vs. Data Science</h1>
 
-<h3>Install NVIDIA driver on Ubuntu 16.04 desktop</h3>
-
-<p class="subtitle">February 19, 2018</p>
+<p class="subtitle">May 7, 2018</p>
 
 
 <section>
   <p>
-  Ubuntu 16.04 Desktop 버전에서 NVIDIA 최신 드라이버를 나름 쉽게 설치하는 방법입니다.
+  일하다보면 다음과 같은 이야기를 가끔 듣습니다.
+  </p>
+  <div class="epigraph">
+    <blockquote>
+      <p>
+      "데이터 과학, 사실 그거 알고보면 다 데이터 마이닝 시절부터 있던 겁니다. 별로 새로운 것이 없습니다."
+      </p>
+    </blockquote>  
+  </div>  
+  <p>
+  이 글에서는 정말로 최근의 데이터 과학 분야에 별로 새로운 것이 없는지 살펴보겠습니다.
   </p>
 </section>
 
 
 <section>
   <p>
-  1. 터미널에서 다음과 같이 입력합니다.<label for="sn-extensive-use-of-sidenotes" class="margin-toggle sidenote-number"></label><input type="checkbox" class="margin-toggle"/><span class="sidenote">출처: <a href="https://launchpad.net/~graphics-drivers/+archive/ubuntu/ppa">Proprietary GPU Drivers</a></span>
-    <pre class="code">
-$ sudo add-apt-repository ppa:graphics-drivers/ppa
-$ sudo apt-get update
-    </pre>
+  크게 2가지 관점에서 데이터 마이닝과 데이터 과학을 비교해보겠습니다.<label for="sn-extensive-use-of-sidenotes" class="margin-toggle sidenote-number"></label><input type="checkbox" class="margin-toggle"/><span class="sidenote">순전히 개인적인 의견입니다. 아직은 초안입니다.</span>
+  </p>
+  <ol>
+    <li>1. 데이터: 데이터 종류, 데이터 관련 기반 기술 등 포함</li>
+    <li>2. 업무 수행</li>
+  </ol>
+</section>
+
+
+<section>
+  <h2>1. 데이터</h2>
+  <p>
+  데이터 마이닝(90년대 후반 ~ 2007 또는 2008)
+    <ul>
+      <li>제조업 생산 관련 정보: 설비, 수율 등</li>      
+      <li>금융/카드 회사 고객 정보</li>
+    </ul>
   </p>
   <p>
-  2. "Additional Drivers"를 실행합니다.<label for="sn-extensive-use-of-sidenotes" class="margin-toggle sidenote-number"></label><input type="checkbox" class="margin-toggle"/><span class="sidenote">출처: <a href="https://www.youtube.com/watch?v=PeWTSprpq1M">Install Nvidia Driver on Ubuntu 16.04 (GUI Method for Beginners)</a></span> 2번 항목부터는 출처에 있는 내용과 거의 같습니다. 최신 버전이 나오는 것만 다릅니다.
+  데이터 과학(2010 ~ 현재)
+    <ul>
+      <li>위의 데이터 마이닝 포함</li>
+      <li>스마트폰 사용 패턴 데이터: 앱 사용, 각종 통신사 고객 사용 패턴 등</li>
+      <li>게임 데이터: 자체 경제 시스템, 사용자 데이터 등</li>
+      <li>검색 엔진 트렌드 데이터</li>
+      <li>이미지 데이터: 딥러닝 관련</li>
+      <li>음성 데이터: 딥러닝 관련</li>
+      <li>대화형 데이터 시각화 Interactive Data Visualization</li>
+      <li>High Availability Hadoop Ecosystem</li>
+    </ul>
+  </p>
+</section>
+
+
+<section>
+  <h2>2. 업무 수행</h2>
+  <p>
+  데이터 마이닝(90년대 후반 ~ 2007 또는 2008)
+    <ul>
+      <li>프로그래밍 언어: 컴파일 + 스크립팅(느림)</li>
+      <li>직접 구현 또는 비싼 상용 프로그램: 문서화 ㅠㅠ 유지 보수 ㅠㅠ</li>
+    </ul>
   </p>
   <p>
-  3. "Using NVIDIA binary driver - version xxx.xx from nvidia-xxx" 을 선택합니다. 이 과정은 몇 분 걸립니다. 여기에서 xxx.xx 나 xxx 는 버전을 가리키는 숫자입니다. 참고로 저는 CUDA 9.1을 설치하기 위해<label for="sn-extensive-use-of-sidenotes" class="margin-toggle sidenote-number"></label><input type="checkbox" class="margin-toggle"/><span class="sidenote">출처: <a href="https://developer.nvidia.com/cuda-downloads?target_os=Linux&target_arch=x86_64&target_distro=Ubuntu&target_version=1604&target_type=debnetwork">CUDA Toolkit 9.1 Download</a></span> 390.xx 버전을 설치했습니다.
-  </p>
-  <p>
-  4. 드라이버 설치가 끝나면 재부팅합니다.
+  데이터 과학(2010 ~ 현재)
+    <ul>
+      <li>훨씬 더 빠른 스크립팅 언어: 예) Intel® Python + Cython</li>
+      <li>오픈소스 대중화, GitHub</li>
+      <li>훨씬 더 가볍고 빠르게 작업: Jupyter notebook</li>
+      <li>자동화된 문서화 도구</li>
+      <li>웹 기반 공동 작업 환경: Google Colab 등</li>
+    </ul>
   </p>
 </section>
 
@@ -140,8 +186,8 @@ jQuery("p").inlineDisqussions({
 	<div id="disqus_thread" style="max-width:55%;"></div>
 	<script type="text/javascript">
     var disqus_config = function () {
-      this.page.url = "https://danielykim.github.io/articles/2018/02/19/Install-NVIDIA-driver-on-Ubuntu1604/"; // <--- use canonical URL
-      this.page.identifier = "/articles/2018/02/19/Install-NVIDIA-driver-on-Ubuntu1604";
+      this.page.url = "https://danielykim.github.io/articles/2018/05/07/Data-mining-vs-data-science/"; // <--- use canonical URL
+      this.page.identifier = "/articles/2018/05/07/Data-mining-vs-data-science";
     };
     (function() { // DON'T EDIT BELOW THIS LINE
     
@@ -160,7 +206,7 @@ jQuery("p").inlineDisqussions({
 
 
     </article>
-    <span class="print-footer">Ubuntu 16.04 Desktop에서 NVIDIA 최신 driver 쉽게 설치하기 - February 19, 2018 - Daniel Kim, PhD</span>
+    <span class="print-footer">Data Mining vs. Data Science - May 7, 2018 - Daniel Kim, PhD</span>
 
 
     <footer>
